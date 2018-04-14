@@ -1,0 +1,25 @@
+# vscode
+.vscode/*
+!.vscode/c_cpp_properties.json
+
+# cmake
+_build
+
+# bazel
+bazel-*
+compile_commands.json
+
+clang-analysis
+
+# binary
+*.out
+*.o
+*.so
+*.heap
+*.svg
+
+.venv
+
+*.log
+
+README.md
