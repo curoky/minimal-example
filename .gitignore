@@ -1,1 +1,39 @@
+# vscode
+.vscode
+
+# C++
+## cmake
+builddir
+CMakeUserPresets.json
+
+## vcpkg
+vcpkg_installed
+
+## bazel
 bazel-*
+
+## buck
+.buckd
+buck-out
+
+## clang
+clang-analysis
+compile_commands.json
+# !cmake/hello/compile_commands.json
+
+## thrift
+**/gen-cpp/*
+**/gen-go/*
+**/gen-java/*
+
+# python
+*.pyc
+*.egg-info
+pypi/pip/build
+
+## poetry
+dist
+
+# bazel
+bazel-*
+compile_commands.json
