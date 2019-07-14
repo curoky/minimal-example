@@ -1,7 +1,9 @@
-# vscode
-.vscode
+## gcc
+*.so
+*.o
+*.os
+*.a
 
-# C++
 ## cmake
 builddir
 CMakeUserPresets.json
