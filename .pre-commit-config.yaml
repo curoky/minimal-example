@@ -62,10 +62,19 @@ repos:
     rev: '5.10.1'
     hooks:
       - id: isort
-  # - repo: https://github.com/golangci/golangci-lint
-  #   rev: 'v1.43.0'
-  #   hooks:
-  #     - id: golangci-lint
+        args: ['--settings-file=config/codestyle/.isort.cfg']
+  - repo: https://github.com/golangci/golangci-lint
+    rev: 'v1.46.1'
+    hooks:
+      - id: golangci-lint
+  - repo: https://github.com/nbQA-dev/nbQA
+    rev: 1.3.1
+    hooks:
+      - id: nbqa-isort
+        args: ['--settings-file=config/codestyle/.isort.cfg']
+      - id: nbqa-yapf
+        additional_dependencies: [toml, yapf]
+      - id: nbqa-pyupgrade
   # - repo: https://github.com/adrienverge/yamllint
   #   rev: 'v1.26.3'
   #   hooks:
@@ -84,10 +93,10 @@ repos:
     hooks:
       - id: shfmt
         args: ['-i', '2', '-s', '-l', '-ci']
-  - repo: https://github.com/pocc/pre-commit-hooks
-    rev: v1.3.4
-    hooks:
-      - id: cppcheck
+  # - repo: https://github.com/pocc/pre-commit-hooks
+  #   rev: v1.3.4
+  #   hooks:
+  #     - id: cppcheck
   - repo: https://github.com/keith/pre-commit-buildifier
     rev: '5.1.0.1'
     hooks:
