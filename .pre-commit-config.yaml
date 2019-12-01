@@ -1,7 +1,7 @@
 default_stages: [commit]
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: 'v4.0.1'
+    rev: 'v4.3.0'
     hooks:
       - id: check-added-large-files
       - id: check-executables-have-shebangs
@@ -10,93 +10,42 @@ repos:
       - id: end-of-file-fixer
       - id: trailing-whitespace
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: 'v2.20.0'
+    rev: 'v2.35.0'
     hooks:
       - id: commitizen
         stages: [commit-msg]
   - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: 'v2.4.1'
+    rev: 'v3.0.0-alpha.2'
     hooks:
       - id: prettier
   - repo: https://github.com/pre-commit/mirrors-yapf
-    rev: 'v0.31.0'
+    rev: 'v0.32.0'
     hooks:
       - id: yapf
         additional_dependencies: [toml]
   - repo: https://github.com/asottile/pyupgrade
-    rev: 'v2.29.0'
+    rev: 'v3.1.0'
     hooks:
       - id: pyupgrade
-  - repo: https://github.com/yoheimuta/protolint
-    rev: 'v0.38.1'
-    hooks:
-      - id: protolint
-  # - repo: https://github.com/markdownlint/markdownlint
-  - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: 'v0.29.0'
-    hooks:
-      - id: markdownlint
-  - repo: https://github.com/rubocop/rubocop
-    rev: 'v1.22.3'
-    hooks:
-      - id: rubocop
-  - repo: https://github.com/shellcheck-py/shellcheck-py
-    rev: 'v0.8.0.1'
-    hooks:
-      - id: shellcheck
-  - repo: https://github.com/cpplint/cpplint
-    rev: '1.6.0'
-    hooks:
-      - id: cpplint
-        args: ['--linelength=100']
   - repo: https://github.com/cheshirekow/cmake-format-precommit
     rev: 'v0.6.13'
     hooks:
       - id: cmake-format
-      - id: cmake-lint
-  - repo: https://github.com/PyCQA/pylint
-    rev: 'v2.11.1'
-    hooks:
-      - id: pylint
   - repo: https://github.com/PyCQA/isort
     rev: '5.10.1'
     hooks:
       - id: isort
-        args: ['--settings-file=config/codestyle/.isort.cfg']
-  - repo: https://github.com/golangci/golangci-lint
-    rev: 'v1.46.1'
-    hooks:
-      - id: golangci-lint
-  - repo: https://github.com/nbQA-dev/nbQA
-    rev: 1.3.1
-    hooks:
-      - id: nbqa-isort
-        args: ['--settings-file=config/codestyle/.isort.cfg']
-      - id: nbqa-yapf
-        additional_dependencies: [toml, yapf]
-      - id: nbqa-pyupgrade
-  # - repo: https://github.com/adrienverge/yamllint
-  #   rev: 'v1.26.3'
-  #   hooks:
-  #     - id: yamllint
-  - repo: https://github.com/whtsky/pre-commit-beancount-format
-    rev: '2.3.4'
-    hooks:
-      - id: beancount-format
-        files: \.bean$
+        args: ['--line-length=100']
   - repo: https://github.com/pre-commit/mirrors-clang-format
     rev: 'v14.0.6'
     hooks:
       - id: clang-format
-  - repo: https://github.com/jumanjihouse/pre-commit-hooks
-    rev: '2.1.5'
+        'types_or': [c++, c, c#, cuda, java, objective-c, proto]
+  - repo: https://github.com/scop/pre-commit-shfmt
+    rev: 'v3.5.1-1'
     hooks:
       - id: shfmt
-        args: ['-i', '2', '-s', '-l', '-ci']
-  # - repo: https://github.com/pocc/pre-commit-hooks
-  #   rev: v1.3.4
-  #   hooks:
-  #     - id: cppcheck
+        args: ['-w', '-i', '2', '-s', '-l', '-ci']
   - repo: https://github.com/keith/pre-commit-buildifier
     rev: '5.1.0.1'
     hooks:
