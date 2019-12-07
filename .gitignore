@@ -41,3 +41,4 @@ coverage.txt
 
 # clang
 clang-analysis
+compile_commands.json
