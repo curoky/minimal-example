@@ -39,6 +39,20 @@ dist
 # golang
 coverage.txt
 
-# clang
-clang-analysis
-compile_commands.json
+# npm
+**/node_modules/*
+
+## maven
+
+## gradle
+.gradle
+gradle/hello/build
+
+# please
+plz-out
+
+# rust
+target/
+
+# scons
+.sconsign.dblite
