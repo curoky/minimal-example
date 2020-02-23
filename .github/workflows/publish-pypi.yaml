@@ -1,0 +1,65 @@
+# https://packaging.python.org/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/
+# - https://pypi.org/account/register
+# - https://pypi.org/manage/account/#api-tokens
+# - https://test.pypi.org/account/register
+# - https://test.pypi.org/manage/account/#api-tokens
+
+name: Publish to PyPI
+on:
+  push:
+    paths:
+      - '.github/workflows/publish-pypi.yaml'
+      - 'lang/python/**'
+      - '**.py'
+  schedule:
+    - cron: '0 0 * * 6'
+  workflow_dispatch:
+
+jobs:
+  setup_py:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      - name: Install setuptools and other tools
+        run: python3 -m pip install setuptools wheel twine pytest
+
+      - name: Test packages
+        run: python3 setup.py test
+
+      - name: Build packages
+        run: python3 setup.py sdist bdist_wheel --universal
+
+      - name: Publish distribution 📦 to Test PyPI
+        if: startsWith(github.event.ref, 'refs/tags')
+        uses: pypa/gh-action-pypi-publish@master
+        with:
+          password: ${{ secrets.test_pypi_password }}
+          repository_url: https://test.pypi.org/legacy/
+
+      - name: Publish distribution 📦 to PyPI
+        if: startsWith(github.event.ref, 'refs/tags')
+        uses: pypa/gh-action-pypi-publish@master
+        with:
+          password: ${{ secrets.pypi_password }}
+
+  poetry:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install poetry
+        run: brew install poetry
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          cache: 'poetry'
+
+      - name: Build project for distribution
+        run: poetry build
