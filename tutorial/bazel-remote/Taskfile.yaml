@@ -1,0 +1,18 @@
+version: '3'
+
+tasks:
+  start:
+    deps:
+      - stop
+    cmds:
+      - >
+        docker run --name=cached
+        -u 1000:1000
+        -p 9090:8080
+        -p 9092:9092
+        -v /tmp:/data
+        buchgr/bazel-remote-cache --max_size=10 --dir=/data/cache
+
+  stop:
+    cmds:
+      - docker rm --force cached
