@@ -1,0 +1,37 @@
+version: 3
+
+tasks:
+  setup-qemu:
+    # Firstly: setup qemu environment.
+    #   https://github.com/multiarch/qemu-user-static
+    #   https://www.stereolabs.com/docs/docker/building-arm-container-on-x86/
+    #   https://docs.docker.com/desktop/multi-arch/
+    #   https://www.docker.com/blog/faster-multi-platform-builds-dockerfile-cross-compilation-guide/
+    cmds:
+      - docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
+  test-qemu:
+    cmds:
+      - docker run --rm -t arm64v8/ubuntu uname -m
+
+  create-builder:
+    # Secondly: setup mybuilder for multi arch building.
+    cmds:
+      - docker buildx create --use --name mybuilder
+      - docker buildx inspect mybuilder --bootstrap
+
+  build:
+    # Thirdly: build images with target platform
+    # Notice: should use --push on multi-platform, use --load for single platform
+    #   https://github.com/docker/buildx/issues/59
+    cmds:
+      # ,linux/arm64,linux/amd64
+      - docker buildx build -t hello-arch --platform=linux/aarch64 --load . --output=type=docker
+
+  info:
+    # Notice: only support images from registry
+    cmds:
+      - docker buildx imagetools inspect hello-arch
+
+  run:
+    cmds:
+      - docker run --rm hello-arch
