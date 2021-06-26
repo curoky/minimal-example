@@ -1,0 +1,9 @@
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      - rm -rf ./builddir/cmake
+      - cmake -B ./builddir/cmake -S . -G Ninja
+      - cmake --build ./builddir/cmake
+      - ninja -C ./builddir/cmake -f build.ninja -t compdb > compile_commands.json
