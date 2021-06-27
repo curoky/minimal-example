@@ -1,0 +1,23 @@
+# https://github.com/SCons/scons-examples
+
+env = Environment(
+    CCFLAGS='-g',
+    LIBPATH=['.', 'src/'],
+)
+
+env.SharedLibrary(
+    target="libhello-shared",
+    source=['src/hello-shared.cc'],
+)
+env.StaticLibrary(
+    target="libhello-static",
+    source=['src/hello-static.cc'],
+)
+
+main = env.Program(
+    target='main',
+    source=["src/main.cc"],
+    LIBS=['libhello-shared', 'libhello-static'],
+)
+
+env.Install(dir="/tmp/main", source=main)
