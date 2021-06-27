@@ -1,0 +1,8 @@
+version: '3'
+tasks:
+  default:
+    cmds:
+      - meson setup ./builddir/meson
+      - meson compile -C ./builddir/meson
+      - ninja -C ./builddir/meson
+      - ninja -C ./builddir/meson -f build.ninja -t compdb > compile_commands.json
