@@ -1,0 +1,8 @@
+version: '3'
+tasks:
+  default:
+    dir: ./builddir/autotools
+    cmds:
+      - autoreconf -vfi ../..
+      - ../../configure
+      - make -C src
