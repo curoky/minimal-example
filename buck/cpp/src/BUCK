@@ -1,0 +1,28 @@
+cxx_library(
+    name="libhello-shared",
+    srcs=[
+        "hello.h",
+        "hello-shared.cc",
+    ],
+    link_style="shared",
+)
+
+cxx_library(
+    name="libhello-static",
+    srcs=[
+        "hello.h",
+        "hello-static.cc",
+    ],
+    link_style="static",
+)
+
+cxx_binary(
+    name="main",
+    srcs=[
+        "main.cc",
+    ],
+    deps=[
+        ":libhello-static",
+        ":libhello-shared",
+    ],
+)
