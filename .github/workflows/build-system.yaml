@@ -1,0 +1,117 @@
+name: Build System
+
+on:
+  push:
+    paths:
+      - '.github/workflows/build-system.yaml'
+      - 'build-system/**'
+  schedule:
+    - cron: '0 0 * * 6'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.9' # just for blade
+          cache: 'pip'
+
+      - uses: actions/setup-go@v3
+        with:
+          go-version: '^1.18'
+          cache: true
+
+      - name: install tools
+        #  facebook/fb/buck
+        run: >
+          brew install automake autoconf make llvm mold
+          scons cmake ninja meson bazelisk conan poetry
+          go-task/tap/go-task
+          thought-machine/please/please
+
+      - name: install go tools
+        run: go install github.com/bazelbuild/bazel-gazelle/cmd/gazelle@latest
+
+      - name: install blade
+        run: |
+          git clone --depth=1 https://github.com/chen3feng/blade-build
+          echo "$PWD/blade-build" >> $GITHUB_PATH
+
+      - run: task --dir=build-system/gcc/hello
+
+      - run: task --dir=build-system/cmake/hello
+      - run: task --dir=build-system/cmake/hello-with-conan
+      - run: task --dir=build-system/cmake/hello-with-cpm
+      - run: task --dir=build-system/cmake/hello-with-vcpkg install
+      - run: task --dir=build-system/cmake/hello-with-vcpkg
+
+      - run: task --dir=build-system/scons/hello
+
+      - run: task --dir=build-system/meson/hello
+
+      - run: task --dir=build-system/bazel/hello
+      - run: task --dir=build-system/bazel/hello-go
+      - run: task --dir=build-system/bazel/hello-with-conan
+      - run: task --dir=build-system/bazel/hello-with-bzlmod
+
+      - run: task --dir=build-system/autotools/hello
+
+      # `please` not support soft link
+      - run: find ./build-system/please/hello -type l -exec bash -c "echo 'Replacing {} ...';  cp -LR '{}' '{}'.dereferenced;  rm '{}';  mv '{}'.dereferenced '{}'" \;
+
+      - run: task --dir=build-system/please/hello
+
+      - run: task --dir=build-system/blade/hello
+
+      - uses: mxschmitt/action-tmate@v3
+        if: ${{ failure() }}
+        timeout-minutes: 30
+
+  bazel-with-remote-cache:
+    runs-on: ubuntu-22.04
+    services:
+      httpbin:
+        image: kennethreitz/httpbin
+        ports:
+          - 3200:80
+
+      remote-cache:
+        image: curoky/my-own-x:bazel-remote-cache
+        ports:
+          - 8080:8080
+          - 9092:9092
+        options: >-
+          -u 1001:121
+        env:
+          BAZEL_REMOTE_MAX_SIZE: 2
+          BAZEL_REMOTE_DIR: /data/remote-cache
+        volumes:
+          - /tmp:/data
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: bazelbuild/setup-bazelisk@v2
+
+      - name: mount bazel cache
+        uses: actions/cache@v3
+        with:
+          path: /tmp/remote-cache
+          key: bazel-hello-${{ github.run_id }}-${{ github.sha }}
+          restore-keys: |
+            bazel-
+
+      - run: curl http://0.0.0.0:8080/status >> $GITHUB_STEP_SUMMARY
+
+      - name: bazel build
+        run: bazel run //src:main
+        working-directory: build-system/bazel/hello-with-remote-cache
+
+      - run: curl http://0.0.0.0:8080/status >> $GITHUB_STEP_SUMMARY
+
+      - uses: mxschmitt/action-tmate@v3
+        if: ${{ failure() }}
+        timeout-minutes: 30
