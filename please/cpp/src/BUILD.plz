@@ -1,0 +1,24 @@
+cc_library(
+    name = "libhello-shared",
+    srcs = [
+        "hello-shared.cc",
+    ],
+    hdrs = ["hello.h"],
+)
+
+cc_library(
+    name = "libhello-static",
+    srcs = [
+        "hello-static.cc",
+    ],
+    hdrs = ["hello.h"],
+)
+
+cc_binary(
+    name = "main",
+    srcs = ["main.cc"],
+    deps = [
+        ":libhello-shared",
+        ":libhello-static",
+    ],
+)
