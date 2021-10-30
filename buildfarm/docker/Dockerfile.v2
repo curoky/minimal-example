@@ -1,0 +1,44 @@
+ARG OS="ubuntu:22.04"
+
+FROM ${OS} as base
+
+ENV LANG=en_US.UTF-8 \
+  LANGUAGE=en_US.UTF-8 \
+  LC_ALL=en_US.UTF-8 \
+  DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update \
+  && apt-get install -y -qq --no-install-recommends \
+    curl ca-certificates wget ncdu git gettext gperf autoconf automake pkg-config \
+    python3 python-is-python3 python3-distutils \
+    gcc g++ gcc-11 g++-11 lld openjdk-17-jdk
+
+FROM base as builder
+
+WORKDIR /opt/buildfarm
+
+RUN curl -sSL https://github.com/bazelbuild/bazel-buildfarm/archive/main.tar.gz \
+    | tar xz --strip-components=1 -C /opt/buildfarm
+RUN curl -sSL -o /usr/local/bin/bazel https://github.com/bazelbuild/bazelisk/releases/download/v1.11.0/bazelisk-linux-amd64 \
+  && chmod +x /usr/local/bin/bazel
+RUN bazel build \
+  //src/main/java/build/buildfarm:buildfarm-server_deploy.jar \
+  //src/main/java/build/buildfarm:buildfarm-memory-worker_deploy.jar
+
+FROM base
+
+LABEL Author=cccuroky@gmail.com
+
+ENV SERVER_HOST="0.0.0.0"
+ENV SERVER_PORT="7851"
+ENV WORKER_TASK_SIZE="30"
+
+COPY --from=builder /opt/buildfarm/bazel-bin/src/main/java/build/buildfarm/buildfarm-server_deploy.jar /opt/buildfarm/server.jar
+COPY --from=builder /opt/buildfarm/bazel-bin/src/main/java/build/buildfarm/buildfarm-memory-worker_deploy.jar /opt/buildfarm/worker.jar
+
+COPY ./conf /opt/conf
+COPY ./script /opt/script
+
+WORKDIR /opt/buildfarm
+
+ENTRYPOINT [ "/opt/script/entrypoint.sh" ]
