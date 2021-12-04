@@ -1,0 +1,43 @@
+ARG OS="ubuntu:22.04"
+
+FROM ${OS} as base
+
+ENV LANG=en_US.UTF-8 \
+  LANGUAGE=en_US.UTF-8 \
+  LC_ALL=en_US.UTF-8 \
+  DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update \
+  && apt-get install -y -qq --no-install-recommends \
+    curl ca-certificates less ncdu \
+  && adduser --system --no-create-home distccd
+
+FROM base as builder
+
+RUN apt-get update \
+  && apt-get install -y -qq --no-install-recommends \
+    gcc make python3 python3-dev libiberty-dev automake autoconf libtool ccache unzip
+
+RUN curl -sSL -o distcc.zip https://github.com/distcc/distcc/archive/refs/heads/master.zip \
+  && unzip distcc.zip \
+  && cd distcc-master \
+  && ./autogen.sh \
+  && ./configure --prefix=/opt/distcc/ \
+  && make \
+  # && make check \
+  && make install \
+  # && make installcheck \
+  && ./update-distcc-symlinks
+
+FROM base
+
+LABEL Author=cccuroky@gmail.com
+
+COPY --from=builder /opt/distcc /opt/distcc
+COPY ./conf /opt/conf
+COPY ./script /opt/script
+
+RUN ln -s /opt/conf/ccache.conf /etc/ccache.conf \
+  && /opt/script/setup-ccache.sh
+
+ENTRYPOINT [ "/opt/script/entrypoint.sh" ]
