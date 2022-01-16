@@ -1,0 +1,15 @@
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      - task: conan
+      - task: bazel
+
+  conan:
+    cmds:
+      - conan install conanfile.txt --output-folder=builddir/conan --install-folder=builddir/conan --build=missing -pr:b=default --profile conanrc
+
+  bazel:
+    cmds:
+      - bazel run //src:main
