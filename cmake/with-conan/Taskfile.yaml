@@ -1,0 +1,17 @@
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      - task: conan
+      - task: cmake
+
+  conan:
+    cmds:
+      - conan install conanfile.txt --output-folder=builddir/conan --install-folder=builddir/conan --build=missing -pr:b=default --profile conanrc
+
+  cmake:
+    cmds:
+      - rm -rf ./builddir/cmake
+      - cmake -B ./builddir/cmake -S . -G Ninja -DCMAKE_TOOLCHAIN_FILE=builddir/conan/conan_toolchain.cmake
+      - cmake --build ./builddir/cmake
