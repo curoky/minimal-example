@@ -1,0 +1,22 @@
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      - task: vcpkg
+      - task: cmake
+
+  install:
+    cmds:
+      - git clone https://github.com/Microsoft/vcpkg.git --depth=1
+      - ./vcpkg/bootstrap-vcpkg.sh -disableMetrics
+
+  vcpkg:
+    cmds:
+      - ./vcpkg/vcpkg install
+
+  cmake:
+    cmds:
+      - rm -rf ./builddir/cmake
+      - cmake -B ./builddir/cmake -S . -G Ninja -DCMAKE_TOOLCHAIN_FILE=./vcpkg/scripts/buildsystems/vcpkg.cmake
+      - cmake --build ./builddir/cmake
