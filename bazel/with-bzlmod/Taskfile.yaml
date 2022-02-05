@@ -1,0 +1,8 @@
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      - export USE_BAZEL_VERSION=last_green
+      - bazel build --experimental_enable_bzlmod //src:main
+      - GLOG_logtostderr=1 ./bazel-bin/src/main
