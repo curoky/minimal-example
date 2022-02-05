@@ -1,0 +1,56 @@
+# https://github.com/python-poetry/poetry/blob/master/pyproject.toml
+
+[tool.poetry]
+name = "my-own-x"
+version = "1.0.0"
+description = "My python utils library."
+
+license = "Apache License 2.0"
+
+authors = [
+    "curoky <cccuroky@gmail.com>"
+]
+
+readme = "README.md"
+
+packages = [
+    { include = "foo", from = "./" }
+]
+include = [
+    { path = "tests", format = "sdist" }
+]
+
+repository = "https://github.com/curoky/my-own-x"
+homepage = "https://github.com/curoky/my-own-x"
+
+keywords = ["my-own-x"]
+
+[tool.poetry.dependencies]
+python = "^3.10"  # python = "~2.7 || ^3.2"  # Compatible python versions must be declared here
+toml = "*"
+thrift = "*"
+typer = "*"
+# Dependencies with extras
+requests = { version = "*", extras = [ "security" ] }
+
+# Python specific dependencies with prereleases allowed
+# pathlib2 = { version = "*", python = "~2.7", allow-prereleases = true }
+
+# Git dependencies
+# cleo = { git = "https://github.com/sdispater/cleo.git", branch = "master" }
+
+# Optional dependencies (extras)
+# pendulum = { version = "^1.4", optional = true }
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+pytest-cov = "*"
+
+[tool.poetry.scripts]
+my-script = "my_package:main"
+
+[tool.yapf]
+based_on_style = "google"
+column_limit = 100
+# spaces_before_comment = 4
+# split_before_logical_operator = true
