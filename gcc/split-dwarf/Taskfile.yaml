@@ -1,0 +1,13 @@
+version: '3'
+
+tasks:
+  default:
+    deps:
+      - normal
+      - split-dwarf
+  normal:
+    - g++ -g -c main.cc -o main.o
+    - g++ main.o -o main
+  split-dwarf:
+    - g++ -g -c -gsplit-dwarf main.cc -o main_dwarf.o
+    - g++ main_dwarf.o -o main_dwarf -Wl,--gdb-index
