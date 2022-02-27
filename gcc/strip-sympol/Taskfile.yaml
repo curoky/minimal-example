@@ -1,0 +1,46 @@
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      - task: normal
+      - task: static
+      - task: strip
+      - task: _g
+      - task: _g_O0
+      - task: _g_O3
+      - task: _s
+      - task: _s_g
+      - task: _s_g_O0
+      - task: _s_g_O3
+  normal:
+    - g++ -g -c main.cc -o main.o
+    - g++ main.o -o main
+  static:
+    - g++ -c main.cc -o main.o
+    - g++ main.o -o main_static -static
+  strip:
+    - g++ -c main.cc -o main.o
+    - g++ main.o -o main
+    - strip -s main -o main_strip
+  _g:
+    - g++ -g -c main.cc -o main.o
+    - g++ main.o -o main_g
+  _g_O0:
+    - g++ -g -O0 -c main.cc -o main.o
+    - g++ main.o -o main_g_O0
+  _g_O3:
+    - g++ -g -O3 -c main.cc -o main.o
+    - g++ main.o -o main_g_O3
+  _s:
+    - g++ -s -c main.cc -o main.o
+    - g++ main.o -o main_s
+  _s_g:
+    - g++ -s -g -c main.cc -o main.o
+    - g++ main.o -o main_s_g
+  _s_g_O0:
+    - g++ -s -g -O0 -c main.cc -o main.o
+    - g++ main.o -o main_s_g_O0
+  _s_g_O3:
+    - g++ -s -g -O3 -c main.cc -o main.o
+    - g++ main.o -o main_s_g_O3
