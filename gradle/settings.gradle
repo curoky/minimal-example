@@ -1,0 +1,14 @@
+rootProject.name = 'tutorial'
+
+include('hello')
+project(":hello").name = "hello"
+
+// https://docs.gradle.org/current/userguide/directory_layout.html#dir:project_root
+// https://dzone.com/articles/gradle-goodness-change-local-build-cache-directory
+buildCache {
+  local {
+    // Set local build cache directory.
+    // directory = "build-cache"
+    // directory = new File(rootDir, 'build-cache')
+  }
+}
