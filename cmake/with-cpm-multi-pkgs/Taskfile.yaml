@@ -1,0 +1,17 @@
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      - task: cpm
+      - task: cmake
+
+  cpm:
+    cmds:
+      - curl -sSL -o cmake/CPM.cmake https://github.com/cpm-cmake/CPM.cmake/releases/latest/download/get_cpm.cmake
+
+  cmake:
+    cmds:
+      - rm -rf ./builddir/cmake
+      - cmake -B ./builddir/cmake -S . -G Ninja
+      - cmake --build ./builddir/cmake
