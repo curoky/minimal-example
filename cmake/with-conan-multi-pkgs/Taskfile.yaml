@@ -1,0 +1,33 @@
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      - task: fetch
+      - task: generate
+      - task: cmake
+
+  fetch:
+    env:
+      CXXFLAGS: -Wno-deprecated-copy -Wno-maybe-uninitialized # just for cppfs
+    cmds:
+      - conan export ../../conan/recipes/cppfs
+      - conan export ../../conan/recipes/restclient-cpp
+      - conan install conanfile.txt --output-folder=builddir/conan --install-folder=builddir/conan --build=missing -pr:b=default --profile conanrc
+
+  generate:
+    cmds:
+      # - >
+      #   grep -E 'cmake_find_package=[^\n]*' _conan/conanbuildinfo.txt --color=never |
+      #   sed 's/cmake_find_package=//g' |
+      #   awk '{printf "find_package(%s)\n", $1}' > deps.cmake
+      - find builddir/conan -type f -name "*Config.cmake" | sed 's$builddir/conan/$$g' | sed 's/Config.cmake//g' > builddir/conan/deps-tmp.cmake
+      - find builddir/conan -type f -name "*-config.cmake" | sed 's$builddir/conan/$$g' | sed 's/-config.cmake//g' >> builddir/conan/deps-tmp.cmake
+      - cat builddir/conan/deps-tmp.cmake | sort -u | awk '{printf "find_package(%s)\n", $1}' > generated-find-pkgs.cmake
+      - grep -P 'set\(([-\w]*)_INCLUDE_DIR ' -o -h -r builddir/conan | sed 's/set(//' | sort -u | awk '{printf "include_directories(${%s})\n", $1}' >> generated-find-pkgs.cmake
+
+  cmake:
+    cmds:
+      # - rm -rf ./builddir/cmake
+      - cmake -B ./builddir/cmake -S . -G Ninja -DCMAKE_TOOLCHAIN_FILE=builddir/conan/conan_toolchain.cmake
+      - cmake --build ./builddir/cmake
