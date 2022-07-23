@@ -1,0 +1,31 @@
+version: '3'
+
+env:
+  VCPKG_OVERLAY_TRIPLETS: triplets
+  VCPKG_DEFAULT_TRIPLET: x64-linux-release
+
+tasks:
+  default:
+    cmds:
+      - task: fetch
+      - task: generate
+      - task: cmake
+
+  fetch:
+    cmds:
+      - mkdir -p builddir
+      - /opt/vcpkg/vcpkg install --x-use-aria2 2>&1 | tee builddir/vcpkg.log
+
+  generate:
+    cmds:
+      - >
+        grep -E "(find_package|set\(|target_link_libraries|find_path|target_include_directories)[^\n]*" --color=never builddir/vcpkg.log |
+        sed 's/^\s*//g' |
+        sed 's/find_package(Boost/# find_package(Boost/g' |
+        sed 's/target/\# target/g' | sort -u > generated-find-pkgs.cmake
+
+  cmake:
+    cmds:
+      # - rm -rf ./builddir/cmake
+      - cmake -B ./builddir/cmake -S . -G Ninja -DCMAKE_TOOLCHAIN_FILE=/opt/vcpkg/scripts/buildsystems/vcpkg.cmake
+      - cmake --build ./builddir/cmake
