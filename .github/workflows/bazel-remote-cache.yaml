@@ -1,0 +1,56 @@
+name: bazel with remote cache
+
+on:
+  push:
+    paths:
+      - '.github/workflows/bazel-remote-catch.yaml'
+      - 'build-system/bazel/hello-with-remote-cache/**'
+  schedule:
+    - cron: '0 0 * * 6'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    services:
+      httpbin:
+        image: kennethreitz/httpbin
+        ports:
+          - 3200:80
+
+      remote-cache:
+        image: curoky/my-own-x:bazel-remote-cache
+        ports:
+          - 8080:8080
+          - 9092:9092
+        options: >-
+          -u 1001:121
+        env:
+          BAZEL_REMOTE_MAX_SIZE: 2
+          BAZEL_REMOTE_DIR: /data/remote-cache
+        volumes:
+          - /tmp:/data
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: bazelbuild/setup-bazelisk@v2
+
+      - name: mount bazel cache
+        uses: actions/cache@v3
+        with:
+          path: /tmp/remote-cache
+          key: bazel-hello-${{ github.run_id }}-${{ github.sha }}
+          restore-keys: |
+            bazel-
+
+      - run: curl http://0.0.0.0:8080/status >> $GITHUB_STEP_SUMMARY
+
+      - name: bazel build
+        run: bazel run //src:main
+        working-directory: build-system/bazel/hello-with-remote-cache
+
+      - run: curl http://0.0.0.0:8080/status >> $GITHUB_STEP_SUMMARY
+
+      - uses: mxschmitt/action-tmate@v3
+        if: ${{ failure() }}
+        timeout-minutes: 30
