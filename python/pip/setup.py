@@ -29,9 +29,9 @@ from pkg_resources import parse_requirements
 from setuptools import Command, find_packages, setup
 
 # Package meta-data.
-NAME = 'my_own_x'
-DESCRIPTION = 'My python utils library.'
-URL = 'https://github.com/curoky/my-own-x'
+NAME = 'pypi_tutorial'
+DESCRIPTION = 'A small example package'
+URL = 'https://github.com/curoky/learn-build-system'
 EMAIL = 'cccuroky@gmail.com'
 AUTHOR = 'curoky'
 REQUIRES_PYTHON = '>=3.6.0'
