@@ -1,0 +1,564 @@
+name: Build System
+
+on:
+  push:
+    paths:
+      - .github/workflows/build-system.yaml
+      - tutorial/**
+  schedule:
+    - cron: '0 0 * * 6'
+  workflow_dispatch:
+
+jobs:
+  autotools_tutorial_cpp:
+    defaults:
+      run:
+        working-directory: tutorial/autotools/cpp
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: autoreconf -vfi
+      - run: ./configure
+      - run: make -C src
+
+  bazel_tutorial_cpp:
+    defaults:
+      run:
+        working-directory: tutorial/bazel/cpp
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: bazelbuild/setup-bazelisk@v2
+      - run: bazel build //src:main
+      - run: bazel run @hedron_compile_commands//:refresh_all
+
+  bazel_tutorial_go:
+    defaults:
+      run:
+        working-directory: tutorial/bazel/go
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: bazelbuild/setup-bazelisk@v2
+      - uses: actions/setup-go@v3
+        with:
+          go-version: '^1.18'
+          cache: true
+          go-version-file: 'tutorial/bazel/go/go.mod'
+          cache-dependency-path: 'tutorial/bazel/go/go.sum'
+      - run: go install github.com/bazelbuild/bazel-gazelle/cmd/gazelle@latest
+      - run: gazelle update-repos -from_file=go.mod -to_macro=go_mod.bzl%go_repositories
+      - run: gazelle -go_prefix github.com/curoky/learn-build-system -lang go -exclude design-pattern -exclude external -exclude service -build_file_name BUILD
+      - run: bazel run :main
+
+  bazel_tutorial_with_buildbuddy:
+    defaults:
+      run:
+        working-directory: tutorial/bazel/with-buildbuddy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: bazelbuild/setup-bazelisk@v2
+      - run: BUILDBUDDY_API=${{ secrets.BUILDBUDDY_API }} envsubst < .bazelrc | tee .bazelrc
+      - run: bazel build //src:main
+
+  bazel_tutorial_with_bzlmod:
+    defaults:
+      run:
+        working-directory: tutorial/bazel/with-bzlmod
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: bazelbuild/setup-bazelisk@v2
+      - run: sudo apt-get install -y gcc-11 g++-11
+      - run: bazel build --experimental_enable_bzlmod //src:main
+        env:
+          USE_BAZEL_VERSION: last_green
+          CC: gcc-11
+          CXX: gcc-11
+
+  bazel_tutorial_with_conan:
+    defaults:
+      run:
+        working-directory: tutorial/bazel/with-conan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: bazelbuild/setup-bazelisk@v2
+      - uses: Homebrew/actions/setup-homebrew@master
+      - run: sudo apt-get install -y gcc-11 g++-11
+      - run: brew install conan
+      - run: conan install conanfile.txt --output-folder=builddir/conan --install-folder=builddir/conan --build=missing -pr:b=default --profile conanrc
+      - run: bazel run //src:main
+        env:
+          CC: gcc-11
+          CXX: gcc-11
+
+  bazel_tutorial_with_remote_cache:
+    runs-on: ubuntu-latest
+    services:
+      httpbin:
+        image: kennethreitz/httpbin
+        ports:
+          - 3200:80
+
+      remote-cache:
+        image: curoky/my-own-x:bazel-remote-cache
+        ports:
+          - 8080:8080
+          - 9092:9092
+        options: >-
+          -u 1001:121
+        env:
+          BAZEL_REMOTE_MAX_SIZE: 2
+          BAZEL_REMOTE_DIR: /data/remote-cache
+        volumes:
+          - /tmp:/data
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: bazelbuild/setup-bazelisk@v2
+
+      - name: mount bazel cache
+        uses: actions/cache@v3
+        with:
+          path: /tmp/remote-cache
+          key: bazel-hello-${{ github.run_id }}-${{ github.sha }}
+          restore-keys: |
+            bazel-
+
+      - run: curl http://0.0.0.0:8080/status >> $GITHUB_STEP_SUMMARY
+
+      - name: bazel build
+        run: bazel run //src:main
+        working-directory: tutorial/bazel/with-remote-cache
+
+      - run: curl http://0.0.0.0:8080/status >> $GITHUB_STEP_SUMMARY
+
+  blade_tutorial_cpp:
+    defaults:
+      run:
+        working-directory: tutorial/blade/cpp
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: Homebrew/actions/setup-homebrew@master
+      - run: brew install ninja
+      - name: install blade
+        run: |
+          git clone --depth=1 https://github.com/chen3feng/blade-build
+          echo "$PWD/blade-build" >> $GITHUB_PATH
+      - run: blade build //src:main
+
+  buck_tutorial_cpp:
+    defaults:
+      run:
+        working-directory: tutorial/buck/cpp
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+  cmake_tutorial_hello:
+    defaults:
+      run:
+        working-directory: tutorial/cmake/hello
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: Homebrew/actions/setup-homebrew@master
+      - run: sudo apt-get install -y lld
+      - run: brew install ninja
+      - run: cmake -B ./builddir/cmake -S . -G Ninja
+      - run: cmake --build ./builddir/cmake
+      - run: ninja -C ./builddir/cmake -f build.ninja -t compdb > compile_commands.json
+
+  cmake_tutorial_with_ccache:
+    defaults:
+      run:
+        working-directory: tutorial/cmake/with-ccache
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: Homebrew/actions/setup-homebrew@master
+      - run: brew install ninja ccache
+      - run: ccache --show-stats
+      - name: ccache
+        uses: hendrikmuhs/ccache-action@v1.2
+        with:
+          verbose: 2
+          key: ccache-${{ github.run_id }}-${{ github.sha }}
+          restore-keys: |
+            ccache-
+      - run: ccache --show-stats
+      - run: cmake -B ./builddir/cmake -S . -G Ninja
+      - run: cmake --build ./builddir/cmake
+      - run: ccache --show-stats
+
+  cmake_tutorial_with_conan:
+    defaults:
+      run:
+        working-directory: tutorial/cmake/with-conan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: Homebrew/actions/setup-homebrew@master
+      - run: brew install conan ninja
+      - name: mount conan cache
+        uses: actions/cache@v3
+        with:
+          path: ~/.conan/data
+          key: conan-${{ runner.os }}-${{ hashFiles('tutorial/cmake/with-conan/conanfile.txt') }}
+      - run: sudo apt-get install -y gcc-11 g++-11
+      - run: echo "CC=gcc-11" >> $GITHUB_ENV
+      - run: echo "CXX=g++-11" >> $GITHUB_ENV
+      - run: conan install conanfile.txt --output-folder=builddir/conan --install-folder=builddir/conan --build=missing -pr:b=default --profile conanrc
+      - run: cmake -B ./builddir/cmake -S . -G Ninja -DCMAKE_TOOLCHAIN_FILE=builddir/conan/conan_toolchain.cmake
+      - run: cmake --build ./builddir/cmake
+
+  cmake_tutorial_with_cpm:
+    defaults:
+      run:
+        working-directory: tutorial/cmake/with-cpm
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: Homebrew/actions/setup-homebrew@master
+      - run: brew install ninja
+      - run: curl -sSL -o cmake/CPM.cmake https://github.com/cpm-cmake/CPM.cmake/releases/latest/download/get_cpm.cmake
+      - run: cmake -B ./builddir/cmake -S . -G Ninja
+      - run: cmake --build ./builddir/cmake
+
+  cmake_tutorial_with_vcpkg:
+    defaults:
+      run:
+        working-directory: tutorial/cmake/with-vcpkg
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: Homebrew/actions/setup-homebrew@master
+      - run: brew install ninja
+      - name: install vcpkg
+        run: |
+          git clone https://github.com/Microsoft/vcpkg.git --depth=1
+          ./vcpkg/bootstrap-vcpkg.sh -disableMetrics
+      - name: mount vcpkg cache
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/vcpkg
+          key: vcpkg-${{ github.run_id }}-${{ github.sha }}
+          restore-keys: |
+            vcpkg-
+      - run: ./vcpkg/vcpkg install
+      - run: cmake -B ./builddir/cmake -S . -G Ninja -DCMAKE_TOOLCHAIN_FILE=./vcpkg/scripts/buildsystems/vcpkg.cmake
+      - run: cmake --build ./builddir/cmake
+
+  docker_tutorial_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: docker/setup-buildx-action@v2
+      # - uses: docker/login-action@v2
+      #   with:
+      #     username: curoky
+      #     password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - uses: docker/build-push-action@v3
+        with:
+          context: tutorial/docker/hello
+          push: false
+          tags: curoky/learn-build-system:docker_tutorial_hello
+          cache-from: type=registry,ref=curoky/learn-build-system:docker_tutorial_hello
+          cache-to: type=inline
+
+  docker_tutorial_multi_platform:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: docker/setup-qemu-action@v2
+        with:
+          platforms: arm64,arm
+      - uses: docker/setup-buildx-action@v2
+      # - uses: docker/login-action@v2
+      #   with:
+      #     username: curoky
+      #     password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - uses: docker/build-push-action@v3
+        with:
+          context: tutorial/docker/multi-platform
+          push: false
+          tags: curoky/learn-build-system:docker_tutorial_multi_platform
+          cache-from: type=registry,ref=curoky/learn-build-system:docker_tutorial_multi_platform
+          cache-to: type=inline
+
+  earthly:
+    runs-on: ubuntu-latest
+    env:
+      FORCE_COLOR: 1
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Put back the git branch into git (Earthly uses it for tagging)
+        run: |
+          branch=""
+          if [ -n "$GITHUB_HEAD_REF" ]; then
+            branch="$GITHUB_HEAD_REF"
+          else
+            branch="${GITHUB_REF##*/}"
+          fi
+          git checkout -b "$branch" || true
+
+      - name: Download latest earthly
+        run: "sudo /bin/sh -c 'wget https://github.com/earthly/earthly/releases/download/v0.6.14/earthly-linux-amd64 -O /usr/local/bin/earthly && chmod +x /usr/local/bin/earthly'"
+
+      - name: run cpp tutorial
+        run: earthly +build
+        working-directory: tutorial/earthly/cpp
+
+      - name: run golang tutorial
+        run: earthly +build
+        working-directory: tutorial/earthly/go
+
+  gcc_tutorial_hello:
+    defaults:
+      run:
+        working-directory: tutorial/gcc/hello
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: sudo apt-get install -y lld
+      - run: ./gcc.sh
+
+  gradle_tutorial_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '18'
+          cache: 'gradle'
+
+      # @deprecated
+      - uses: actions/cache@v3
+        if: 'false'
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2
+
+      - name: Build
+        run: gradle build
+        working-directory: tutorial/gradle/hello
+
+  maven_tutorial_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '18'
+          cache: 'maven'
+
+      # @deprecated
+      - uses: actions/cache@v3
+        if: 'false'
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
+      # - name: Setup Maven
+      #   uses: stCarolas/setup-maven@v4.3
+      #   with:
+      #     maven-version: 3.8.5
+
+      - name: Build
+        run: mvn -B compile -e --file pom.xml
+        working-directory: tutorial/maven/hello
+
+  meson_tutorial_cpp:
+    defaults:
+      run:
+        working-directory: tutorial/meson/cpp
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: Homebrew/actions/setup-homebrew@master
+      - run: brew install meson
+      - run: meson setup ./builddir/meson
+      - run: meson compile -C ./builddir/meson
+      - run: ninja -C ./builddir/meson
+      - run: ninja -C ./builddir/meson -f build.ninja -t compdb > compile_commands.json
+
+  please_tutorial_cpp:
+    defaults:
+      run:
+        working-directory: tutorial/please/cpp
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: |
+          curl -s https://get.please.build | bash
+          echo "${HOME}/.please/bin" >> $GITHUB_PATH
+      # - run: brew install thought-machine/please/please
+      - run: plz build //src:main
+
+  # https://packaging.python.org/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/
+  # - https://pypi.org/account/register
+  # - https://pypi.org/manage/account/#api-tokens
+  # - https://test.pypi.org/account/register
+  # - https://test.pypi.org/manage/account/#api-tokens
+  pypi_tutorial_pip_setuppy:
+    defaults:
+      run:
+        working-directory: tutorial/pypi/pip
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      - run: 'sed -i "s/1.0.0/$(date +%Y.%-m.%d).post1.dev$(date +%s)/g" setup.py'
+      - run: rm -rf pyproject.toml
+
+      - name: Install setuptools and other tools
+        run: python3 -m pip install setuptools wheel twine pytest
+
+      - name: Test packages
+        run: python3 setup.py test
+
+      - name: Build packages
+        run: python3 setup.py sdist bdist_wheel --universal
+
+      - name: Publish a Python distribution to Test PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          password: ${{ secrets.TEST_PYPI_API_TOKEN }}
+          repository_url: https://test.pypi.org/legacy/
+          packages_dir: tutorial/pypi/pip/dist
+
+  pypi_tutorial_pip_pyproject:
+    defaults:
+      run:
+        working-directory: tutorial/pypi/pip
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      - uses: actions/cache@v3
+        if: 'false'
+        with:
+          path: ~/.cache/pip
+          key: pip-{{ runner.os }}-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            pip-${{ runner.os }}-
+
+      - run: 'sed -i "s/1.0.0/$(date +%Y.%-m.%d).post2.dev$(date +%s)/g" pyproject.toml'
+      - run: rm -rf setup.py
+
+      - run: python3 -m pip install --upgrade build
+      - run: python3 -m build
+      # - run: python3 -m pip install --upgrade twine
+      # - run: python3 -m twine upload --repository testpypi dist/*
+
+      - name: Publish a Python distribution to Test PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          password: ${{ secrets.TEST_PYPI_API_TOKEN }}
+          repository_url: https://test.pypi.org/legacy/
+          packages_dir: tutorial/pypi/pip/dist
+
+      - name: Publish a Python distribution to PyPI
+        if: startsWith(github.event.ref, 'refs/tags')
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          password: ${{ secrets.PYPI_API_TOKEN }}
+          packages_dir: tutorial/pypi/pip/dist
+
+  pypi_tutorial_pipenv:
+    defaults:
+      run:
+        working-directory: tutorial/pypi/pipenv
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: Homebrew/actions/setup-homebrew@master
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          cache: 'pipenv'
+
+      - uses: actions/cache@v3
+        if: 'false'
+        with:
+          path: ~/.local/share/virtualenvs
+          key: pipenv-${{ runner.os }}-${{ hashFiles('**/Pipfile.lock') }}
+
+      - run: brew install pipenv
+      - run: pipenv install --deploy --dev
+      - run: pipenv run pytest . || echo ignore error
+
+  pypi_tutorial_poetry:
+    defaults:
+      run:
+        working-directory: tutorial/pypi/poetry
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: Homebrew/actions/setup-homebrew@master
+
+      - run: 'sed -i "s/1.0.0/$(date +%Y.%-m.%d).post1.dev$(date +%s)/g" pyproject.toml'
+
+      - run: brew install poetry
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          cache: 'poetry'
+
+      - uses: actions/cache@v3
+        if: 'false'
+        with:
+          path: |
+            ~/.cache/pypoetry
+            .venv
+          key: poetry-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+
+      - run: poetry install
+
+      - run: poetry run pytest . || echo ignore error
+
+      - run: poetry build
+
+      - name: Publish a Python distribution to Test PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          password: ${{ secrets.TEST_PYPI_API_TOKEN }}
+          repository_url: https://test.pypi.org/legacy/
+          packages_dir: tutorial/pypi/poetry/dist
+
+  scons_tutorial_cpp:
+    defaults:
+      run:
+        working-directory: tutorial/scons/cpp
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: Homebrew/actions/setup-homebrew@master
+
+      - run: brew install scons
+      - run: scons
+      - run: scons -c
