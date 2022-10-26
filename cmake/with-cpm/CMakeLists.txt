@@ -28,11 +28,9 @@ CPMAddPackage("gh:fmtlib/fmt#9.0.0")
 
 set(BOOST_INCLUDE_LIBRARIES "algorithm;")
 CPMAddPackage(
-  NAME Boost
-  VERSION 1.77.0
+  NAME Boost VERSION 1.77.0
   GITHUB_REPOSITORY "boostorg/boost"
-  GIT_TAG "boost-1.77.0"
-)
+  GIT_TAG "boost-1.77.0")
 
 add_executable(main main.cc)
 

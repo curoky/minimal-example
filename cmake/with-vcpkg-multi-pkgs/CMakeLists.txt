@@ -50,11 +50,6 @@ set_property(TARGET glog::glog PROPERTY INTERFACE_LINK_LIBRARIES ${TARGET_LIBRAR
 
 add_executable(main main.cc)
 
-target_link_libraries(main PRIVATE
-  fmt::fmt
-  benchmark::benchmark
-  TBB::tbb
-)
-target_include_directories(main PUBLIC
-  $<BUILD_INTERFACE:${_VCPKG_INSTALLED_DIR}/${VCPKG_TARGET_TRIPLET}/include>
-)
+target_link_libraries(main PRIVATE fmt::fmt benchmark::benchmark TBB::tbb)
+target_include_directories(
+  main PUBLIC $<BUILD_INTERFACE:${_VCPKG_INSTALLED_DIR}/${VCPKG_TARGET_TRIPLET}/include>)

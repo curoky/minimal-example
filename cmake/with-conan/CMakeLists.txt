@@ -28,8 +28,6 @@ find_package(fmt CONFIG REQUIRED)
 add_executable(main main.cc)
 
 # TODO: we should use Boost_INCLUDE_DIR
-target_include_directories(main PUBLIC
-  $<BUILD_INTERFACE:${boost_Boost_boost_INCLUDE_DIRS_RELEASE}>
-)
+target_include_directories(main PUBLIC $<BUILD_INTERFACE:${boost_Boost_boost_INCLUDE_DIRS_RELEASE}>)
 
 target_link_libraries(main PRIVATE fmt::fmt)

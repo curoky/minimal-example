@@ -36,7 +36,6 @@ project(${PACKAGE_NAME} LANGUAGES CXX)
 
 set(CMAKE_INSTALL_PREFIX installdir)
 
-
 # Specify linker for shared library and binary
 set(CMAKE_SHARED_LINKER_FLAGS "-fuse-ld=lld")
 set(CMAKE_EXE_LINKER_FLAGS "-fuse-ld=lld")

@@ -29,11 +29,9 @@ include(deps-generated.cmake)
 
 set(BOOST_INCLUDE_LIBRARIES "algorithm;")
 CPMAddPackage(
-  NAME Boost
-  VERSION 1.77.0
+  NAME Boost VERSION 1.77.0
   GITHUB_REPOSITORY "boostorg/boost"
-  GIT_TAG "boost-1.77.0"
-)
+  GIT_TAG "boost-1.77.0")
 
 include_directories(${cpp_httplib_SOURCE_DIR})
 include_directories(${abseil_cpp_SOURCE_DIR})
