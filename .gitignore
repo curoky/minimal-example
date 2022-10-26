@@ -13,6 +13,7 @@ vcpkg_installed
 
 ## bazel
 bazel-*
+!bazel-like
 
 ## buck
 .buckd

@@ -1,0 +1,33 @@
+# Copyright (c) 2018-2022 curoky(cccuroky@gmail.com).
+#
+# This file is part of learn-build-system.
+# See https://github.com/curoky/learn-build-system for further info.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# add_library(libhello-static STATIC hello-static.cc)
+
+# add_library(libhello-shared SHARED hello-shared.cc)
+
+# add_executable(main main.cc)
+
+# target_link_libraries(main PRIVATE libhello-static libhello-shared)
+
+cc_library(libhello-static STATIC SRCS hello.h hello-static.cc)
+
+cc_library(libhello-shared SHARED SRCS hello.h hello-shared.cc)
+
+cc_binary(
+  main
+  SRCS main.cc
+  DEPS libhello-static libhello-shared)
