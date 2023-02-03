@@ -1,0 +1,15 @@
+[tool.pdm]
+
+[project]
+name = "pypi_tutorial"
+version = "1.0.0"
+description = "A small example package"
+authors = [{ name = "curoky", email = "cccuroky@gmail.com" }]
+dependencies = []
+requires-python = ">=3.10"
+readme = "README.md"
+license = { text = "Apache License 2.0" }
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
