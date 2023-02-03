@@ -32,7 +32,7 @@ compile_commands.json
 # python
 *.pyc
 *.egg-info
-pypi/pip/build
+python/pip/build
 
 ## poetry
 dist

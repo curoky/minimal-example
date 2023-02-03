@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - .github/workflows/pypi-publish-via-poetry.yaml
-      - pypi/poetry/**
+      - python/poetry/**
   schedule:
     - cron: '0 0 * * 0'
   workflow_dispatch:
@@ -13,7 +13,7 @@ jobs:
   build:
     defaults:
       run:
-        working-directory: pypi/poetry
+        working-directory: python/poetry
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -44,4 +44,4 @@ jobs:
         with:
           password: ${{ secrets.TEST_PYPI_API_TOKEN }}
           repository_url: https://test.pypi.org/legacy/
-          packages_dir: pypi/poetry/dist
+          packages_dir: python/poetry/dist

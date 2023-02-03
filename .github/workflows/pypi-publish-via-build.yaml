@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - .github/workflows/pypi-publish-via-build.yaml
-      - pypi/pip/**
+      - python/pip/**
   schedule:
     - cron: '0 0 * * 0'
   workflow_dispatch:
@@ -13,7 +13,7 @@ jobs:
   build:
     defaults:
       run:
-        working-directory: pypi/pip
+        working-directory: python/pip
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -43,11 +43,11 @@ jobs:
         with:
           password: ${{ secrets.TEST_PYPI_API_TOKEN }}
           repository_url: https://test.pypi.org/legacy/
-          packages_dir: pypi/pip/dist
+          packages_dir: python/pip/dist
 
       - name: Publish a Python distribution to PyPI
         if: startsWith(github.event.ref, 'refs/tags')
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           password: ${{ secrets.PYPI_API_TOKEN }}
-          packages_dir: pypi/pip/dist
+          packages_dir: python/pip/dist
