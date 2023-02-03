@@ -1,0 +1,19 @@
+name: buck
+
+on:
+  push:
+    paths:
+      - .github/workflows/buck.yaml
+      - buck/**
+  schedule:
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+
+jobs:
+  cpp:
+    defaults:
+      run:
+        working-directory: buck/cpp
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3

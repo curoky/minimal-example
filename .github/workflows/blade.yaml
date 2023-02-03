@@ -1,0 +1,26 @@
+name: blade
+
+on:
+  push:
+    paths:
+      - .github/workflows/blade.yaml
+      - blade/**
+  schedule:
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+
+jobs:
+  cpp:
+    defaults:
+      run:
+        working-directory: blade/cpp
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: Homebrew/actions/setup-homebrew@master
+      - run: brew install ninja
+      - name: install blade
+        run: |
+          git clone --depth=1 https://github.com/chen3feng/blade-build
+          echo "$PWD/blade-build" >> $GITHUB_PATH
+      - run: blade build //src:main

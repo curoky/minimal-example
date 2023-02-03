@@ -1,0 +1,89 @@
+name: pipy publish via setuptools
+
+on:
+  push:
+    paths:
+      - .github/workflows/pypi-publish-via-setuptools.yaml
+      - pypi/pip/**
+  schedule:
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+
+jobs:
+  # https://packaging.python.org/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/
+  # - https://pypi.org/account/register
+  # - https://pypi.org/manage/account/#api-tokens
+  # - https://test.pypi.org/account/register
+  # - https://test.pypi.org/manage/account/#api-tokens
+  build:
+    defaults:
+      run:
+        working-directory: pypi/pip
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      - run: 'sed -i "s/1.0.0/$(date +%Y.%-m.%d).post1.dev$(date +%s)/g" setup.py'
+      - run: rm -rf pyproject.toml
+
+      - name: Install setuptools and other tools
+        run: python3 -m pip install setuptools wheel twine pytest
+
+      - name: Test packages
+        run: python3 setup.py test
+
+      - name: Build packages
+        run: python3 setup.py sdist bdist_wheel --universal
+
+      - name: Publish a Python distribution to Test PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          password: ${{ secrets.TEST_PYPI_API_TOKEN }}
+          repository_url: https://test.pypi.org/legacy/
+          packages_dir: pypi/pip/dist
+
+  pypi_tutorial_pip_pyproject:
+    defaults:
+      run:
+        working-directory: pypi/pip
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      - uses: actions/cache@v3
+        if: 'false'
+        with:
+          path: ~/.cache/pip
+          key: pip-{{ runner.os }}-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            pip-${{ runner.os }}-
+
+      - run: 'sed -i "s/1.0.0/$(date +%Y.%-m.%d).post2.dev$(date +%s)/g" pyproject.toml'
+      - run: rm -rf setup.py
+
+      - run: python3 -m pip install --upgrade build
+      - run: python3 -m build
+      # - run: python3 -m pip install --upgrade twine
+      # - run: python3 -m twine upload --repository testpypi dist/*
+
+      - name: Publish a Python distribution to Test PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          password: ${{ secrets.TEST_PYPI_API_TOKEN }}
+          repository_url: https://test.pypi.org/legacy/
+          packages_dir: pypi/pip/dist
+
+      - name: Publish a Python distribution to PyPI
+        if: startsWith(github.event.ref, 'refs/tags')
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          password: ${{ secrets.PYPI_API_TOKEN }}
+          packages_dir: pypi/pip/dist

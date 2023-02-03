@@ -1,0 +1,21 @@
+name: gcc
+
+on:
+  push:
+    paths:
+      - .github/workflows/gcc.yaml
+      - gcc/**
+  schedule:
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+
+jobs:
+  hello:
+    defaults:
+      run:
+        working-directory: gcc/hello
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: sudo apt-get install -y lld
+      - run: ./gcc.sh

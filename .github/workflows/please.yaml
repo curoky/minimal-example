@@ -1,0 +1,24 @@
+name: please
+
+on:
+  push:
+    paths:
+      - .github/workflows/please.yaml
+      - please/**
+  schedule:
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+
+jobs:
+  cpp:
+    defaults:
+      run:
+        working-directory: please/cpp
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: |
+          curl -s https://get.please.build | bash
+          echo "${HOME}/.please/bin" >> $GITHUB_PATH
+      # - run: brew install thought-machine/please/please
+      - run: plz build //src:main

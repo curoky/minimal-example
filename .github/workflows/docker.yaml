@@ -1,0 +1,48 @@
+name: docker
+
+on:
+  push:
+    paths:
+      - .github/workflows/docker.yaml
+      - docker/**
+  schedule:
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: docker/setup-buildx-action@v2
+      # - uses: docker/login-action@v2
+      #   with:
+      #     username: curoky
+      #     password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - uses: docker/build-push-action@v3
+        with:
+          context: docker/hello
+          push: false
+          tags: curoky/learn-build-system:docker_tutorial_hello
+          cache-from: type=registry,ref=curoky/learn-build-system:docker_tutorial_hello
+          cache-to: type=inline
+
+  multi_platform:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: docker/setup-qemu-action@v2
+        with:
+          platforms: arm64,arm
+      - uses: docker/setup-buildx-action@v2
+      # - uses: docker/login-action@v2
+      #   with:
+      #     username: curoky
+      #     password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - uses: docker/build-push-action@v3
+        with:
+          context: docker/multi-platform
+          push: false
+          tags: curoky/learn-build-system:docker_tutorial_multi_platform
+          cache-from: type=registry,ref=curoky/learn-build-system:docker_tutorial_multi_platform
+          cache-to: type=inline

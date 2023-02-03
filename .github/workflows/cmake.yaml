@@ -1,0 +1,105 @@
+name: cmake
+
+on:
+  push:
+    paths:
+      - .github/workflows/cmake.yaml
+      - cmake/**
+  schedule:
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+
+jobs:
+  hello:
+    defaults:
+      run:
+        working-directory: cmake/hello
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: Homebrew/actions/setup-homebrew@master
+      - run: sudo apt-get install -y lld
+      - run: brew install ninja
+      - run: cmake -B ./builddir/cmake -S . -G Ninja
+      - run: cmake --build ./builddir/cmake
+      - run: ninja -C ./builddir/cmake -f build.ninja -t compdb > compile_commands.json
+
+  with_ccache:
+    defaults:
+      run:
+        working-directory: cmake/with-ccache
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: Homebrew/actions/setup-homebrew@master
+      - run: brew install ninja ccache
+      - run: ccache --show-stats
+      - name: ccache
+        uses: hendrikmuhs/ccache-action@v1.2
+        with:
+          verbose: 2
+          key: ccache-${{ github.run_id }}-${{ github.sha }}
+          restore-keys: |
+            ccache-
+      - run: ccache --show-stats
+      - run: cmake -B ./builddir/cmake -S . -G Ninja
+      - run: cmake --build ./builddir/cmake
+      - run: ccache --show-stats
+
+  with_conan:
+    defaults:
+      run:
+        working-directory: cmake/with-conan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: Homebrew/actions/setup-homebrew@master
+      - run: brew install conan ninja
+      - name: mount conan cache
+        uses: actions/cache@v3
+        with:
+          path: ~/.conan/data
+          key: conan-${{ runner.os }}-${{ hashFiles('cmake/with-conan/conanfile.txt') }}
+      - run: sudo apt-get install -y gcc-11 g++-11
+      - run: echo "CC=gcc-11" >> $GITHUB_ENV
+      - run: echo "CXX=g++-11" >> $GITHUB_ENV
+      - run: conan install conanfile.txt --output-folder=builddir/conan --install-folder=builddir/conan --build=missing -pr:b=default --profile conanrc
+      - run: cmake -B ./builddir/cmake -S . -G Ninja -DCMAKE_TOOLCHAIN_FILE=builddir/conan/conan_toolchain.cmake
+      - run: cmake --build ./builddir/cmake
+
+  with_cpm:
+    defaults:
+      run:
+        working-directory: cmake/with-cpm
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: Homebrew/actions/setup-homebrew@master
+      - run: brew install ninja
+      - run: curl -sSL -o cmake/CPM.cmake https://github.com/cpm-cmake/CPM.cmake/releases/latest/download/get_cpm.cmake
+      - run: cmake -B ./builddir/cmake -S . -G Ninja
+      - run: cmake --build ./builddir/cmake
+
+  with_vcpkg:
+    defaults:
+      run:
+        working-directory: cmake/with-vcpkg
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: Homebrew/actions/setup-homebrew@master
+      - run: brew install ninja
+      - name: install vcpkg
+        run: |
+          git clone https://github.com/Microsoft/vcpkg.git --depth=1
+          ./vcpkg/bootstrap-vcpkg.sh -disableMetrics
+      - name: mount vcpkg cache
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/vcpkg
+          key: vcpkg-${{ github.run_id }}-${{ github.sha }}
+          restore-keys: |
+            vcpkg-
+      - run: ./vcpkg/vcpkg install
+      - run: cmake -B ./builddir/cmake -S . -G Ninja -DCMAKE_TOOLCHAIN_FILE=./vcpkg/scripts/buildsystems/vcpkg.cmake
+      - run: cmake --build ./builddir/cmake
