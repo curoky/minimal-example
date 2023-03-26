@@ -63,7 +63,9 @@ jobs:
       - run: sudo apt-get install -y gcc-11 g++-11
       - run: echo "CC=gcc-11" >> $GITHUB_ENV
       - run: echo "CXX=g++-11" >> $GITHUB_ENV
-      - run: conan install conanfile.txt --output-folder=builddir/conan --install-folder=builddir/conan --build=missing -pr:b=default --profile conanrc
+      - run: conan profile detect --force
+      - run: conan profile path default
+      - run: conan install conanfile.txt --output-folder=builddir/conan --build=missing
       - run: cmake -B ./builddir/cmake -S . -G Ninja -DCMAKE_TOOLCHAIN_FILE=builddir/conan/conan_toolchain.cmake
       - run: cmake --build ./builddir/cmake
 
