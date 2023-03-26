@@ -8,7 +8,9 @@ tasks:
 
   conan:
     cmds:
-      - conan install conanfile.txt --output-folder=builddir/conan --install-folder=builddir/conan --build=missing -pr:b=default --profile conanrc
+      - conan profile detect --force
+      - conan profile path default
+      - conan install conanfile.txt --output-folder=builddir/conan --build=missing # --profile conanrc
 
   cmake:
     cmds:
