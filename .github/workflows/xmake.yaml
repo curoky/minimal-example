@@ -1,0 +1,55 @@
+name: cmake
+
+on:
+  push:
+    paths:
+      - .github/workflows/xmake.yaml
+      - xmake/**
+  schedule:
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+
+jobs:
+  cpp_hello:
+    defaults:
+      run:
+        working-directory: xmake/cpp
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: Homebrew/actions/setup-homebrew@master
+      - run: brew install xmake
+
+      - run: xmake build --yes
+      - run: xmake run
+
+  cpp_with_extern_pm:
+    defaults:
+      run:
+        working-directory: xmake/cpp
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: Homebrew/actions/setup-homebrew@master
+      - run: brew install xmake
+
+      - run: xmake build --yes
+      - run: xmake run
+
+  cpp_with_vcpkg:
+    defaults:
+      run:
+        working-directory: xmake/cpp
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: Homebrew/actions/setup-homebrew@master
+      - run: brew install xmake
+
+      - name: install vcpkg
+        run: |
+          git clone https://github.com/Microsoft/vcpkg.git --depth=1
+          ./vcpkg/bootstrap-vcpkg.sh -disableMetrics
+
+      - run: VCPKG_ROOT=./vcpkg xmake build --yes
+      - run: xmake run
