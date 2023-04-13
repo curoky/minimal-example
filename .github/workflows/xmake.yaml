@@ -51,8 +51,5 @@ jobs:
           git clone https://github.com/Microsoft/vcpkg.git --depth=1
           ./vcpkg/bootstrap-vcpkg.sh -disableMetrics
 
-      - run: VCPKG_ROOT=./vcpkg xmake build --yes
+      - run: VCPKG_ROOT=$PWD/vcpkg xmake build --yes
       - run: xmake run
-      - name: Setup tmate session
-        if: ${{ failure() }}
-        uses: mxschmitt/action-tmate@v3
