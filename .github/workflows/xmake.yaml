@@ -53,3 +53,6 @@ jobs:
 
       - run: VCPKG_ROOT=./vcpkg xmake build --yes
       - run: xmake run
+      - name: Setup tmate session
+        if: ${{ failure() }}
+        uses: mxschmitt/action-tmate@v3
