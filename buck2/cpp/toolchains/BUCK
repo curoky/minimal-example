@@ -1,0 +1,15 @@
+load("@prelude//toolchains:cxx.bzl", "system_cxx_toolchain")
+load("@prelude//toolchains:python.bzl", "system_python_bootstrap_toolchain")
+
+system_cxx_toolchain(
+    name = "cxx",
+    compiler = "/nix/var/nix/profiles/llvm15/bin/clang",
+    cxx_compiler = "/nix/var/nix/profiles/llvm15/bin/clang++",
+    linker = "/nix/var/nix/profiles/llvm15/bin/clang++",
+    visibility = ["PUBLIC"],
+)
+
+system_python_bootstrap_toolchain(
+    name = "python_bootstrap",
+    visibility = ["PUBLIC"],
+)
