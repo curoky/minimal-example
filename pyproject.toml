@@ -1,0 +1,21 @@
+[tool.ruff]
+# Enable pycodestyle (`E`) and Pyflakes (`F`) codes by default.
+select = ["E", "F", "B", "Q", "I", "UP"]
+ignore = ["F821"]
+
+# Allow autofix for all enabled rules (when `--fix`) is provided.
+# fixable = []
+# unfixable = []
+
+# Same as Black.
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.per-file-ignores]
+# "__init__.py" = ["E402"]
+# "path/to/file.py" = ["E402"]
+
+[tool.ruff.flake8-quotes]
+docstring-quotes = "single"
+inline-quotes = "single"
+multiline-quotes = "single"

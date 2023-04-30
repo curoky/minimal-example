@@ -30,7 +30,6 @@
 #include <crc32c/crc32c.h>
 #include <flatbuffers/flatbuffers.h>
 #include <fmt/format.h>
-// #include <folly/Math.h>
 #include <gflags/gflags.h>
 #include <gtest/gtest.h>
 #include <immer/algorithm.hpp>
@@ -41,7 +40,6 @@
 #include <tbb/tbb.h>
 #include <thrift/server/TServer.h>
 #include <uv.h>
-// #include <wangle/bootstrap/ServerBootstrap.h>
 #include <zstd.h>
 
 #include <iostream>

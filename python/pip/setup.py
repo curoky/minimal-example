@@ -66,14 +66,14 @@ else:
 
 
 class UploadCommand(Command):
-    """Support setup.py upload."""
+    '''Support setup.py upload.'''
 
     description = 'Build and publish the package.'
     user_options = []
 
     @staticmethod
     def status(s):
-        """Prints things in bold."""
+        '''Prints things in bold.'''
         print(f'\033[1m{s}\033[0m')
 
     def initialize_options(self):
