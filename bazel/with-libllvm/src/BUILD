@@ -19,17 +19,9 @@ cc_binary(
     name = "main",
     srcs = ["main.cc"],
     copts = [
-        "-std=c++2b",
-        "-fexperimental-library",
+        "-std=c++23",
     ],
-    linkopts = ["-lc++experimental"],
-)
-
-cc_binary(
-    name = "feature_test",
-    srcs = ["feature_test.cc"],
-    copts = [
-        "-std=c++2b",
-        "-fexperimental-library",
+    deps = [
+        "@llvm-project//clang:basic",
     ],
 )

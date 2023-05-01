@@ -14,22 +14,3 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
-cc_binary(
-    name = "main",
-    srcs = ["main.cc"],
-    copts = [
-        "-std=c++2b",
-        "-fexperimental-library",
-    ],
-    linkopts = ["-lc++experimental"],
-)
-
-cc_binary(
-    name = "feature_test",
-    srcs = ["feature_test.cc"],
-    copts = [
-        "-std=c++2b",
-        "-fexperimental-library",
-    ],
-)
