@@ -1,0 +1,7 @@
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      - bazel run //src:feature_test
+      - bazel run //src:main
