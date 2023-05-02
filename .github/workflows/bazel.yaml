@@ -84,9 +84,6 @@ jobs:
           CXX: gcc-11
 
   with_libllvm:
-    defaults:
-      run:
-        working-directory: bazel/with-libllvm
     runs-on: ubuntu-latest
     container:
       image: ubuntu:23.04
@@ -97,8 +94,8 @@ jobs:
       - uses: bazelbuild/setup-bazelisk@v2
       - run: BUILDBUDDY_API=${{ secrets.BUILDBUDDY_API }} envsubst < .bazelrc | tee .bazelrc
       - run: sudo apt-get install -y gcc-13 g++-13
-      - run: |
-          bazel run //src:main --config=generic_gcc
+      - run: bazel run //src:main --config=generic_gcc
+        working-directory: bazel/with-libllvm
         env:
           USE_BAZEL_VERSION: last_green
           CC: gcc-13
