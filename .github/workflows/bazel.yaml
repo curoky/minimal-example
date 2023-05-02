@@ -91,9 +91,15 @@ jobs:
       - run: apt-get update
       - run: apt-get install -y curl wget git gcc-13 g++-13 lld gettext
       - uses: actions/checkout@v3
+      - uses: arduino/setup-task@v1
       - uses: bazelbuild/setup-bazelisk@v2
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
       - run: BUILDBUDDY_API=${{ secrets.BUILDBUDDY_API }} envsubst < .bazelrc | tee .bazelrc
         working-directory: bazel/with-libllvm
+
       - run: bazel run //src:main --config=generic_gcc
         working-directory: bazel/with-libllvm
         env:
