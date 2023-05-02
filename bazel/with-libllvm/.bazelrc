@@ -71,7 +71,7 @@ build:generic_clang --linkopt=-fuse-ld=lld --host_linkopt=-fuse-ld=lld
 ###############################################################################
 
 # Set the default compiler to the `gcc` binary on the `PATH`.
-build:generic_gcc --repo_env=CC=gcc
+# build:generic_gcc --repo_env=CC=gcc
 
 # C++17 standard version is required.
 build:generic_gcc --cxxopt=-std=c++17 --host_cxxopt=-std=c++17
