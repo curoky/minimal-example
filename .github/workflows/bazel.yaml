@@ -89,7 +89,7 @@ jobs:
       image: ubuntu:23.04
     steps:
       - run: apt-get update
-      - run: apt-get install -y curl wget git gcc-13 g++-13 lld
+      - run: apt-get install -y curl wget git gcc-13 g++-13 lld gettext
       - uses: actions/checkout@v3
       - uses: bazelbuild/setup-bazelisk@v2
       - run: BUILDBUDDY_API=${{ secrets.BUILDBUDDY_API }} envsubst < .bazelrc | tee .bazelrc
