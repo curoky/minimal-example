@@ -22,6 +22,10 @@ cc_binary(
         "-std=c++23",
     ],
     deps = [
-        "@llvm-project//clang:basic",
+        "@llvm-project//clang:ast",
+        # "@llvm-project//clang:basic",
+        "@llvm-project//clang:frontend",
+        # "@llvm-project//clang:serialization",
+        "@llvm-project//clang:tooling",
     ],
 )
