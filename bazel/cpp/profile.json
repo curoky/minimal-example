@@ -1,0 +1,5113 @@
+{
+  "otherData": {
+    "bazel_version": "release 6.2.0",
+    "build_id": "0ac45a01-18cb-4566-8210-11a37c47dbfb",
+    "output_base": "/home/cicada/.cache/bazel/_bazel_cicada/1595c2b72fdaf2a32edf6b2d57df9246",
+    "date": "2023-05-11T08:15:36.344304Z",
+    "profile_finish_ts": 1683792936000
+  },
+  "traceEvents": [
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 0,
+      "args": { "name": "Critical Path" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 0,
+      "args": { "sort_index": "0" }
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 36,
+      "args": { "name": "Main Thread" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 36,
+      "args": { "sort_index": "1" }
+    },
+    {
+      "cat": "build phase marker",
+      "name": "Launch Blaze",
+      "ph": "X",
+      "ts": -1190000,
+      "dur": 1190000,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "build phase marker",
+      "name": "Initialize command",
+      "ph": "i",
+      "ts": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelStartupOptionsModule.beforeCommand",
+      "ph": "X",
+      "ts": 341329,
+      "dur": 263,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "NoSpawnCacheModule.beforeCommand",
+      "ph": "X",
+      "ts": 341674,
+      "dur": 3,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "CredentialModule.beforeCommand",
+      "ph": "X",
+      "ts": 341686,
+      "dur": 741,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "CommandLogModule.beforeCommand",
+      "ph": "X",
+      "ts": 342471,
+      "dur": 13,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "MemoryPressureModule.beforeCommand",
+      "ph": "X",
+      "ts": 342497,
+      "dur": 1018,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "SleepPreventionModule.beforeCommand",
+      "ph": "X",
+      "ts": 343575,
+      "dur": 143,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "SystemSuspensionModule.beforeCommand",
+      "ph": "X",
+      "ts": 343763,
+      "dur": 9,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelFileSystemModule.beforeCommand",
+      "ph": "X",
+      "ts": 343783,
+      "dur": 2,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "MobileInstallModule.beforeCommand",
+      "ph": "X",
+      "ts": 343793,
+      "dur": 1,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelWorkspaceStatusModule.beforeCommand",
+      "ph": "X",
+      "ts": 343802,
+      "dur": 1,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelDiffAwarenessModule.beforeCommand",
+      "ph": "X",
+      "ts": 343810,
+      "dur": 1,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "RemoteModule.beforeCommand",
+      "ph": "X",
+      "ts": 343819,
+      "dur": 13797,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelRepositoryModule.beforeCommand",
+      "ph": "X",
+      "ts": 357672,
+      "dur": 4343,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "StarlarkRepositoryDebugModule.beforeCommand",
+      "ph": "X",
+      "ts": 362064,
+      "dur": 455,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "WorkspaceRuleModule.beforeCommand",
+      "ph": "X",
+      "ts": 362561,
+      "dur": 44,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelCoverageReportModule.beforeCommand",
+      "ph": "X",
+      "ts": 362617,
+      "dur": 2,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "StarlarkDebuggerModule.beforeCommand",
+      "ph": "X",
+      "ts": 362627,
+      "dur": 92,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "RepositoryResolvedModule.beforeCommand",
+      "ph": "X",
+      "ts": 362754,
+      "dur": 29,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "CacheHitReportingModule.beforeCommand",
+      "ph": "X",
+      "ts": 362793,
+      "dur": 519,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "SpawnLogModule.beforeCommand",
+      "ph": "X",
+      "ts": 363352,
+      "dur": 3,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "OutputFilteringModule.beforeCommand",
+      "ph": "X",
+      "ts": 363364,
+      "dur": 767,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "WorkerModule.beforeCommand",
+      "ph": "X",
+      "ts": 364176,
+      "dur": 1180,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "CacheFileDigestsModule.beforeCommand",
+      "ph": "X",
+      "ts": 365410,
+      "dur": 22,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "StandaloneModule.beforeCommand",
+      "ph": "X",
+      "ts": 365454,
+      "dur": 3,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "SandboxModule.beforeCommand",
+      "ph": "X",
+      "ts": 365465,
+      "dur": 1119,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BuildSummaryStatsModule.beforeCommand",
+      "ph": "X",
+      "ts": 366632,
+      "dur": 1063,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "DynamicExecutionModule.beforeCommand",
+      "ph": "X",
+      "ts": 367746,
+      "dur": 1121,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelRulesModule.beforeCommand",
+      "ph": "X",
+      "ts": 368916,
+      "dur": 373,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelStrategyModule.beforeCommand",
+      "ph": "X",
+      "ts": 369324,
+      "dur": 2,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "NoOpConnectivityModule.beforeCommand",
+      "ph": "X",
+      "ts": 369335,
+      "dur": 1,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelBuildEventServiceModule.beforeCommand",
+      "ph": "X",
+      "ts": 369344,
+      "dur": 1348,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "CallcountsModule.beforeCommand",
+      "ph": "X",
+      "ts": 370746,
+      "dur": 455,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "AllocationTrackerModule.beforeCommand",
+      "ph": "X",
+      "ts": 371246,
+      "dur": 4,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "PostGCMemoryUseRecorderModule.beforeCommand",
+      "ph": "X",
+      "ts": 371544,
+      "dur": 1624,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "GcAfterBuildModule.beforeCommand",
+      "ph": "X",
+      "ts": 373212,
+      "dur": 48,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "PackageMetricsModule.beforeCommand",
+      "ph": "X",
+      "ts": 373285,
+      "dur": 4074,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "MetricsModule.beforeCommand",
+      "ph": "X",
+      "ts": 377408,
+      "dur": 11216,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "ExecutionGraphModule.beforeCommand",
+      "ph": "X",
+      "ts": 388666,
+      "dur": 69,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelBuiltinCommandModule.beforeCommand",
+      "ph": "X",
+      "ts": 388774,
+      "dur": 2,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "IncludeScanningModule.beforeCommand",
+      "ph": "X",
+      "ts": 388785,
+      "dur": 106,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BlockWaitingModule.beforeCommand",
+      "ph": "X",
+      "ts": 388910,
+      "dur": 88,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "setup event handler",
+      "ph": "X",
+      "ts": 389536,
+      "dur": 8868,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "replay stored events",
+      "ph": "X",
+      "ts": 398439,
+      "dur": 2334,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "announce rc options",
+      "ph": "X",
+      "ts": 400816,
+      "dur": 4,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "CommandEnv.beforeCommand",
+      "ph": "X",
+      "ts": 400841,
+      "dur": 1646,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelStartupOptionsModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 402679,
+      "dur": 19,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "NoSpawnCacheModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 402725,
+      "dur": 2,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "CredentialModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 402733,
+      "dur": 2,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "CommandLogModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 402747,
+      "dur": 2,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "MemoryPressureModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 402753,
+      "dur": 1,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "SleepPreventionModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 402759,
+      "dur": 1,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "SystemSuspensionModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 402764,
+      "dur": 1,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelFileSystemModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 402769,
+      "dur": 1,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "MobileInstallModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 402774,
+      "dur": 1,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelWorkspaceStatusModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 402780,
+      "dur": 2,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelDiffAwarenessModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 402786,
+      "dur": 1,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "RemoteModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 402791,
+      "dur": 1,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelRepositoryModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 402796,
+      "dur": 563,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "StarlarkRepositoryDebugModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 403400,
+      "dur": 4,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "WorkspaceRuleModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 403413,
+      "dur": 7,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelCoverageReportModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 403428,
+      "dur": 2,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "StarlarkDebuggerModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 403435,
+      "dur": 1,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "RepositoryResolvedModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 403440,
+      "dur": 1,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "CacheHitReportingModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 403445,
+      "dur": 1,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "SpawnLogModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 403450,
+      "dur": 1,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "OutputFilteringModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 403454,
+      "dur": 1,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "WorkerModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 403459,
+      "dur": 1,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "CacheFileDigestsModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 403464,
+      "dur": 1,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "StandaloneModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 403469,
+      "dur": 1,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "SandboxModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 403474,
+      "dur": 1,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BuildSummaryStatsModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 403478,
+      "dur": 1,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "DynamicExecutionModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 403484,
+      "dur": 1,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelRulesModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 403489,
+      "dur": 1,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelStrategyModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 403493,
+      "dur": 1,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "NoOpConnectivityModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 403498,
+      "dur": 1,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelBuildEventServiceModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 403504,
+      "dur": 1,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "CallcountsModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 403508,
+      "dur": 1,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "AllocationTrackerModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 403513,
+      "dur": 1,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "PostGCMemoryUseRecorderModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 403518,
+      "dur": 1,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "GcAfterBuildModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 403523,
+      "dur": 1,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "PackageMetricsModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 403527,
+      "dur": 1,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "MetricsModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 403533,
+      "dur": 1,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "ExecutionGraphModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 403763,
+      "dur": 2,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelBuiltinCommandModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 403770,
+      "dur": 1,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "IncludeScanningModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 403775,
+      "dur": 1,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BlockWaitingModule.injectExtraPrecomputedValues",
+      "ph": "X",
+      "ts": 403781,
+      "dur": 1,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "preparePackageLoading",
+      "ph": "X",
+      "ts": 404044,
+      "dur": 3875,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "setDeletedPackages",
+      "ph": "X",
+      "ts": 408020,
+      "dur": 368,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "ParallelEvaluator.eval",
+      "ph": "X",
+      "ts": 439517,
+      "dur": 2793,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "fsvc.getDirtyKeys",
+      "ph": "X",
+      "ts": 444371,
+      "dur": 1532,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "handleDiffs",
+      "ph": "X",
+      "ts": 408656,
+      "dur": 39134,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 25,
+      "args": { "name": "Garbage Collector" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 25,
+      "args": { "sort_index": "2" }
+    },
+    {
+      "cat": "gc notification",
+      "name": "minor GC",
+      "ph": "X",
+      "ts": 967170,
+      "dur": 27000,
+      "pid": 1,
+      "tid": 25
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 241,
+      "args": { "name": "skyframe-evaluator 97" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 241,
+      "args": { "sort_index": "10097" }
+    },
+    {
+      "cat": "general information",
+      "name": "fetching: repository @hedron_compile_commands",
+      "ph": "X",
+      "ts": 695942,
+      "dur": 898295,
+      "pid": 1,
+      "tid": 241
+    },
+    {
+      "cat": "general information",
+      "name": "extracting: repository @hedron_compile_commands",
+      "ph": "X",
+      "ts": 1594567,
+      "dur": 9202,
+      "pid": 1,
+      "tid": 241
+    },
+    {
+      "cat": "Starlark builtin function call",
+      "name": "download_and_extract",
+      "ph": "X",
+      "ts": 686330,
+      "dur": 918712,
+      "pid": 1,
+      "tid": 241
+    },
+    {
+      "cat": "Starlark user function call",
+      "name": "_http_archive_impl",
+      "ph": "X",
+      "ts": 670570,
+      "dur": 942442,
+      "pid": 1,
+      "tid": 241
+    },
+    {
+      "cat": "Starlark repository function call",
+      "name": "//external:hedron_compile_commands",
+      "ph": "X",
+      "ts": 670533,
+      "dur": 942506,
+      "pid": 1,
+      "tid": 241
+    },
+    {
+      "cat": "skyframe evaluator",
+      "name": "Parallel Evaluator evaluation",
+      "ph": "X",
+      "ts": 490536,
+      "dur": 1327553,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "ParallelEvaluator.eval",
+      "ph": "X",
+      "ts": 490002,
+      "dur": 1328161,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "ProjectFileSupport.getTargets",
+      "ph": "X",
+      "ts": 1832453,
+      "dur": 15,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BuildRequest.create",
+      "ph": "X",
+      "ts": 1832512,
+      "dur": 4027,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "validateOptions",
+      "ph": "X",
+      "ts": 1839070,
+      "dur": 20,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "createBuildOptions",
+      "ph": "X",
+      "ts": 1839122,
+      "dur": 1962,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "Finding output file system",
+      "ph": "X",
+      "ts": 1841154,
+      "dur": 10,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BuildStartingEvent",
+      "ph": "X",
+      "ts": 1841113,
+      "dur": 43121,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "build phase marker",
+      "name": "Evaluate target patterns",
+      "ph": "i",
+      "ts": 1885845,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 424,
+      "args": { "name": "skyframe-evaluator 76" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 424,
+      "args": { "sort_index": "10076" }
+    },
+    {
+      "cat": "package creation",
+      "name": "src",
+      "ph": "X",
+      "ts": 2012368,
+      "dur": 1089,
+      "pid": 1,
+      "tid": 424
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 407,
+      "args": { "name": "skyframe-evaluator 59" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 407,
+      "args": { "sort_index": "10059" }
+    },
+    {
+      "cat": "package creation",
+      "name": "src",
+      "ph": "X",
+      "ts": 2017439,
+      "dur": 8030,
+      "pid": 1,
+      "tid": 407
+    },
+    {
+      "cat": "skyframe evaluator",
+      "name": "Parallel Evaluator evaluation",
+      "ph": "X",
+      "ts": 1889607,
+      "dur": 150403,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "ParallelEvaluator.eval",
+      "ph": "X",
+      "ts": 1889536,
+      "dur": 150500,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "evaluateTargetPatterns",
+      "ph": "X",
+      "ts": 1885904,
+      "dur": 155780,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "build phase marker",
+      "name": "Load and analyze dependencies",
+      "ph": "i",
+      "ts": 2042642,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "ParallelEvaluator.eval",
+      "ph": "X",
+      "ts": 2046437,
+      "dur": 477,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "ParallelEvaluator.eval",
+      "ph": "X",
+      "ts": 2051419,
+      "dur": 264,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "skyframe evaluator",
+      "name": "Parallel Evaluator evaluation",
+      "ph": "X",
+      "ts": 2054248,
+      "dur": 3685,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "ParallelEvaluator.eval",
+      "ph": "X",
+      "ts": 2054215,
+      "dur": 3740,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "skyframe evaluator",
+      "name": "Parallel Evaluator evaluation",
+      "ph": "X",
+      "ts": 2065773,
+      "dur": 19187,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "ParallelEvaluator.eval",
+      "ph": "X",
+      "ts": 2065726,
+      "dur": 19311,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "ParallelEvaluator.eval",
+      "ph": "X",
+      "ts": 2087886,
+      "dur": 80,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "skyframe evaluator",
+      "name": "Parallel Evaluator evaluation",
+      "ph": "X",
+      "ts": 2090153,
+      "dur": 9670,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "ParallelEvaluator.eval",
+      "ph": "X",
+      "ts": 2090117,
+      "dur": 9731,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "createConfigurations",
+      "ph": "X",
+      "ts": 2052205,
+      "dur": 48347,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "ParallelEvaluator.eval",
+      "ph": "X",
+      "ts": 2106429,
+      "dur": 72,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "skyframe evaluator",
+      "name": "Parallel Evaluator evaluation",
+      "ph": "X",
+      "ts": 2110182,
+      "dur": 9628,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "ParallelEvaluator.eval",
+      "ph": "X",
+      "ts": 2110152,
+      "dur": 9681,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "AnalysisUtils.getTargetsWithConfigs",
+      "ph": "X",
+      "ts": 2100581,
+      "dur": 20465,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "ParallelEvaluator.eval",
+      "ph": "X",
+      "ts": 2139867,
+      "dur": 96,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 448,
+      "args": { "name": "skyframe-evaluator-cpu-heavy-1" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 448,
+      "args": { "sort_index": "10001" }
+    },
+    {
+      "cat": "package creation",
+      "name": "@bazel_tools//tools/cpp",
+      "ph": "X",
+      "ts": 2161295,
+      "dur": 1095,
+      "pid": 1,
+      "tid": 448
+    },
+    {
+      "cat": "package creation",
+      "name": "@bazel_tools//tools/cpp",
+      "ph": "X",
+      "ts": 2166736,
+      "dur": 1143,
+      "pid": 1,
+      "tid": 448
+    },
+    {
+      "cat": "package creation",
+      "name": "@bazel_tools//tools/cpp",
+      "ph": "X",
+      "ts": 2179008,
+      "dur": 16296,
+      "pid": 1,
+      "tid": 448
+    },
+    {
+      "cat": "package creation",
+      "name": "@local_config_platform//",
+      "ph": "X",
+      "ts": 2241145,
+      "dur": 356,
+      "pid": 1,
+      "tid": 448
+    },
+    {
+      "cat": "package creation",
+      "name": "@local_config_platform//",
+      "ph": "X",
+      "ts": 2243462,
+      "dur": 555,
+      "pid": 1,
+      "tid": 448
+    },
+    {
+      "cat": "package creation",
+      "name": "@local_config_platform//",
+      "ph": "X",
+      "ts": 2245002,
+      "dur": 827,
+      "pid": 1,
+      "tid": 448
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 446,
+      "args": { "name": "skyframe-evaluator-cpu-heavy-0" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 446,
+      "args": { "sort_index": "10000" }
+    },
+    {
+      "cat": "package creation",
+      "name": "@platforms//cpu",
+      "ph": "X",
+      "ts": 2255217,
+      "dur": 843,
+      "pid": 1,
+      "tid": 446
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 460,
+      "args": { "name": "skyframe-evaluator-cpu-heavy-3" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 460,
+      "args": { "sort_index": "10003" }
+    },
+    {
+      "cat": "package creation",
+      "name": "@platforms//os",
+      "ph": "X",
+      "ts": 2255942,
+      "dur": 241,
+      "pid": 1,
+      "tid": 460
+    },
+    {
+      "cat": "package creation",
+      "name": "@platforms//os",
+      "ph": "X",
+      "ts": 2259644,
+      "dur": 3923,
+      "pid": 1,
+      "tid": 446
+    },
+    {
+      "cat": "package creation",
+      "name": "@platforms//cpu",
+      "ph": "X",
+      "ts": 2259644,
+      "dur": 4351,
+      "pid": 1,
+      "tid": 460
+    },
+    {
+      "cat": "package creation",
+      "name": "@bazel_tools//tools/jdk",
+      "ph": "X",
+      "ts": 2296616,
+      "dur": 4171,
+      "pid": 1,
+      "tid": 460
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk17_win_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2306457,
+      "dur": 391,
+      "pid": 1,
+      "tid": 460
+    },
+    {
+      "cat": "package creation",
+      "name": "@bazel_tools//tools/python",
+      "ph": "X",
+      "ts": 2307058,
+      "dur": 598,
+      "pid": 1,
+      "tid": 460
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk17_linux_aarch64_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2308615,
+      "dur": 231,
+      "pid": 1,
+      "tid": 460
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 559,
+      "args": { "name": "skyframe-evaluator-cpu-heavy-22" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 559,
+      "args": { "sort_index": "10022" }
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk11_linux_ppc64le_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2309685,
+      "dur": 338,
+      "pid": 1,
+      "tid": 559
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk18_linux_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2310676,
+      "dur": 288,
+      "pid": 1,
+      "tid": 559
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 556,
+      "args": { "name": "skyframe-evaluator-cpu-heavy-18" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 556,
+      "args": { "sort_index": "10018" }
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk11_win_arm64_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2310764,
+      "dur": 251,
+      "pid": 1,
+      "tid": 556
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 560,
+      "args": { "name": "skyframe-evaluator-cpu-heavy-21" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 560,
+      "args": { "sort_index": "10021" }
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk11_linux_s390x_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2310825,
+      "dur": 3070,
+      "pid": 1,
+      "tid": 560
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 546,
+      "args": { "name": "skyframe-evaluator-cpu-heavy-8" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 546,
+      "args": { "sort_index": "10008" }
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk11_linux_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2314335,
+      "dur": 333,
+      "pid": 1,
+      "tid": 546
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 549,
+      "args": { "name": "skyframe-evaluator-cpu-heavy-11" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 549,
+      "args": { "sort_index": "10011" }
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk11_linux_aarch64_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2314459,
+      "dur": 407,
+      "pid": 1,
+      "tid": 549
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk18_win_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2314661,
+      "dur": 266,
+      "pid": 1,
+      "tid": 560
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 545,
+      "args": { "name": "skyframe-evaluator-cpu-heavy-7" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 545,
+      "args": { "sort_index": "10007" }
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk11_macos_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2314756,
+      "dur": 250,
+      "pid": 1,
+      "tid": 545
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 548,
+      "args": { "name": "skyframe-evaluator-cpu-heavy-10" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 548,
+      "args": { "sort_index": "10010" }
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk17_macos_aarch64_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2314896,
+      "dur": 247,
+      "pid": 1,
+      "tid": 548
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk18_win_arm64_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2315541,
+      "dur": 567,
+      "pid": 1,
+      "tid": 545
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 543,
+      "args": { "name": "skyframe-evaluator-cpu-heavy-6" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 543,
+      "args": { "sort_index": "10006" }
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk11_win_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2315459,
+      "dur": 713,
+      "pid": 1,
+      "tid": 543
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 562,
+      "args": { "name": "skyframe-evaluator-cpu-heavy-26" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 562,
+      "args": { "sort_index": "10026" }
+    },
+    {
+      "cat": "package creation",
+      "name": "@local_config_sh//",
+      "ph": "X",
+      "ts": 2316495,
+      "dur": 252,
+      "pid": 1,
+      "tid": 562
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk17_linux_aarch64_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2315634,
+      "dur": 2836,
+      "pid": 1,
+      "tid": 546
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk11_linux_ppc64le_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2315308,
+      "dur": 3419,
+      "pid": 1,
+      "tid": 549
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk11_linux_s390x_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2316801,
+      "dur": 2598,
+      "pid": 1,
+      "tid": 560
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 555,
+      "args": { "name": "skyframe-evaluator-cpu-heavy-17" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 555,
+      "args": { "sort_index": "10017" }
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk17_win_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2310577,
+      "dur": 9188,
+      "pid": 1,
+      "tid": 555
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk11_linux_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2317617,
+      "dur": 2879,
+      "pid": 1,
+      "tid": 548
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk18_win_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2318335,
+      "dur": 2219,
+      "pid": 1,
+      "tid": 562
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk11_macos_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2320043,
+      "dur": 1444,
+      "pid": 1,
+      "tid": 546
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 459,
+      "args": { "name": "skyframe-evaluator-cpu-heavy-2" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 459,
+      "args": { "sort_index": "10002" }
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk17_macos_aarch64_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2320037,
+      "dur": 1450,
+      "pid": 1,
+      "tid": 459
+    },
+    {
+      "cat": "package creation",
+      "name": "@local_config_sh//",
+      "ph": "X",
+      "ts": 2321437,
+      "dur": 316,
+      "pid": 1,
+      "tid": 555
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 539,
+      "args": { "name": "skyframe-evaluator-cpu-heavy-5" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 539,
+      "args": { "sort_index": "10005" }
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk11_linux_aarch64_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2319284,
+      "dur": 3295,
+      "pid": 1,
+      "tid": 539
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk17_win_arm64_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2322568,
+      "dur": 338,
+      "pid": 1,
+      "tid": 446
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk11_win_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2321180,
+      "dur": 2163,
+      "pid": 1,
+      "tid": 549
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk18_win_arm64_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2321154,
+      "dur": 2565,
+      "pid": 1,
+      "tid": 560
+    },
+    {
+      "cat": "package creation",
+      "name": "@local_config_sh//",
+      "ph": "X",
+      "ts": 2323545,
+      "dur": 720,
+      "pid": 1,
+      "tid": 446
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk17_win_arm64_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2325433,
+      "dur": 1186,
+      "pid": 1,
+      "tid": 539
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk17_linux_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2327278,
+      "dur": 288,
+      "pid": 1,
+      "tid": 448
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 561,
+      "args": { "name": "skyframe-evaluator-cpu-heavy-23" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 561,
+      "args": { "sort_index": "10023" }
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk18_macos_aarch64_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2310920,
+      "dur": 19486,
+      "pid": 1,
+      "tid": 561
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk18_macos_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2330910,
+      "dur": 222,
+      "pid": 1,
+      "tid": 561
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 553,
+      "args": { "name": "skyframe-evaluator-cpu-heavy-15" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 553,
+      "args": { "sort_index": "10015" }
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk17_macos_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2310930,
+      "dur": 20232,
+      "pid": 1,
+      "tid": 553
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk18_linux_aarch64_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2331131,
+      "dur": 211,
+      "pid": 1,
+      "tid": 559
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk11_macos_aarch64_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2331369,
+      "dur": 249,
+      "pid": 1,
+      "tid": 460
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 551,
+      "args": { "name": "skyframe-evaluator-cpu-heavy-13" }
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 576,
+      "args": { "name": "skyframe-evaluator-cpu-heavy-25" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 576,
+      "args": { "sort_index": "10025" }
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk18_macos_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2336197,
+      "dur": 2775,
+      "pid": 1,
+      "tid": 576
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 551,
+      "args": { "sort_index": "10013" }
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk18_macos_aarch64_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2337159,
+      "dur": 1810,
+      "pid": 1,
+      "tid": 551
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 550,
+      "args": { "name": "skyframe-evaluator-cpu-heavy-12" }
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk11_macos_aarch64_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2337139,
+      "dur": 3033,
+      "pid": 1,
+      "tid": 553
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 550,
+      "args": { "sort_index": "10012" }
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk17_macos_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2338862,
+      "dur": 1281,
+      "pid": 1,
+      "tid": 550
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk18_linux_aarch64_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2339560,
+      "dur": 1328,
+      "pid": 1,
+      "tid": 551
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk11_win_arm64_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2338527,
+      "dur": 2538,
+      "pid": 1,
+      "tid": 561
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk17_linux_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2340044,
+      "dur": 1494,
+      "pid": 1,
+      "tid": 576
+    },
+    {
+      "cat": "package creation",
+      "name": "@remotejdk18_linux_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 2339149,
+      "dur": 2899,
+      "pid": 1,
+      "tid": 556
+    },
+    {
+      "cat": "package creation",
+      "name": "@bazel_tools//tools/python",
+      "ph": "X",
+      "ts": 2335185,
+      "dur": 7454,
+      "pid": 1,
+      "tid": 559
+    },
+    {
+      "cat": "package creation",
+      "name": "@local_config_cc_toolchains//",
+      "ph": "X",
+      "ts": 2355357,
+      "dur": 472,
+      "pid": 1,
+      "tid": 559
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 547,
+      "args": { "name": "skyframe-evaluator-cpu-heavy-9" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 547,
+      "args": { "sort_index": "10009" }
+    },
+    {
+      "cat": "package creation",
+      "name": "@bazel_tools//tools/jdk",
+      "ph": "X",
+      "ts": 2314212,
+      "dur": 44456,
+      "pid": 1,
+      "tid": 547
+    },
+    {
+      "cat": "package creation",
+      "name": "@local_config_cc_toolchains//",
+      "ph": "X",
+      "ts": 2358124,
+      "dur": 954,
+      "pid": 1,
+      "tid": 559
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 452,
+      "args": { "name": "skyframe-evaluator-4" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 452,
+      "args": { "sort_index": "10004" }
+    },
+    {
+      "cat": "Starlark repository function call",
+      "name": "local: /home/cicada/.cache/bazel/_bazel_cicada/install/edecd2b1233e0abfae42ec33e...",
+      "ph": "X",
+      "ts": 2320567,
+      "dur": 180489,
+      "pid": 1,
+      "tid": 452
+    },
+    {
+      "cat": "Starlark builtin function call",
+      "name": "execute",
+      "ph": "X",
+      "ts": 2297690,
+      "dur": 203529,
+      "pid": 1,
+      "tid": 452
+    },
+    {
+      "cat": "Starlark user function call",
+      "name": "_detect_java_version",
+      "ph": "X",
+      "ts": 2297640,
+      "dur": 209503,
+      "pid": 1,
+      "tid": 452
+    },
+    {
+      "cat": "Starlark user function call",
+      "name": "_local_java_repository_impl",
+      "ph": "X",
+      "ts": 2296465,
+      "dur": 214232,
+      "pid": 1,
+      "tid": 452
+    },
+    {
+      "cat": "Starlark repository function call",
+      "name": "//external:local_jdk",
+      "ph": "X",
+      "ts": 2296449,
+      "dur": 214273,
+      "pid": 1,
+      "tid": 452
+    },
+    {
+      "cat": "package creation",
+      "name": "@local_jdk//",
+      "ph": "X",
+      "ts": 2513395,
+      "dur": 1701,
+      "pid": 1,
+      "tid": 547
+    },
+    {
+      "cat": "package creation",
+      "name": "@local_jdk//",
+      "ph": "X",
+      "ts": 2516659,
+      "dur": 1275,
+      "pid": 1,
+      "tid": 547
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 516,
+      "args": { "name": "skyframe-evaluator-62" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 516,
+      "args": { "sort_index": "10062" }
+    },
+    {
+      "cat": "general information",
+      "name": "fetching: repository @rules_java",
+      "ph": "X",
+      "ts": 2521162,
+      "dur": 6700,
+      "pid": 1,
+      "tid": 516
+    },
+    {
+      "cat": "general information",
+      "name": "extracting: repository @rules_java",
+      "ph": "X",
+      "ts": 2527969,
+      "dur": 7397,
+      "pid": 1,
+      "tid": 516
+    },
+    {
+      "cat": "package creation",
+      "name": "@local_jdk//",
+      "ph": "X",
+      "ts": 2541294,
+      "dur": 34851,
+      "pid": 1,
+      "tid": 547
+    },
+    {
+      "cat": "gc notification",
+      "name": "minor GC",
+      "ph": "X",
+      "ts": 2591263,
+      "dur": 18000,
+      "pid": 1,
+      "tid": 25
+    },
+    {
+      "cat": "package creation",
+      "name": "@bazel_tools//tools/sh",
+      "ph": "X",
+      "ts": 2659681,
+      "dur": 7984,
+      "pid": 1,
+      "tid": 459
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 670,
+      "args": { "name": "skyframe-evaluator-cpu-heavy-69" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 670,
+      "args": { "sort_index": "10069" }
+    },
+    {
+      "cat": "package creation",
+      "name": "@bazel_tools//tools/def_parser",
+      "ph": "X",
+      "ts": 2705138,
+      "dur": 1661,
+      "pid": 1,
+      "tid": 670
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 544,
+      "args": { "name": "skyframe-evaluator-87" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 544,
+      "args": { "sort_index": "10087" }
+    },
+    {
+      "cat": "Starlark repository function call",
+      "name": "local: /home/cicada/.cache/bazel/_bazel_cicada/install/edecd2b1233e0abfae42ec33e...",
+      "ph": "X",
+      "ts": 2745404,
+      "dur": 68107,
+      "pid": 1,
+      "tid": 544
+    },
+    {
+      "cat": "Starlark builtin function call",
+      "name": "execute",
+      "ph": "X",
+      "ts": 2745238,
+      "dur": 68401,
+      "pid": 1,
+      "tid": 544
+    },
+    {
+      "cat": "Starlark user function call",
+      "name": "_find_linker_path",
+      "ph": "X",
+      "ts": 2745190,
+      "dur": 68588,
+      "pid": 1,
+      "tid": 544
+    },
+    {
+      "cat": "Starlark user function call",
+      "name": "configure_unix_toolchain",
+      "ph": "X",
+      "ts": 2721730,
+      "dur": 582519,
+      "pid": 1,
+      "tid": 544
+    },
+    {
+      "cat": "Starlark user function call",
+      "name": "cc_autoconf_impl",
+      "ph": "X",
+      "ts": 2721564,
+      "dur": 582763,
+      "pid": 1,
+      "tid": 544
+    },
+    {
+      "cat": "Starlark repository function call",
+      "name": "//external:local_config_cc",
+      "ph": "X",
+      "ts": 2721558,
+      "dur": 582774,
+      "pid": 1,
+      "tid": 544
+    },
+    {
+      "cat": "package creation",
+      "name": "@local_config_cc//",
+      "ph": "X",
+      "ts": 3310548,
+      "dur": 670,
+      "pid": 1,
+      "tid": 670
+    },
+    {
+      "cat": "package creation",
+      "name": "@local_config_cc//",
+      "ph": "X",
+      "ts": 3312865,
+      "dur": 792,
+      "pid": 1,
+      "tid": 670
+    },
+    {
+      "cat": "general information",
+      "name": "fetching: repository @rules_cc",
+      "ph": "X",
+      "ts": 3316168,
+      "dur": 2920,
+      "pid": 1,
+      "tid": 544
+    },
+    {
+      "cat": "general information",
+      "name": "extracting: repository @rules_cc",
+      "ph": "X",
+      "ts": 3319131,
+      "dur": 19735,
+      "pid": 1,
+      "tid": 544
+    },
+    {
+      "cat": "package creation",
+      "name": "@local_config_cc//",
+      "ph": "X",
+      "ts": 3345981,
+      "dur": 2028,
+      "pid": 1,
+      "tid": 670
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 650,
+      "args": { "name": "skyframe-evaluator-cpu-heavy-49" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 650,
+      "args": { "sort_index": "10049" }
+    },
+    {
+      "cat": "package creation",
+      "name": "@bazel_tools//tools/build_defs/cc/whitelists/parse_headers_and_layering_check",
+      "ph": "X",
+      "ts": 3367217,
+      "dur": 1480,
+      "pid": 1,
+      "tid": 650
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 671,
+      "args": { "name": "skyframe-evaluator-cpu-heavy-70" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 671,
+      "args": { "sort_index": "10070" }
+    },
+    {
+      "cat": "package creation",
+      "name": "@bazel_tools//tools/build_defs/cc/whitelists/starlark_hdrs_check",
+      "ph": "X",
+      "ts": 3367260,
+      "dur": 1437,
+      "pid": 1,
+      "tid": 671
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 574,
+      "args": { "name": "skyframe-evaluator-cpu-heavy-38" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 574,
+      "args": { "sort_index": "10038" }
+    },
+    {
+      "cat": "package creation",
+      "name": "@bazel_tools//src/conditions",
+      "ph": "X",
+      "ts": 3371882,
+      "dur": 841,
+      "pid": 1,
+      "tid": 574
+    },
+    {
+      "cat": "package creation",
+      "name": "@bazel_tools//src/conditions",
+      "ph": "X",
+      "ts": 3374038,
+      "dur": 1846,
+      "pid": 1,
+      "tid": 574
+    },
+    {
+      "cat": "Starlark user function call",
+      "name": "_impl",
+      "ph": "X",
+      "ts": 3377520,
+      "dur": 59478,
+      "pid": 1,
+      "tid": 543
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 667,
+      "args": { "name": "skyframe-evaluator-cpu-heavy-66" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 667,
+      "args": { "sort_index": "10066" }
+    },
+    {
+      "cat": "Starlark user function call",
+      "name": "_impl",
+      "ph": "X",
+      "ts": 3377455,
+      "dur": 61719,
+      "pid": 1,
+      "tid": 667
+    },
+    {
+      "cat": "gc notification",
+      "name": "minor GC",
+      "ph": "X",
+      "ts": 3517867,
+      "dur": 19000,
+      "pid": 1,
+      "tid": 25
+    },
+    {
+      "cat": "Starlark user function call",
+      "name": "_cc_library_impl",
+      "ph": "X",
+      "ts": 3460403,
+      "dur": 119887,
+      "pid": 1,
+      "tid": 574
+    },
+    {
+      "cat": "Starlark builtin function call",
+      "name": "create_linking_context_from_compilation_outputs",
+      "ph": "X",
+      "ts": 3576178,
+      "dur": 58828,
+      "pid": 1,
+      "tid": 667
+    },
+    {
+      "cat": "Starlark builtin function call",
+      "name": "create_linking_context_from_compilation_outputs",
+      "ph": "X",
+      "ts": 3576264,
+      "dur": 59150,
+      "pid": 1,
+      "tid": 543
+    },
+    {
+      "cat": "Starlark user function call",
+      "name": "_cc_library_impl",
+      "ph": "X",
+      "ts": 3460423,
+      "dur": 191907,
+      "pid": 1,
+      "tid": 667
+    },
+    {
+      "cat": "Starlark user function call",
+      "name": "_cc_library_impl",
+      "ph": "X",
+      "ts": 3460400,
+      "dur": 191940,
+      "pid": 1,
+      "tid": 543
+    },
+    {
+      "cat": "skyframe evaluator",
+      "name": "Parallel Evaluator evaluation",
+      "ph": "X",
+      "ts": 2144900,
+      "dur": 1555548,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "ParallelEvaluator.eval",
+      "ph": "X",
+      "ts": 2144509,
+      "dur": 1555986,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "skyframeExecutor.configureTargets",
+      "ph": "X",
+      "ts": 2140903,
+      "dur": 1561391,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "skyframeExecutor.getActionLookupValuesInBuild",
+      "ph": "X",
+      "ts": 3703764,
+      "dur": 16674,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "skyframeExecutor.findArtifactConflicts",
+      "ph": "X",
+      "ts": 3703719,
+      "dur": 23189,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "ParallelEvaluator.eval",
+      "ph": "X",
+      "ts": 3729218,
+      "dur": 120,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "ParallelEvaluator.eval",
+      "ph": "X",
+      "ts": 3729676,
+      "dur": 74,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "skyframe evaluator",
+      "name": "Parallel Evaluator evaluation",
+      "ph": "X",
+      "ts": 3730565,
+      "dur": 1869,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "ParallelEvaluator.eval",
+      "ph": "X",
+      "ts": 3730536,
+      "dur": 1916,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "SkyframeExecutor.getWorkspaceStatusArtifact",
+      "ph": "X",
+      "ts": 3730168,
+      "dur": 2325,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "ParallelEvaluator.eval",
+      "ph": "X",
+      "ts": 3737466,
+      "dur": 48,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "runAnalysisPhase",
+      "ph": "X",
+      "ts": 2042758,
+      "dur": 1695524,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelStartupOptionsModule.executorInit",
+      "ph": "X",
+      "ts": 3744689,
+      "dur": 6,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelStartupOptionsModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3744784,
+      "dur": 2,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelStartupOptionsModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3744846,
+      "dur": 2,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "NoSpawnCacheModule.executorInit",
+      "ph": "X",
+      "ts": 3744858,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "NoSpawnCacheModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3744861,
+      "dur": 347,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "NoSpawnCacheModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3745229,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "CredentialModule.executorInit",
+      "ph": "X",
+      "ts": 3745233,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "CredentialModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3745234,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "CredentialModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3745236,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "CommandLogModule.executorInit",
+      "ph": "X",
+      "ts": 3745238,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "CommandLogModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3745239,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "CommandLogModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3745241,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "MemoryPressureModule.executorInit",
+      "ph": "X",
+      "ts": 3745242,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "MemoryPressureModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3745244,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "MemoryPressureModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3745245,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "SleepPreventionModule.executorInit",
+      "ph": "X",
+      "ts": 3745250,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "SleepPreventionModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3745251,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "SleepPreventionModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3745252,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "SystemSuspensionModule.executorInit",
+      "ph": "X",
+      "ts": 3745255,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "SystemSuspensionModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3745256,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "SystemSuspensionModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3745257,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelFileSystemModule.executorInit",
+      "ph": "X",
+      "ts": 3745259,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelFileSystemModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3745414,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelFileSystemModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3745415,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "MobileInstallModule.executorInit",
+      "ph": "X",
+      "ts": 3745417,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "MobileInstallModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3745419,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "MobileInstallModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3745420,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelWorkspaceStatusModule.executorInit",
+      "ph": "X",
+      "ts": 3745422,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelWorkspaceStatusModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3745423,
+      "dur": 334,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelWorkspaceStatusModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3745775,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelDiffAwarenessModule.executorInit",
+      "ph": "X",
+      "ts": 3745778,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelDiffAwarenessModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3745780,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelDiffAwarenessModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3745782,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "RemoteModule.executorInit",
+      "ph": "X",
+      "ts": 3745784,
+      "dur": 13399,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "RemoteModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3759224,
+      "dur": 20031,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "RemoteModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3779312,
+      "dur": 4859,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelRepositoryModule.executorInit",
+      "ph": "X",
+      "ts": 3784211,
+      "dur": 1,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelRepositoryModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3784215,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelRepositoryModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3784218,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "StarlarkRepositoryDebugModule.executorInit",
+      "ph": "X",
+      "ts": 3784220,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "StarlarkRepositoryDebugModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3784222,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "StarlarkRepositoryDebugModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3784223,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "WorkspaceRuleModule.executorInit",
+      "ph": "X",
+      "ts": 3784226,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "WorkspaceRuleModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3784227,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "WorkspaceRuleModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3784229,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelCoverageReportModule.executorInit",
+      "ph": "X",
+      "ts": 3784241,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelCoverageReportModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3784244,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelCoverageReportModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3784246,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "StarlarkDebuggerModule.executorInit",
+      "ph": "X",
+      "ts": 3784248,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "StarlarkDebuggerModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3784250,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "StarlarkDebuggerModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3784251,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "RepositoryResolvedModule.executorInit",
+      "ph": "X",
+      "ts": 3784253,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "RepositoryResolvedModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3784255,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "RepositoryResolvedModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3784261,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "CacheHitReportingModule.executorInit",
+      "ph": "X",
+      "ts": 3784263,
+      "dur": 3,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "CacheHitReportingModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3784272,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "CacheHitReportingModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3784273,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "SpawnLogModule.executorInit",
+      "ph": "X",
+      "ts": 3784276,
+      "dur": 517,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "SpawnLogModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3784818,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "SpawnLogModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3784821,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "OutputFilteringModule.executorInit",
+      "ph": "X",
+      "ts": 3784825,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "OutputFilteringModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3784827,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "OutputFilteringModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3784829,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "WorkerModule.executorInit",
+      "ph": "X",
+      "ts": 3784835,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "WorkerModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3784837,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "WorkerModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3784839,
+      "dur": 4035,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "CacheFileDigestsModule.executorInit",
+      "ph": "X",
+      "ts": 3788903,
+      "dur": 3575,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "CacheFileDigestsModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3792510,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "CacheFileDigestsModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3792514,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "StandaloneModule.executorInit",
+      "ph": "X",
+      "ts": 3792518,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "StandaloneModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3792520,
+      "dur": 1246,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "StandaloneModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3793791,
+      "dur": 1087,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "SandboxModule.executorInit",
+      "ph": "X",
+      "ts": 3794902,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "SandboxModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3794905,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "shouldUseWindowsSandbox",
+      "ph": "X",
+      "ts": 3795301,
+      "dur": 106,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "LinuxSandboxedSpawnRunner.isSupported",
+      "ph": "X",
+      "ts": 3797374,
+      "dur": 52675,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "SandboxModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3794907,
+      "dur": 57330,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BuildSummaryStatsModule.executorInit",
+      "ph": "X",
+      "ts": 3852274,
+      "dur": 3071,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BuildSummaryStatsModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3855367,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BuildSummaryStatsModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3855370,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "DynamicExecutionModule.executorInit",
+      "ph": "X",
+      "ts": 3855382,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "DynamicExecutionModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3855384,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "DynamicExecutionModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3855386,
+      "dur": 113,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelRulesModule.executorInit",
+      "ph": "X",
+      "ts": 3855522,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelRulesModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3855525,
+      "dur": 243,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelRulesModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3855787,
+      "dur": 3,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelStrategyModule.executorInit",
+      "ph": "X",
+      "ts": 3855794,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelStrategyModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3855796,
+      "dur": 20,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelStrategyModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3855824,
+      "dur": 131,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "NoOpConnectivityModule.executorInit",
+      "ph": "X",
+      "ts": 3855965,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "NoOpConnectivityModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3855966,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "NoOpConnectivityModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3855968,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelBuildEventServiceModule.executorInit",
+      "ph": "X",
+      "ts": 3855970,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelBuildEventServiceModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3855971,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelBuildEventServiceModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3855973,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "CallcountsModule.executorInit",
+      "ph": "X",
+      "ts": 3855974,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "CallcountsModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3855976,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "CallcountsModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3855977,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "AllocationTrackerModule.executorInit",
+      "ph": "X",
+      "ts": 3855979,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "AllocationTrackerModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3855980,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "AllocationTrackerModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3855981,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "PostGCMemoryUseRecorderModule.executorInit",
+      "ph": "X",
+      "ts": 3855983,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "PostGCMemoryUseRecorderModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3855987,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "PostGCMemoryUseRecorderModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3855989,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "GcAfterBuildModule.executorInit",
+      "ph": "X",
+      "ts": 3855990,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "GcAfterBuildModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3855992,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "GcAfterBuildModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3855993,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "PackageMetricsModule.executorInit",
+      "ph": "X",
+      "ts": 3855994,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "PackageMetricsModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3855996,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "PackageMetricsModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3855997,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "MetricsModule.executorInit",
+      "ph": "X",
+      "ts": 3855999,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "MetricsModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3856000,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "MetricsModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3856001,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "ExecutionGraphModule.executorInit",
+      "ph": "X",
+      "ts": 3856002,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "ExecutionGraphModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3856004,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "ExecutionGraphModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3856005,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelBuiltinCommandModule.executorInit",
+      "ph": "X",
+      "ts": 3856007,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelBuiltinCommandModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3856008,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BazelBuiltinCommandModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3856009,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "IncludeScanningModule.executorInit",
+      "ph": "X",
+      "ts": 3856011,
+      "dur": 2160,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "IncludeScanningModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3858231,
+      "dur": 584,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "IncludeScanningModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3858839,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BlockWaitingModule.executorInit",
+      "ph": "X",
+      "ts": 3858844,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BlockWaitingModule.registerActionContexts",
+      "ph": "X",
+      "ts": 3858846,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "BlockWaitingModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 3858847,
+      "dur": 0,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "analysisPostProcessor.process",
+      "ph": "X",
+      "ts": 3862755,
+      "dur": 11,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "ExecutionTool.init",
+      "ph": "X",
+      "ts": 3862785,
+      "dur": 4287,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "build phase marker",
+      "name": "Prepare for build",
+      "ph": "i",
+      "ts": 3867189,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "plantSymlinkForest",
+      "ph": "X",
+      "ts": 3867220,
+      "dur": 1732,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "outputService.startBuild",
+      "ph": "X",
+      "ts": 3869270,
+      "dur": 12,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "ParallelEvaluator.eval",
+      "ph": "X",
+      "ts": 3870295,
+      "dur": 111,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "OutputDirectoryLinksUtils.createOutputDirectoryLinks",
+      "ph": "X",
+      "ts": 3870448,
+      "dur": 6101,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "ExecutionTool.handleConvenienceSymlinks",
+      "ph": "X",
+      "ts": 3869458,
+      "dur": 7109,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "Loading action cache",
+      "ph": "X",
+      "ts": 3876721,
+      "dur": 4199,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "createBuilder",
+      "ph": "X",
+      "ts": 3882144,
+      "dur": 2280,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "ExecutionStartingEvent",
+      "ph": "X",
+      "ts": 3884448,
+      "dur": 207,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "com.google.devtools.build.lib.includescanning.IncludeScanningModule$IncludeScannerLifecycleManager@2437570.executionPhaseStarting",
+      "ph": "X",
+      "ts": 3884997,
+      "dur": 2346,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "configureResourceManager",
+      "ph": "X",
+      "ts": 3887734,
+      "dur": 705,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "build phase marker",
+      "name": "Build artifacts",
+      "ph": "i",
+      "ts": 3888463,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "getDirtyActionValues.filter_actions",
+      "ph": "X",
+      "ts": 3889722,
+      "dur": 1498,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "getDirtyActionValues.stat_files",
+      "ph": "X",
+      "ts": 3891698,
+      "dur": 136,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "detectModifiedOutputFiles",
+      "ph": "X",
+      "ts": 3888501,
+      "dur": 3617,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "configureActionExecutor",
+      "ph": "X",
+      "ts": 3892145,
+      "dur": 401,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "skyframeActionExecutor.prepareForExecution",
+      "ph": "X",
+      "ts": 3895618,
+      "dur": 1492,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 718,
+      "args": { "name": "skyframe-evaluator 10" }
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 708,
+      "args": { "name": "skyframe-evaluator 0" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 718,
+      "args": { "sort_index": "10010" }
+    },
+    {
+      "cat": "general information",
+      "name": "action.prepare",
+      "ph": "X",
+      "ts": 3930026,
+      "dur": 209,
+      "pid": 1,
+      "tid": 718
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 708,
+      "args": { "sort_index": "10000" }
+    },
+    {
+      "cat": "general information",
+      "name": "action.prepare",
+      "ph": "X",
+      "ts": 3930023,
+      "dur": 211,
+      "pid": 1,
+      "tid": 708
+    },
+    {
+      "cat": "general information",
+      "name": "ActionContinuation.execute",
+      "ph": "X",
+      "ts": 3930874,
+      "dur": 5474,
+      "pid": 1,
+      "tid": 718
+    },
+    {
+      "cat": "general information",
+      "name": "ActionContinuation.execute",
+      "ph": "X",
+      "ts": 3930872,
+      "dur": 5475,
+      "pid": 1,
+      "tid": 708
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 787,
+      "args": { "name": "skyframe-evaluator 79" }
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 788,
+      "args": { "name": "skyframe-evaluator 80" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 788,
+      "args": { "sort_index": "10080" }
+    },
+    {
+      "cat": "general information",
+      "name": "discoverInputs",
+      "ph": "X",
+      "ts": 3935837,
+      "dur": 3357,
+      "pid": 1,
+      "tid": 788
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 787,
+      "args": { "sort_index": "10079" }
+    },
+    {
+      "cat": "general information",
+      "name": "discoverInputs",
+      "ph": "X",
+      "ts": 3937215,
+      "dur": 1979,
+      "pid": 1,
+      "tid": 787
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 791,
+      "args": { "name": "skyframe-evaluator 83" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 791,
+      "args": { "sort_index": "10083" }
+    },
+    {
+      "cat": "general information",
+      "name": "discoverInputs",
+      "ph": "X",
+      "ts": 3938152,
+      "dur": 1727,
+      "pid": 1,
+      "tid": 791
+    },
+    {
+      "cat": "general information",
+      "name": "outputService.finalizeAction",
+      "ph": "X",
+      "ts": 3939966,
+      "dur": 44,
+      "pid": 1,
+      "tid": 718
+    },
+    {
+      "cat": "general information",
+      "name": "outputService.finalizeAction",
+      "ph": "X",
+      "ts": 3940348,
+      "dur": 22,
+      "pid": 1,
+      "tid": 708
+    },
+    {
+      "cat": "complete action execution",
+      "name": "actuallyCompleteAction",
+      "ph": "X",
+      "ts": 3936366,
+      "dur": 6632,
+      "pid": 1,
+      "tid": 708
+    },
+    {
+      "cat": "complete action execution",
+      "name": "actuallyCompleteAction",
+      "ph": "X",
+      "ts": 3936367,
+      "dur": 6638,
+      "pid": 1,
+      "tid": 718
+    },
+    {
+      "cat": "action processing",
+      "name": "BazelWorkspaceStatusAction stable-status.txt",
+      "ph": "X",
+      "ts": 3921751,
+      "dur": 33332,
+      "pid": 1,
+      "out": "bazel-out/stable-status.txt",
+      "args": { "target": "", "mnemonic": "BazelWorkspaceStatusAction" },
+      "tid": 708
+    },
+    {
+      "cat": "action processing",
+      "name": "Creating source manifest for //src:main",
+      "ph": "X",
+      "ts": 3921748,
+      "dur": 33350,
+      "pid": 1,
+      "out": "bazel-out/k8-dbg/bin/src/main.runfiles_manifest",
+      "args": { "target": "//src:main", "mnemonic": "SourceSymlinkManifest" },
+      "tid": 718
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 717,
+      "args": { "name": "skyframe-evaluator 9" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 717,
+      "args": { "sort_index": "10009" }
+    },
+    {
+      "cat": "general information",
+      "name": "action.prepare",
+      "ph": "X",
+      "ts": 3955141,
+      "dur": 380,
+      "pid": 1,
+      "tid": 717
+    },
+    {
+      "cat": "general information",
+      "name": "action.prepare",
+      "ph": "X",
+      "ts": 3955247,
+      "dur": 1972,
+      "pid": 1,
+      "tid": 787
+    },
+    {
+      "cat": "general information",
+      "name": "action.prepare",
+      "ph": "X",
+      "ts": 3955219,
+      "dur": 2023,
+      "pid": 1,
+      "tid": 791
+    },
+    {
+      "cat": "general information",
+      "name": "action.prepare",
+      "ph": "X",
+      "ts": 3955219,
+      "dur": 2023,
+      "pid": 1,
+      "tid": 788
+    },
+    {
+      "cat": "general information",
+      "name": "postprocessing.run",
+      "ph": "X",
+      "ts": 3955148,
+      "dur": 4572,
+      "pid": 1,
+      "tid": 708
+    },
+    {
+      "cat": "general information",
+      "name": "ActionContinuation.execute",
+      "ph": "X",
+      "ts": 3957574,
+      "dur": 4151,
+      "pid": 1,
+      "tid": 717
+    },
+    {
+      "cat": "general information",
+      "name": "postprocessing.run",
+      "ph": "X",
+      "ts": 3955145,
+      "dur": 6583,
+      "pid": 1,
+      "tid": 718
+    },
+    {
+      "cat": "general information",
+      "name": "AbstractSpawnStrategy.getInputMapping",
+      "ph": "X",
+      "ts": 3961763,
+      "dur": 452,
+      "pid": 1,
+      "tid": 787
+    },
+    {
+      "cat": "general information",
+      "name": "AbstractSpawnStrategy.getInputMapping",
+      "ph": "X",
+      "ts": 3961773,
+      "dur": 443,
+      "pid": 1,
+      "tid": 791
+    },
+    {
+      "cat": "general information",
+      "name": "AbstractSpawnStrategy.getInputMapping",
+      "ph": "X",
+      "ts": 3961773,
+      "dur": 443,
+      "pid": 1,
+      "tid": 788
+    },
+    {
+      "cat": "general information",
+      "name": "outputService.finalizeAction",
+      "ph": "X",
+      "ts": 3962746,
+      "dur": 10,
+      "pid": 1,
+      "tid": 717
+    },
+    {
+      "cat": "complete action execution",
+      "name": "actuallyCompleteAction",
+      "ph": "X",
+      "ts": 3961749,
+      "dur": 1095,
+      "pid": 1,
+      "tid": 717
+    },
+    {
+      "cat": "action processing",
+      "name": "Writing file src/main-2.params",
+      "ph": "X",
+      "ts": 3921748,
+      "dur": 41294,
+      "pid": 1,
+      "out": "bazel-out/k8-dbg/bin/src/main-2.params",
+      "args": { "target": "//src:main", "mnemonic": "FileWrite" },
+      "tid": 717
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 792,
+      "args": { "name": "skyframe-evaluator 84" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 792,
+      "args": { "sort_index": "10084" }
+    },
+    {
+      "cat": "general information",
+      "name": "action.prepare",
+      "ph": "X",
+      "ts": 3963455,
+      "dur": 61,
+      "pid": 1,
+      "tid": 792
+    },
+    {
+      "cat": "general information",
+      "name": "postprocessing.run",
+      "ph": "X",
+      "ts": 3963060,
+      "dur": 829,
+      "pid": 1,
+      "tid": 717
+    },
+    {
+      "cat": "general information",
+      "name": "ActionContinuation.execute",
+      "ph": "X",
+      "ts": 3963678,
+      "dur": 6591,
+      "pid": 1,
+      "tid": 792
+    },
+    {
+      "cat": "general information",
+      "name": "outputService.finalizeAction",
+      "ph": "X",
+      "ts": 3970789,
+      "dur": 9,
+      "pid": 1,
+      "tid": 792
+    },
+    {
+      "cat": "complete action execution",
+      "name": "actuallyCompleteAction",
+      "ph": "X",
+      "ts": 3970287,
+      "dur": 588,
+      "pid": 1,
+      "tid": 792
+    },
+    {
+      "cat": "action processing",
+      "name": "Creating runfiles tree bazel-out/k8-dbg/bin/src/main.runfiles",
+      "ph": "X",
+      "ts": 3963267,
+      "dur": 7807,
+      "pid": 1,
+      "out": "bazel-out/k8-dbg/bin/src/main.runfiles/MANIFEST",
+      "args": { "target": "//src:main", "mnemonic": "SymlinkTree" },
+      "tid": 792
+    },
+    {
+      "cat": "general information",
+      "name": "postprocessing.run",
+      "ph": "X",
+      "ts": 3971095,
+      "dur": 348,
+      "pid": 1,
+      "tid": 792
+    },
+    {
+      "cat": "general information",
+      "name": "MerkleTree.build(ActionInput)",
+      "ph": "X",
+      "ts": 3962710,
+      "dur": 14653,
+      "pid": 1,
+      "tid": 788
+    },
+    {
+      "cat": "general information",
+      "name": "MerkleTree.build(ActionInput)",
+      "ph": "X",
+      "ts": 3962706,
+      "dur": 14657,
+      "pid": 1,
+      "tid": 791
+    },
+    {
+      "cat": "general information",
+      "name": "MerkleTree.build(ActionInput)",
+      "ph": "X",
+      "ts": 3962690,
+      "dur": 15186,
+      "pid": 1,
+      "tid": 787
+    },
+    {
+      "cat": "remote action cache check",
+      "name": "check cache hit",
+      "ph": "X",
+      "ts": 4012676,
+      "dur": 10961,
+      "pid": 1,
+      "tid": 788
+    },
+    {
+      "cat": "remote action cache check",
+      "name": "check cache hit",
+      "ph": "X",
+      "ts": 4013044,
+      "dur": 10593,
+      "pid": 1,
+      "tid": 791
+    },
+    {
+      "cat": "remote action cache check",
+      "name": "check cache hit",
+      "ph": "X",
+      "ts": 4013029,
+      "dur": 10609,
+      "pid": 1,
+      "tid": 787
+    },
+    {
+      "cat": "remote output download",
+      "name": "stage remote inputs",
+      "ph": "X",
+      "ts": 4037221,
+      "dur": 12,
+      "pid": 1,
+      "tid": 787
+    },
+    {
+      "cat": "remote output download",
+      "name": "stage remote inputs",
+      "ph": "X",
+      "ts": 4037221,
+      "dur": 12,
+      "pid": 1,
+      "tid": 788
+    },
+    {
+      "cat": "remote output download",
+      "name": "stage remote inputs",
+      "ph": "X",
+      "ts": 4037221,
+      "dur": 12,
+      "pid": 1,
+      "tid": 791
+    },
+    {
+      "cat": "remote output download",
+      "name": "stage remote inputs",
+      "ph": "X",
+      "ts": 4038072,
+      "dur": 3,
+      "pid": 1,
+      "tid": 787
+    },
+    {
+      "cat": "remote output download",
+      "name": "stage remote inputs",
+      "ph": "X",
+      "ts": 4038084,
+      "dur": 4,
+      "pid": 1,
+      "tid": 788
+    },
+    {
+      "cat": "remote output download",
+      "name": "stage remote inputs",
+      "ph": "X",
+      "ts": 4038084,
+      "dur": 3,
+      "pid": 1,
+      "tid": 791
+    },
+    {
+      "cat": "Remote execution process wall time",
+      "name": "CppCompile",
+      "ph": "X",
+      "ts": 4044963,
+      "dur": 224552,
+      "pid": 1,
+      "tid": 791
+    },
+    {
+      "cat": "Remote execution process wall time",
+      "name": "CppCompile",
+      "ph": "X",
+      "ts": 4044942,
+      "dur": 224108,
+      "pid": 1,
+      "tid": 787
+    },
+    {
+      "cat": "Remote execution process wall time",
+      "name": "CppCompile",
+      "ph": "X",
+      "ts": 4044963,
+      "dur": 224087,
+      "pid": 1,
+      "tid": 788
+    },
+    {
+      "cat": "local action execution",
+      "name": "CppCompile",
+      "ph": "X",
+      "ts": 4038129,
+      "dur": 238461,
+      "pid": 1,
+      "tid": 787
+    },
+    {
+      "cat": "local action execution",
+      "name": "CppCompile",
+      "ph": "X",
+      "ts": 4038672,
+      "dur": 237931,
+      "pid": 1,
+      "tid": 791
+    },
+    {
+      "cat": "local action execution",
+      "name": "CppCompile",
+      "ph": "X",
+      "ts": 4038130,
+      "dur": 238509,
+      "pid": 1,
+      "tid": 788
+    },
+    {
+      "cat": "general information",
+      "name": "ActionContinuation.execute",
+      "ph": "X",
+      "ts": 3957682,
+      "dur": 371875,
+      "pid": 1,
+      "tid": 791
+    },
+    {
+      "cat": "general information",
+      "name": "ActionContinuation.execute",
+      "ph": "X",
+      "ts": 3957647,
+      "dur": 371910,
+      "pid": 1,
+      "tid": 788
+    },
+    {
+      "cat": "general information",
+      "name": "ActionContinuation.execute",
+      "ph": "X",
+      "ts": 3957534,
+      "dur": 372047,
+      "pid": 1,
+      "tid": 787
+    },
+    {
+      "cat": "general information",
+      "name": "outputService.finalizeAction",
+      "ph": "X",
+      "ts": 4331838,
+      "dur": 10,
+      "pid": 1,
+      "tid": 791
+    },
+    {
+      "cat": "complete action execution",
+      "name": "actuallyCompleteAction",
+      "ph": "X",
+      "ts": 4329587,
+      "dur": 2407,
+      "pid": 1,
+      "tid": 791
+    },
+    {
+      "cat": "general information",
+      "name": "outputService.finalizeAction",
+      "ph": "X",
+      "ts": 4332116,
+      "dur": 10,
+      "pid": 1,
+      "tid": 787
+    },
+    {
+      "cat": "general information",
+      "name": "outputService.finalizeAction",
+      "ph": "X",
+      "ts": 4332142,
+      "dur": 8,
+      "pid": 1,
+      "tid": 788
+    },
+    {
+      "cat": "complete action execution",
+      "name": "actuallyCompleteAction",
+      "ph": "X",
+      "ts": 4329571,
+      "dur": 2653,
+      "pid": 1,
+      "tid": 788
+    },
+    {
+      "cat": "complete action execution",
+      "name": "actuallyCompleteAction",
+      "ph": "X",
+      "ts": 4329592,
+      "dur": 2667,
+      "pid": 1,
+      "tid": 787
+    },
+    {
+      "cat": "action processing",
+      "name": "Compiling src/main.cc",
+      "ph": "X",
+      "ts": 3942028,
+      "dur": 390278,
+      "pid": 1,
+      "out": "bazel-out/k8-dbg/bin/src/_objs/main/main.pic.o",
+      "args": { "target": "//src:main", "mnemonic": "CppCompile" },
+      "tid": 791
+    },
+    {
+      "cat": "action processing",
+      "name": "Compiling src/hello-static.cc",
+      "ph": "X",
+      "ts": 3942028,
+      "dur": 390451,
+      "pid": 1,
+      "out": "bazel-out/k8-dbg/bin/src/_objs/libhello-static/hello-static.pic.o",
+      "args": { "target": "//src:libhello-static", "mnemonic": "CppCompile" },
+      "tid": 788
+    },
+    {
+      "cat": "action processing",
+      "name": "Compiling src/hello-shared.cc",
+      "ph": "X",
+      "ts": 3942043,
+      "dur": 390550,
+      "pid": 1,
+      "out": "bazel-out/k8-dbg/bin/src/_objs/libhello-shared/hello-shared.pic.o",
+      "args": { "target": "//src:libhello-shared", "mnemonic": "CppCompile" },
+      "tid": 787
+    },
+    {
+      "cat": "general information",
+      "name": "postprocessing.run",
+      "ph": "X",
+      "ts": 4332329,
+      "dur": 3670,
+      "pid": 1,
+      "tid": 791
+    },
+    {
+      "cat": "general information",
+      "name": "postprocessing.run",
+      "ph": "X",
+      "ts": 4332498,
+      "dur": 3508,
+      "pid": 1,
+      "tid": 788
+    },
+    {
+      "cat": "general information",
+      "name": "postprocessing.run",
+      "ph": "X",
+      "ts": 4332614,
+      "dur": 3402,
+      "pid": 1,
+      "tid": 787
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 796,
+      "args": { "name": "skyframe-evaluator 86" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 796,
+      "args": { "sort_index": "10086" }
+    },
+    {
+      "cat": "general information",
+      "name": "action.prepare",
+      "ph": "X",
+      "ts": 4338521,
+      "dur": 106,
+      "pid": 1,
+      "tid": 796
+    },
+    {
+      "cat": "general information",
+      "name": "AbstractSpawnStrategy.getInputMapping",
+      "ph": "X",
+      "ts": 4339604,
+      "dur": 85,
+      "pid": 1,
+      "tid": 796
+    },
+    {
+      "cat": "general information",
+      "name": "MerkleTree.build(ActionInput)",
+      "ph": "X",
+      "ts": 4339717,
+      "dur": 1112,
+      "pid": 1,
+      "tid": 796
+    },
+    {
+      "cat": "remote action cache check",
+      "name": "check cache hit",
+      "ph": "X",
+      "ts": 4341359,
+      "dur": 191,
+      "pid": 1,
+      "tid": 796
+    },
+    {
+      "cat": "remote output download",
+      "name": "stage remote inputs",
+      "ph": "X",
+      "ts": 4341822,
+      "dur": 2,
+      "pid": 1,
+      "tid": 796
+    },
+    {
+      "cat": "remote output download",
+      "name": "stage remote inputs",
+      "ph": "X",
+      "ts": 4342026,
+      "dur": 1,
+      "pid": 1,
+      "tid": 796
+    },
+    {
+      "cat": "local action execution",
+      "name": "CppLink",
+      "ph": "X",
+      "ts": 4342043,
+      "dur": 47030,
+      "pid": 1,
+      "tid": 796
+    },
+    {
+      "cat": "general information",
+      "name": "ActionContinuation.execute",
+      "ph": "X",
+      "ts": 4338788,
+      "dur": 56381,
+      "pid": 1,
+      "tid": 796
+    },
+    {
+      "cat": "general information",
+      "name": "outputService.finalizeAction",
+      "ph": "X",
+      "ts": 4395921,
+      "dur": 10,
+      "pid": 1,
+      "tid": 796
+    },
+    {
+      "cat": "complete action execution",
+      "name": "actuallyCompleteAction",
+      "ph": "X",
+      "ts": 4395192,
+      "dur": 828,
+      "pid": 1,
+      "tid": 796
+    },
+    {
+      "cat": "action processing",
+      "name": "Linking src/main",
+      "ph": "X",
+      "ts": 4338253,
+      "dur": 58048,
+      "pid": 1,
+      "out": "bazel-out/k8-dbg/bin/src/main",
+      "args": { "target": "//src:main", "mnemonic": "CppLink" },
+      "tid": 796
+    },
+    {
+      "cat": "general information",
+      "name": "postprocessing.run",
+      "ph": "X",
+      "ts": 4396318,
+      "dur": 833,
+      "pid": 1,
+      "tid": 796
+    },
+    {
+      "cat": "skyframe evaluator",
+      "name": "Parallel Evaluator evaluation",
+      "ph": "X",
+      "ts": 3899773,
+      "dur": 508419,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "ParallelEvaluator.eval",
+      "ph": "X",
+      "ts": 3899279,
+      "dur": 508930,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "Saving action cache",
+      "ph": "X",
+      "ts": 4421888,
+      "dur": 1138,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "Show results",
+      "ph": "X",
+      "ts": 4423610,
+      "dur": 4574,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "Show artifacts",
+      "ph": "X",
+      "ts": 4428208,
+      "dur": 9,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "general information",
+      "name": "buildTargets",
+      "ph": "X",
+      "ts": 1839065,
+      "dur": 2589726,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "build phase marker",
+      "name": "Complete build",
+      "ph": "i",
+      "ts": 4428988,
+      "pid": 1,
+      "tid": 36
+    },
+    {
+      "cat": "critical path component",
+      "name": "cc_library-compile for //src:libhello-static",
+      "ph": "X",
+      "ts": 3924866,
+      "dur": 5116,
+      "pid": 1,
+      "args": { "tid": 36 },
+      "tid": 0
+    },
+    {
+      "cat": "critical path component",
+      "name": "action 'Compiling src/hello-static.cc'",
+      "ph": "X",
+      "ts": 3934890,
+      "dur": 397423,
+      "pid": 1,
+      "args": { "tid": 36 },
+      "tid": 0
+    },
+    {
+      "cat": "critical path component",
+      "name": "action 'Linking src/main'",
+      "ph": "X",
+      "ts": 4337817,
+      "dur": 58280,
+      "pid": 1,
+      "args": { "tid": 36 },
+      "tid": 0
+    },
+    {
+      "cat": "critical path component",
+      "name": "runfiles for //src:main",
+      "ph": "X",
+      "ts": 4398378,
+      "dur": 309,
+      "pid": 1,
+      "args": { "tid": 36 },
+      "tid": 0
+    },
+    {
+      "name": "action count",
+      "ph": "C",
+      "ts": 3723520,
+      "pid": 1,
+      "tid": 36,
+      "args": { "action": "0.030000000000000027" }
+    },
+    {
+      "name": "action count",
+      "ph": "C",
+      "ts": 3923520,
+      "pid": 1,
+      "tid": 36,
+      "args": { "action": "3.31" }
+    },
+    {
+      "name": "action count",
+      "ph": "C",
+      "ts": 4123520,
+      "pid": 1,
+      "tid": 36,
+      "args": { "action": "3.0" }
+    },
+    {
+      "name": "action count",
+      "ph": "C",
+      "ts": 4323520,
+      "pid": 1,
+      "tid": 36,
+      "args": { "action": "0.41500000000000004" }
+    },
+    {
+      "name": "CPU usage (Bazel)",
+      "cname": "good",
+      "ph": "C",
+      "ts": 126424,
+      "pid": 1,
+      "tid": 36,
+      "args": { "cpu": "5.3960237979326635" }
+    },
+    {
+      "name": "CPU usage (Bazel)",
+      "cname": "good",
+      "ph": "C",
+      "ts": 1126424,
+      "pid": 1,
+      "tid": 36,
+      "args": { "cpu": "5.202208171154616" }
+    },
+    {
+      "name": "CPU usage (Bazel)",
+      "cname": "good",
+      "ph": "C",
+      "ts": 2126424,
+      "pid": 1,
+      "tid": 36,
+      "args": { "cpu": "10.278728464101947" }
+    },
+    {
+      "name": "CPU usage (Bazel)",
+      "cname": "good",
+      "ph": "C",
+      "ts": 3126424,
+      "pid": 1,
+      "tid": 36,
+      "args": { "cpu": "8.32708170137685" }
+    },
+    {
+      "name": "CPU usage (Bazel)",
+      "cname": "good",
+      "ph": "C",
+      "ts": 4126424,
+      "pid": 1,
+      "tid": 36,
+      "args": { "cpu": "1.081237475765003" }
+    },
+    {
+      "name": "Memory usage (Bazel)",
+      "cname": "olive",
+      "ph": "C",
+      "ts": 126424,
+      "pid": 1,
+      "tid": 36,
+      "args": { "memory": "119.838" }
+    },
+    {
+      "name": "Memory usage (Bazel)",
+      "cname": "olive",
+      "ph": "C",
+      "ts": 1126424,
+      "pid": 1,
+      "tid": 36,
+      "args": { "memory": "118.54599999999999" }
+    },
+    {
+      "name": "Memory usage (Bazel)",
+      "cname": "olive",
+      "ph": "C",
+      "ts": 2126424,
+      "pid": 1,
+      "tid": 36,
+      "args": { "memory": "165.205" }
+    },
+    {
+      "name": "Memory usage (Bazel)",
+      "cname": "olive",
+      "ph": "C",
+      "ts": 3126424,
+      "pid": 1,
+      "tid": 36,
+      "args": { "memory": "154.86700000000005" }
+    },
+    {
+      "name": "Memory usage (Bazel)",
+      "cname": "olive",
+      "ph": "C",
+      "ts": 4126424,
+      "pid": 1,
+      "tid": 36,
+      "args": { "memory": "43.849000000000004" }
+    },
+    {
+      "name": "CPU usage (total)",
+      "cname": "rail_load",
+      "ph": "C",
+      "ts": 126424,
+      "pid": 1,
+      "tid": 36,
+      "args": { "system cpu": "5.31542109419128" }
+    },
+    {
+      "name": "CPU usage (total)",
+      "cname": "rail_load",
+      "ph": "C",
+      "ts": 1126424,
+      "pid": 1,
+      "tid": 36,
+      "args": { "system cpu": "6.523646998368646" }
+    },
+    {
+      "name": "CPU usage (total)",
+      "cname": "rail_load",
+      "ph": "C",
+      "ts": 2126424,
+      "pid": 1,
+      "tid": 36,
+      "args": { "system cpu": "12.201572130452872" }
+    },
+    {
+      "name": "CPU usage (total)",
+      "cname": "rail_load",
+      "ph": "C",
+      "ts": 3126424,
+      "pid": 1,
+      "tid": 36,
+      "args": { "system cpu": "10.113026982172986" }
+    },
+    {
+      "name": "CPU usage (total)",
+      "cname": "rail_load",
+      "ph": "C",
+      "ts": 4126424,
+      "pid": 1,
+      "tid": 36,
+      "args": { "system cpu": "1.7714914010850789" }
+    },
+    {
+      "name": "Memory usage (total)",
+      "cname": "bad",
+      "ph": "C",
+      "ts": 126424,
+      "pid": 1,
+      "tid": 36,
+      "args": { "system memory": "23912.781" }
+    },
+    {
+      "name": "Memory usage (total)",
+      "cname": "bad",
+      "ph": "C",
+      "ts": 1126424,
+      "pid": 1,
+      "tid": 36,
+      "args": { "system memory": "24005.104" }
+    },
+    {
+      "name": "Memory usage (total)",
+      "cname": "bad",
+      "ph": "C",
+      "ts": 2126424,
+      "pid": 1,
+      "tid": 36,
+      "args": { "system memory": "24145.685999999998" }
+    },
+    {
+      "name": "Memory usage (total)",
+      "cname": "bad",
+      "ph": "C",
+      "ts": 3126424,
+      "pid": 1,
+      "tid": 36,
+      "args": { "system memory": "24244.178000000004" }
+    },
+    {
+      "name": "Memory usage (total)",
+      "cname": "bad",
+      "ph": "C",
+      "ts": 4126424,
+      "pid": 1,
+      "tid": 36,
+      "args": { "system memory": "5932.111000000001" }
+    },
+    {
+      "name": "System load average",
+      "cname": "generic_work",
+      "ph": "C",
+      "ts": 126424,
+      "pid": 1,
+      "tid": 36,
+      "args": { "load": "2.1015625" }
+    },
+    {
+      "name": "System load average",
+      "cname": "generic_work",
+      "ph": "C",
+      "ts": 1126424,
+      "pid": 1,
+      "tid": 36,
+      "args": { "load": "2.1015625" }
+    },
+    {
+      "name": "System load average",
+      "cname": "generic_work",
+      "ph": "C",
+      "ts": 2126424,
+      "pid": 1,
+      "tid": 36,
+      "args": { "load": "2.1015625" }
+    },
+    {
+      "name": "System load average",
+      "cname": "generic_work",
+      "ph": "C",
+      "ts": 3126424,
+      "pid": 1,
+      "tid": 36,
+      "args": { "load": "2.4673281250000003" }
+    },
+    {
+      "name": "System load average",
+      "cname": "generic_work",
+      "ph": "C",
+      "ts": 4126424,
+      "pid": 1,
+      "tid": 36,
+      "args": { "load": "0.6671874999999999" }
+    },
+    {
+      "cat": "general information",
+      "name": "Finishing",
+      "ph": "i",
+      "ts": 4457204,
+      "pid": 1,
+      "tid": 36
+    }
+  ]
+}
