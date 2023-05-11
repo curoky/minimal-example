@@ -100,10 +100,9 @@ jobs:
       - run: BUILDBUDDY_API=${{ secrets.BUILDBUDDY_API }} envsubst < .bazelrc | tee .bazelrc
         working-directory: bazel/with-libllvm
 
-      - run: bazel run //src:main --config=generic_gcc
+      - run: bazel run //src:main
         working-directory: bazel/with-libllvm
         env:
-          USE_BAZEL_VERSION: last_green
           CC: gcc-13
           CXX: gcc-13
 
