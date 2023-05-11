@@ -48,7 +48,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: bazelbuild/setup-bazelisk@v2
-      - run: BUILDBUDDY_API=${{ secrets.BUILDBUDDY_API }} envsubst < .bazelrc | tee .bazelrc
+      - run: |
+          BUILDBUDDY_API=${{ secrets.BUILDBUDDY_API }} envsubst < .bazelrc > .bazelrc.new
+          mv .bazelrc.new .bazelrc
       - run: bazel build //src:main
 
   with_bzlmod:
@@ -97,7 +99,9 @@ jobs:
         with:
           python-version: '3.10'
 
-      - run: BUILDBUDDY_API=${{ secrets.BUILDBUDDY_API }} envsubst < .bazelrc | tee .bazelrc
+      - run: |
+          BUILDBUDDY_API=${{ secrets.BUILDBUDDY_API }} envsubst < .bazelrc > .bazelrc.new
+          mv .bazelrc.new .bazelrc
         working-directory: bazel/with-libllvm
 
       - run: bazel run //src:main
