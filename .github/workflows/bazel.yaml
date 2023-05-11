@@ -51,7 +51,7 @@ jobs:
       - run: |
           BUILDBUDDY_API=${{ secrets.BUILDBUDDY_API }} envsubst < .bazelrc | tee .bazelrc.new
           mv -f .bazelrc.new .bazelrc
-      - run: bazel build //src:main
+      - run: bazel build //src:main --config=ci
 
   with_bzlmod:
     defaults:
@@ -104,7 +104,7 @@ jobs:
           mv -f .bazelrc.new .bazelrc
         working-directory: bazel/with-libllvm
 
-      - run: bazel run //src:main
+      - run: bazel run //src:main --config=ci
         working-directory: bazel/with-libllvm
         env:
           CC: gcc-13
