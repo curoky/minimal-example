@@ -1,8 +1,0 @@
-version: '3'
-
-tasks:
-  default:
-    cmds:
-      - python3 -m pip install setuptools wheel twine pytest
-      - python3 setup.py test
-      - python3 setup.py sdist bdist_wheel --universal

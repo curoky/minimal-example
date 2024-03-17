@@ -1,0 +1,7 @@
+version: '3'
+tasks:
+  build: flit build
+  install: pip install . # flit install
+  run:
+    - foo-cli
+    - python -m foo

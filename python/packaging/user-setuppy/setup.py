@@ -28,7 +28,7 @@ from pkg_resources import parse_requirements
 from setuptools import Command, find_packages, setup
 
 # Package meta-data.
-NAME = 'pypi_tutorial'
+NAME = 'foo'
 DESCRIPTION = 'A small example package'
 URL = 'https://github.com/curoky/learn-build-system'
 EMAIL = 'cccuroky@gmail.com'

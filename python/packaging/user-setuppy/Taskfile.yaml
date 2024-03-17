@@ -1,0 +1,11 @@
+version: '3'
+
+tasks:
+  build:
+    - python3 -m pip install setuptools wheel twine pytest
+    - python3 setup.py test
+    - python3 setup.py sdist bdist_wheel --universal
+  install: pip install .
+  run:
+    - foo-cli
+    - python -m foo
