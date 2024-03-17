@@ -21,24 +21,24 @@ from conans import CMake, ConanFile, tools
 
 
 class RestClientCppConan(ConanFile):
-    name = 'restclient-cpp'
-    version = '0.5.2'
+    name = "restclient-cpp"
+    version = "0.5.2"
     scm = {
-        'type': 'git',
-        'subfolder': 'source_subfolder',
-        'url': 'https://github.com/mrtazz/restclient-cpp.git',
-        'revision': version
+        "type": "git",
+        "subfolder": "source_subfolder",
+        "url": "https://github.com/mrtazz/restclient-cpp.git",
+        "revision": version
     }
-    exports_sources = ['CMakeLists.txt']
+    exports_sources = ["CMakeLists.txt"]
 
-    settings = 'os', 'compiler', 'build_type', 'arch'
-    options = {'shared': [True, False], 'fPIC': [True, False]}
+    settings = "os", "compiler", "build_type", "arch"
+    options = {"shared": [True, False], "fPIC": [True, False]}
     default_options = (
-        'shared=False',
-        'fPIC=True',
+        "shared=False",
+        "fPIC=True",
     )
 
-    generators = 'cmake'
+    generators = "cmake"
     _cmake = None
 
     def _configure_cmake(self):
@@ -46,7 +46,7 @@ class RestClientCppConan(ConanFile):
             return self._cmake
 
         self._cmake = CMake(self, set_cmake_flags=True)
-        self._cmake.definitions['BUILD_SHARED_LIBS'] = self.options.shared
+        self._cmake.definitions["BUILD_SHARED_LIBS"] = self.options.shared
         self._cmake.configure()
         return self._cmake
 
@@ -62,5 +62,5 @@ class RestClientCppConan(ConanFile):
         self.cpp_info.libs = tools.collect_libs(self)
 
     def requirements(self):
-        self.requires.add('libcurl/7.80.0')
-        self.requires.add('openssl/1.1.1n')
+        self.requires.add("libcurl/7.80.0")
+        self.requires.add("openssl/1.1.1n")

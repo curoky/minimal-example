@@ -21,21 +21,21 @@ from conans import CMake, ConanFile, tools
 
 
 class CppfsConan(ConanFile):
-    name = 'cppfs'
-    version = '1.3.0'
+    name = "cppfs"
+    version = "1.3.0"
     scm = {
-        'type': 'git',
-        'url': 'https://github.com/cginternals/cppfs.git',
-        'revision': 'v%s' % version
+        "type": "git",
+        "url": "https://github.com/cginternals/cppfs.git",
+        "revision": "v%s" % version
     }
 
-    settings = 'os', 'compiler', 'build_type', 'arch'
+    settings = "os", "compiler", "build_type", "arch"
     options = {
-        'shared': [True, False],
+        "shared": [True, False],
     }
-    default_options = ('shared=True',)
+    default_options = ("shared=True",)
 
-    generators = 'cmake'
+    generators = "cmake"
     _cmake = None
 
     def _configure_cmake(self):
@@ -43,9 +43,9 @@ class CppfsConan(ConanFile):
             return self._cmake
 
         self._cmake = CMake(self, set_cmake_flags=True)
-        self._cmake.definitions['BUILD_SHARED_LIBS'] = self.options.shared
-        self._cmake.definitions['OPTION_BUILD_TESTS'] = False
-        self._cmake.configure(build_folder='build_subfolder')
+        self._cmake.definitions["BUILD_SHARED_LIBS"] = self.options.shared
+        self._cmake.definitions["OPTION_BUILD_TESTS"] = False
+        self._cmake.configure(build_folder="build_subfolder")
         return self._cmake
 
     def build(self):
