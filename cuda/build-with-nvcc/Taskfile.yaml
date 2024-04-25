@@ -1,0 +1,7 @@
+version: '3'
+tasks:
+  default:
+    cmds:
+      - rm -f main
+      - /usr/local/cuda-11.4/bin/nvcc -lcudart_static -o main main.cu
+      - ./main
