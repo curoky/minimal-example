@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Copyright (c) 2018-2023 curoky(cccuroky@gmail.com).
+# Copyright (c) 2018-2024 curoky(cccuroky@gmail.com).
 #
 # This file is part of learn-build-system.
 # See https://github.com/curoky/learn-build-system for further info.
