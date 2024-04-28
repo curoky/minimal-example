@@ -1,3 +1,9 @@
+build --cxxopt=-std=c++17 --host_cxxopt=-std=c++17
+
+build --remote_download_toplevel
+build --experimental_remote_cache_compression
+build --legacy_important_outputs
+
 build:ci --bes_results_url=https://app.buildbuddy.io/invocation/
 build:ci --bes_backend=grpcs://remote.buildbuddy.io
 build:ci --remote_cache=grpcs://remote.buildbuddy.io
