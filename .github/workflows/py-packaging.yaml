@@ -1,0 +1,111 @@
+name: pipy publish via build
+
+on:
+  push:
+    paths:
+      - .github/workflows/py-packaging.yaml
+      - python/packaging/**
+  schedule:
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+
+jobs:
+  use-poetry:
+    defaults:
+      run:
+        working-directory: python/packaging/use-poetry
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: Homebrew/actions/setup-homebrew@master
+      - run: brew install poetry
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          cache: 'poetry'
+
+      - run: 'sed -i "s/1.0.0/$(date +%Y.%-m.%d).post1.dev$(date +%s)/g" pyproject.toml'
+
+      - run: poetry install
+
+      - run: poetry run pytest . || echo ignore error
+
+      - run: poetry build
+
+      - name: Publish a Python distribution to Test PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          password: ${{ secrets.TEST_PYPI_API_TOKEN }}
+          repository_url: https://test.pypi.org/legacy/
+          packages_dir: python/packaging/use-poetry/dist
+
+  use-pdm:
+    defaults:
+      run:
+        working-directory: python/packaging/use-poetry
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: Homebrew/actions/setup-homebrew@master
+      - run: brew install pdm
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - run: pdm build
+
+  use-hatchling:
+    defaults:
+      run:
+        working-directory: python/packaging/use-hatchling
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: Homebrew/actions/setup-homebrew@master
+      - run: brew install hatch
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - run: hatchling build
+
+  use-flit:
+    defaults:
+      run:
+        working-directory: python/packaging/use-flit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: Homebrew/actions/setup-homebrew@master
+      - run: brew install flit
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - run: flit build
+
+  use-setuptools:
+    defaults:
+      run:
+        working-directory: python/packaging/use-setuptools
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: Homebrew/actions/setup-homebrew@master
+      - run: brew install hatch
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - run: hatch build
+
+  use-setuppy:
+    defaults:
+      run:
+        working-directory: python/packaging/use-setuppy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+      - run: python3 -m pip install setuptools wheel twine pytest
+      - run: python3 setup.py test
+      - run: python3 setup.py sdist bdist_wheel --universal
