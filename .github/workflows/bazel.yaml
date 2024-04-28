@@ -73,7 +73,7 @@ jobs:
   with_clang:
     defaults:
       run:
-        working-directory: bazel/with-clang
+        working-directory: bazel/with-clang-v2
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -88,12 +88,15 @@ jobs:
           CXX: gcc-11
 
   with_libllvm:
+    defaults:
+      run:
+        working-directory: bazel/with-libllvm-v2
     runs-on: ubuntu-latest
     container:
       image: ubuntu:23.04
     steps:
       - run: apt-get update
-      - run: apt-get install -y curl wget git gcc-13 g++-13 lld gettext
+      - run: apt-get install -y curl wget git gcc-13 g++-13 lld gettext libz-dev
       - uses: actions/checkout@v3
       - uses: arduino/setup-task@v1
       - uses: bazelbuild/setup-bazelisk@v2
@@ -104,10 +107,8 @@ jobs:
       - run: |
           BUILDBUDDY_API=${{ secrets.BUILDBUDDY_API }} envsubst < .bazelrc | tee .bazelrc.new
           mv -f .bazelrc.new .bazelrc
-        working-directory: bazel/with-libllvm
 
       - run: bazel run //src:main --config=ci
-        working-directory: bazel/with-libllvm
         env:
           CC: gcc-13
           CXX: gcc-13
