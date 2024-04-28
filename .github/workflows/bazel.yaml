@@ -101,7 +101,7 @@ jobs:
         with:
           python-version: '3.10'
 
-      - run: sudo apt-get install -y curl wget git gcc-13 g++-13 lld gettext libz-dev
+      - run: apt-get install -y curl wget git gcc-13 g++-13 lld gettext libz-dev
       - run: |
           BUILDBUDDY_API=${{ secrets.BUILDBUDDY_API }} envsubst < .bazelrc | tee .bazelrc.new
           mv -f .bazelrc.new .bazelrc
