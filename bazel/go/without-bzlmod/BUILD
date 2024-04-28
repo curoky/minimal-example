@@ -14,18 +14,33 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
+load("@bazel_gazelle//:def.bzl", "gazelle")
 load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
 
+# gazelle:prefix github.com/curoky/learn-build-system/go-example
+gazelle(name = "gazelle")
+
+gazelle(
+    name = "gazelle-update-repos",
+    args = [
+        "-from_file=go.mod",
+        "-to_macro=deps.bzl%go_dependencies",
+        "-prune",
+    ],
+    command = "update-repos",
+)
+
 go_library(
-    name = "main_lib",
+    name = "go-example_lib",
     srcs = ["main.go"],
-    importpath = "github.com/curoky/learn-build-system",
+    importpath = "github.com/curoky/learn-build-system/go-example",
     visibility = ["//visibility:private"],
     deps = ["@com_github_urfave_cli_v2//:cli"],
 )
 
 go_binary(
-    name = "main",
-    embed = [":main_lib"],
+    name = "go-example",
+    embed = [":go-example_lib"],
     visibility = ["//visibility:public"],
 )

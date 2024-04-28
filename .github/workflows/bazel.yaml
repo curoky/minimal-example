@@ -24,20 +24,22 @@ jobs:
   go:
     defaults:
       run:
-        working-directory: bazel/go
+        working-directory: bazel/go/without-bzlmod
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: bazelbuild/setup-bazelisk@v2
-      - uses: actions/setup-go@v3
-        with:
-          go-version: '^1.18'
-          cache: true
-          go-version-file: 'bazel/go/go.mod'
-          cache-dependency-path: 'bazel/go/go.sum'
-      - run: go install github.com/bazelbuild/bazel-gazelle/cmd/gazelle@latest
-      - run: gazelle update-repos -from_file=go.mod -to_macro=go_mod.bzl%go_repositories
-      - run: gazelle -go_prefix github.com/curoky/learn-build-system -lang go -exclude design-pattern -exclude external -exclude service -build_file_name BUILD
+      # - uses: actions/setup-go@v3
+      #   with:
+      #     go-version: '^1.18'
+      #     cache: true
+      #     go-version-file: 'bazel/go/go.mod'
+      #     cache-dependency-path: 'bazel/go/go.sum'
+      # - run: go install github.com/bazelbuild/bazel-gazelle/cmd/gazelle@latest
+      # - run: gazelle update-repos -from_file=go.mod -to_macro=go_mod.bzl%go_repositories
+      # - run: gazelle -go_prefix github.com/curoky/learn-build-system -lang go -exclude design-pattern -exclude external -exclude service -build_file_name BUILD
+      - run: bazel run //:gazelle-update-repos
+      - run: bazel run //:gazelle
       - run: bazel run :main
 
   with_buildbuddy:
