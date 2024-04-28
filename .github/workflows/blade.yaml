@@ -16,7 +16,7 @@ jobs:
         working-directory: blade/cpp
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: Homebrew/actions/setup-homebrew@master
       - run: brew install ninja
       - name: install blade

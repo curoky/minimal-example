@@ -16,7 +16,7 @@ jobs:
         working-directory: please/cpp
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: |
           curl -s https://get.please.build | bash
           echo "${HOME}/.please/bin" >> $GITHUB_PATH

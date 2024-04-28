@@ -1,4 +1,4 @@
-name: pipy publish via build
+name: py packaging
 
 on:
   push:
@@ -16,10 +16,10 @@ jobs:
         working-directory: python/packaging/use-poetry
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: Homebrew/actions/setup-homebrew@master
       - run: brew install poetry
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.10'
           cache: 'poetry'
@@ -43,10 +43,10 @@ jobs:
         working-directory: python/packaging/use-poetry
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: Homebrew/actions/setup-homebrew@master
       - run: brew install pdm
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.10'
       - run: pdm build
@@ -57,10 +57,10 @@ jobs:
         working-directory: python/packaging/use-hatchling
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: Homebrew/actions/setup-homebrew@master
       - run: brew install hatch
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.10'
       - run: hatch build
@@ -71,10 +71,10 @@ jobs:
         working-directory: python/packaging/use-flit
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: Homebrew/actions/setup-homebrew@master
       - run: brew install flit
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.10'
       - run: flit build
@@ -85,10 +85,10 @@ jobs:
         working-directory: python/packaging/use-setuptools
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: Homebrew/actions/setup-homebrew@master
       - run: brew install hatch
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.10'
       - run: hatch build
@@ -99,8 +99,8 @@ jobs:
         working-directory: python/packaging/use-setuppy
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.10'
           cache: 'pip'

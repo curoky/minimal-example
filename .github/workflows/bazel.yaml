@@ -16,8 +16,8 @@ jobs:
         working-directory: bazel/cpp
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: bazelbuild/setup-bazelisk@v2
+      - uses: actions/checkout@v4
+      - uses: bazelbuild/setup-bazelisk@v3
       - run: bazel build //src:main
       - run: bazel run @hedron_compile_commands//:refresh_all
 
@@ -27,8 +27,8 @@ jobs:
         working-directory: bazel/go/without-bzlmod
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: bazelbuild/setup-bazelisk@v2
+      - uses: actions/checkout@v4
+      - uses: bazelbuild/setup-bazelisk@v3
       # - uses: actions/setup-go@v3
       #   with:
       #     go-version: '^1.18'
@@ -48,8 +48,8 @@ jobs:
         working-directory: bazel/with-buildbuddy
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: bazelbuild/setup-bazelisk@v2
+      - uses: actions/checkout@v4
+      - uses: bazelbuild/setup-bazelisk@v3
       - run: |
           BUILDBUDDY_API=${{ secrets.BUILDBUDDY_API }} envsubst < .bazelrc | tee .bazelrc.new
           mv -f .bazelrc.new .bazelrc
@@ -61,8 +61,8 @@ jobs:
         working-directory: bazel/with-bzlmod
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: bazelbuild/setup-bazelisk@v2
+      - uses: actions/checkout@v4
+      - uses: bazelbuild/setup-bazelisk@v3
       - run: sudo apt-get install -y gcc-11 g++-11
       - run: bazel build //src:main
         env:
@@ -76,8 +76,8 @@ jobs:
         working-directory: bazel/with-clang-v2
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: bazelbuild/setup-bazelisk@v2
+      - uses: actions/checkout@v4
+      - uses: bazelbuild/setup-bazelisk@v3
       - run: sudo apt-get install -y gcc-11 g++-11 libncurses5
       - run: |
           bazel run //src:feature_test
@@ -97,10 +97,10 @@ jobs:
     steps:
       - run: apt-get update
       - run: apt-get install -y curl wget git gcc-13 g++-13 lld gettext libz-dev
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: arduino/setup-task@v1
-      - uses: bazelbuild/setup-bazelisk@v2
-      - uses: actions/setup-python@v4
+      - uses: bazelbuild/setup-bazelisk@v3
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
@@ -119,8 +119,8 @@ jobs:
         working-directory: bazel/with-conan
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: bazelbuild/setup-bazelisk@v2
+      - uses: actions/checkout@v4
+      - uses: bazelbuild/setup-bazelisk@v3
       - uses: Homebrew/actions/setup-homebrew@master
       - run: sudo apt-get install -y gcc-11 g++-11
       - run: brew install conan
@@ -154,11 +154,11 @@ jobs:
   #         - /tmp:/data
 
   #   steps:
-  #     - uses: actions/checkout@v3
-  #     - uses: bazelbuild/setup-bazelisk@v2
+  #     - uses: actions/checkout@v4
+  #     - uses: bazelbuild/setup-bazelisk@v3
 
   #     - name: mount bazel cache
-  #       uses: actions/cache@v3
+  #       uses: actions/cache@v4
   #       with:
   #         path: /tmp/remote-cache
   #         key: bazel-hello-${{ github.run_id }}-${{ github.sha }}

@@ -16,7 +16,7 @@ jobs:
         working-directory: autotools/cpp
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: autoreconf -vfi
       - run: ./configure
       - run: make -C src
