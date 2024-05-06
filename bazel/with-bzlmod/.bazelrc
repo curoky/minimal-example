@@ -1,3 +1,2 @@
 build --enable_bzlmod
-build --registry=https://bcr.bazel.build
-build --registry=https://raw.githubusercontent.com/curoky/bazel-curoky-registry/master/
+# build --registry=https://bcr.bazel.build
