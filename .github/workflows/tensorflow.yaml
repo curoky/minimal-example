@@ -96,7 +96,7 @@ jobs:
         working-directory: tensorflow
 
       - name: setup bazel remote cache
-        run: >
+        run: |
           echo 'build:ci --bes_results_url=https://app.buildbuddy.io/invocation/" >> .bazelrc
           echo 'build:ci --bes_backend=grpcs://remote.buildbuddy.io" >> .bazelrc
           echo 'build:ci --remote_cache=grpcs://remote.buildbuddy.io' >> .bazelrc
