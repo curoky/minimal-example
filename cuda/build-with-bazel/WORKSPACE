@@ -41,7 +41,7 @@ load("@rules_cuda//cuda:repositories.bzl", "local_cuda", "register_detected_cuda
 
 local_cuda(
     name = "local_cuda",
-    toolkit_path = "/usr/local/cuda-11.4",
+    toolkit_path = "/usr/local/cuda",
 )
 
 register_detected_cuda_toolchains()
