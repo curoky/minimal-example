@@ -1,4 +1,4 @@
-name: cuda
+name: tensorflow
 
 on:
   push:
@@ -13,7 +13,7 @@ jobs:
   2_15:
     defaults:
       run:
-        working-directory: cuda/build-with-bazel
+        working-directory: tensorflow
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -42,7 +42,7 @@ jobs:
           sudo apt-get -y install cudnn-cuda-12
           rm -rf cudnn-local-repo-ubuntu2204-9.1.1_1.0-1_amd64.deb
 
-      - name: git clone --recurse-submodules --depth=1 -b v2.15.1 https://github.com/tensorflow/tensorflow
+      - run: git clone --recurse-submodules --depth=1 -b v2.15.1 https://github.com/tensorflow/tensorflow
         working-directory: tensorflow
 
       - name: setup bazel remote cache
@@ -62,7 +62,7 @@ jobs:
   2_16:
     defaults:
       run:
-        working-directory: cuda/build-with-bazel
+        working-directory: tensorflow
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -92,7 +92,7 @@ jobs:
           rm -rf cudnn-local-repo-ubuntu2204-9.1.1_1.0-1_amd64.deb
           mv -f .bazelrc.new .bazelrc
 
-      - name: git clone --recurse-submodules --depth=1 -b v2.16.1 https://github.com/tensorflow/tensorflow
+      - run: git clone --recurse-submodules --depth=1 -b v2.16.1 https://github.com/tensorflow/tensorflow
         working-directory: tensorflow
 
       - name: setup bazel remote cache
