@@ -101,6 +101,10 @@ jobs:
           mv -f .bazelrc.new .bazelrc
         working-directory: tensorflow/tensorflow
 
+      - name: patch TF_CUDA_COMPUTE_CAPABILITIES
+        run: echo 'build --repo_env=TF_CUDA_COMPUTE_CAPABILITIES="sm_80,compute_90"' >> .bazelrc
+        working-directory: tensorflow/tensorflow
+
       - run: bazel build //tensorflow/tools/pip_package:build_pip_package --repo_env=WHEEL_NAME=tensorflow --config=cuda --config=ci
         working-directory: tensorflow/tensorflow
 
