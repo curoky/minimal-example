@@ -50,6 +50,7 @@ runs:
 
     - name: download cudnn
       if: inputs.enable_cudnn == 'true' && steps.cache-cudnn.outputs.cache-hit != 'true'
+      shell: bash
       run: |
         mkdir -p cudnn_pkg
         if [[ ${{ inputs.cudnn_version }} == '8' ]]; then
@@ -60,6 +61,7 @@ runs:
 
     - name: install cudnn
       if: inputs.enable_cudnn == 'true'
+      shell: bash
       run: |
         if [[ ${{ inputs.enable_cudnn }} == 'true' ]]; then
           if [[ ${{ inputs.cudnn_version }} == '8' ]]; then
