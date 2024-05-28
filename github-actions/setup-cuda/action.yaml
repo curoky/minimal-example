@@ -19,7 +19,7 @@ runs:
       uses: actions/cache@v4
       with:
         path: cuda_pkg
-        key: ${{ inputs.cuda_version }}
+        key: cuda_pkg-${{ inputs.cuda_version }}
 
     - name: cache cudnn
       id: cache-cudnn
@@ -27,7 +27,7 @@ runs:
       uses: actions/cache@v4
       with:
         path: cudnn_pkg
-        key: ${{ inputs.cudnn_version }}
+        key: cudnn_pkg-${{ inputs.cudnn_version }}
 
     - name: download cuda
       if: steps.cache-cuda.outputs.cache-hit != 'true'
