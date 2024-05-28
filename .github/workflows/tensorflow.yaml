@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  2_15:
+  tf2_15:
     defaults:
       run:
         working-directory: tensorflow
@@ -59,7 +59,7 @@ jobs:
       - run: bazel build //tensorflow/tools/pip_package:build_pip_package --repo_env=WHEEL_NAME=tensorflow --config=cuda
         working-directory: tensorflow/tensorflow
 
-  2_16:
+  tf2_16:
     defaults:
       run:
         working-directory: tensorflow
