@@ -55,6 +55,10 @@ jobs:
       - run: bazel build //tensorflow/tools/pip_package:build_pip_package --repo_env=WHEEL_NAME=tensorflow --config=cuda --config=ci
         working-directory: tensorflow/tensorflow
 
+      - uses: mxschmitt/action-tmate@v3
+        if: ${{ failure() && github.event_name == 'workflow_dispatch' }}
+        timeout-minutes: 30
+
   tf2_16:
     defaults:
       run:
@@ -102,3 +106,7 @@ jobs:
 
       - run: bazel build //tensorflow/tools/pip_package:v2:wheel --repo_env=WHEEL_NAME=tensorflow --config=cuda --config=ci
         working-directory: tensorflow/tensorflow
+
+      - uses: mxschmitt/action-tmate@v3
+        if: ${{ failure() && github.event_name == 'workflow_dispatch' }}
+        timeout-minutes: 30
