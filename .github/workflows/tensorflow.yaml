@@ -47,11 +47,7 @@ jobs:
 
       - name: setup bazel remote cache
         run: |
-          echo 'build:ci --bes_results_url=https://app.buildbuddy.io/invocation/" >> .bazelrc
-          echo 'build:ci --bes_backend=grpcs://remote.buildbuddy.io" >> .bazelrc
-          echo 'build:ci --remote_cache=grpcs://remote.buildbuddy.io' >> .bazelrc
-          echo 'build:ci --remote_timeout=3600' >> .bazelrc
-          echo 'build:ci --remote_header=x-buildbuddy-api-key="${BUILDBUDDY_API}"' >> .bazelrc
+          cat ../../bazel/with-buildbuddy/.bazelrc >> .bazelrc
           BUILDBUDDY_API=${{ secrets.BUILDBUDDY_API }} envsubst < .bazelrc | tee .bazelrc.new
           mv -f .bazelrc.new .bazelrc
         working-directory: tensorflow/tensorflow
@@ -97,11 +93,7 @@ jobs:
 
       - name: setup bazel remote cache
         run: |
-          echo 'build:ci --bes_results_url=https://app.buildbuddy.io/invocation/" >> .bazelrc
-          echo 'build:ci --bes_backend=grpcs://remote.buildbuddy.io" >> .bazelrc
-          echo 'build:ci --remote_cache=grpcs://remote.buildbuddy.io' >> .bazelrc
-          echo 'build:ci --remote_timeout=3600' >> .bazelrc
-          echo 'build:ci --remote_header=x-buildbuddy-api-key="${BUILDBUDDY_API}"' >> .bazelrc
+          cat ../../bazel/with-buildbuddy/.bazelrc >> .bazelrc
           BUILDBUDDY_API=${{ secrets.BUILDBUDDY_API }} envsubst < .bazelrc | tee .bazelrc.new
           mv -f .bazelrc.new .bazelrc
         working-directory: tensorflow/tensorflow
