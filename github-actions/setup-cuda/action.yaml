@@ -60,17 +60,18 @@ runs:
 
     - name: install cudnn
       if: inputs.enable_cudnn == 'true'
+      run: |
         if [[ ${{ inputs.enable_cudnn }} == 'true' ]]; then
-        if [[ ${{ inputs.cudnn_version }} == '8' ]]; then
-        sudo dpkg -i cudnn_pkg/cudnn.deb
-        sudo cp /var/cudnn-local-repo-ubuntu2204-8.8.0.121/cudnn-*-keyring.gpg /usr/share/keyrings/
-        sudo apt-get update
-        sudo apt-get -y install libcudnn8-dev
-        elif [[ ${{ inputs.cudnn_version }} == '9' ]]; then
-        sudo dpkg -i cudnn_pkg/cudnn.deb
-        sudo cp /var/cudnn-local-repo-ubuntu2204-9.1.1/cudnn-*-keyring.gpg /usr/share/keyrings/
-        sudo apt-get update
-        sudo apt-get -y install cudnn
-        sudo apt-get -y install cudnn-cuda-12
-        fi
+          if [[ ${{ inputs.cudnn_version }} == '8' ]]; then
+            sudo dpkg -i cudnn_pkg/cudnn.deb
+            sudo cp /var/cudnn-local-repo-ubuntu2204-8.8.0.121/cudnn-*-keyring.gpg /usr/share/keyrings/
+            sudo apt-get update -y
+            sudo apt-get -y install libcudnn8-dev
+          elif [[ ${{ inputs.cudnn_version }} == '9' ]]; then
+            sudo dpkg -i cudnn_pkg/cudnn.deb
+            sudo cp /var/cudnn-local-repo-ubuntu2204-9.1.1/cudnn-*-keyring.gpg /usr/share/keyrings/
+            sudo apt-get update -y
+            sudo apt-get -y install cudnn
+            sudo apt-get -y install cudnn-cuda-12
+          fi
         fi
