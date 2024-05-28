@@ -11,8 +11,6 @@ inputs:
     required: false
     default: '8'
 
-outputs:
-
 runs:
   using: 'composite'
   steps:
