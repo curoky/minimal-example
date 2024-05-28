@@ -35,12 +35,12 @@ jobs:
 
       - name: install cudann
         run: |
-          wget https://developer.download.nvidia.com/compute/cudnn/9.1.1/local_installers/cudnn-local-repo-ubuntu2204-9.1.1_1.0-1_amd64.deb
-          sudo dpkg -i cudnn-local-repo-ubuntu2204-9.1.1_1.0-1_amd64.deb
-          sudo cp /var/cudnn-local-repo-ubuntu2204-9.1.1/cudnn-*-keyring.gpg /usr/share/keyrings/
+          wget https://developer.download.nvidia.com/compute/redist/cudnn/v8.8.0/local_installers/12.0/cudnn-local-repo-ubuntu2204-8.8.0.121_1.0-1_amd64.deb
+          sudo dpkg -i cudnn-local-repo-ubuntu2204-8.8.0.121_1.0-1_amd64.deb
+          sudo cp /var/cudnn-local-repo-ubuntu2204-8.8.0.121/cudnn-*-keyring.gpg /usr/share/keyrings/
           sudo apt-get update
-          sudo apt-get -y install cudnn-cuda-12
-          rm -rf cudnn-local-repo-ubuntu2204-9.1.1_1.0-1_amd64.deb
+          sudo apt-get -y install libcudnn8-dev
+          rm -rf cudnn-local-repo-ubuntu2204-8.8.0.121_1.0-1_amd64.deb
 
       - run: git clone --recurse-submodules --depth=1 -b v2.15.1 https://github.com/tensorflow/tensorflow
         working-directory: tensorflow
@@ -84,12 +84,12 @@ jobs:
 
       - name: install cudann
         run: |
-          wget https://developer.download.nvidia.com/compute/cudnn/9.1.1/local_installers/cudnn-local-repo-ubuntu2204-9.1.1_1.0-1_amd64.deb
-          sudo dpkg -i cudnn-local-repo-ubuntu2204-9.1.1_1.0-1_amd64.deb
-          sudo cp /var/cudnn-local-repo-ubuntu2204-9.1.1/cudnn-*-keyring.gpg /usr/share/keyrings/
+          wget https://developer.download.nvidia.com/compute/redist/cudnn/v8.8.0/local_installers/12.0/cudnn-local-repo-ubuntu2204-8.8.0.121_1.0-1_amd64.deb
+          sudo dpkg -i cudnn-local-repo-ubuntu2204-8.8.0.121_1.0-1_amd64.deb
+          sudo cp /var/cudnn-local-repo-ubuntu2204-8.8.0.121/cudnn-*-keyring.gpg /usr/share/keyrings/
           sudo apt-get update
-          sudo apt-get -y install cudnn-cuda-12
-          rm -rf cudnn-local-repo-ubuntu2204-9.1.1_1.0-1_amd64.deb
+          sudo apt-get -y install libcudnn8-dev
+          rm -rf cudnn-local-repo-ubuntu2204-8.8.0.121_1.0-1_amd64.deb
 
       - run: git clone --recurse-submodules --depth=1 -b v2.16.1 https://github.com/tensorflow/tensorflow
         working-directory: tensorflow
