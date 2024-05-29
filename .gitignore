@@ -21,8 +21,6 @@ buck-out
 
 ## clang
 clang-analysis
-compile_commands.json
-# !cmake/hello/compile_commands.json
 
 ## thrift
 **/gen-cpp/*
