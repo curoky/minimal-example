@@ -1,0 +1,11 @@
+steps:
+  - label: ':bazel: Build bazel example'
+    plugins:
+      - monebag/monorepo-diff#v2.5.9:
+          diff: 'git diff --name-only HEAD~1'
+          watch:
+            - path:
+                - bazel/with-buildkite
+                - .buildkite/pipeline.yaml
+              config:
+                command: cd bazel/with-buildkite && bazel build //src:main
