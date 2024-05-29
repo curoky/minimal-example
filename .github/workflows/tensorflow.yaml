@@ -83,10 +83,10 @@ jobs:
         run: echo 'build --repo_env=TF_CUDA_COMPUTE_CAPABILITIES="compute_90"' >> .bazelrc
         working-directory: tensorflow/tensorflow
 
-      - run: bazel build //tensorflow/tools/pip_package:build_pip_package --repo_env=WHEEL_NAME=tensorflow --config=cuda --config=ci
+      - run: bazel build //tensorflow/tools/pip_package:build_pip_package --repo_env=WHEEL_NAME=tensorflow --config=cuda --config=remote_cache
         working-directory: tensorflow/tensorflow
 
-      - run: bazel build //tensorflow/tools/pip_package/v2:wheel --repo_env=WHEEL_NAME=tensorflow --config=cuda --config=ci
+      - run: bazel build //tensorflow/tools/pip_package/v2:wheel --repo_env=WHEEL_NAME=tensorflow --config=cuda --config=remote_cache
         working-directory: tensorflow/tensorflow
 
       - uses: mxschmitt/action-tmate@v3
