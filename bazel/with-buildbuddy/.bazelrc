@@ -1,5 +1,9 @@
-build:ci --bes_results_url=https://app.buildbuddy.io/invocation/
-build:ci --bes_backend=grpcs://remote.buildbuddy.io
-build:ci --remote_cache=grpcs://remote.buildbuddy.io
-build:ci --remote_timeout=3600
-build:ci --remote_header=x-buildbuddy-api-key="${BUILDBUDDY_API}"
+build:remote_cache --bes_results_url=https://app.buildbuddy.io/invocation/
+build:remote_cache --bes_backend=grpcs://remote.buildbuddy.io
+build:remote_cache --remote_cache=grpcs://remote.buildbuddy.io
+build:remote_cache --remote_timeout=3600
+build:remote_cache --remote_header=x-buildbuddy-api-key="${BUILDBUDDY_API}"
+
+build:remote_build --bes_results_url=https://app.buildbuddy.io/invocation/
+build:remote_build --bes_backend=grpcs://remote.buildbuddy.io
+build:remote_build --remote_header=x-buildbuddy-api-key="${BUILDBUDDY_API}"

@@ -53,7 +53,8 @@ jobs:
       - run: |
           BUILDBUDDY_API=${{ secrets.BUILDBUDDY_API }} envsubst < .bazelrc | tee .bazelrc.new
           mv -f .bazelrc.new .bazelrc
-      - run: bazel build //src:main --config=ci
+      - run: bazel build //src:main --config=remote_cache
+      - run: bazel build //src:main --config=remote_build
 
   with_bzlmod:
     defaults:
