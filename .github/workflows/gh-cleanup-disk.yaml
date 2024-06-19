@@ -18,7 +18,7 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: disk_usage.data
+          name: disk_usage_origin.data
           path: disk_usage.data
 
       - run: df -h
@@ -34,6 +34,16 @@ jobs:
 
       - run: df -h
       - run: du -ahd2 2>&1 | grep -v "denied" | grep -v "/dev" | grep -v "/proc"
+      - name: run ncdu
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y ncdu
+          ncdu -o disk_usage.data -q off /
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: disk_usage_1.data
+          path: disk_usage.data
 
   cleanup_method2:
     runs-on: ubuntu-latest
@@ -53,6 +63,16 @@ jobs:
 
       - run: df -h
       - run: du -ahd2 / 2>&1 | grep -v "denied" | grep -v "/dev" | grep -v "/proc"
+      - name: run ncdu
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y ncdu
+          ncdu -o disk_usage.data -q off /
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: disk_usage_2.data
+          path: disk_usage.data
 
   cleanup_method3:
     runs-on: ubuntu-latest
@@ -66,3 +86,13 @@ jobs:
 
       - run: df -h
       - run: du -ahd2 / 2>&1 | grep -v "denied" | grep -v "/dev" | grep -v "/proc"
+      - name: run ncdu
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y ncdu
+          ncdu -o disk_usage.data -q off /
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: disk_usage_3.data
+          path: disk_usage.data
