@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: test ipv6
-        run: ping -c 1 ipv6.google.com
+        run: ping -c 1 ipv6.google.com || echo ignore error
 
       - name: Set up WARP # for ipv6
         uses: fscarmen/warp-on-actions@v1.1
