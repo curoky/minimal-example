@@ -14,7 +14,7 @@ jobs:
         run: |
           sudo apt-get update -y
           sudo apt-get install -y ncdu
-          ncdu -o disk_usage.data -q --color off /
+          ncdu -o disk_usage.data -q off /
 
       - uses: actions/upload-artifact@v4
         with:
@@ -22,19 +22,25 @@ jobs:
           path: disk_usage.data
 
       - run: df -h
-      - run: du -ahd2 2>&1 | sort -h | grep --color -v "Permission denied"
+      - run: du -ahd2 / 2>&1 | grep -v "denied" | grep -v "/dev" | grep -v "/proc"
 
   cleanup_method1:
     runs-on: ubuntu-latest
     steps:
+      - run: df -h
+      - run: du -ahd2 / 2>&1 | grep -v "denied" | grep -v "/dev" | grep -v "/proc"
+
       - uses: jlumbroso/free-disk-space@main
 
       - run: df -h
-      - run: du -ahd2 2>&1 | sort -h | grep --color -v "Permission denied"
+      - run: du -ahd2 2>&1 | grep -v "denied" | grep -v "/dev" | grep -v "/proc"
 
   cleanup_method2:
     runs-on: ubuntu-latest
     steps:
+      - run: df -h
+      - run: du -ahd2 / 2>&1 | grep -v "denied" | grep -v "/dev" | grep -v "/proc"
+
       - uses: easimon/maximize-build-space@master
         with:
           root-reserve-mb: 512
@@ -46,14 +52,17 @@ jobs:
           remove-docker-images: 'true'
 
       - run: df -h
-      - run: du -ahd2 2>&1 | sort -h | grep --color -v "Permission denied"
+      - run: du -ahd2 / 2>&1 | grep -v "denied" | grep -v "/dev" | grep -v "/proc"
 
   cleanup_method3:
     runs-on: ubuntu-latest
     steps:
+      - run: df -h
+      - run: du -ahd2 / 2>&1 | grep -v "denied" | grep -v "/dev" | grep -v "/proc"
+
       - uses: actions/checkout@v4
 
       - run: github-actions/cleanup-disk/free-github-action-disk-space.sh
 
       - run: df -h
-      - run: du -ahd2 2>&1 | sort -h | grep --color -v "Permission denied"
+      - run: du -ahd2 / 2>&1 | grep -v "denied" | grep -v "/dev" | grep -v "/proc"
