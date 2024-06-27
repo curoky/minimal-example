@@ -5,6 +5,8 @@ tasks:
     cmds:
       - git clone --recurse-submodules --depth=1 -b v2.5.3 https://github.com/tensorflow/tensorflow tensorflow_2_5
       - bazel build //tensorflow/tools/pip_package:build_pip_package --repo_env=WHEEL_NAME=tensorflow --config=cuda --config=noaws --config=nogcp --config=nohdfs --config=nonccl
+    env:
+      CUDNN_INSTALL_PATH: /nix/var/nix/profiles/cu11_cudnn_8_9_7_29
 
   2.15:
     cmds:
