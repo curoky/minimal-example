@@ -1,0 +1,73 @@
+name: tensorflow lib
+
+on:
+  push:
+    paths:
+      - .github/workflows/tensorflow_lib.yaml
+      - tensorflow/bazel_depend_tf_from_pip/**
+  schedule:
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+
+jobs:
+  tf_2_5_gcc:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.8'
+          cache: 'pip'
+
+      - run: pip install protobuf==3.20.* tensorflow==2.5.0
+
+      - run: ./build.sh
+        working-directory: tensorflow/bazel_depend_tf_from_pip/tf2_5_gcc
+
+  tf_2_16_gcc:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - run: pip install protobuf==4.25.3 tensorflow==2.16.1
+
+      - run: ./build.sh
+        working-directory: tensorflow/bazel_depend_tf_from_pip/tf2_16_gcc
+
+  tf_2_5_bazel:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: bazelbuild/setup-bazelisk@v3
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.8'
+          cache: 'pip'
+      - run: pip install protobuf==3.20.* tensorflow==2.5.0
+
+      - run: sed -i -e "s#/app/conda/envs/tf2.5/lib/python3.8/site-packages#$(pip list -v | grep 'tensorflow ' | grep -o -E '[^ ]*site[^ ]*')#g" WORKSPACE
+        working-directory: tensorflow/bazel_depend_tf_from_pip/tf2_5_gcc
+
+      - run: bazel build :zero_out
+        working-directory: tensorflow/bazel_depend_tf_from_pip/tf2_5_gcc
+
+  tf_2_16_bazel:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: bazelbuild/setup-bazelisk@v3
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - run: pip install protobuf==4.25.3 tensorflow==2.16.1
+
+      - run: sed -i -e "s#/app/conda/envs/tf2.16/lib/python3.11/site-packages#$(pip list -v | grep 'tensorflow ' | grep -o -E '[^ ]*site[^ ]*')#g" WORKSPACE
+        working-directory: tensorflow/bazel_depend_tf_from_pip/tf2_16_gcc
+
+      - run: bazel build :zero_out
+        working-directory: tensorflow/bazel_depend_tf_from_pip/tf2_16_gcc

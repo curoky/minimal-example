@@ -1,0 +1,17 @@
+version: '3'
+
+tasks:
+  2.5:
+    cmds:
+      - git clone --recurse-submodules --depth=1 -b v2.5.3 https://github.com/tensorflow/tensorflow tensorflow_2_5
+      - bazel build //tensorflow/tools/pip_package:build_pip_package --repo_env=WHEEL_NAME=tensorflow --config=cuda --config=noaws --config=nogcp --config=nohdfs --config=nonccl
+
+  2.15:
+    cmds:
+      - git clone --recurse-submodules --depth=1 -b v2.15.1 https://github.com/tensorflow/tensorflow tensorflow_2_15
+      - bazel build //tensorflow/tools/pip_package:build_pip_package --repo_env=WHEEL_NAME=tensorflow --config=cuda
+  2.16:
+    cmds:
+      - git clone --recurse-submodules --depth=1 -b v2.16.1 https://github.com/tensorflow/tensorflow tensorflow_2_16
+      - bazel build //tensorflow/tools/pip_package:build_pip_package --repo_env=WHEEL_NAME=tensorflow --config=cuda
+      - bazel build //tensorflow/tools/pip_package/v2:wheel --repo_env=WHEEL_NAME=tensorflow --config=cuda --config=remote_cache

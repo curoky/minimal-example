@@ -1,15 +1,53 @@
-name: tensorflow
+name: tensorflow source build
 
 on:
   push:
     paths:
-      - .github/workflows/tensorflow.yaml
-      - tensorflow/**
-  schedule:
-    - cron: '0 0 * * 0'
+      - .github/workflows/tensorflow_source_build.yaml
+      - tensorflow/source_build/**
   workflow_dispatch:
 
 jobs:
+  tf2_5:
+    defaults:
+      run:
+        working-directory: tensorflow
+    runs-on: ubuntu-latest
+    steps:
+      - uses: jlumbroso/free-disk-space@main
+      - uses: actions/checkout@v4
+      - uses: bazelbuild/setup-bazelisk@v3
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - uses: ./github-actions/setup-cuda
+        with:
+          cuda_version: '11.4'
+          enable_cudnn: 'true'
+          cudnn_version: '8'
+
+      - run: git clone --recurse-submodules --depth=1 -b v2.5.3 https://github.com/tensorflow/tensorflow
+        working-directory: tensorflow
+
+      - name: setup bazel remote cache
+        run: |
+          cat ../../bazel/with-buildbuddy/.bazelrc >> .bazelrc
+          BUILDBUDDY_API=${{ secrets.BUILDBUDDY_API }} envsubst < .bazelrc | tee .bazelrc.new
+          mv -f .bazelrc.new .bazelrc
+        working-directory: tensorflow/tensorflow
+
+      - name: patch TF_CUDA_COMPUTE_CAPABILITIES
+        run: echo 'build --repo_env=TF_CUDA_COMPUTE_CAPABILITIES="compute_75"' >> .bazelrc
+        working-directory: tensorflow/tensorflow
+
+      - run: bazel build //tensorflow/tools/pip_package:build_pip_package --repo_env=WHEEL_NAME=tensorflow --config=cuda --config=noaws --config=nogcp --config=nohdfs --config=nonccl --config=remote_cache
+        working-directory: tensorflow/tensorflow
+
+      - uses: mxschmitt/action-tmate@v3
+        if: ${{ failure() && github.event_name == 'workflow_dispatch' }}
+        timeout-minutes: 30
+
   tf2_15:
     defaults:
       run:
@@ -43,7 +81,7 @@ jobs:
         run: echo 'build --repo_env=TF_CUDA_COMPUTE_CAPABILITIES="compute_90"' >> .bazelrc
         working-directory: tensorflow/tensorflow
 
-      - run: bazel build //tensorflow/tools/pip_package:build_pip_package --repo_env=WHEEL_NAME=tensorflow --config=cuda --config=remote_cache
+      - run: bazel build //tensorflow/tools/pip_package:build_pip_package --repo_env=WHEEL_NAME=tensorflow --config=cuda --config=noaws --config=nogcp --config=nohdfs --config=nonccl --config=remote_cache
         working-directory: tensorflow/tensorflow
 
       - uses: mxschmitt/action-tmate@v3
@@ -83,10 +121,10 @@ jobs:
         run: echo 'build --repo_env=TF_CUDA_COMPUTE_CAPABILITIES="compute_90"' >> .bazelrc
         working-directory: tensorflow/tensorflow
 
-      - run: bazel build //tensorflow/tools/pip_package:build_pip_package --repo_env=WHEEL_NAME=tensorflow --config=cuda --config=remote_cache
+      - run: bazel build //tensorflow/tools/pip_package:build_pip_package --repo_env=WHEEL_NAME=tensorflow --config=cuda --config=noaws --config=nogcp --config=nohdfs --config=nonccl --config=remote_cache
         working-directory: tensorflow/tensorflow
 
-      - run: bazel build //tensorflow/tools/pip_package/v2:wheel --repo_env=WHEEL_NAME=tensorflow --config=cuda --config=remote_cache
+      - run: bazel build //tensorflow/tools/pip_package/v2:wheel --repo_env=WHEEL_NAME=tensorflow --config=cuda --config=noaws --config=nogcp --config=nohdfs --config=nonccl --config=remote_cache
         working-directory: tensorflow/tensorflow
 
       - uses: mxschmitt/action-tmate@v3
