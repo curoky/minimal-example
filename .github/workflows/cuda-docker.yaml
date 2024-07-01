@@ -1,4 +1,4 @@
-name: cuda
+name: cuda docker
 
 on:
   push:

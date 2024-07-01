@@ -44,7 +44,6 @@ runs:
         fi
 
     - name: install cuda
-      if: steps.cache-cuda.outputs.cache-hit != 'true'
       shell: bash
       run: |
         if [[ ${{ inputs.cuda_version }} == '12.5' ]]; then
