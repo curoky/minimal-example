@@ -6,6 +6,6 @@ RUN apt-get update -y \
 
 RUN mkdir -p /usr/local/cudnn9 \
   && curl -sSL https://developer.download.nvidia.com/compute/cudnn/redist/cudnn/linux-x86_64/cudnn-linux-x86_64-9.2.0.82_cuda12-archive.tar.xz \
-    | tar -xv --xz -C /usr/local/cudnn9 --strip-components 1
+    | tar -xv --xz -C /usr/local/cudnn9-cu12.3 --strip-components 1
 
 RUN ln -s /usr/local/cuda-12.3 /usr/local/cuda

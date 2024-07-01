@@ -1,10 +1,10 @@
 ARG BASE_IMAGE_VERSION=1
 
 FROM curoky/infra-image:cuda12.3-cudnn8 as base_image_v1
-ENV CUDNN_INSTALL_PATH=/usr/local/cudnn8-cu12 TF_CUDNN_VERSION=8
+ENV CUDNN_INSTALL_PATH=/usr/local/cudnn8-cu12.3 TF_CUDNN_VERSION=8
 
 FROM curoky/infra-image:cuda12.3-cudnn9 as base_image_v1
-ENV CUDNN_INSTALL_PATH=/usr/local/cudnn9-cu12 TF_CUDNN_VERSION=9
+ENV CUDNN_INSTALL_PATH=/usr/local/cudnn9-cu12.3 TF_CUDNN_VERSION=9
 
 FROM nvidia/cuda:12.3.2-devel-ubuntu22.04 as base_image_v3
 RUN apt-get update -y && apt-get install -y libcudnn8-dev

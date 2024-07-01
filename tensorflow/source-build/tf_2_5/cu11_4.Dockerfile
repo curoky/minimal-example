@@ -1,7 +1,7 @@
 ARG BASE_IMAGE_VERSION=1
 
 FROM curoky/infra-image:cuda11.4-cudnn8 as base_image_v1
-ENV CUDNN_INSTALL_PATH=/usr/local/cudnn8-cu11
+ENV CUDNN_INSTALL_PATH=/usr/local/cudnn8-cu11.4
 
 FROM nvidia/cuda:11.4.3-cudnn8-devel-ubuntu20.04 as base_image_v2
 ENV CUDNN_INSTALL_PATH=/usr

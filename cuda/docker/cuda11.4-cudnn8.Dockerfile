@@ -6,6 +6,6 @@ RUN apt-get update -y \
 
 RUN mkdir -p /usr/local/cudnn8 \
   && curl -sSL https://developer.download.nvidia.com/compute/cudnn/redist/cudnn/linux-x86_64/cudnn-linux-x86_64-8.9.7.29_cuda11-archive.tar.xz \
-    | tar -xv --xz -C /usr/local/cudnn8 --strip-components 1
+    | tar -xv --xz -C /usr/local/cudnn8-cu11.4 --strip-components 1
 
 RUN ln -s /usr/local/cuda-11.4 /usr/local/cuda
