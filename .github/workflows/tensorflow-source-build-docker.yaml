@@ -25,5 +25,5 @@ jobs:
           file: tensorflow/source-build/tf_2_5/cu11_4.Dockerfile
           push: true
           tags: curoky/infra-image:tensorflow2.5-cu11.4-cudnn8
-          cache-from: type=registry,curoky/infra-image:__cache_tensorflow2.5-cu11.4-cudnn8
-          cache-to: type=registry,curoky/infra-image:__cache_tensorflow2.5-cu11.4-cudnn8,mode=max
+          cache-from: type=registry,curoky/infra-image:cache_tensorflow2.5-cu11.4-cudnn8
+          cache-to: type=registry,curoky/infra-image:cache_tensorflow2.5-cu11.4-cudnn8,mode=max
