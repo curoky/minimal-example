@@ -33,4 +33,4 @@ jobs:
           push: true
           tags: curoky/infra-image:${{ matrix.version }}
           cache-from: type=registry,ref=curoky/infra-image:__cache_${{ matrix.version }}
-          cache-to: type=inline
+          cache-to: type=registry,ref=curoky/infra-image:__cache_${{ matrix.version }},mode=max
