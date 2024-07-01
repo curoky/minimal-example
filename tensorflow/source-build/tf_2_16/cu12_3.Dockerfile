@@ -1,21 +1,9 @@
 ARG BASE_IMAGE_VERSION=1
 
-FROM ubuntu:22.04 as base_image_v1
-COPY --link --from=nvidia/cuda:12.3.2-devel-ubuntu22.04 /usr/local/cuda-12.3 /usr/local/cuda-12.3
-RUN apt-get update -y && apt-get install -y --no-install-recommends curl xz-utils ca-certificates
-RUN mkdir -p /usr/local/cudnn8-cu12 \
-  && curl -sSL https://developer.download.nvidia.com/compute/cudnn/redist/cudnn/linux-x86_64/cudnn-linux-x86_64-8.9.7.29_cuda12-archive.tar.xz \
-    | tar -xv --xz -C /usr/local/cudnn8-cu12 --strip-components 1
-RUN ln -s /usr/local/cuda-12.3 /usr/local/cuda
+FROM curoky/infra-image:cuda12.3-cudnn8 as base_image_v1
 ENV CUDNN_INSTALL_PATH=/usr/local/cudnn8-cu12 TF_CUDNN_VERSION=8
 
-FROM ubuntu:22.04 as base_image_v2
-COPY --link --from=nvidia/cuda:12.3.2-devel-ubuntu22.04 /usr/local/cuda-12.3 /usr/local/cuda-12.3
-RUN apt-get update -y && apt-get install -y --no-install-recommends curl xz-utils ca-certificates
-RUN mkdir -p /usr/local/cudnn9-cu12 \
-  && curl -sSL https://developer.download.nvidia.com/compute/cudnn/redist/cudnn/linux-x86_64/cudnn-linux-x86_64-9.2.0.82_cuda12-archive.tar.xz \
-    | tar -xv --xz -C /usr/local/cudnn9-cu12 --strip-components 1
-RUN ln -s /usr/local/cuda-12.3 /usr/local/cuda
+FROM curoky/infra-image:cuda12.3-cudnn9 as base_image_v1
 ENV CUDNN_INSTALL_PATH=/usr/local/cudnn9-cu12 TF_CUDNN_VERSION=9
 
 FROM nvidia/cuda:12.3.2-devel-ubuntu22.04 as base_image_v3

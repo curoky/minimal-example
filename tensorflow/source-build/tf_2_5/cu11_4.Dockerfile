@@ -1,17 +1,9 @@
 ARG BASE_IMAGE_VERSION=1
 
-FROM ubuntu:20.04 as base_image_v1
-COPY --link --from=nvidia/cuda:11.4.3-devel-ubuntu20.04 /usr/local/cuda-11.4 /usr/local/cuda-11.4
-RUN apt-get update -y && apt-get install -y --no-install-recommends curl xz-utils ca-certificates
-RUN mkdir -p /usr/local/cudnn8-cu11 \
-  && curl -sSL https://developer.download.nvidia.com/compute/cudnn/redist/cudnn/linux-x86_64/cudnn-linux-x86_64-8.9.7.29_cuda11-archive.tar.xz \
-    | tar -xv --xz -C /usr/local/cudnn8-cu11 --strip-components 1
-RUN ln -s /usr/local/cuda-11.4 /usr/local/cuda
-# this env is needed by tensorflow
+FROM curoky/infra-image:cuda11.4-cudnn8 as base_image_v1
 ENV CUDNN_INSTALL_PATH=/usr/local/cudnn8-cu11
 
 FROM nvidia/cuda:11.4.3-cudnn8-devel-ubuntu20.04 as base_image_v2
-# this env is needed by tensorflow
 ENV CUDNN_INSTALL_PATH=/usr
 
 FROM base_image_v$BASE_IMAGE_VERSION
