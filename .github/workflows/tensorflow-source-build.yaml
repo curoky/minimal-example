@@ -3,8 +3,7 @@ name: tensorflow source build
 on:
   push:
     paths:
-      - .github/workflows/tensorflow_source_build.yaml
-      - tensorflow/source_build/**
+      - .github/workflows/tensorflow-source-build.yaml
   workflow_dispatch:
 
 jobs:
