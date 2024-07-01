@@ -1,10 +1,10 @@
-name: tensorflow lib
+name: tensorflow usage
 
 on:
   push:
     paths:
-      - .github/workflows/tensorflow_lib.yaml
-      - tensorflow/bazel_depend_tf_from_pip/**
+      - .github/workflows/tensorflow-usage.yaml
+      - tensorflow/usage/**
   schedule:
     - cron: '0 0 * * 0'
   workflow_dispatch:
@@ -22,7 +22,7 @@ jobs:
       - run: pip install protobuf==3.20.* tensorflow==2.5.0
 
       - run: ./build.sh
-        working-directory: tensorflow/bazel_depend_tf_from_pip/tf2_5_gcc
+        working-directory: tensorflow/usage/build-with-pip-prebuilt/tf2_5_gcc
 
   tf_2_16_gcc:
     runs-on: ubuntu-latest
@@ -36,7 +36,7 @@ jobs:
       - run: pip install protobuf==4.25.3 tensorflow==2.16.1
 
       - run: ./build.sh
-        working-directory: tensorflow/bazel_depend_tf_from_pip/tf2_16_gcc
+        working-directory: tensorflow/usage/build-with-pip-prebuilt/tf2_16_gcc
 
   tf_2_5_bazel:
     runs-on: ubuntu-latest
@@ -50,10 +50,10 @@ jobs:
       - run: pip install protobuf==3.20.* tensorflow==2.5.0
 
       - run: sed -i -e "s#/app/conda/envs/tf2.5/lib/python3.8/site-packages#$(pip list -v | grep 'tensorflow ' | grep -o -E '[^ ]*site[^ ]*')#g" WORKSPACE
-        working-directory: tensorflow/bazel_depend_tf_from_pip/tf2_5_bazel
+        working-directory: tensorflow/usage/build-with-pip-prebuilt/tf2_5_bazel
 
       - run: bazel build :zero_out
-        working-directory: tensorflow/bazel_depend_tf_from_pip/tf2_5_bazel
+        working-directory: tensorflow/usage/build-with-pip-prebuilt/tf2_5_bazel
 
   tf_2_16_bazel:
     runs-on: ubuntu-latest
@@ -67,7 +67,7 @@ jobs:
       - run: pip install protobuf==4.25.3 tensorflow==2.16.1
 
       - run: sed -i -e "s#/app/conda/envs/tf2.16/lib/python3.11/site-packages#$(pip list -v | grep 'tensorflow ' | grep -o -E '[^ ]*site[^ ]*')#g" WORKSPACE
-        working-directory: tensorflow/bazel_depend_tf_from_pip/tf2_16_bazel
+        working-directory: tensorflow/usage/build-with-pip-prebuilt/tf2_16_bazel
 
       - run: bazel build :zero_out
-        working-directory: tensorflow/bazel_depend_tf_from_pip/tf2_16_bazel
+        working-directory: tensorflow/usage/build-with-pip-prebuilt/tf2_16_bazel
