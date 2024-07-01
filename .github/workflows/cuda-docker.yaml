@@ -12,9 +12,9 @@ jobs:
     strategy:
       matrix:
         version:
-          - cu11.4-cudnn8
-          - cu12.3-cudnn8
-          - cu12.3-cudnn9
+          - cuda11.4-cudnn8
+          - cuda12.3-cudnn8
+          - cuda12.3-cudnn9
 
     runs-on: ubuntu-latest
     steps:
