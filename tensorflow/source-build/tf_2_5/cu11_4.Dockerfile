@@ -24,7 +24,7 @@ ENV TF_CUDNN_VERSION=8 \
   CC=/usr/bin/gcc-10 CXX=/usr/bin/g++-10 \
   CUDA_TOOLKIT_PATH=/usr/local/cuda-11.4
 
-RUN echo 'startup --host_jvm_args=-Djava.net.preferIPv6Addresses=true' >> .bazelrc
+# RUN echo 'startup --host_jvm_args=-Djava.net.preferIPv6Addresses=true' >> .bazelrc
 RUN pip3 install numpy==1.19.5 keras_preprocessing==1.1.2
 RUN ln -s /usr/bin/python3 /usr/bin/python
 RUN bazel build //tensorflow/tools/pip_package:build_pip_package \

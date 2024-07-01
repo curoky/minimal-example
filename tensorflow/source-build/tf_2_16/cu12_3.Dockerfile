@@ -33,7 +33,7 @@ ENV TF_CUDA_VERSION=12 \
   CC=/usr/bin/gcc-11 CXX=/usr/bin/g++-11 \
   CUDA_TOOLKIT_PATH=/usr/local/cuda-12.3
 
-RUN echo 'startup --host_jvm_args=-Djava.net.preferIPv6Addresses=true' >> .bazelrc
+# RUN echo 'startup --host_jvm_args=-Djava.net.preferIPv6Addresses=true' >> .bazelrc
 # RUN echo 'build --repo_env=TF_CUDA_COMPUTE_CAPABILITIES="compute_90"' >> .bazelrc
 RUN ln -s /usr/bin/python3 /usr/bin/python
 RUN bazel build //tensorflow/tools/pip_package:build_pip_package \
