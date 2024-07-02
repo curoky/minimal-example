@@ -3,12 +3,12 @@ build --repo_env=CUDNN_INSTALL_PATH=/usr/local/cudnn8-cu11.4
 build --repo_env=TF_CUDA_COMPUTE_CAPABILITIES="sm_80" # compute_90
 build --check_visibility=false
 build --config=v2
-build --config=avx_linux
-build --config=cuda
-build --config=noaws 
-build --config=nogcp 
-build --config=nohdfs 
-build --config=nonccl 
+# build --config=avx_linux
+# build --config=cuda
+# build --config=noaws
+# build --config=nogcp
+# build --config=nohdfs
+# build --config=nonccl
 
 # TensorFlow Bazel configuration file.
 # This file tries to group and simplify build options for TensorFlow

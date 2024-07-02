@@ -19,10 +19,9 @@ set -xeuo pipefail
 
 TF_CFLAGS=($(python -c 'import tensorflow as tf; print(" ".join(tf.sysconfig.get_compile_flags()))'))
 TF_LFLAGS=($(python -c 'import tensorflow as tf; print(" ".join(tf.sysconfig.get_link_flags()))'))
-g++ -shared zero_out.cc -o zero_out.so -fPIC ${TF_CFLAGS[@]} ${TF_LFLAGS[@]} -O2
+g++ --std=c++14 -shared zero_out.cc -o zero_out.so -fPIC ${TF_CFLAGS[@]} ${TF_LFLAGS[@]} -O2
 
 # g++ -shared zero_out.cc -o zero_out.so \
 #   -fPIC -I/app/conda/envs/tf2.5/lib/python3.8/site-packages/tensorflow/include \
-#   -D_GLIBCXX_USE_CXX11_ABI=1 --std=c++17 -DEIGEN_MAX_ALIGN_BYTES=64 \
-#   -L/app/conda/envs/tf2.5/lib/python3.8/site-packages/tensorflow \
+#   -D_GLIBCXX_USE_CXX11_ABI=0 -L/app/conda/envs/tf2.5/lib/python3.8/site-packages/tensorflow \
 #   -l:libtensorflow_framework.so.2 -O2

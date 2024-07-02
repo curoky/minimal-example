@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Copyright (c) 2024-2024 curoky(cccuroky@gmail.com).
 #
 # This file is part of learn-ml.
@@ -15,10 +16,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-load("@org_tensorflow//tensorflow:tensorflow.bzl", "tf_custom_op_library")
+import tensorflow as tf
+from tensorflow.python.framework import load_library
+from tensorflow.python.platform import resource_loader
 
-tf_custom_op_library(
-    name = "zero_out",
-    srcs = ["zero_out.cc"],
-    copts = ["-D_GLIBCXX_USE_CXX11_ABI=1"],
+zero_out_module = load_library.load_op_library(
+    resource_loader.get_path_to_datafile(
+        "bazel-bin/libzero_out.so"
+    )
+    # resource_loader.get_path_to_datafile("zero_out.so")
 )
+with tf.device("/cpu:0"):
+    print(dir(zero_out_module))
+    a = zero_out_module.zero_out([[1, 2], [3, 4]])
+    print(a.numpy())

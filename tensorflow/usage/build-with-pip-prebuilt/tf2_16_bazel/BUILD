@@ -14,11 +14,18 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
 cc_library(
     name = "zero_out",
     srcs = ["zero_out.cc"],
     copts = [
         "-std=c++17",
+        "-DEIGEN_MAX_ALIGN_BYTES=64",
+    ],
+    linkopts = [
+        # "-l:libtensorflow_framework.so.2",
+        #"-shared",
+        #"-fPIC",
     ],
     deps = [
         "@tensorflow",

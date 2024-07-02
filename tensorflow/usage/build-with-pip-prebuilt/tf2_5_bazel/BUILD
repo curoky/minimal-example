@@ -18,7 +18,8 @@ cc_library(
     name = "zero_out",
     srcs = ["zero_out.cc"],
     copts = [
-        "-std=c++17",
+        "-std=c++14",
+        "-D_GLIBCXX_USE_CXX11_ABI=0",
     ],
     deps = [
         "@tensorflow",
