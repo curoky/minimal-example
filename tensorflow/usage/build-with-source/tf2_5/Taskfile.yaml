@@ -1,0 +1,15 @@
+version: '3'
+
+tasks:
+  clone:
+    cmds:
+      - git clone --recurse-submodules https://github.com/tensorflow/tensorflow tensorflow_src -b v2.5.0 --depth=1
+      # - sed -i -e "s|cxx|cu|g" tensorflow_src/third_party/gpus/crosstool/clang/bin/crosstool_wrapper_driver_is_not_gcc.tpl
+      # - sed -i -e "s|copts + tf_copts()|tf_copts() + copts|g" tensorflow_src/tensorflow/tensorflow.bzl
+      # - sed -i -e "s|copts + tf_copts(is_external = True)|tf_copts(is_external = True)+copts|g" tensorflow_src/tensorflow/tensorflow.bzl
+  build:
+    cmds:
+      - bazel build :zero_out --config=cuda --verbose_failures
+  test:
+    cmds:
+      - ./test.py
