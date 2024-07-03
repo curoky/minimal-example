@@ -1,7 +1,7 @@
-# Copyright (c) 2024-2024 curoky(cccuroky@gmail.com).
+# Copyright (c) 2018-2024 curoky(cccuroky@gmail.com).
 #
-# This file is part of learn-ml.
-# See https://github.com/curoky/learn-ml for further info.
+# This file is part of minimal-example.
+# See https://github.com/curoky/minimal-example for further info.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -26,6 +26,6 @@ tf_custom_op_library(
 tf_custom_op_library(
     name = "cuda_op",
     srcs = ["cuda_op_kernel.cc"],
-    gpu_srcs = ["cuda_op_kernel.cu.cc"],
     copts = ["-D_GLIBCXX_USE_CXX11_ABI=0"],
+    gpu_srcs = ["cuda_op_kernel.cu.cc"],
 )

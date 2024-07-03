@@ -1,8 +1,8 @@
 /*
- * Copyright (c) 2018-2022 curoky(cccuroky@gmail.com).
+ * Copyright (c) 2018-2024 curoky(cccuroky@gmail.com).
  *
- * This file is part of learn-qt.
- * See https://github.com/curoky/learn-qt for further info.
+ * This file is part of minimal-example.
+ * See https://github.com/curoky/minimal-example for further info.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.

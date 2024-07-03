@@ -1,8 +1,8 @@
 #
 # Copyright (c) 2018-2024 curoky(cccuroky@gmail.com).
 #
-# This file is part of learn-build-system.
-# See https://github.com/curoky/learn-build-system for further info.
+# This file is part of minimal-example.
+# See https://github.com/curoky/minimal-example for further info.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
