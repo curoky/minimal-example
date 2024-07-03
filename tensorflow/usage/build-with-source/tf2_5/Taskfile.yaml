@@ -10,6 +10,7 @@ tasks:
   build:
     cmds:
       - bazel build :zero_out --config=cuda --verbose_failures
+      - bazel build :cuda_op --config=cuda --verbose_failures
   test:
     cmds:
       - ./test.py

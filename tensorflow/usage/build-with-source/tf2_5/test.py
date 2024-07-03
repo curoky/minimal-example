@@ -21,12 +21,19 @@ from tensorflow.python.framework import load_library
 from tensorflow.python.platform import resource_loader
 
 zero_out_module = load_library.load_op_library(
-    resource_loader.get_path_to_datafile(
-        "bazel-bin/libzero_out.so"
-    )
+    resource_loader.get_path_to_datafile("bazel-bin/libzero_out.so")
     # resource_loader.get_path_to_datafile("zero_out.so")
 )
 with tf.device("/cpu:0"):
     print(dir(zero_out_module))
     a = zero_out_module.zero_out([[1, 2], [3, 4]])
+    print(a.numpy())
+
+cuda_op_module = load_library.load_op_library(
+    resource_loader.get_path_to_datafile("bazel-bin/libcuda_op.so")
+    # resource_loader.get_path_to_datafile("zero_out.so")
+)
+with tf.device("/gpu:0"):
+    print(dir(zero_out_module))
+    a = cuda_op_module.add_one([1, 2])
     print(a.numpy())

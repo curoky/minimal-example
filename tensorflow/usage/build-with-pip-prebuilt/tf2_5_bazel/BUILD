@@ -14,6 +14,9 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
+'''
+# need sudo patchelf --add-needed /app/conda/envs/tf2.5/lib/python3.8/site-packages/tensorflow/libtensorflow_framework.so.2 bazel-bin/libzero_out.so
 cc_library(
     name = "zero_out",
     srcs = ["zero_out.cc"],
@@ -21,6 +24,20 @@ cc_library(
         "-std=c++14",
         "-D_GLIBCXX_USE_CXX11_ABI=0",
     ],
+    deps = [
+        "@tensorflow",
+    ],
+)
+'''
+
+cc_binary(
+    name = "zero_out",
+    srcs = ["zero_out.cc"],
+    copts = [
+        "-std=c++14",
+        "-D_GLIBCXX_USE_CXX11_ABI=0",
+    ],
+    linkshared = 1,
     deps = [
         "@tensorflow",
     ],

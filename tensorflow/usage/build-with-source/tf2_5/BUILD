@@ -22,3 +22,10 @@ tf_custom_op_library(
     srcs = ["zero_out.cc"],
     copts = ["-D_GLIBCXX_USE_CXX11_ABI=0"],
 )
+
+tf_custom_op_library(
+    name = "cuda_op",
+    srcs = ["cuda_op_kernel.cc"],
+    gpu_srcs = ["cuda_op_kernel.cu.cc"],
+    copts = ["-D_GLIBCXX_USE_CXX11_ABI=0"],
+)
