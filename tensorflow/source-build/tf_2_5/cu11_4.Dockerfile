@@ -19,7 +19,7 @@ RUN git clone --recurse-submodules --depth=1 -b v2.5.0 https://github.com/tensor
 WORKDIR /tensorflow
 ENV TF_CUDNN_VERSION=8 \
   TF_CUDA_VERSION=11 \
-  TF_CUDA_COMPUTE_CAPABILITIES="sm_75,compute_75" \
+  TF_CUDA_COMPUTE_CAPABILITIES="sm_75,compute_75,sm_80,compute_80,sm_86,compute_86" \
   GCC_HOST_COMPILER_PATH=/usr/bin/gcc-10 \
   CC=/usr/bin/gcc-10 CXX=/usr/bin/g++-10 \
   CUDA_TOOLKIT_PATH=/usr/local/cuda-11.4

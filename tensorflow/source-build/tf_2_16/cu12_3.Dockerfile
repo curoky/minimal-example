@@ -27,7 +27,7 @@ RUN git clone --recurse-submodules --depth=1 -b v2.16.1 https://github.com/tenso
 
 WORKDIR /tensorflow
 ENV TF_CUDA_VERSION=12 \
-  TF_CUDA_COMPUTE_CAPABILITIES="sm_90,compute_90" \
+  TF_CUDA_COMPUTE_CAPABILITIES="sm_75,compute_75,sm_80,compute_80,sm_86,compute_86" \
   TF_PYTHON_VERSION="3.11" \
   GCC_HOST_COMPILER_PATH=/usr/bin/gcc-11 \
   CC=/usr/bin/gcc-11 CXX=/usr/bin/g++-11 \
