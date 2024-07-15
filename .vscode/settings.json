@@ -2,6 +2,7 @@
   "files.associations": {
     "*.BUILD": "starlark",
     "*.blade": "starlark",
+    "*.bzlmod": "starlark",
     "*.cc.j2": "jinja-cpp",
     "*.drawio": "xml",
     "*.h.j2": "jinja-cpp",
@@ -10,12 +11,15 @@
     "*.mustache": "cpp",
     "*.nova": "thrift",
     "*.orc": "thrift",
+    "*.ssh_config": "ssh_config",
     "*.tcc": "cpp",
     "*.tcc.j2": "jinja-cpp",
+    ".bazelignore": "ignore",
+    ".bazelrc": "shellscript",
     "BUILD": "starlark",
     "Brewfile.*": "ruby",
+    "ssh_config": "ssh_config",
     "vimrc": "viml",
-    "*.bzlmod": "starlark",
     "iostream": "cpp",
     "format": "cpp",
     "__bit_reference": "cpp",
@@ -98,6 +102,7 @@
     "random": "cpp",
     "type_traits": "cpp",
     "utility": "cpp",
-    "stop_token": "cpp"
+    "stop_token": "cpp",
+    "tensor": "cpp"
   }
 }

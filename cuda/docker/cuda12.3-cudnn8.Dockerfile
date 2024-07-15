@@ -1,5 +1,6 @@
 FROM ubuntu:22.04
 COPY --link --from=nvidia/cuda:12.3.2-devel-ubuntu22.04 /usr/local/cuda-12.3 /usr/local/cuda-12.3
+COPY --link --from=nvidia/cuda:12.3.2-devel-ubuntu22.04 /opt/nvidia/nsight-compute/2023.3.1 /usr/local/cuda-12.3/nsight-compute-2023.3.1
 
 RUN apt-get update -y \
   && apt-get install -y --no-install-recommends curl xz-utils ca-certificates

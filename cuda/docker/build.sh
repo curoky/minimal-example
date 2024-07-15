@@ -15,3 +15,10 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
+set -xeuo pipefail
+
+docker buildx build . \
+  --file cuda11.4-cudnn8.Dockerfile \
+  --network=host \
+  --tag curoky/infra-image:cuda11.4-cudnn8

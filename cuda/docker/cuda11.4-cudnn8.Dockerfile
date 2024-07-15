@@ -1,5 +1,6 @@
 FROM ubuntu:20.04
 COPY --link --from=nvidia/cuda:11.4.3-devel-ubuntu20.04 /usr/local/cuda-11.4 /usr/local/cuda-11.4
+COPY --link --from=nvidia/cuda:11.4.3-devel-ubuntu20.04 /opt/nvidia/nsight-compute/2021.2.2 /usr/local/cuda-11.4/nsight-compute-2021.2.2
 
 RUN apt-get update -y \
   && apt-get install -y --no-install-recommends curl xz-utils ca-certificates
