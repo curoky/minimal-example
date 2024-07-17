@@ -18,6 +18,9 @@ jobs:
     container:
       image: curoky/infra-image:cuda11.4-cudnn8
     steps:
+      - run: |
+          apt-get update -y
+          apt-get install -y lsb-release
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
@@ -35,12 +38,10 @@ jobs:
     container:
       image: curoky/infra-image:cuda12.3-cudnn8
     steps:
+      - run: |
+          apt-get update -y
+          apt-get install -y lsb-release
       - uses: actions/checkout@v4
-      - uses: ./github-actions/setup-cuda
-        with:
-          cuda_version: '12.3'
-          enable_cudnn: 'true'
-          cudnn_version: '8'
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
@@ -57,13 +58,11 @@ jobs:
     container:
       image: curoky/infra-image:cuda11.4-cudnn8
     steps:
+      - run: |
+          apt-get update -y
+          apt-get install -y lsb-release
       - uses: actions/checkout@v4
       - uses: bazelbuild/setup-bazelisk@v3
-      - uses: ./github-actions/setup-cuda
-        with:
-          cuda_version: '11.4'
-          enable_cudnn: 'true'
-          cudnn_version: '8'
       - uses: actions/setup-python@v5
         with:
           python-version: '3.8'
@@ -83,13 +82,11 @@ jobs:
     container:
       image: curoky/infra-image:cuda12.3-cudnn8
     steps:
+      - run: |
+          apt-get update -y
+          apt-get install -y lsb-release
       - uses: actions/checkout@v4
       - uses: bazelbuild/setup-bazelisk@v3
-      - uses: ./github-actions/setup-cuda
-        with:
-          cuda_version: '12.3'
-          enable_cudnn: 'true'
-          cudnn_version: '8'
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
