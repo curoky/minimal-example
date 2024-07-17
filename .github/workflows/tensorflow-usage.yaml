@@ -11,7 +11,7 @@ on:
 
 jobs:
   tf_2_5_gcc:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v4
       - uses: ./github-actions/setup-cuda
@@ -47,7 +47,7 @@ jobs:
         working-directory: tensorflow/usage/build-with-pip-prebuilt/tf2_16_gcc
 
   tf_2_5_bazel:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v4
       - uses: bazelbuild/setup-bazelisk@v3
@@ -65,7 +65,7 @@ jobs:
       - run: sed -i -e "s#/app/conda/envs/tf2.5/lib/python3.8/site-packages#$(pip list -v | grep 'tensorflow ' | grep -o -E '[^ ]*site[^ ]*')#g" WORKSPACE
         working-directory: tensorflow/usage/build-with-pip-prebuilt/tf2_5_bazel
 
-      - run: bazel build :zero_out
+      - run: bazel build :add_one
         working-directory: tensorflow/usage/build-with-pip-prebuilt/tf2_5_bazel
 
   tf_2_16_bazel:
@@ -87,5 +87,5 @@ jobs:
       - run: sed -i -e "s#/app/conda/envs/tf2.16/lib/python3.11/site-packages#$(pip list -v | grep 'tensorflow ' | grep -o -E '[^ ]*site[^ ]*')#g" WORKSPACE
         working-directory: tensorflow/usage/build-with-pip-prebuilt/tf2_16_bazel
 
-      - run: bazel build :zero_out
+      - run: bazel build :add_one
         working-directory: tensorflow/usage/build-with-pip-prebuilt/tf2_16_bazel
