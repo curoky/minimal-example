@@ -126,6 +126,7 @@ jobs:
           /usr/local/lib/python3.8/dist-packages/tensorflow/include/tensorflow/core/util/gpu_device_functions.h
       - run: sed -i -e "s#/app/conda/envs/tf2.5/lib/python3.8/site-packages#$(pip3 list -v | grep 'tensorflow ' | grep -o -E '[^ ]*dist[^ ]*')#g" WORKSPACE
       - run: git clone --recurse-submodules https://github.com/tensorflow/tensorflow tensorflow_src -b v2.5.0 --depth=1
+      - run: ln -s /usr/bin/python3 /usr/bin/python
       - run: bazel build :add_one --config=cuda --verbose_failures
       - run: ./test.py
         env:
