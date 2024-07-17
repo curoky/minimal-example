@@ -1,24 +1,24 @@
-name: tensorflow usage
+name: tensorflow custom op
 
 on:
   push:
     paths:
       - .github/workflows/tensorflow-usage.yaml
-      - tensorflow/usage/**
+      - tensorflow/custom-op/**
   schedule:
     - cron: '0 0 * * 0'
   workflow_dispatch:
 
 jobs:
   tf_2_5_gcc:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: tensorflow/custom-op/build-with-pip-prebuilt/tf2_5_gcc
+    container:
+      image: curoky/infra-image:cuda11.4-cudnn8
     steps:
       - uses: actions/checkout@v4
-      - uses: ./github-actions/setup-cuda
-        with:
-          cuda_version: '11.4'
-          enable_cudnn: 'true'
-          cudnn_version: '8'
       - uses: actions/setup-python@v5
         with:
           python-version: '3.8'
@@ -26,10 +26,14 @@ jobs:
       - run: pip install protobuf==3.20.* tensorflow==2.5.0
 
       - run: ./build.sh
-        working-directory: tensorflow/usage/build-with-pip-prebuilt/tf2_5_gcc
 
   tf_2_16_gcc:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: tensorflow/custom-op/build-with-pip-prebuilt/tf2_16_gcc
+    container:
+      image: curoky/infra-image:cuda12.3-cudnn8
     steps:
       - uses: actions/checkout@v4
       - uses: ./github-actions/setup-cuda
@@ -44,10 +48,14 @@ jobs:
       - run: pip install protobuf==4.25.3 tensorflow==2.16.1
 
       - run: ./build.sh
-        working-directory: tensorflow/usage/build-with-pip-prebuilt/tf2_16_gcc
 
   tf_2_5_bazel:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: tensorflow/custom-op/build-with-pip-prebuilt/tf2_5_bazel
+    container:
+      image: curoky/infra-image:cuda11.4-cudnn8
     steps:
       - uses: actions/checkout@v4
       - uses: bazelbuild/setup-bazelisk@v3
@@ -63,13 +71,17 @@ jobs:
       - run: pip install protobuf==3.20.* tensorflow==2.5.0
 
       - run: sed -i -e "s#/app/conda/envs/tf2.5/lib/python3.8/site-packages#$(pip list -v | grep 'tensorflow ' | grep -o -E '[^ ]*site[^ ]*')#g" WORKSPACE
-        working-directory: tensorflow/usage/build-with-pip-prebuilt/tf2_5_bazel
 
       - run: bazel build :add_one
         working-directory: tensorflow/usage/build-with-pip-prebuilt/tf2_5_bazel
 
   tf_2_16_bazel:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: tensorflow/custom-op/build-with-pip-prebuilt/tf2_16_bazel
+    container:
+      image: curoky/infra-image:cuda12.3-cudnn8
     steps:
       - uses: actions/checkout@v4
       - uses: bazelbuild/setup-bazelisk@v3
@@ -85,7 +97,4 @@ jobs:
       - run: pip install protobuf==4.25.3 tensorflow==2.16.1
 
       - run: sed -i -e "s#/app/conda/envs/tf2.16/lib/python3.11/site-packages#$(pip list -v | grep 'tensorflow ' | grep -o -E '[^ ]*site[^ ]*')#g" WORKSPACE
-        working-directory: tensorflow/usage/build-with-pip-prebuilt/tf2_16_bazel
-
       - run: bazel build :add_one
-        working-directory: tensorflow/usage/build-with-pip-prebuilt/tf2_16_bazel
