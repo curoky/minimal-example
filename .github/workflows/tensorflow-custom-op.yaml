@@ -3,7 +3,7 @@ name: tensorflow custom op
 on:
   push:
     paths:
-      - .github/workflows/tensorflow-usage.yaml
+      - .github/workflows/tensorflow-custom-op.yaml
       - tensorflow/custom-op/**
   schedule:
     - cron: '0 0 * * 0'
@@ -18,10 +18,10 @@ jobs:
     container:
       image: curoky/infra-image:cuda11.4-cudnn8
     steps:
+      - uses: actions/checkout@v4
       - run: |
           apt-get update -y
           apt-get install -y lsb-release
-      - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.8'
@@ -38,10 +38,10 @@ jobs:
     container:
       image: curoky/infra-image:cuda12.3-cudnn8
     steps:
+      - uses: actions/checkout@v4
       - run: |
           apt-get update -y
           apt-get install -y lsb-release
-      - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
@@ -58,10 +58,10 @@ jobs:
     container:
       image: curoky/infra-image:cuda11.4-cudnn8
     steps:
+      - uses: actions/checkout@v4
       - run: |
           apt-get update -y
           apt-get install -y lsb-release
-      - uses: actions/checkout@v4
       - uses: bazelbuild/setup-bazelisk@v3
       - uses: actions/setup-python@v5
         with:
@@ -82,10 +82,10 @@ jobs:
     container:
       image: curoky/infra-image:cuda12.3-cudnn8
     steps:
+      - uses: actions/checkout@v4
       - run: |
           apt-get update -y
           apt-get install -y lsb-release
-      - uses: actions/checkout@v4
       - uses: bazelbuild/setup-bazelisk@v3
       - uses: actions/setup-python@v5
         with:
