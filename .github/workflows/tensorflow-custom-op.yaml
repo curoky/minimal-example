@@ -23,6 +23,10 @@ jobs:
           apt-get update -y
           apt-get install -y lsb-release python3.8 python3.8-dev python3-pip
       - run: pip3 install protobuf==3.20.* tensorflow==2.5.0
+      - run: >
+          sed -i -e "s|third_party/gpus/cuda/include/||g"
+          /usr/local/lib/python3.8/dist-packages/tensorflow/include/tensorflow/core/util/gpu_kernel_helper.h
+          /usr/local/lib/python3.8/dist-packages/tensorflow/include/tensorflow/core/util/gpu_device_functions.h
       - run: ./build.sh
       - run: ./test.py
         env:
@@ -61,12 +65,16 @@ jobs:
       image: curoky/infra-image:cuda11.4-cudnn8
     steps:
       - uses: actions/checkout@v4
+      - uses: bazelbuild/setup-bazelisk@v3
       - run: |
           apt-get update -y
           apt-get install -y lsb-release python3.8 python3.8-dev python3-pip
       - run: pip3 install protobuf==3.20.* tensorflow==2.5.0
+      - run: >
+          sed -i -e "s|third_party/gpus/cuda/include/||g"
+          /usr/local/lib/python3.8/dist-packages/tensorflow/include/tensorflow/core/util/gpu_kernel_helper.h
+          /usr/local/lib/python3.8/dist-packages/tensorflow/include/tensorflow/core/util/gpu_device_functions.h
       - run: sed -i -e "s#/app/conda/envs/tf2.5/lib/python3.8/site-packages#$(pip list -v | grep 'tensorflow ' | grep -o -E '[^ ]*site[^ ]*')#g" WORKSPACE
-
       - run: bazel build :add_one
         working-directory: tensorflow/usage/build-with-pip-prebuilt/tf2_5_bazel
       - run: ./test.py
@@ -84,6 +92,7 @@ jobs:
       image: curoky/infra-image:cuda12.3-cudnn8
     steps:
       - uses: actions/checkout@v4
+      - uses: bazelbuild/setup-bazelisk@v3
       - run: |
           apt-get update -y
           apt-get install -y lsb-release python3.11 python3.11-dev python3-pip
