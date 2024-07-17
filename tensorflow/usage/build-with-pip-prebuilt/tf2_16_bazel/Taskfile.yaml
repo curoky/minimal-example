@@ -3,4 +3,4 @@ version: '3'
 tasks:
   build:
     cmds:
-      - bazel build :zero_out
+      - bazel build :add_one

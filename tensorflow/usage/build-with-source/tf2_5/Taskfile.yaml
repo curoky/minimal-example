@@ -9,8 +9,7 @@ tasks:
       # - sed -i -e "s|copts + tf_copts(is_external = True)|tf_copts(is_external = True)+copts|g" tensorflow_src/tensorflow/tensorflow.bzl
   build:
     cmds:
-      - bazel build :zero_out --config=cuda --verbose_failures
-      - bazel build :cuda_op --config=cuda --verbose_failures
+      - bazel build :add_one --config=cuda --verbose_failures
   test:
     cmds:
       - ./test.py

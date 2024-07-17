@@ -16,10 +16,10 @@
 # limitations under the License.
 
 '''
-# need sudo patchelf --add-needed /app/conda/envs/tf2.5/lib/python3.8/site-packages/tensorflow/libtensorflow_framework.so.2 bazel-bin/libzero_out.so
+# need sudo patchelf --add-needed /app/conda/envs/tf2.5/lib/python3.8/site-packages/tensorflow/libtensorflow_framework.so.2 bazel-bin/libadd_one.so
 cc_library(
-    name = "zero_out",
-    srcs = ["zero_out.cc"],
+    name = "add_one",
+    srcs = ["add_one.cu.cc"],
     copts = [
         "-std=c++14",
         "-D_GLIBCXX_USE_CXX11_ABI=0",
@@ -28,17 +28,49 @@ cc_library(
         "@tensorflow",
     ],
 )
-'''
 
 cc_binary(
-    name = "zero_out",
-    srcs = ["zero_out.cc"],
+    name = "add_one",
+    srcs = ["add_one.cu.cc"],
     copts = [
         "-std=c++14",
         "-D_GLIBCXX_USE_CXX11_ABI=0",
     ],
     linkshared = 1,
     deps = [
+        "@tensorflow",
+    ],
+)
+'''
+
+load("@rules_cuda//cuda:defs.bzl", "cuda_library")
+
+cuda_library(
+    name = "_add_one",
+    srcs = ["add_one.cu.cc"],
+    copts = [
+        "-std=c++14",
+        "-D_GLIBCXX_USE_CXX11_ABI=0",
+        "-DGOOGLE_CUDA",
+    ],
+    rdc = True,
+    deps = [
+        "@tensorflow",
+    ],
+    alwayslink = True,
+)
+
+cc_binary(
+    name = "add_one",
+    srcs = [],
+    copts = [
+        "-std=c++14",
+        "-D_GLIBCXX_USE_CXX11_ABI=0",
+        "-DGOOGLE_CUDA",
+    ],
+    linkshared = 1,
+    deps = [
+        ":_add_one",
         "@tensorflow",
     ],
 )

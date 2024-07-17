@@ -22,7 +22,7 @@ build --experimental_cc_shared_library
 build --experimental_link_static_libraries_once=false
 build --incompatible_enforce_config_setting_visibility
 
-# build --repo_env=CUDA_PATH=/usr/local/cuda
+build --repo_env=TF_CUDA_PATHS=/usr/local/cuda-12.3
 build --repo_env=CUDNN_INSTALL_PATH=/usr/local/cudnn8-cu12.3
 build --repo_env=TF_CUDA_COMPUTE_CAPABILITIES="sm_80" # compute_90
 
@@ -46,8 +46,8 @@ build:verbose_logs --output_filter=
 # # build:linux --define=LIBDIR=$(PREFIX)/lib
 # # build:linux --define=INCLUDEDIR=$(PREFIX)/include
 # # build:linux --define=PROTOBUF_INCLUDE_PATH=$(PREFIX)/include
-# build:linux --cxxopt=-std=c++17
-# build:linux --host_cxxopt=-std=c++17
+build:linux --cxxopt=-std=c++17
+build:linux --host_cxxopt=-std=c++17
 # build:linux --config=dynamic_kernels
 # build:linux --experimental_guard_against_concurrent_changes
 # build:avx_linux --copt=-mavx5

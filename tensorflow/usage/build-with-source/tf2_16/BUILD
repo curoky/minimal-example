@@ -18,7 +18,7 @@
 load("@org_tensorflow//tensorflow:tensorflow.bzl", "tf_custom_op_library")
 
 tf_custom_op_library(
-    name = "zero_out",
-    srcs = ["zero_out.cc"],
+    name = "add_one",
     copts = ["-D_GLIBCXX_USE_CXX11_ABI=1"],
+    gpu_srcs = ["add_one.cu.cc"],
 )

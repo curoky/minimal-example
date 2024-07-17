@@ -15,11 +15,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-'''
-# need sudo patchelf --add-needed /app/conda/envs/tf2.16/lib/python3.11/site-packages/tensorflow/libtensorflow_framework.so.2 bazel-bin/libzero_out.so
+"""
+# need sudo patchelf --add-needed /app/conda/envs/tf2.16/lib/python3.11/site-packages/tensorflow/libtensorflow_framework.so.2 bazel-bin/libadd_one.so
 cc_library(
-    name = "zero_out",
-    srcs = ["zero_out.cc"],
+    name = "add_one",
+    srcs = ["add_one.cc"],
     copts = [
         "-std=c++17",
         "-DEIGEN_MAX_ALIGN_BYTES=64",
@@ -33,17 +33,54 @@ cc_library(
         "@tensorflow",
     ],
 )
-'''
 
 cc_binary(
-    name = "zero_out",
-    srcs = ["zero_out.cc"],
+    name = "add_one",
+    srcs = ["add_one.cu.cc"],
     copts = [
         "-std=c++17",
         "-DEIGEN_MAX_ALIGN_BYTES=64",
     ],
     linkshared = 1,
     deps = [
+        "@tensorflow",
+    ],
+)
+
+"""
+
+load("@rules_cuda//cuda:defs.bzl", "cuda_library")
+
+cuda_library(
+    name = "_add_one",
+    srcs = ["add_one.cu.cc"],
+    copts = [
+        "-std=c++17",
+        "-D_GLIBCXX_USE_CXX11_ABI=1",
+        "-DGOOGLE_CUDA",
+        "-DTF_MAJOR_VERSION=2",
+        "-DTF_MINOR_VERSION=16",
+    ],
+    rdc = True,
+    deps = [
+        "@tensorflow",
+    ],
+    alwayslink = True,
+)
+
+cc_binary(
+    name = "add_one",
+    srcs = [],
+    copts = [
+        "-std=c++17",
+        "-D_GLIBCXX_USE_CXX11_ABI=1",
+        "-DGOOGLE_CUDA",
+        "-DTF_MAJOR_VERSION=2",
+        "-DTF_MINOR_VERSION=16",
+    ],
+    linkshared = 1,
+    deps = [
+        ":_add_one",
         "@tensorflow",
     ],
 )
