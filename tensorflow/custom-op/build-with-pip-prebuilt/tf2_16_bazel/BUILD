@@ -58,8 +58,6 @@ cuda_library(
         "-std=c++17",
         "-D_GLIBCXX_USE_CXX11_ABI=1",
         "-DGOOGLE_CUDA",
-        "-DTF_MAJOR_VERSION=2",
-        "-DTF_MINOR_VERSION=16",
     ],
     rdc = True,
     deps = [
@@ -75,8 +73,6 @@ cc_binary(
         "-std=c++17",
         "-D_GLIBCXX_USE_CXX11_ABI=1",
         "-DGOOGLE_CUDA",
-        "-DTF_MAJOR_VERSION=2",
-        "-DTF_MINOR_VERSION=16",
     ],
     linkshared = 1,
     deps = [

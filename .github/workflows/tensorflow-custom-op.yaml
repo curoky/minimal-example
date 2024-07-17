@@ -68,7 +68,7 @@ jobs:
       - uses: bazelbuild/setup-bazelisk@v3
       - run: |
           apt-get update -y
-          apt-get install -y lsb-release python3.8 python3.8-dev python3-pip
+          apt-get install -y lsb-release python3.8 python3.8-dev python3-pip git vim
       - run: pip3 install protobuf==3.20.* tensorflow==2.5.0
       - run: >
           sed -i -e "s|third_party/gpus/cuda/include/||g"
@@ -95,7 +95,7 @@ jobs:
       - uses: bazelbuild/setup-bazelisk@v3
       - run: |
           apt-get update -y
-          apt-get install -y lsb-release python3.11 python3.11-dev python3-pip
+          apt-get install -y lsb-release python3.11 python3.11-dev python3-pip git vim
       - run: pip install protobuf==4.25.3 tensorflow==2.16.1
       - run: sed -i -e "s#/app/conda/envs/tf2.16/lib/python3.11/site-packages#$(pip3 list -v | grep 'tensorflow ' | grep -o -E '[^ ]*dist[^ ]*')#g" WORKSPACE
       - run: bazel build :add_one

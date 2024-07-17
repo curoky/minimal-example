@@ -22,11 +22,10 @@ TF_CFLAGS=($(python3 -c 'import tensorflow as tf; print(" ".join(tf.sysconfig.ge
 TF_LFLAGS=($(python3 -c 'import tensorflow as tf; print(" ".join(tf.sysconfig.get_link_flags()))'))
 # g++ -shared add_one.cc -o add_one.so -fPIC ${TF_CFLAGS[@]} ${TF_LFLAGS[@]} -O2
 nvcc -c -o add_one.cu.o add_one.cu.cc \
-  ${TF_CFLAGS[@]} -D GOOGLE_CUDA=1 -x cu -Xcompiler -fPIC --expt-relaxed-constexpr \
-  -DTF_MAJOR_VERSION=2 -DTF_MINOR_VERSION=16
+  ${TF_CFLAGS[@]} -D GOOGLE_CUDA=1 -x cu -Xcompiler -fPIC --expt-relaxed-constexpr
+
 g++ -shared -o add_one.so add_one.cu.o \
-  ${TF_CFLAGS[@]} -fPIC -lcudart -L/usr/local/cuda-12.3/lib64/ ${TF_LFLAGS[@]} \
-  -DTF_MAJOR_VERSION=2 -DTF_MINOR_VERSION=16
+  ${TF_CFLAGS[@]} -fPIC -lcudart -L/usr/local/cuda-12.3/lib64/ ${TF_LFLAGS[@]}
 
 # g++ -shared add_one.cc -o add_one.so \
 #   -fPIC -I/app/conda/envs/tf2.16/lib/python3.11/site-packages/tensorflow/include \
