@@ -30,6 +30,9 @@ jobs:
 
       - run: ./build.sh
 
+      - uses: mxschmitt/action-tmate@v3
+        if: ${{ failure() }}
+
   tf_2_16_gcc:
     runs-on: ubuntu-latest
     defaults:
@@ -49,6 +52,8 @@ jobs:
       - run: pip install protobuf==4.25.3 tensorflow==2.16.1
 
       - run: ./build.sh
+      - uses: mxschmitt/action-tmate@v3
+        if: ${{ failure() }}
 
   tf_2_5_bazel:
     runs-on: ubuntu-latest
@@ -74,6 +79,9 @@ jobs:
       - run: bazel build :add_one
         working-directory: tensorflow/usage/build-with-pip-prebuilt/tf2_5_bazel
 
+      - uses: mxschmitt/action-tmate@v3
+        if: ${{ failure() }}
+
   tf_2_16_bazel:
     runs-on: ubuntu-latest
     defaults:
@@ -95,3 +103,6 @@ jobs:
 
       - run: sed -i -e "s#/app/conda/envs/tf2.16/lib/python3.11/site-packages#$(pip list -v | grep 'tensorflow ' | grep -o -E '[^ ]*site[^ ]*')#g" WORKSPACE
       - run: bazel build :add_one
+
+      - uses: mxschmitt/action-tmate@v3
+        if: ${{ failure() }}
