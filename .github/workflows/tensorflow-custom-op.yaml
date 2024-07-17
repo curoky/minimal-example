@@ -21,13 +21,8 @@ jobs:
       - uses: actions/checkout@v4
       - run: |
           apt-get update -y
-          apt-get install -y lsb-release
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.8'
-          cache: 'pip'
-      - run: pip install protobuf==3.20.* tensorflow==2.5.0
-
+          apt-get install -y lsb-release python3.8 python3.8-dev python3-pip
+      - run: pip3 install protobuf==3.20.* tensorflow==2.5.0
       - run: ./build.sh
 
       - uses: mxschmitt/action-tmate@v3
@@ -44,13 +39,8 @@ jobs:
       - uses: actions/checkout@v4
       - run: |
           apt-get update -y
-          apt-get install -y lsb-release
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-          cache: 'pip'
+          apt-get install -y lsb-release python3.11 python3.11-dev python3-pip
       - run: pip install protobuf==4.25.3 tensorflow==2.16.1
-
       - run: ./build.sh
       - uses: mxschmitt/action-tmate@v3
         if: ${{ failure() }}
@@ -66,14 +56,8 @@ jobs:
       - uses: actions/checkout@v4
       - run: |
           apt-get update -y
-          apt-get install -y lsb-release
-      - uses: bazelbuild/setup-bazelisk@v3
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.8'
-          cache: 'pip'
-      - run: pip install protobuf==3.20.* tensorflow==2.5.0
-
+          apt-get install -y lsb-release python3.8 python3.8-dev python3-pip
+      - run: pip3 install protobuf==3.20.* tensorflow==2.5.0
       - run: sed -i -e "s#/app/conda/envs/tf2.5/lib/python3.8/site-packages#$(pip list -v | grep 'tensorflow ' | grep -o -E '[^ ]*site[^ ]*')#g" WORKSPACE
 
       - run: bazel build :add_one
@@ -93,14 +77,8 @@ jobs:
       - uses: actions/checkout@v4
       - run: |
           apt-get update -y
-          apt-get install -y lsb-release
-      - uses: bazelbuild/setup-bazelisk@v3
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-          cache: 'pip'
+          apt-get install -y lsb-release python3.11 python3.11-dev python3-pip
       - run: pip install protobuf==4.25.3 tensorflow==2.16.1
-
       - run: sed -i -e "s#/app/conda/envs/tf2.16/lib/python3.11/site-packages#$(pip list -v | grep 'tensorflow ' | grep -o -E '[^ ]*site[^ ]*')#g" WORKSPACE
       - run: bazel build :add_one
 
