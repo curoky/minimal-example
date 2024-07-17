@@ -18,8 +18,8 @@
 set -xeuo pipefail
 export PATH=/usr/local/cuda-12.3/bin:$PATH
 
-TF_CFLAGS=($(python -c 'import tensorflow as tf; print(" ".join(tf.sysconfig.get_compile_flags()))'))
-TF_LFLAGS=($(python -c 'import tensorflow as tf; print(" ".join(tf.sysconfig.get_link_flags()))'))
+TF_CFLAGS=($(python3 -c 'import tensorflow as tf; print(" ".join(tf.sysconfig.get_compile_flags()))'))
+TF_LFLAGS=($(python3 -c 'import tensorflow as tf; print(" ".join(tf.sysconfig.get_link_flags()))'))
 # g++ -shared add_one.cc -o add_one.so -fPIC ${TF_CFLAGS[@]} ${TF_LFLAGS[@]} -O2
 nvcc -c -o add_one.cu.o add_one.cu.cc \
   ${TF_CFLAGS[@]} -D GOOGLE_CUDA=1 -x cu -Xcompiler -fPIC --expt-relaxed-constexpr \

@@ -24,6 +24,9 @@ jobs:
           apt-get install -y lsb-release python3.8 python3.8-dev python3-pip
       - run: pip3 install protobuf==3.20.* tensorflow==2.5.0
       - run: ./build.sh
+      - run: ./test.py
+        env:
+          LD_LIBRARY_PATH: /usr/local/cuda-11.4/lib64
 
       - uses: mxschmitt/action-tmate@v3
         if: ${{ failure() }}
@@ -42,6 +45,10 @@ jobs:
           apt-get install -y lsb-release python3.11 python3.11-dev python3-pip
       - run: pip install protobuf==4.25.3 tensorflow==2.16.1
       - run: ./build.sh
+      - run: ./test.py
+        env:
+          LD_LIBRARY_PATH: /usr/local/cuda-12.3/lib64
+
       - uses: mxschmitt/action-tmate@v3
         if: ${{ failure() }}
 
@@ -62,7 +69,9 @@ jobs:
 
       - run: bazel build :add_one
         working-directory: tensorflow/usage/build-with-pip-prebuilt/tf2_5_bazel
-
+      - run: ./test.py
+        env:
+          LD_LIBRARY_PATH: /usr/local/cuda-11.4/lib64
       - uses: mxschmitt/action-tmate@v3
         if: ${{ failure() }}
 
@@ -81,6 +90,9 @@ jobs:
       - run: pip install protobuf==4.25.3 tensorflow==2.16.1
       - run: sed -i -e "s#/app/conda/envs/tf2.16/lib/python3.11/site-packages#$(pip list -v | grep 'tensorflow ' | grep -o -E '[^ ]*site[^ ]*')#g" WORKSPACE
       - run: bazel build :add_one
+      - run: ./test.py
+        env:
+          LD_LIBRARY_PATH: /usr/local/cuda-12.3/lib64
 
       - uses: mxschmitt/action-tmate@v3
         if: ${{ failure() }}
