@@ -33,7 +33,7 @@ jobs:
           LD_LIBRARY_PATH: /usr/local/cuda-11.4/lib64
 
       - uses: mxschmitt/action-tmate@v3
-        if: ${{ failure() }}
+        if: ${{ failure() && github.event_name == 'workflow_dispatch' }}
 
   tf_2_16_gcc:
     runs-on: ubuntu-latest
@@ -54,7 +54,7 @@ jobs:
           LD_LIBRARY_PATH: /usr/local/cuda-12.3/lib64
 
       - uses: mxschmitt/action-tmate@v3
-        if: ${{ failure() }}
+        if: ${{ failure() && github.event_name == 'workflow_dispatch' }}
 
   tf_2_5_bazel:
     runs-on: ubuntu-latest
@@ -76,12 +76,12 @@ jobs:
           /usr/local/lib/python3.8/dist-packages/tensorflow/include/tensorflow/core/util/gpu_device_functions.h
       - run: sed -i -e "s#/app/conda/envs/tf2.5/lib/python3.8/site-packages#$(pip3 list -v | grep 'tensorflow ' | grep -o -E '[^ ]*dist[^ ]*')#g" WORKSPACE
       - run: bazel build :add_one
-        working-directory: tensorflow/usage/build-with-pip-prebuilt/tf2_5_bazel
       - run: ./test.py
         env:
           LD_LIBRARY_PATH: /usr/local/cuda-11.4/lib64
+
       - uses: mxschmitt/action-tmate@v3
-        if: ${{ failure() }}
+        if: ${{ failure() && github.event_name == 'workflow_dispatch' }}
 
   tf_2_16_bazel:
     runs-on: ubuntu-latest
@@ -104,4 +104,56 @@ jobs:
           LD_LIBRARY_PATH: /usr/local/cuda-12.3/lib64
 
       - uses: mxschmitt/action-tmate@v3
-        if: ${{ failure() }}
+        if: ${{ failure() && github.event_name == 'workflow_dispatch' }}
+
+  tf_2_5_src_build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: tensorflow/custom-op/build-with-source/tf2_5
+    container:
+      image: curoky/infra-image:cuda11.4-cudnn8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: bazelbuild/setup-bazelisk@v3
+      - run: |
+          apt-get update -y
+          apt-get install -y lsb-release python3.8 python3.8-dev python3-pip
+      - run: pip3 install protobuf==3.20.* tensorflow==2.5.0
+      - run: >
+          sed -i -e "s|third_party/gpus/cuda/include/||g"
+          /usr/local/lib/python3.8/dist-packages/tensorflow/include/tensorflow/core/util/gpu_kernel_helper.h
+          /usr/local/lib/python3.8/dist-packages/tensorflow/include/tensorflow/core/util/gpu_device_functions.h
+      - run: sed -i -e "s#/app/conda/envs/tf2.5/lib/python3.8/site-packages#$(pip3 list -v | grep 'tensorflow ' | grep -o -E '[^ ]*dist[^ ]*')#g" WORKSPACE
+      - run: git clone --recurse-submodules https://github.com/tensorflow/tensorflow tensorflow_src -b v2.5.0 --depth=1
+      - run: bazel build :add_one --config=cuda --verbose_failures
+      - run: ./test.py
+        env:
+          LD_LIBRARY_PATH: /usr/local/cuda-11.4/lib64
+
+      - uses: mxschmitt/action-tmate@v3
+        if: ${{ failure() && github.event_name == 'workflow_dispatch' }}
+
+  tf_2_16_src_build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: tensorflow/custom-op/build-with-source/tf2_16
+    container:
+      image: curoky/infra-image:cuda12.3-cudnn8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: bazelbuild/setup-bazelisk@v3
+      - run: |
+          apt-get update -y
+          apt-get install -y lsb-release python3.11 python3.11-dev python3-pip
+      - run: pip install protobuf==4.25.3 tensorflow==2.16.1
+      - run: sed -i -e "s#/app/conda/envs/tf2.16/lib/python3.11/site-packages#$(pip3 list -v | grep 'tensorflow ' | grep -o -E '[^ ]*dist[^ ]*')#g" WORKSPACE
+      - run: git clone --recurse-submodules https://github.com/tensorflow/tensorflow tensorflow_src -b v2.16.1 --depth=1
+      - run: bazel build :add_one --config=cuda --verbose_failures
+      - run: ./test.py
+        env:
+          LD_LIBRARY_PATH: /usr/local/cuda-12.3/lib64
+
+      - uses: mxschmitt/action-tmate@v3
+        if: ${{ failure() && github.event_name == 'workflow_dispatch' }}
