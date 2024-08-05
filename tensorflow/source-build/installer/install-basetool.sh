@@ -18,10 +18,6 @@
 
 set -xeuo pipefail
 
-base_image_version=${1:-2}
-
-docker buildx build . \
-  --file cu12_3.gcc.Dockerfile \
-  --network=host \
-  --build-arg BASE_IMAGE_VERSION=${base_image_version} \
-  --tag curoky/infra-image:tensorflow2.15-cu12.3-cudnn8
+apt-get update -y
+apt-get install -y --no-install-recommends \
+  curl wget git ncdu ca-certificates xz-utils patchelf

@@ -1,4 +1,4 @@
-ARG BASE_IMAGE_VERSION=1
+ARG BASE_IMAGE_VERSION=2
 
 FROM curoky/infra-image:cuda12.3-cudnn8 as base_image_v1
 ENV CUDNN_INSTALL_PATH=//usr/local/cudnn8-cu12.3

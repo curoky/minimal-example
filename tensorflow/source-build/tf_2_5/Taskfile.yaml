@@ -1,0 +1,19 @@
+version: '3'
+
+tasks:
+  gcc:
+    cmds:
+      - >
+        docker buildx build .
+        --file cu11_4.gcc.Dockerfile
+        --build-context installer=../installer
+        --network=host
+        --tag curoky/infra-image:tensorflow2.5-cu11.4-cudnn8-gcc
+  clang:
+    cmds:
+      - >
+        docker buildx build .
+        --file cu11_4.clang.Dockerfile
+        --build-context installer=../installer
+        --network=host
+        --tag curoky/infra-image:tensorflow2.5-cu11.4-cudnn8-clang

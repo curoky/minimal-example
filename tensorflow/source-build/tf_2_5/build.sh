@@ -18,10 +18,11 @@
 
 set -xeuo pipefail
 
-base_image_version=${1:-1}
+base_image_version=${1:-2}
+toolchain=${2:-clang}
 
 docker buildx build . \
-  --file cu11_4.Dockerfile \
+  --file cu11_4.$toolchain.Dockerfile \
   --network=host \
   --build-arg BASE_IMAGE_VERSION=${base_image_version} \
   --tag curoky/infra-image:tensorflow2.5-cu11.4-cudnn8

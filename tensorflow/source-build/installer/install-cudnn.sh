@@ -18,10 +18,11 @@
 
 set -xeuo pipefail
 
-base_image_version=${1:-2}
+VERSION=${1-'8.9.7.29_cuda11'}
+INSTALL_PATH=/opt/cudnn
 
-docker buildx build . \
-  --file cu12_3.gcc.Dockerfile \
-  --network=host \
-  --build-arg BASE_IMAGE_VERSION=${base_image_version} \
-  --tag curoky/infra-image:tensorflow2.15-cu12.3-cudnn8
+mkdir -p $INSTALL_PATH
+echo "Installing cudnn $VERSION" >$INSTALL_PATH/version.txt
+
+curl -sSL https://developer.download.nvidia.com/compute/cudnn/redist/cudnn/linux-x86_64/cudnn-linux-x86_64-8.9.7.29_cuda11-archive.tar.xz |
+  tar -xv --xz -C $INSTALL_PATH --strip-components 1
