@@ -8,7 +8,7 @@ tasks:
         --file cu12_3.gcc.Dockerfile
         --build-context installer=../installer
         --network=host
-        --tag curoky/infra-image:tensorflow2.16-cu12.3-cudnn8-gcc
+        --tag curoky/infra-image:tensorflow2.16-cu12.3-cudnn8.9-gcc
   clang:
     cmds:
       - >
@@ -16,4 +16,4 @@ tasks:
         --file cu12_3.clang.Dockerfile
         --build-context installer=../installer
         --network=host
-        --tag curoky/infra-image:tensorflow2.16-cu12.3-cudnn8-clang
+        --tag curoky/infra-image:tensorflow2.16-cu12.3-cudnn8.9-clang
