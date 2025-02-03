@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - .github/workflows/scons.yaml
-      - scons/**
+      - build-system/scons/**
   schedule:
     - cron: '0 0 * * 0'
   workflow_dispatch:
@@ -13,7 +13,7 @@ jobs:
   cpp:
     defaults:
       run:
-        working-directory: scons/cpp
+        working-directory: build-system/scons/cpp
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

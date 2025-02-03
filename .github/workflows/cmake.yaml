@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - .github/workflows/cmake.yaml
-      - cmake/**
+      - build-system/cmake/**
   schedule:
     - cron: '0 0 * * 0'
   workflow_dispatch:
@@ -13,7 +13,7 @@ jobs:
   hello:
     defaults:
       run:
-        working-directory: cmake/hello
+        working-directory: build-system/cmake/hello
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -27,7 +27,7 @@ jobs:
   with_ccache:
     defaults:
       run:
-        working-directory: cmake/with-ccache
+        working-directory: build-system/cmake/with-ccache
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -49,7 +49,7 @@ jobs:
   with_conan:
     defaults:
       run:
-        working-directory: cmake/with-conan
+        working-directory: build-system/cmake/with-conan
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -72,7 +72,7 @@ jobs:
   with_cpm:
     defaults:
       run:
-        working-directory: cmake/with-cpm
+        working-directory: build-system/cmake/with-cpm
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -85,7 +85,7 @@ jobs:
   with_vcpkg:
     defaults:
       run:
-        working-directory: cmake/with-vcpkg
+        working-directory: build-system/cmake/with-vcpkg
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

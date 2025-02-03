@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - .github/workflows/docker.yaml
-      - docker/**
+      - build-environ/docker/**
   schedule:
     - cron: '0 0 * * 0'
   workflow_dispatch:
@@ -21,7 +21,7 @@ jobs:
       #     password: ${{ secrets.DOCKERHUB_TOKEN }}
       - uses: docker/build-push-action@v5
         with:
-          context: docker/hello
+          context: build-environ/docker/hello
           push: false
           tags: curoky/learn-build-system:docker_tutorial_hello
           cache-from: type=registry,ref=curoky/learn-build-system:docker_tutorial_hello
@@ -41,7 +41,7 @@ jobs:
       #     password: ${{ secrets.DOCKERHUB_TOKEN }}
       - uses: docker/build-push-action@v5
         with:
-          context: docker/multi-platform
+          context: build-environ/docker/multi-platform
           push: false
           tags: curoky/learn-build-system:docker_tutorial_multi_platform
           cache-from: type=registry,ref=curoky/learn-build-system:docker_tutorial_multi_platform

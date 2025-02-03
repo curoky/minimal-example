@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - .github/workflows/blade.yaml
-      - blade/**
+      - build-system/blade/**
   schedule:
     - cron: '0 0 * * 0'
   workflow_dispatch:
@@ -13,7 +13,7 @@ jobs:
   cpp:
     defaults:
       run:
-        working-directory: blade/cpp
+        working-directory: build-system/blade/cpp
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

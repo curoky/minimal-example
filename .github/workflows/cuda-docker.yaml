@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - .github/workflows/cuda-docker.yaml
-      - cuda/docker/**
+      - build-system/cuda/docker/**
   workflow_dispatch:
 
 jobs:
@@ -29,7 +29,7 @@ jobs:
       - uses: docker/build-push-action@v5
         with:
           context: cuda/docker
-          file: cuda/docker/${{ matrix.version }}.Dockerfile
+          file: build-system/cuda/docker/${{ matrix.version }}.Dockerfile
           push: true
           tags: curoky/infra-image:${{ matrix.version }}
           cache-from: type=registry,ref=curoky/infra-image:__cache_${{ matrix.version }}

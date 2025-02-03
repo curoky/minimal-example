@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - .github/workflows/xmake.yaml
-      - xmake/**
+      - build-system/xmake/**
   schedule:
     - cron: '0 0 * * 0'
   workflow_dispatch:
@@ -13,7 +13,7 @@ jobs:
   cpp_hello:
     defaults:
       run:
-        working-directory: xmake/cpp/hello
+        working-directory: build-system/xmake/cpp/hello
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -26,7 +26,7 @@ jobs:
   cpp_with_extern_pm:
     defaults:
       run:
-        working-directory: xmake/cpp/with-extern-pm
+        working-directory: build-system/xmake/cpp/with-extern-pm
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -39,7 +39,7 @@ jobs:
   cpp_with_vcpkg:
     defaults:
       run:
-        working-directory: xmake/cpp/with-vcpkg
+        working-directory: build-system/xmake/cpp/with-vcpkg
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

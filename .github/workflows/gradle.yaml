@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - .github/workflows/gradle.yaml
-      - gradle/**
+      - build-system/gradle/**
   schedule:
     - cron: '0 0 * * 0'
   workflow_dispatch:
@@ -36,4 +36,4 @@ jobs:
 
       - name: Build
         run: gradle build
-        working-directory: gradle/hello
+        working-directory: build-system/gradle/hello

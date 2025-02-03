@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - .github/workflows/bazel.yaml
-      - bazel/**
+      - build-system/bazel/**
   schedule:
     - cron: '0 0 * * 0'
   workflow_dispatch:
@@ -13,7 +13,7 @@ jobs:
   cpp:
     defaults:
       run:
-        working-directory: bazel/cpp
+        working-directory: build-system/bazel/cpp
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -24,7 +24,7 @@ jobs:
   go:
     defaults:
       run:
-        working-directory: bazel/go/without-bzlmod
+        working-directory: build-system/bazel/go/without-bzlmod
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -45,7 +45,7 @@ jobs:
   with_buildbuddy:
     defaults:
       run:
-        working-directory: bazel/with-buildbuddy
+        working-directory: build-system/bazel/with-buildbuddy
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -59,7 +59,7 @@ jobs:
   with_bzlmod:
     defaults:
       run:
-        working-directory: bazel/with-bzlmod
+        working-directory: build-system/bazel/with-bzlmod
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -74,7 +74,7 @@ jobs:
   with_clang:
     defaults:
       run:
-        working-directory: bazel/with-clang-v2
+        working-directory: build-system/bazel/with-clang-v2
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -91,7 +91,7 @@ jobs:
   with_libllvm:
     defaults:
       run:
-        working-directory: bazel/with-libllvm-v2
+        working-directory: build-system/bazel/with-libllvm-v2
     runs-on: ubuntu-latest
     container:
       image: ubuntu:23.04
@@ -116,7 +116,7 @@ jobs:
   with_conan:
     defaults:
       run:
-        working-directory: bazel/with-conan
+        working-directory: build-system/bazel/with-conan
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - .github/workflows/tensorflow-custom-op.yaml
-      - tensorflow/custom-op/**
+      - application/tensorflow/custom-op/**
   schedule:
     - cron: '0 0 * * 0'
   workflow_dispatch:
@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: tensorflow/custom-op/build-with-pip-prebuilt/tf2_5_gcc
+        working-directory: application/tensorflow/custom-op/build-with-pip-prebuilt/tf2_5_gcc
     container:
       image: nvidia/cuda:11.4.3-devel-ubuntu20.04
     steps:
@@ -39,7 +39,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: tensorflow/custom-op/build-with-pip-prebuilt/tf2_16_gcc
+        working-directory: application/tensorflow/custom-op/build-with-pip-prebuilt/tf2_16_gcc
     container:
       image: nvidia/cuda:12.3.2-devel-ubuntu22.04
     steps:
@@ -60,7 +60,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: tensorflow/custom-op/build-with-pip-prebuilt/tf2_5_bazel
+        working-directory: application/tensorflow/custom-op/build-with-pip-prebuilt/tf2_5_bazel
     container:
       image: nvidia/cuda:11.4.3-devel-ubuntu20.04
     steps:
@@ -87,7 +87,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: tensorflow/custom-op/build-with-pip-prebuilt/tf2_16_bazel
+        working-directory: application/tensorflow/custom-op/build-with-pip-prebuilt/tf2_16_bazel
     container:
       image: nvidia/cuda:12.3.2-devel-ubuntu22.04
     steps:
@@ -110,7 +110,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: tensorflow/custom-op/build-with-source/tf2_5
+        working-directory: application/tensorflow/custom-op/build-with-source/tf2_5
     container:
       image: curoky/infra-image:cuda11.4-cudnn8
     steps:
@@ -139,7 +139,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: tensorflow/custom-op/build-with-source/tf2_16
+        working-directory: application/tensorflow/custom-op/build-with-source/tf2_16
     container:
       image: curoky/infra-image:cuda12.3-cudnn8
     steps:

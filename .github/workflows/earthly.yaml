@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - .github/workflows/earthly.yaml
-      - earthly/**
+      - build-environ/earthly/**
   schedule:
     - cron: '0 0 * * 0'
   workflow_dispatch:
@@ -32,8 +32,8 @@ jobs:
 
       - name: run cpp tutorial
         run: earthly +build
-        working-directory: earthly/cpp
+        working-directory: build-environ/earthly/cpp
 
       - name: run golang tutorial
         run: earthly +build
-        working-directory: earthly/go
+        working-directory: build-environ/earthly/go

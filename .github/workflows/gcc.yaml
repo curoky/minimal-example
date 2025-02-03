@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - .github/workflows/gcc.yaml
-      - gcc/**
+      - build-system/gcc/**
   schedule:
     - cron: '0 0 * * 0'
   workflow_dispatch:
@@ -13,7 +13,7 @@ jobs:
   hello:
     defaults:
       run:
-        working-directory: gcc/hello
+        working-directory: build-system/gcc/hello
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
