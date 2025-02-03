@@ -28,7 +28,7 @@ jobs:
 
       - uses: docker/build-push-action@v5
         with:
-          context: cuda/docker
+          context: build-system/cuda/docker
           file: build-system/cuda/docker/${{ matrix.version }}.Dockerfile
           push: true
           tags: curoky/infra-image:${{ matrix.version }}

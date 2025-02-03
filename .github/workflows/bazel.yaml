@@ -76,6 +76,8 @@ jobs:
       run:
         working-directory: build-system/bazel/with-clang-v2
     runs-on: ubuntu-latest
+    container:
+      image: ubuntu:23.04
     steps:
       - uses: actions/checkout@v4
       - uses: bazelbuild/setup-bazelisk@v3

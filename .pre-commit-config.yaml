@@ -2,7 +2,7 @@ default_stages: [pre-commit]
 repos:
   # >>>>>>>>>>>>>>>>>>>>> basic <<<<<<<<<<<<<<<<<<<< #
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: 'v4.6.0'
+    rev: 'v5.0.0'
     hooks:
       - id: check-added-large-files
       - id: check-case-conflict
@@ -21,16 +21,16 @@ repos:
     hooks:
       - id: prettier
         additional_dependencies: ['prettier@3.2.5']
-  - repo: https://github.com/commitizen-tools/commitizen
-    rev: 'v3.24.0'
-    hooks:
-      - id: commitizen
-        stages: [commit-msg]
+  # - repo: https://github.com/commitizen-tools/commitizen
+  #   rev: 'v3.24.0'
+  #   hooks:
+  #     - id: commitizen
+  #       stages: [commit-msg]
   # >>>>>>>>>>>>>>>>>>>>> basic <<<<<<<<<<<<<<<<<<<< #
 
   # >>>>>>>>>>>>>>>>>>>>> bash <<<<<<<<<<<<<<<<<<<< #
   - repo: https://github.com/scop/pre-commit-shfmt
-    rev: 'v3.8.0-1'
+    rev: 'v3.10.0-2'
     hooks:
       - id: shfmt
         args: ['-w', '-i', '2', '-s', '-l', '-ci']
@@ -38,12 +38,12 @@ repos:
 
   # >>>>>>>>>>>>>>>>>>>>> python <<<<<<<<<<<<<<<<<<<< #
   - repo: https://github.com/nbQA-dev/nbQA
-    rev: '1.8.5'
+    rev: '1.9.1'
     hooks:
       - id: nbqa-ruff
         args: [--fix]
   - repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: 'v0.4.2'
+    rev: 'v0.9.4'
     hooks:
       - id: ruff
         args: [--fix, --exit-non-zero-on-fix, --no-cache]
@@ -60,13 +60,13 @@ repos:
   #     - id: cpplint
   #       args: ['--linelength=100']
   - repo: https://github.com/keith/pre-commit-buildifier
-    rev: '6.4.0'
+    rev: '8.0.1'
     hooks:
       - id: buildifier
   # >>>>>>>>>>>>>>>>>>>>> c++ <<<<<<<<<<<<<<<<<<<< #
 
   - repo: https://github.com/pre-commit/mirrors-clang-format
-    rev: 'v18.1.4'
+    rev: 'v19.1.7'
     hooks:
       - id: clang-format
         'types_or': [c++, c, c#, cuda, java, objective-c, proto]
