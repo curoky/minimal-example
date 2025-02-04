@@ -3,10 +3,19 @@ name: build-system
 on:
   push:
     paths:
-      - .github/workflows/build-system
+      - .github/workflows/build-system.yaml
+      - build-system/autotools/**
       - build-system/bazel/**
       - build-system/blade/**
       - build-system/buck2/**
+      - build-system/meson/**
+      - build-system/scons/**
+      - build-system/please/**
+      - build-system/cmake/**
+      - build-system/xmake/**
+      - build-system/maven/**
+      - build-system/gradle/**
+      - build-system/cuda/**
   schedule:
     - cron: '0 0 * * 0'
   workflow_dispatch:
@@ -36,10 +45,16 @@ jobs:
           - build-system/xmake/cpp/hello
           - build-system/xmake/cpp/with-extern-pm
           - build-system/xmake/cpp/with-vcpkg
+          - build-system/maven
+          - build-system/gradle
+          - build-system/cuda/usage/build-with-nvcc
+          - build-system/cuda/usage/build-with-bazel-bzlmod
+          - build-system/cuda/usage/build-with-bazel
 
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: arduino/setup-task@v2
+      - uses: Homebrew/actions/setup-homebrew@master
+      - run: brew install task
       - run: task docker
         working-directory: ${{ matrix.path }}

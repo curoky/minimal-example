@@ -1,9 +1,6 @@
 version: '3'
+
 tasks:
-  default:
-    cmds:
-      - scons
-      - scons -c
   docker:
     cmds:
       - docker build . --tag bazel-example

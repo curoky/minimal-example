@@ -20,12 +20,7 @@ module(
     version = "1.0.0",
 )
 
-bazel_dep(name = "rules_cuda", version = "")
-archive_override(
-    module_name = "rules_cuda",
-    strip_prefix = "rules_cuda-main",
-    urls = ["https://github.com/bazel-contrib/rules_cuda/archive/refs/heads/main.tar.gz"],
-)
+bazel_dep(name = "rules_cuda", version = "0.2.3")
 
 cuda = use_extension("@rules_cuda//cuda:extensions.bzl", "toolchain")
 cuda.local_toolchain(

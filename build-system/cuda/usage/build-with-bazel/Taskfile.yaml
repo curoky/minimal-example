@@ -2,9 +2,7 @@ version: '3'
 tasks:
   default:
     cmds:
-      - rm -f main
-      - /usr/local/cuda/bin/nvcc -lcudart_static -o main main.cu
-      # - ./main
+      - bazel build :main
   docker:
     cmds:
       - docker build . --tag bazel-example
