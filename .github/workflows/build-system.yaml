@@ -41,5 +41,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: arduino/setup-task@v2
-      - run: bazel build :main
+      - run: task docker
         working-directory: ${{ matrix.path }}
