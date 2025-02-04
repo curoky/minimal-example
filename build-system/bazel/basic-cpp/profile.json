@@ -1,10 +1,10 @@
 {
   "otherData": {
     "bazel_version": "release 8.0.1",
-    "build_id": "93d727b9-ea5f-42f8-ad31-23f31d5ac9e9",
+    "build_id": "cdcd9f23-6dd5-450b-bc2c-a56736063036",
     "output_base": "/data/cache/bazel/_bazel_x/5516e0a6b9d0c2b1d26abd5cae654898",
-    "date": "2025-02-04T11:57:55.965156615Z",
-    "profile_start_ts": 1738670275965
+    "date": "2025-02-04T18:10:25.144515469Z",
+    "profile_start_ts": 1738692625144
   },
   "traceEvents": [
     {
@@ -25,24 +25,24 @@
       "name": "thread_name",
       "ph": "M",
       "pid": 1,
-      "tid": 7330,
+      "tid": 1160,
       "args": { "name": "Main Thread" }
     },
     {
       "name": "thread_sort_index",
       "ph": "M",
       "pid": 1,
-      "tid": 7330,
+      "tid": 1160,
       "args": { "sort_index": 1 }
     },
     {
       "cat": "build phase marker",
       "name": "Launch Blaze",
       "ph": "X",
-      "ts": -10000,
-      "dur": 10000,
+      "ts": -12000,
+      "dur": 12000,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "build phase marker",
@@ -50,3031 +50,6448 @@
       "ph": "i",
       "ts": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "BazelStartupOptionsModule.beforeCommand",
       "ph": "X",
-      "ts": 3662,
-      "dur": 1,
+      "ts": 7720,
+      "dur": 5,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "CommandProfilerModule.beforeCommand",
       "ph": "X",
-      "ts": 3678,
+      "ts": 7743,
       "dur": 8,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "NoSpawnCacheModule.beforeCommand",
       "ph": "X",
-      "ts": 3687,
+      "ts": 7752,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "CredentialModule.beforeCommand",
       "ph": "X",
-      "ts": 3688,
-      "dur": 35,
+      "ts": 7754,
+      "dur": 13,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "CommandLogModule.beforeCommand",
       "ph": "X",
-      "ts": 3730,
-      "dur": 1,
+      "ts": 7768,
+      "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "MemoryPressureModule.beforeCommand",
       "ph": "X",
-      "ts": 3733,
-      "dur": 43,
+      "ts": 7770,
+      "dur": 61,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "SleepPreventionModule.beforeCommand",
       "ph": "X",
-      "ts": 3783,
+      "ts": 7840,
       "dur": 4,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "SystemSuspensionModule.beforeCommand",
       "ph": "X",
-      "ts": 3788,
-      "dur": 1,
+      "ts": 7846,
+      "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "BazelFileSystemModule.beforeCommand",
       "ph": "X",
-      "ts": 3790,
+      "ts": 7847,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "MobileInstallModule.beforeCommand",
       "ph": "X",
-      "ts": 3792,
+      "ts": 7848,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "BazelWorkspaceStatusModule.beforeCommand",
       "ph": "X",
-      "ts": 3792,
+      "ts": 7849,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "BazelDiffAwarenessModule.beforeCommand",
       "ph": "X",
-      "ts": 3793,
+      "ts": 7850,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "RemoteModule.beforeCommand",
       "ph": "X",
-      "ts": 3794,
-      "dur": 216,
+      "ts": 7852,
+      "dur": 75,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "BazelRepositoryModule.beforeCommand",
       "ph": "X",
-      "ts": 4018,
-      "dur": 257,
+      "ts": 7933,
+      "dur": 215,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "StarlarkRepositoryDebugModule.beforeCommand",
       "ph": "X",
-      "ts": 4284,
-      "dur": 25,
+      "ts": 8157,
+      "dur": 24,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "WorkspaceRuleModule.beforeCommand",
       "ph": "X",
-      "ts": 4315,
+      "ts": 8189,
       "dur": 6,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "BazelCoverageReportModule.beforeCommand",
       "ph": "X",
-      "ts": 4323,
+      "ts": 8196,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "StarlarkDebuggerModule.beforeCommand",
       "ph": "X",
-      "ts": 4324,
-      "dur": 12,
+      "ts": 8198,
+      "dur": 14,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "RepositoryResolvedModule.beforeCommand",
       "ph": "X",
-      "ts": 4342,
-      "dur": 5,
+      "ts": 8218,
+      "dur": 4,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "CacheHitReportingModule.beforeCommand",
       "ph": "X",
-      "ts": 4349,
-      "dur": 8,
+      "ts": 8224,
+      "dur": 18,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "SpawnLogModule.beforeCommand",
       "ph": "X",
-      "ts": 4363,
+      "ts": 8248,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "BazelLockFileModule.beforeCommand",
       "ph": "X",
-      "ts": 4365,
-      "dur": 27,
+      "ts": 8249,
+      "dur": 12,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "OutputFilteringModule.beforeCommand",
       "ph": "X",
-      "ts": 4398,
-      "dur": 6,
+      "ts": 8263,
+      "dur": 8,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "WorkerModule.beforeCommand",
       "ph": "X",
-      "ts": 4405,
-      "dur": 15,
+      "ts": 8272,
+      "dur": 21,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "CacheFileDigestsModule.beforeCommand",
       "ph": "X",
-      "ts": 4425,
+      "ts": 8301,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "StandaloneModule.beforeCommand",
       "ph": "X",
-      "ts": 4426,
+      "ts": 8303,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "SandboxModule.beforeCommand",
       "ph": "X",
-      "ts": 4427,
-      "dur": 4,
+      "ts": 8304,
+      "dur": 21,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "BuildSummaryStatsModule.beforeCommand",
       "ph": "X",
-      "ts": 4433,
-      "dur": 27,
+      "ts": 8327,
+      "dur": 40,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "DynamicExecutionModule.beforeCommand",
       "ph": "X",
-      "ts": 4467,
-      "dur": 107,
+      "ts": 8373,
+      "dur": 91,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "BazelRulesModule.beforeCommand",
       "ph": "X",
-      "ts": 4581,
+      "ts": 8471,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "BazelStrategyModule.beforeCommand",
       "ph": "X",
-      "ts": 4582,
+      "ts": 8473,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "NoOpConnectivityModule.beforeCommand",
       "ph": "X",
-      "ts": 4583,
+      "ts": 8474,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "BazelBuildEventServiceModule.beforeCommand",
       "ph": "X",
-      "ts": 4584,
-      "dur": 139,
+      "ts": 8475,
+      "dur": 122,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "AllocationTrackerModule.beforeCommand",
       "ph": "X",
-      "ts": 4731,
-      "dur": 0,
+      "ts": 8606,
+      "dur": 1,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "PackageMetricsModule.beforeCommand",
       "ph": "X",
-      "ts": 4732,
-      "dur": 14,
+      "ts": 8609,
+      "dur": 24,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "ExecutionGraphModule.beforeCommand",
       "ph": "X",
-      "ts": 4748,
-      "dur": 10,
+      "ts": 8639,
+      "dur": 11,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "BazelBuiltinCommandModule.beforeCommand",
       "ph": "X",
-      "ts": 4763,
+      "ts": 8656,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "IncludeScanningModule.beforeCommand",
       "ph": "X",
-      "ts": 4764,
-      "dur": 35,
+      "ts": 8657,
+      "dur": 58,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "SkymeldModule.beforeCommand",
       "ph": "X",
-      "ts": 4806,
-      "dur": 47,
+      "ts": 8720,
+      "dur": 50,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "SerializationModule.beforeCommand",
       "ph": "X",
-      "ts": 4859,
+      "ts": 8774,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "BlockWaitingModule.beforeCommand",
       "ph": "X",
-      "ts": 4860,
-      "dur": 13,
+      "ts": 8776,
+      "dur": 19,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "PostGCMemoryUseRecorderModule.beforeCommand",
       "ph": "X",
-      "ts": 4879,
+      "ts": 8799,
       "dur": 3,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "GcAfterBuildModule.beforeCommand",
       "ph": "X",
-      "ts": 4884,
+      "ts": 8804,
       "dur": 4,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "MetricsModule.beforeCommand",
       "ph": "X",
-      "ts": 4890,
-      "dur": 70,
+      "ts": 8809,
+      "dur": 88,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "setup event handler",
       "ph": "X",
-      "ts": 5096,
-      "dur": 191,
+      "ts": 9037,
+      "dur": 151,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "replay stored events",
       "ph": "X",
-      "ts": 5299,
-      "dur": 32,
+      "ts": 9197,
+      "dur": 40,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "announce rc options",
       "ph": "X",
-      "ts": 5338,
-      "dur": 159,
+      "ts": 9242,
+      "dur": 206,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "CommandEnv.beforeCommand",
       "ph": "X",
-      "ts": 5520,
-      "dur": 90,
+      "ts": 9468,
+      "dur": 124,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "BazelStartupOptionsModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5621,
+      "ts": 9601,
       "dur": 1,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "CommandProfilerModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5623,
+      "ts": 9604,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "NoSpawnCacheModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5624,
+      "ts": 9605,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "CredentialModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5624,
+      "ts": 9606,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "CommandLogModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5625,
+      "ts": 9607,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "MemoryPressureModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5626,
+      "ts": 9608,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "SleepPreventionModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5626,
+      "ts": 9609,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "SystemSuspensionModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5627,
+      "ts": 9610,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "BazelFileSystemModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5628,
+      "ts": 9611,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "MobileInstallModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5629,
+      "ts": 9612,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "BazelWorkspaceStatusModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5630,
+      "ts": 9613,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "BazelDiffAwarenessModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5630,
+      "ts": 9613,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "RemoteModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5631,
+      "ts": 9614,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "BazelRepositoryModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5631,
-      "dur": 29,
+      "ts": 9615,
+      "dur": 72,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "StarlarkRepositoryDebugModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5661,
+      "ts": 9689,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "WorkspaceRuleModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5662,
+      "ts": 9690,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "BazelCoverageReportModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5663,
+      "ts": 9691,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "StarlarkDebuggerModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5663,
+      "ts": 9692,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "RepositoryResolvedModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5664,
+      "ts": 9692,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "CacheHitReportingModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5665,
-      "dur": 0,
+      "ts": 9693,
+      "dur": 1,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "SpawnLogModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5665,
+      "ts": 9695,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "BazelLockFileModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5666,
+      "ts": 9696,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "OutputFilteringModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5667,
+      "ts": 9697,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "WorkerModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5667,
+      "ts": 9698,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "CacheFileDigestsModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5668,
+      "ts": 9699,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "StandaloneModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5669,
+      "ts": 9700,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "SandboxModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5669,
+      "ts": 9700,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "BuildSummaryStatsModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5670,
+      "ts": 9701,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "DynamicExecutionModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5671,
+      "ts": 9702,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "BazelRulesModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5671,
+      "ts": 9703,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "BazelStrategyModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5672,
+      "ts": 9704,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "NoOpConnectivityModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5672,
+      "ts": 9705,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "BazelBuildEventServiceModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5673,
+      "ts": 9706,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "AllocationTrackerModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5673,
+      "ts": 9707,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "PackageMetricsModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5674,
+      "ts": 9707,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "ExecutionGraphModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5675,
+      "ts": 9708,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "BazelBuiltinCommandModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5676,
+      "ts": 9709,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "IncludeScanningModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5676,
+      "ts": 9710,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "SkymeldModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5677,
+      "ts": 9711,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "SerializationModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5677,
+      "ts": 9712,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "BlockWaitingModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5683,
+      "ts": 9713,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "PostGCMemoryUseRecorderModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5683,
+      "ts": 9714,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "GcAfterBuildModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5684,
+      "ts": 9715,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "MetricsModule.injectExtraPrecomputedValues",
       "ph": "X",
-      "ts": 5685,
+      "ts": 9715,
       "dur": 0,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "preparePackageLoading",
       "ph": "X",
-      "ts": 5834,
-      "dur": 454,
+      "ts": 9811,
+      "dur": 506,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "setDeletedPackages",
       "ph": "X",
-      "ts": 6303,
-      "dur": 17,
+      "ts": 10339,
+      "dur": 16,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "ParallelEvaluator.eval",
       "ph": "X",
-      "ts": 7403,
-      "dur": 138,
+      "ts": 11552,
+      "dur": 173,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "diffAwareness.getCurrentView",
       "ph": "X",
-      "ts": 7594,
+      "ts": 11776,
       "dur": 10,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "diffAwareness.getDiff",
       "ph": "X",
-      "ts": 7745,
-      "dur": 2,
+      "ts": 11911,
+      "dur": 3,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "handleDiffsWithCompleteDiffInformation",
       "ph": "X",
-      "ts": 7793,
-      "dur": 4,
+      "ts": 11949,
+      "dur": 3,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "ParallelEvaluator.eval",
       "ph": "X",
-      "ts": 7908,
-      "dur": 64,
+      "ts": 12008,
+      "dur": 40,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "invalidateValuesMarkedForInvalidation",
       "ph": "X",
-      "ts": 7864,
-      "dur": 119,
+      "ts": 11979,
+      "dur": 78,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "fsvc.getDirtyKeys",
       "ph": "X",
-      "ts": 8096,
-      "dur": 49341,
+      "ts": 12210,
+      "dur": 40482,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "handleDiffsWithMissingDiffInformation",
       "ph": "X",
-      "ts": 7845,
-      "dur": 49905,
+      "ts": 11968,
+      "dur": 41342,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "handleDiffs",
       "ph": "X",
-      "ts": 6338,
-      "dur": 51659,
+      "ts": 10392,
+      "dur": 43294,
       "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "ParallelEvaluator.eval",
-      "ph": "X",
-      "ts": 63911,
-      "dur": 100,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "bazel module processing",
-      "name": "compute main repo mapping",
-      "ph": "X",
-      "ts": 62044,
-      "dur": 2035,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "bazel module processing",
-      "name": "reparse options with main repo mapping",
-      "ph": "X",
-      "ts": 64089,
-      "dur": 1785,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "bazel module processing",
-      "name": "parse starlark options",
-      "ph": "X",
-      "ts": 65892,
-      "dur": 17,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "ProjectFileSupport.getTargets",
-      "ph": "X",
-      "ts": 65976,
-      "dur": 1,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BuildRequest.create",
-      "ph": "X",
-      "ts": 65985,
-      "dur": 309,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "validateOptions",
-      "ph": "X",
-      "ts": 66316,
-      "dur": 2,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "createBuildOptions",
-      "ph": "X",
-      "ts": 66319,
-      "dur": 374,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "Finding output file system",
-      "ph": "X",
-      "ts": 66706,
-      "dur": 2,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BuildStartingEvent",
-      "ph": "X",
-      "ts": 66704,
-      "dur": 603,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "build phase marker",
-      "name": "Evaluate target patterns",
-      "ph": "i",
-      "ts": 67381,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "ParallelEvaluator.eval",
-      "ph": "X",
-      "ts": 67521,
-      "dur": 89,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "evaluateTargetPatterns",
-      "ph": "X",
-      "ts": 67392,
-      "dur": 241,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "ParallelEvaluator.eval",
-      "ph": "X",
-      "ts": 67706,
-      "dur": 22,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BazelStartupOptionsModule.executorInit",
-      "ph": "X",
-      "ts": 67820,
-      "dur": 1,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BazelStartupOptionsModule.registerActionContexts",
-      "ph": "X",
-      "ts": 67829,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BazelStartupOptionsModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 67830,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "CommandProfilerModule.executorInit",
-      "ph": "X",
-      "ts": 67832,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "CommandProfilerModule.registerActionContexts",
-      "ph": "X",
-      "ts": 67832,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "CommandProfilerModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 67833,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "NoSpawnCacheModule.executorInit",
-      "ph": "X",
-      "ts": 67834,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "NoSpawnCacheModule.registerActionContexts",
-      "ph": "X",
-      "ts": 67834,
-      "dur": 2,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "NoSpawnCacheModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 67837,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "CredentialModule.executorInit",
-      "ph": "X",
-      "ts": 67838,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "CredentialModule.registerActionContexts",
-      "ph": "X",
-      "ts": 67839,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "CredentialModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 67839,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "CommandLogModule.executorInit",
-      "ph": "X",
-      "ts": 67840,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "CommandLogModule.registerActionContexts",
-      "ph": "X",
-      "ts": 67840,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "CommandLogModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 67841,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "MemoryPressureModule.executorInit",
-      "ph": "X",
-      "ts": 67842,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "MemoryPressureModule.registerActionContexts",
-      "ph": "X",
-      "ts": 67842,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "MemoryPressureModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 67842,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "SleepPreventionModule.executorInit",
-      "ph": "X",
-      "ts": 67843,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "SleepPreventionModule.registerActionContexts",
-      "ph": "X",
-      "ts": 67843,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "SleepPreventionModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 67844,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "SystemSuspensionModule.executorInit",
-      "ph": "X",
-      "ts": 67845,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "SystemSuspensionModule.registerActionContexts",
-      "ph": "X",
-      "ts": 67845,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "SystemSuspensionModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 67846,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BazelFileSystemModule.executorInit",
-      "ph": "X",
-      "ts": 67847,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BazelFileSystemModule.registerActionContexts",
-      "ph": "X",
-      "ts": 67847,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BazelFileSystemModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 67847,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "MobileInstallModule.executorInit",
-      "ph": "X",
-      "ts": 67848,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "MobileInstallModule.registerActionContexts",
-      "ph": "X",
-      "ts": 67849,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "MobileInstallModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 67849,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BazelWorkspaceStatusModule.executorInit",
-      "ph": "X",
-      "ts": 67850,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BazelWorkspaceStatusModule.registerActionContexts",
-      "ph": "X",
-      "ts": 67850,
-      "dur": 3,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BazelWorkspaceStatusModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 67854,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BazelDiffAwarenessModule.executorInit",
-      "ph": "X",
-      "ts": 67854,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BazelDiffAwarenessModule.registerActionContexts",
-      "ph": "X",
-      "ts": 67855,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BazelDiffAwarenessModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 67855,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "RemoteModule.executorInit",
-      "ph": "X",
-      "ts": 67856,
-      "dur": 47,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "RemoteModule.registerActionContexts",
-      "ph": "X",
-      "ts": 67904,
-      "dur": 631,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "RemoteModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 68551,
-      "dur": 165,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BazelRepositoryModule.executorInit",
-      "ph": "X",
-      "ts": 68725,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BazelRepositoryModule.registerActionContexts",
-      "ph": "X",
-      "ts": 68726,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BazelRepositoryModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 68727,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "StarlarkRepositoryDebugModule.executorInit",
-      "ph": "X",
-      "ts": 68728,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "StarlarkRepositoryDebugModule.registerActionContexts",
-      "ph": "X",
-      "ts": 68729,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "StarlarkRepositoryDebugModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 68729,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "WorkspaceRuleModule.executorInit",
-      "ph": "X",
-      "ts": 68730,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "WorkspaceRuleModule.registerActionContexts",
-      "ph": "X",
-      "ts": 68730,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "WorkspaceRuleModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 68731,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BazelCoverageReportModule.executorInit",
-      "ph": "X",
-      "ts": 68731,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BazelCoverageReportModule.registerActionContexts",
-      "ph": "X",
-      "ts": 68732,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BazelCoverageReportModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 68732,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "StarlarkDebuggerModule.executorInit",
-      "ph": "X",
-      "ts": 68733,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "StarlarkDebuggerModule.registerActionContexts",
-      "ph": "X",
-      "ts": 68733,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "StarlarkDebuggerModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 68733,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "RepositoryResolvedModule.executorInit",
-      "ph": "X",
-      "ts": 68734,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "RepositoryResolvedModule.registerActionContexts",
-      "ph": "X",
-      "ts": 68735,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "RepositoryResolvedModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 68736,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "CacheHitReportingModule.executorInit",
-      "ph": "X",
-      "ts": 68737,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "CacheHitReportingModule.registerActionContexts",
-      "ph": "X",
-      "ts": 68738,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "CacheHitReportingModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 68738,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "SpawnLogModule.executorInit",
-      "ph": "X",
-      "ts": 68739,
-      "dur": 29,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "SpawnLogModule.registerActionContexts",
-      "ph": "X",
-      "ts": 68769,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "SpawnLogModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 68770,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BazelLockFileModule.executorInit",
-      "ph": "X",
-      "ts": 68771,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BazelLockFileModule.registerActionContexts",
-      "ph": "X",
-      "ts": 68771,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BazelLockFileModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 68772,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "OutputFilteringModule.executorInit",
-      "ph": "X",
-      "ts": 68772,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "OutputFilteringModule.registerActionContexts",
-      "ph": "X",
-      "ts": 68774,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "OutputFilteringModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 68774,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "WorkerModule.executorInit",
-      "ph": "X",
-      "ts": 68775,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "WorkerModule.registerActionContexts",
-      "ph": "X",
-      "ts": 68775,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "WorkerModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 68775,
-      "dur": 43,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "CacheFileDigestsModule.executorInit",
-      "ph": "X",
-      "ts": 68820,
-      "dur": 161,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "CacheFileDigestsModule.registerActionContexts",
-      "ph": "X",
-      "ts": 68994,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "CacheFileDigestsModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 68995,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "StandaloneModule.executorInit",
-      "ph": "X",
-      "ts": 68997,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "StandaloneModule.registerActionContexts",
-      "ph": "X",
-      "ts": 68997,
-      "dur": 45,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "StandaloneModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 69049,
-      "dur": 76,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "SandboxModule.executorInit",
-      "ph": "X",
-      "ts": 69133,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "SandboxModule.registerActionContexts",
-      "ph": "X",
-      "ts": 69134,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "SandboxStash.initialize",
-      "ph": "X",
-      "ts": 69158,
-      "dur": 2,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "shouldUseWindowsSandbox",
-      "ph": "X",
-      "ts": 69196,
-      "dur": 1,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "SandboxModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 69134,
-      "dur": 164,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BuildSummaryStatsModule.executorInit",
-      "ph": "X",
-      "ts": 69307,
-      "dur": 79,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BuildSummaryStatsModule.registerActionContexts",
-      "ph": "X",
-      "ts": 69394,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BuildSummaryStatsModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 69395,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "DynamicExecutionModule.executorInit",
-      "ph": "X",
-      "ts": 69396,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "DynamicExecutionModule.registerActionContexts",
-      "ph": "X",
-      "ts": 69397,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "DynamicExecutionModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 69399,
-      "dur": 71,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BazelRulesModule.executorInit",
-      "ph": "X",
-      "ts": 69477,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BazelRulesModule.registerActionContexts",
-      "ph": "X",
-      "ts": 69478,
-      "dur": 4,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BazelRulesModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 69483,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BazelStrategyModule.executorInit",
-      "ph": "X",
-      "ts": 69484,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BazelStrategyModule.registerActionContexts",
-      "ph": "X",
-      "ts": 69484,
-      "dur": 3,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BazelStrategyModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 69489,
-      "dur": 79,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "NoOpConnectivityModule.executorInit",
-      "ph": "X",
-      "ts": 69576,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "NoOpConnectivityModule.registerActionContexts",
-      "ph": "X",
-      "ts": 69577,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "NoOpConnectivityModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 69577,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BazelBuildEventServiceModule.executorInit",
-      "ph": "X",
-      "ts": 69579,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BazelBuildEventServiceModule.registerActionContexts",
-      "ph": "X",
-      "ts": 69579,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BazelBuildEventServiceModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 69580,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "AllocationTrackerModule.executorInit",
-      "ph": "X",
-      "ts": 69581,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "AllocationTrackerModule.registerActionContexts",
-      "ph": "X",
-      "ts": 69581,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "AllocationTrackerModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 69582,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "PackageMetricsModule.executorInit",
-      "ph": "X",
-      "ts": 69583,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "PackageMetricsModule.registerActionContexts",
-      "ph": "X",
-      "ts": 69583,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "PackageMetricsModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 69583,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "ExecutionGraphModule.executorInit",
-      "ph": "X",
-      "ts": 69584,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "ExecutionGraphModule.registerActionContexts",
-      "ph": "X",
-      "ts": 69585,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "ExecutionGraphModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 69585,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BazelBuiltinCommandModule.executorInit",
-      "ph": "X",
-      "ts": 69586,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BazelBuiltinCommandModule.registerActionContexts",
-      "ph": "X",
-      "ts": 69586,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BazelBuiltinCommandModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 69587,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "IncludeScanningModule.executorInit",
-      "ph": "X",
-      "ts": 69588,
-      "dur": 20,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "IncludeScanningModule.registerActionContexts",
-      "ph": "X",
-      "ts": 69609,
-      "dur": 11,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "IncludeScanningModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 69621,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "SkymeldModule.executorInit",
-      "ph": "X",
-      "ts": 69623,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "SkymeldModule.registerActionContexts",
-      "ph": "X",
-      "ts": 69623,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "SkymeldModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 69624,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "SerializationModule.executorInit",
-      "ph": "X",
-      "ts": 69625,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "SerializationModule.registerActionContexts",
-      "ph": "X",
-      "ts": 69625,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "SerializationModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 69625,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BlockWaitingModule.executorInit",
-      "ph": "X",
-      "ts": 69626,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BlockWaitingModule.registerActionContexts",
-      "ph": "X",
-      "ts": 69627,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "BlockWaitingModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 69627,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "PostGCMemoryUseRecorderModule.executorInit",
-      "ph": "X",
-      "ts": 69628,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "PostGCMemoryUseRecorderModule.registerActionContexts",
-      "ph": "X",
-      "ts": 69628,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "PostGCMemoryUseRecorderModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 69629,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "GcAfterBuildModule.executorInit",
-      "ph": "X",
-      "ts": 69630,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "GcAfterBuildModule.registerActionContexts",
-      "ph": "X",
-      "ts": 69631,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "GcAfterBuildModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 69631,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "MetricsModule.executorInit",
-      "ph": "X",
-      "ts": 69632,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "MetricsModule.registerActionContexts",
-      "ph": "X",
-      "ts": 69632,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "MetricsModule.registerSpawnStrategies",
-      "ph": "X",
-      "ts": 69633,
-      "dur": 0,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "build phase marker",
-      "name": "Load, analyze dependencies and build artifacts",
-      "ph": "i",
-      "ts": 70071,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "ParallelEvaluator.eval",
-      "ph": "X",
-      "ts": 70155,
-      "dur": 50,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "ParallelEvaluator.eval",
-      "ph": "X",
-      "ts": 101608,
-      "dur": 63,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "ParallelEvaluator.eval",
-      "ph": "X",
-      "ts": 103056,
-      "dur": 49,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "skyframe evaluator",
-      "name": "Parallel Evaluator evaluation",
-      "ph": "X",
-      "ts": 103181,
-      "dur": 7118,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "ParallelEvaluator.eval",
-      "ph": "X",
-      "ts": 103151,
-      "dur": 7166,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "createConfigurations",
-      "ph": "X",
-      "ts": 102043,
-      "dur": 8396,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "ParallelEvaluator.eval",
-      "ph": "X",
-      "ts": 129156,
-      "dur": 93,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "preparingExecroot",
-      "ph": "X",
-      "ts": 131199,
-      "dur": 985,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "outputService.startBuild",
-      "ph": "X",
-      "ts": 132199,
-      "dur": 20,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "directory.deleteTree",
-      "ph": "X",
-      "ts": 132230,
-      "dur": 84,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "directory.createDirectoryAndParents",
-      "ph": "X",
-      "ts": 132322,
-      "dur": 22,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "createActionLogDirectory",
-      "ph": "X",
-      "ts": 132222,
-      "dur": 128,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "load/reset action cache",
-      "ph": "X",
-      "ts": 132351,
-      "dur": 22,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "createBuilder",
-      "ph": "X",
-      "ts": 132379,
-      "dur": 227,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "getDirtyActionValues/filterAndBatchActions",
-      "ph": "X",
-      "ts": 132752,
-      "dur": 2612,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "getDirtyActionValues/statFiles",
-      "ph": "X",
-      "ts": 135394,
-      "dur": 11,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "detectModifiedOutputFiles",
-      "ph": "X",
-      "ts": 132637,
-      "dur": 2882,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "configureActionExecutor",
-      "ph": "X",
-      "ts": 135532,
-      "dur": 3,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "prepareSkyframeActionExecutorForExecution",
-      "ph": "X",
-      "ts": 135626,
-      "dur": 17,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "com.google.devtools.build.lib.includescanning.IncludeScanningModule$IncludeScannerLifecycleManager@3f63c511.executionPhaseStarting",
-      "ph": "X",
-      "ts": 135681,
-      "dur": 25,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "configureResourceManager",
-      "ph": "X",
-      "ts": 135715,
-      "dur": 66,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "prepareForExecution",
-      "ph": "X",
-      "ts": 129279,
-      "dur": 6509,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "skyframe evaluator",
-      "name": "Parallel Evaluator evaluation",
-      "ph": "X",
-      "ts": 135838,
-      "dur": 726,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "ParallelEvaluator.eval",
-      "ph": "X",
-      "ts": 135814,
-      "dur": 763,
-      "pid": 1,
-      "tid": 7330
-    },
-    {
-      "cat": "general information",
-      "name": "SkyframeExecutor.getWorkspaceStatusArtifact",
-      "ph": "X",
-      "ts": 135800,
-      "dur": 785,
-      "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "name": "thread_name",
       "ph": "M",
       "pid": 1,
-      "tid": 15961,
+      "tid": 5882,
+      "args": { "name": "skyframe-evaluator-memoizing-0" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 5882,
+      "args": { "sort_index": 40000 }
+    },
+    {
+      "cat": "bazel module processing",
+      "name": "fetch module file: local_config_platform@_",
+      "ph": "X",
+      "ts": 101509,
+      "dur": 147,
+      "pid": 1,
+      "tid": 5882
+    },
+    {
+      "cat": "bazel module processing",
+      "name": "evaluate module file: local_config_platform@_",
+      "ph": "X",
+      "ts": 101868,
+      "dur": 287,
+      "pid": 1,
+      "tid": 5882
+    },
+    {
+      "cat": "skyframe evaluator",
+      "name": "Parallel Evaluator evaluation",
+      "ph": "X",
+      "ts": 97537,
+      "dur": 5097,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "ParallelEvaluator.eval",
+      "ph": "X",
+      "ts": 97279,
+      "dur": 5392,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "bazel module processing",
+      "name": "compute main repo mapping",
+      "ph": "X",
+      "ts": 55420,
+      "dur": 47313,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "bazel module processing",
+      "name": "reparse options with main repo mapping",
+      "ph": "X",
+      "ts": 102739,
+      "dur": 2465,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "bazel module processing",
+      "name": "parse starlark options",
+      "ph": "X",
+      "ts": 105221,
+      "dur": 25,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "ProjectFileSupport.getTargets",
+      "ph": "X",
+      "ts": 105323,
+      "dur": 3,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BuildRequest.create",
+      "ph": "X",
+      "ts": 105343,
+      "dur": 263,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "validateOptions",
+      "ph": "X",
+      "ts": 105632,
+      "dur": 5,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "createBuildOptions",
+      "ph": "X",
+      "ts": 105654,
+      "dur": 396,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "Finding output file system",
+      "ph": "X",
+      "ts": 106064,
+      "dur": 2,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BuildStartingEvent",
+      "ph": "X",
+      "ts": 106061,
+      "dur": 863,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "build phase marker",
+      "name": "Evaluate target patterns",
+      "ph": "i",
+      "ts": 107028,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 5896,
+      "args": { "name": "skyframe-evaluator-memoizing-7" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 5896,
+      "args": { "sort_index": 40007 }
+    },
+    {
+      "cat": "package creation",
+      "name": "src",
+      "ph": "X",
+      "ts": 129614,
+      "dur": 257,
+      "pid": 1,
+      "tid": 5896
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 5962,
+      "args": { "name": "skyframe-evaluator-memoizing-73" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 5962,
+      "args": { "sort_index": 40073 }
+    },
+    {
+      "cat": "package creation",
+      "name": "src",
+      "ph": "X",
+      "ts": 130443,
+      "dur": 1215,
+      "pid": 1,
+      "tid": 5962
+    },
+    {
+      "cat": "skyframe evaluator",
+      "name": "Parallel Evaluator evaluation",
+      "ph": "X",
+      "ts": 107322,
+      "dur": 27761,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "ParallelEvaluator.eval",
+      "ph": "X",
+      "ts": 107248,
+      "dur": 27869,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "evaluateTargetPatterns",
+      "ph": "X",
+      "ts": 107041,
+      "dur": 28151,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "ParallelEvaluator.eval",
+      "ph": "X",
+      "ts": 135348,
+      "dur": 146,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BazelStartupOptionsModule.executorInit",
+      "ph": "X",
+      "ts": 135667,
+      "dur": 2,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BazelStartupOptionsModule.registerActionContexts",
+      "ph": "X",
+      "ts": 135678,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BazelStartupOptionsModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 135680,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "CommandProfilerModule.executorInit",
+      "ph": "X",
+      "ts": 135682,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "CommandProfilerModule.registerActionContexts",
+      "ph": "X",
+      "ts": 135683,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "CommandProfilerModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 135684,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "NoSpawnCacheModule.executorInit",
+      "ph": "X",
+      "ts": 135685,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "NoSpawnCacheModule.registerActionContexts",
+      "ph": "X",
+      "ts": 135686,
+      "dur": 3,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "NoSpawnCacheModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 135690,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "CredentialModule.executorInit",
+      "ph": "X",
+      "ts": 135692,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "CredentialModule.registerActionContexts",
+      "ph": "X",
+      "ts": 135693,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "CredentialModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 135694,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "CommandLogModule.executorInit",
+      "ph": "X",
+      "ts": 135695,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "CommandLogModule.registerActionContexts",
+      "ph": "X",
+      "ts": 135695,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "CommandLogModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 135696,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "MemoryPressureModule.executorInit",
+      "ph": "X",
+      "ts": 135697,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "MemoryPressureModule.registerActionContexts",
+      "ph": "X",
+      "ts": 135701,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "MemoryPressureModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 135701,
+      "dur": 3,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "SleepPreventionModule.executorInit",
+      "ph": "X",
+      "ts": 135707,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "SleepPreventionModule.registerActionContexts",
+      "ph": "X",
+      "ts": 135708,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "SleepPreventionModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 135709,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "SystemSuspensionModule.executorInit",
+      "ph": "X",
+      "ts": 135710,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "SystemSuspensionModule.registerActionContexts",
+      "ph": "X",
+      "ts": 135710,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "SystemSuspensionModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 135711,
+      "dur": 1,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BazelFileSystemModule.executorInit",
+      "ph": "X",
+      "ts": 135713,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BazelFileSystemModule.registerActionContexts",
+      "ph": "X",
+      "ts": 135714,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BazelFileSystemModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 135714,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "MobileInstallModule.executorInit",
+      "ph": "X",
+      "ts": 135716,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "MobileInstallModule.registerActionContexts",
+      "ph": "X",
+      "ts": 135716,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "MobileInstallModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 135717,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BazelWorkspaceStatusModule.executorInit",
+      "ph": "X",
+      "ts": 135718,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BazelWorkspaceStatusModule.registerActionContexts",
+      "ph": "X",
+      "ts": 135719,
+      "dur": 3,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BazelWorkspaceStatusModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 135723,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BazelDiffAwarenessModule.executorInit",
+      "ph": "X",
+      "ts": 135724,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BazelDiffAwarenessModule.registerActionContexts",
+      "ph": "X",
+      "ts": 135724,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BazelDiffAwarenessModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 135725,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "RemoteModule.executorInit",
+      "ph": "X",
+      "ts": 135732,
+      "dur": 113,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "RemoteModule.registerActionContexts",
+      "ph": "X",
+      "ts": 135849,
+      "dur": 602,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "RemoteModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 136468,
+      "dur": 140,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BazelRepositoryModule.executorInit",
+      "ph": "X",
+      "ts": 136715,
+      "dur": 2,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BazelRepositoryModule.registerActionContexts",
+      "ph": "X",
+      "ts": 136724,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BazelRepositoryModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 136726,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "StarlarkRepositoryDebugModule.executorInit",
+      "ph": "X",
+      "ts": 136727,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "StarlarkRepositoryDebugModule.registerActionContexts",
+      "ph": "X",
+      "ts": 136728,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "StarlarkRepositoryDebugModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 136728,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "WorkspaceRuleModule.executorInit",
+      "ph": "X",
+      "ts": 136730,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "WorkspaceRuleModule.registerActionContexts",
+      "ph": "X",
+      "ts": 136731,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "WorkspaceRuleModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 136731,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BazelCoverageReportModule.executorInit",
+      "ph": "X",
+      "ts": 136732,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BazelCoverageReportModule.registerActionContexts",
+      "ph": "X",
+      "ts": 136747,
+      "dur": 1,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BazelCoverageReportModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 136750,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "StarlarkDebuggerModule.executorInit",
+      "ph": "X",
+      "ts": 136752,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "StarlarkDebuggerModule.registerActionContexts",
+      "ph": "X",
+      "ts": 136752,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "StarlarkDebuggerModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 136753,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "RepositoryResolvedModule.executorInit",
+      "ph": "X",
+      "ts": 136754,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "RepositoryResolvedModule.registerActionContexts",
+      "ph": "X",
+      "ts": 136755,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "RepositoryResolvedModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 136755,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "CacheHitReportingModule.executorInit",
+      "ph": "X",
+      "ts": 136757,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "CacheHitReportingModule.registerActionContexts",
+      "ph": "X",
+      "ts": 136757,
+      "dur": 2,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "CacheHitReportingModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 136762,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "SpawnLogModule.executorInit",
+      "ph": "X",
+      "ts": 136763,
+      "dur": 45,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "SpawnLogModule.registerActionContexts",
+      "ph": "X",
+      "ts": 136810,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "SpawnLogModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 136812,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BazelLockFileModule.executorInit",
+      "ph": "X",
+      "ts": 136815,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BazelLockFileModule.registerActionContexts",
+      "ph": "X",
+      "ts": 136816,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BazelLockFileModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 136898,
+      "dur": 1,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "OutputFilteringModule.executorInit",
+      "ph": "X",
+      "ts": 136902,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "OutputFilteringModule.registerActionContexts",
+      "ph": "X",
+      "ts": 136902,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "OutputFilteringModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 136903,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "WorkerModule.executorInit",
+      "ph": "X",
+      "ts": 136904,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "WorkerModule.registerActionContexts",
+      "ph": "X",
+      "ts": 136905,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "WorkerModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 136906,
+      "dur": 75,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "CacheFileDigestsModule.executorInit",
+      "ph": "X",
+      "ts": 136985,
+      "dur": 318,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "CacheFileDigestsModule.registerActionContexts",
+      "ph": "X",
+      "ts": 137430,
+      "dur": 2,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "CacheFileDigestsModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 137503,
+      "dur": 1,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "StandaloneModule.executorInit",
+      "ph": "X",
+      "ts": 137507,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "StandaloneModule.registerActionContexts",
+      "ph": "X",
+      "ts": 137509,
+      "dur": 53,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "StandaloneModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 137571,
+      "dur": 104,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "SandboxModule.executorInit",
+      "ph": "X",
+      "ts": 137686,
+      "dur": 4,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "SandboxModule.registerActionContexts",
+      "ph": "X",
+      "ts": 137693,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "SandboxStash.initialize",
+      "ph": "X",
+      "ts": 137846,
+      "dur": 2,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "shouldUseWindowsSandbox",
+      "ph": "X",
+      "ts": 137896,
+      "dur": 4,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "SandboxModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 137694,
+      "dur": 436,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BuildSummaryStatsModule.executorInit",
+      "ph": "X",
+      "ts": 138146,
+      "dur": 232,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BuildSummaryStatsModule.registerActionContexts",
+      "ph": "X",
+      "ts": 138400,
+      "dur": 1,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BuildSummaryStatsModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 138403,
+      "dur": 2,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "DynamicExecutionModule.executorInit",
+      "ph": "X",
+      "ts": 138408,
+      "dur": 1,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "DynamicExecutionModule.registerActionContexts",
+      "ph": "X",
+      "ts": 138409,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "DynamicExecutionModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 138410,
+      "dur": 91,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BazelRulesModule.executorInit",
+      "ph": "X",
+      "ts": 138530,
+      "dur": 2,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BazelRulesModule.registerActionContexts",
+      "ph": "X",
+      "ts": 138534,
+      "dur": 5,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BazelRulesModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 138539,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BazelStrategyModule.executorInit",
+      "ph": "X",
+      "ts": 138541,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BazelStrategyModule.registerActionContexts",
+      "ph": "X",
+      "ts": 138542,
+      "dur": 3,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BazelStrategyModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 138545,
+      "dur": 66,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "NoOpConnectivityModule.executorInit",
+      "ph": "X",
+      "ts": 138623,
+      "dur": 2,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "NoOpConnectivityModule.registerActionContexts",
+      "ph": "X",
+      "ts": 138628,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "NoOpConnectivityModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 138630,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BazelBuildEventServiceModule.executorInit",
+      "ph": "X",
+      "ts": 138632,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BazelBuildEventServiceModule.registerActionContexts",
+      "ph": "X",
+      "ts": 138632,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BazelBuildEventServiceModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 138633,
+      "dur": 7,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "AllocationTrackerModule.executorInit",
+      "ph": "X",
+      "ts": 138642,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "AllocationTrackerModule.registerActionContexts",
+      "ph": "X",
+      "ts": 138642,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "AllocationTrackerModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 138643,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "PackageMetricsModule.executorInit",
+      "ph": "X",
+      "ts": 138644,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "PackageMetricsModule.registerActionContexts",
+      "ph": "X",
+      "ts": 138645,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "PackageMetricsModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 138645,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "ExecutionGraphModule.executorInit",
+      "ph": "X",
+      "ts": 138646,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "ExecutionGraphModule.registerActionContexts",
+      "ph": "X",
+      "ts": 138647,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "ExecutionGraphModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 138648,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BazelBuiltinCommandModule.executorInit",
+      "ph": "X",
+      "ts": 138649,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BazelBuiltinCommandModule.registerActionContexts",
+      "ph": "X",
+      "ts": 138649,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BazelBuiltinCommandModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 138650,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "IncludeScanningModule.executorInit",
+      "ph": "X",
+      "ts": 138651,
+      "dur": 44,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "IncludeScanningModule.registerActionContexts",
+      "ph": "X",
+      "ts": 138698,
+      "dur": 31,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "IncludeScanningModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 138733,
+      "dur": 1,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "SkymeldModule.executorInit",
+      "ph": "X",
+      "ts": 138841,
+      "dur": 1,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "SkymeldModule.registerActionContexts",
+      "ph": "X",
+      "ts": 138844,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "SkymeldModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 138849,
+      "dur": 1,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "SerializationModule.executorInit",
+      "ph": "X",
+      "ts": 138852,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "SerializationModule.registerActionContexts",
+      "ph": "X",
+      "ts": 138852,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "SerializationModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 138853,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BlockWaitingModule.executorInit",
+      "ph": "X",
+      "ts": 138854,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BlockWaitingModule.registerActionContexts",
+      "ph": "X",
+      "ts": 138855,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "BlockWaitingModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 138855,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "PostGCMemoryUseRecorderModule.executorInit",
+      "ph": "X",
+      "ts": 138865,
+      "dur": 1,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "PostGCMemoryUseRecorderModule.registerActionContexts",
+      "ph": "X",
+      "ts": 138867,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "PostGCMemoryUseRecorderModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 138868,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "GcAfterBuildModule.executorInit",
+      "ph": "X",
+      "ts": 138869,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "GcAfterBuildModule.registerActionContexts",
+      "ph": "X",
+      "ts": 138870,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "GcAfterBuildModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 138870,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "MetricsModule.executorInit",
+      "ph": "X",
+      "ts": 138871,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "MetricsModule.registerActionContexts",
+      "ph": "X",
+      "ts": 138872,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "MetricsModule.registerSpawnStrategies",
+      "ph": "X",
+      "ts": 138873,
+      "dur": 0,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "build phase marker",
+      "name": "Load, analyze dependencies and build artifacts",
+      "ph": "i",
+      "ts": 140139,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "ParallelEvaluator.eval",
+      "ph": "X",
+      "ts": 140252,
+      "dur": 144,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "ParallelEvaluator.eval",
+      "ph": "X",
+      "ts": 143417,
+      "dur": 81,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "skyframe evaluator",
+      "name": "Parallel Evaluator evaluation",
+      "ph": "X",
+      "ts": 144622,
+      "dur": 1484,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "ParallelEvaluator.eval",
+      "ph": "X",
+      "ts": 144580,
+      "dur": 1543,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "skyframe evaluator",
+      "name": "Parallel Evaluator evaluation",
+      "ph": "X",
+      "ts": 146222,
+      "dur": 5207,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "ParallelEvaluator.eval",
+      "ph": "X",
+      "ts": 146160,
+      "dur": 5286,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "createConfigurations",
+      "ph": "X",
+      "ts": 143591,
+      "dur": 7969,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "ParallelEvaluator.eval",
+      "ph": "X",
+      "ts": 179870,
+      "dur": 279,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "preparingExecroot",
+      "ph": "X",
+      "ts": 181667,
+      "dur": 1011,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "outputService.startBuild",
+      "ph": "X",
+      "ts": 182697,
+      "dur": 111,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "directory.deleteTree",
+      "ph": "X",
+      "ts": 182831,
+      "dur": 138,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "directory.createDirectoryAndParents",
+      "ph": "X",
+      "ts": 182979,
+      "dur": 28,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "createActionLogDirectory",
+      "ph": "X",
+      "ts": 182819,
+      "dur": 195,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "load/reset action cache",
+      "ph": "X",
+      "ts": 183016,
+      "dur": 28,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "createBuilder",
+      "ph": "X",
+      "ts": 183050,
+      "dur": 223,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "getDirtyActionValues/filterAndBatchActions",
+      "ph": "X",
+      "ts": 183439,
+      "dur": 2172,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "getDirtyActionValues/statFiles",
+      "ph": "X",
+      "ts": 185660,
+      "dur": 24,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "detectModifiedOutputFiles",
+      "ph": "X",
+      "ts": 183312,
+      "dur": 2526,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "configureActionExecutor",
+      "ph": "X",
+      "ts": 185854,
+      "dur": 5,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "prepareSkyframeActionExecutorForExecution",
+      "ph": "X",
+      "ts": 185959,
+      "dur": 23,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "com.google.devtools.build.lib.includescanning.IncludeScanningModule$IncludeScannerLifecycleManager@cf87eb6.executionPhaseStarting",
+      "ph": "X",
+      "ts": 186036,
+      "dur": 55,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "configureResourceManager",
+      "ph": "X",
+      "ts": 186100,
+      "dur": 92,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "prepareForExecution",
+      "ph": "X",
+      "ts": 180204,
+      "dur": 5999,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "skyframe evaluator",
+      "name": "Parallel Evaluator evaluation",
+      "ph": "X",
+      "ts": 186327,
+      "dur": 606,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "ParallelEvaluator.eval",
+      "ph": "X",
+      "ts": 186268,
+      "dur": 681,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "cat": "general information",
+      "name": "SkyframeExecutor.getWorkspaceStatusArtifact",
+      "ph": "X",
+      "ts": 186220,
+      "dur": 743,
+      "pid": 1,
+      "tid": 1160
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6075,
       "args": { "name": "skyframe-evaluator-execution-0" }
     },
     {
       "name": "thread_sort_index",
       "ph": "M",
       "pid": 1,
-      "tid": 15961,
+      "tid": 6075,
       "args": { "sort_index": 30000 }
     },
     {
       "cat": "general information",
       "name": "action.prepare",
       "ph": "X",
-      "ts": 140277,
-      "dur": 79,
+      "ts": 190454,
+      "dur": 93,
       "pid": 1,
-      "tid": 15961
-    },
-    {
-      "cat": "general information",
-      "name": "Action.execute",
-      "ph": "X",
-      "ts": 140527,
-      "dur": 334,
-      "pid": 1,
-      "tid": 15961
-    },
-    {
-      "cat": "general information",
-      "name": "checkOutputs",
-      "ph": "X",
-      "ts": 140888,
-      "dur": 243,
-      "pid": 1,
-      "tid": 15961
-    },
-    {
-      "cat": "general information",
-      "name": "outputService.finalizeAction",
-      "ph": "X",
-      "ts": 141138,
-      "dur": 1,
-      "pid": 1,
-      "tid": 15961
-    },
-    {
-      "cat": "complete action execution",
-      "name": "actuallyCompleteAction",
-      "ph": "X",
-      "ts": 140876,
-      "dur": 315,
-      "pid": 1,
-      "tid": 15961
-    },
-    {
-      "cat": "action processing",
-      "name": "BazelWorkspaceStatusAction stable-status.txt",
-      "ph": "X",
-      "ts": 138375,
-      "dur": 2926,
-      "pid": 1,
-      "args": { "mnemonic": "BazelWorkspaceStatusAction" },
-      "tid": 15961
-    },
-    {
-      "cat": "general information",
-      "name": "postprocessing.run",
-      "ph": "X",
-      "ts": 141320,
-      "dur": 131,
-      "pid": 1,
-      "tid": 15961
+      "tid": 6075
     },
     {
       "name": "thread_name",
       "ph": "M",
       "pid": 1,
-      "tid": 15965,
+      "tid": 6074,
+      "args": { "name": "skyframe-evaluator-0" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6074,
+      "args": { "sort_index": 10000 }
+    },
+    {
+      "cat": "package creation",
+      "name": "@@bazel_tools//tools",
+      "ph": "X",
+      "ts": 189318,
+      "dur": 1523,
+      "pid": 1,
+      "tid": 6074
+    },
+    {
+      "cat": "general information",
+      "name": "Action.execute",
+      "ph": "X",
+      "ts": 190675,
+      "dur": 379,
+      "pid": 1,
+      "tid": 6075
+    },
+    {
+      "cat": "general information",
+      "name": "checkOutputs",
+      "ph": "X",
+      "ts": 191077,
+      "dur": 213,
+      "pid": 1,
+      "tid": 6075
+    },
+    {
+      "cat": "general information",
+      "name": "outputService.finalizeAction",
+      "ph": "X",
+      "ts": 191299,
+      "dur": 1,
+      "pid": 1,
+      "tid": 6075
+    },
+    {
+      "cat": "complete action execution",
+      "name": "actuallyCompleteAction",
+      "ph": "X",
+      "ts": 191066,
+      "dur": 292,
+      "pid": 1,
+      "tid": 6075
+    },
+    {
+      "cat": "action processing",
+      "name": "BazelWorkspaceStatusAction stable-status.txt",
+      "ph": "X",
+      "ts": 188829,
+      "dur": 2658,
+      "pid": 1,
+      "args": { "mnemonic": "BazelWorkspaceStatusAction" },
+      "tid": 6075
+    },
+    {
+      "cat": "general information",
+      "name": "postprocessing.run",
+      "ph": "X",
+      "ts": 191507,
+      "dur": 130,
+      "pid": 1,
+      "tid": 6075
+    },
+    {
+      "cat": "package creation",
+      "name": "@@bazel_tools//tools",
+      "ph": "X",
+      "ts": 192063,
+      "dur": 397,
+      "pid": 1,
+      "tid": 6074
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@platforms",
+      "ph": "X",
+      "ts": 193248,
+      "dur": 12,
+      "pid": 1,
+      "tid": 6074
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@platforms",
+      "ph": "X",
+      "ts": 193542,
+      "dur": 510,
+      "pid": 1,
+      "tid": 6074
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6080,
+      "args": { "name": "skyframe-evaluator-3" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6080,
+      "args": { "sort_index": 10003 }
+    },
+    {
+      "cat": "package creation",
+      "name": "@@platforms//host",
+      "ph": "X",
+      "ts": 196197,
+      "dur": 342,
+      "pid": 1,
+      "tid": 6080
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@platforms+host_platform+host_platform",
+      "ph": "X",
+      "ts": 196679,
+      "dur": 108,
+      "pid": 1,
+      "tid": 6080
+    },
+    {
+      "cat": "bazel module processing",
+      "name": "check lockfile for @@platforms//host:extension.bzl%host_platform",
+      "ph": "X",
+      "ts": 197865,
+      "dur": 281,
+      "pid": 1,
+      "tid": 6074
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@platforms+host_platform+host_platform",
+      "ph": "X",
+      "ts": 198414,
+      "dur": 263,
+      "pid": 1,
+      "tid": 6074
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6081,
+      "args": { "name": "skyframe-evaluator-4" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6081,
+      "args": { "sort_index": 10004 }
+    },
+    {
+      "cat": "package creation",
+      "name": "@@platforms//host",
+      "ph": "X",
+      "ts": 199674,
+      "dur": 691,
+      "pid": 1,
+      "tid": 6081
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6084,
+      "args": { "name": "skyframe-evaluator-7" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6084,
+      "args": { "sort_index": 10007 }
+    },
+    {
+      "cat": "package creation",
+      "name": "@@platforms//os",
+      "ph": "X",
+      "ts": 202187,
+      "dur": 973,
+      "pid": 1,
+      "tid": 6084
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6082,
+      "args": { "name": "skyframe-evaluator-5" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6082,
+      "args": { "sort_index": 10005 }
+    },
+    {
+      "cat": "package creation",
+      "name": "@@platforms//cpu",
+      "ph": "X",
+      "ts": 202448,
+      "dur": 1017,
+      "pid": 1,
+      "tid": 6082
+    },
+    {
+      "cat": "package creation",
+      "name": "@@bazel_tools//tools/cpp",
+      "ph": "X",
+      "ts": 212197,
+      "dur": 1836,
+      "pid": 1,
+      "tid": 6084
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_kotlin+",
+      "ph": "X",
+      "ts": 215991,
+      "dur": 138,
+      "pid": 1,
+      "tid": 6084
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6087,
+      "args": { "name": "skyframe-evaluator-10" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6087,
+      "args": { "sort_index": 10010 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+local_jdk",
+      "ph": "X",
+      "ts": 216054,
+      "dur": 74,
+      "pid": 1,
+      "tid": 6087
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6096,
+      "args": { "name": "skyframe-evaluator-19" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6096,
+      "args": { "sort_index": 10019 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_cc++cc_configure_extension+local_config_cc_toolchains",
+      "ph": "X",
+      "ts": 216016,
+      "dur": 126,
+      "pid": 1,
+      "tid": 6096
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6100,
+      "args": { "name": "skyframe-evaluator-21" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6100,
+      "args": { "sort_index": 10021 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remote_jdk8_linux_aarch64_toolchain_config_repo",
+      "ph": "X",
+      "ts": 216503,
+      "dur": 19,
+      "pid": 1,
+      "tid": 6100
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6107,
+      "args": { "name": "skyframe-evaluator-23" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6107,
+      "args": { "sort_index": 10023 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remote_jdk8_macos_toolchain_config_repo",
+      "ph": "X",
+      "ts": 217263,
+      "dur": 10,
+      "pid": 1,
+      "tid": 6107
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_kotlin+",
+      "ph": "X",
+      "ts": 216449,
+      "dur": 1004,
+      "pid": 1,
+      "tid": 6084
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6115,
+      "args": { "name": "skyframe-evaluator-36" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6115,
+      "args": { "sort_index": 10036 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk11_linux_ppc64le_toolchain_config_repo",
+      "ph": "X",
+      "ts": 218798,
+      "dur": 9,
+      "pid": 1,
+      "tid": 6115
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_kotlin+//kotlin/internal",
+      "ph": "X",
+      "ts": 218577,
+      "dur": 267,
+      "pid": 1,
+      "tid": 6084
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6091,
+      "args": { "name": "skyframe-evaluator-14" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6091,
+      "args": { "sort_index": 10014 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remote_jdk8_linux_s390x_toolchain_config_repo",
+      "ph": "X",
+      "ts": 218915,
+      "dur": 10,
+      "pid": 1,
+      "tid": 6091
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6103,
+      "args": { "name": "skyframe-evaluator-27" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6103,
+      "args": { "sort_index": 10027 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk11_macos_aarch64_toolchain_config_repo",
+      "ph": "X",
+      "ts": 219820,
+      "dur": 12,
+      "pid": 1,
+      "tid": 6103
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6104,
+      "args": { "name": "skyframe-evaluator-25" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6104,
+      "args": { "sort_index": 10025 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remote_jdk8_linux_toolchain_config_repo",
+      "ph": "X",
+      "ts": 220024,
+      "dur": 8,
+      "pid": 1,
+      "tid": 6104
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6123,
+      "args": { "name": "skyframe-evaluator-44" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6123,
+      "args": { "sort_index": 10044 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remote_jdk8_windows_toolchain_config_repo",
+      "ph": "X",
+      "ts": 220261,
+      "dur": 15,
+      "pid": 1,
+      "tid": 6123
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk17_macos_aarch64_toolchain_config_repo",
+      "ph": "X",
+      "ts": 220428,
+      "dur": 9,
+      "pid": 1,
+      "tid": 6100
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk17_win_toolchain_config_repo",
+      "ph": "X",
+      "ts": 220478,
+      "dur": 6,
+      "pid": 1,
+      "tid": 6123
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk17_win_arm64_toolchain_config_repo",
+      "ph": "X",
+      "ts": 220536,
+      "dur": 4,
+      "pid": 1,
+      "tid": 6123
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6124,
+      "args": { "name": "skyframe-evaluator-45" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6124,
+      "args": { "sort_index": 10045 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk17_linux_aarch64_toolchain_config_repo",
+      "ph": "X",
+      "ts": 220517,
+      "dur": 13,
+      "pid": 1,
+      "tid": 6124
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk21_linux_toolchain_config_repo",
+      "ph": "X",
+      "ts": 220588,
+      "dur": 7,
+      "pid": 1,
+      "tid": 6100
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk21_linux_aarch64_toolchain_config_repo",
+      "ph": "X",
+      "ts": 220630,
+      "dur": 4,
+      "pid": 1,
+      "tid": 6123
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk21_linux_ppc64le_toolchain_config_repo",
+      "ph": "X",
+      "ts": 220648,
+      "dur": 5,
+      "pid": 1,
+      "tid": 6100
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk21_linux_s390x_toolchain_config_repo",
+      "ph": "X",
+      "ts": 220679,
+      "dur": 6,
+      "pid": 1,
+      "tid": 6123
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6121,
+      "args": { "name": "skyframe-evaluator-42" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6121,
+      "args": { "sort_index": 10042 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk17_macos_toolchain_config_repo",
+      "ph": "X",
+      "ts": 220588,
+      "dur": 84,
+      "pid": 1,
+      "tid": 6121
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk21_macos_toolchain_config_repo",
+      "ph": "X",
+      "ts": 220719,
+      "dur": 6,
+      "pid": 1,
+      "tid": 6100
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk21_macos_aarch64_toolchain_config_repo",
+      "ph": "X",
+      "ts": 220725,
+      "dur": 4,
+      "pid": 1,
+      "tid": 6123
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6125,
+      "args": { "name": "skyframe-evaluator-46" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6125,
+      "args": { "sort_index": 10046 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk11_win_toolchain_config_repo",
+      "ph": "X",
+      "ts": 220720,
+      "dur": 9,
+      "pid": 1,
+      "tid": 6125
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk21_win_toolchain_config_repo",
+      "ph": "X",
+      "ts": 220788,
+      "dur": 3,
+      "pid": 1,
+      "tid": 6123
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk21_win_arm64_toolchain_config_repo",
+      "ph": "X",
+      "ts": 220843,
+      "dur": 8,
+      "pid": 1,
+      "tid": 6100
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_shell++sh_configure+local_config_shell",
+      "ph": "X",
+      "ts": 220871,
+      "dur": 3,
+      "pid": 1,
+      "tid": 6123
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6119,
+      "args": { "name": "skyframe-evaluator-40" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6119,
+      "args": { "sort_index": 10040 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_python++python+pythons_hub",
+      "ph": "X",
+      "ts": 220864,
+      "dur": 10,
+      "pid": 1,
+      "tid": 6119
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6126,
+      "args": { "name": "skyframe-evaluator-47" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6126,
+      "args": { "sort_index": 10047 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk17_linux_s390x_toolchain_config_repo",
+      "ph": "X",
+      "ts": 220918,
+      "dur": 8,
+      "pid": 1,
+      "tid": 6126
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk11_linux_aarch64_toolchain_config_repo",
+      "ph": "X",
+      "ts": 221104,
+      "dur": 10,
+      "pid": 1,
+      "tid": 6081
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk17_linux_ppc64le_toolchain_config_repo",
+      "ph": "X",
+      "ts": 221127,
+      "dur": 5,
+      "pid": 1,
+      "tid": 6126
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6102,
+      "args": { "name": "skyframe-evaluator-24" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6102,
+      "args": { "sort_index": 10024 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remote_jdk8_macos_aarch64_toolchain_config_repo",
+      "ph": "X",
+      "ts": 221149,
+      "dur": 6,
+      "pid": 1,
+      "tid": 6102
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk11_linux_toolchain_config_repo",
+      "ph": "X",
+      "ts": 221291,
+      "dur": 4,
+      "pid": 1,
+      "tid": 6102
+    },
+    {
+      "cat": "package creation",
+      "name": "@@bazel_skylib+//toolchains/unittest",
+      "ph": "X",
+      "ts": 221683,
+      "dur": 330,
+      "pid": 1,
+      "tid": 6124
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_kotlin++rules_kotlin_extensions+com_github_jetbrains_kotlin",
+      "ph": "X",
+      "ts": 222138,
+      "dur": 7,
+      "pid": 1,
+      "tid": 6125
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk11_macos_toolchain_config_repo",
+      "ph": "X",
+      "ts": 222340,
+      "dur": 9,
+      "pid": 1,
+      "tid": 6084
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk11_linux_s390x_toolchain_config_repo",
+      "ph": "X",
+      "ts": 222417,
+      "dur": 4,
+      "pid": 1,
+      "tid": 6084
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_java+//toolchains",
+      "ph": "X",
+      "ts": 222468,
+      "dur": 954,
+      "pid": 1,
+      "tid": 6102
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6105,
+      "args": { "name": "skyframe-evaluator-26" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6105,
+      "args": { "sort_index": 10026 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk17_linux_toolchain_config_repo",
+      "ph": "X",
+      "ts": 223445,
+      "dur": 9,
+      "pid": 1,
+      "tid": 6105
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6128,
+      "args": { "name": "skyframe-evaluator-49" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6128,
+      "args": { "sort_index": 10049 }
+    },
+    {
+      "cat": "package creation",
+      "name": "@@protobuf+//bazel/private/toolchains",
+      "ph": "X",
+      "ts": 224431,
+      "dur": 454,
+      "pid": 1,
+      "tid": 6128
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000106,
+      "args": {
+        "name": "module-extension-@@rules_shell+//shell/private/extensions:sh_configure.bzl%sh_configur0 (Virtual)"
+      }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000106,
+      "args": { "sort_index": 1000000 }
+    },
+    {
+      "cat": "bazel module processing",
+      "name": "evaluate module extension: @@rules_shell+//shell/private/extensions:sh_configure.bzl%sh_configure",
+      "ph": "X",
+      "ts": 226574,
+      "dur": 199,
+      "pid": 1,
+      "tid": 1000106
+    },
+    {
+      "cat": "package creation",
+      "name": "@@protobuf+//bazel/private/toolchains",
+      "ph": "X",
+      "ts": 226351,
+      "dur": 548,
+      "pid": 1,
+      "tid": 6128
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6131,
+      "args": { "name": "skyframe-evaluator-52" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6131,
+      "args": { "sort_index": 10052 }
+    },
+    {
+      "cat": "bazel module processing",
+      "name": "check lockfile for @@rules_kotlin+//src/main/starlark/core/repositories:bzlmod_setup.bzl%rules_kotlin_extensions",
+      "ph": "X",
+      "ts": 227107,
+      "dur": 413,
+      "pid": 1,
+      "tid": 6131
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6127,
+      "args": { "name": "skyframe-evaluator-48" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6127,
+      "args": { "sort_index": 10048 }
+    },
+    {
+      "cat": "package creation",
+      "name": "@@bazel_skylib+//toolchains/unittest",
+      "ph": "X",
+      "ts": 227084,
+      "dur": 478,
+      "pid": 1,
+      "tid": 6127
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000107,
+      "args": {
+        "name": "module-extension-@@rules_cc+//cc:extensions.bzl%cc_configure_extensio0 (Virtual)"
+      }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000107,
+      "args": { "sort_index": 1000000 }
+    },
+    {
+      "cat": "bazel module processing",
+      "name": "evaluate module extension: @@rules_cc+//cc:extensions.bzl%cc_configure_extension",
+      "ph": "X",
+      "ts": 228099,
+      "dur": 324,
+      "pid": 1,
+      "tid": 1000107
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_kotlin++rules_kotlin_extensions+com_github_jetbrains_kotlin",
+      "ph": "X",
+      "ts": 228513,
+      "dur": 429,
+      "pid": 1,
+      "tid": 6131
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000108,
+      "args": {
+        "name": "starlark-repository-rules_shell++sh_configure+local_config_shel0 (Virtual)"
+      }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000108,
+      "args": { "sort_index": 1000000 }
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6137,
+      "args": { "name": "skyframe-evaluator-58" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6137,
+      "args": { "sort_index": 10058 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_kotlin++rules_kotlin_extensions+com_github_jetbrains_kotlin",
+      "ph": "X",
+      "ts": 229173,
+      "dur": 482,
+      "pid": 1,
+      "tid": 6137
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6079,
       "args": { "name": "skyframe-evaluator-2" }
     },
     {
       "name": "thread_sort_index",
       "ph": "M",
       "pid": 1,
-      "tid": 15965,
+      "tid": 6079,
       "args": { "sort_index": 10002 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_cc++cc_configure_extension+local_config_cc_toolchains",
+      "ph": "X",
+      "ts": 229488,
+      "dur": 357,
+      "pid": 1,
+      "tid": 6079
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6132,
+      "args": { "name": "skyframe-evaluator-53" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6132,
+      "args": { "sort_index": 10053 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_cc++cc_configure_extension+local_config_cc_toolchains",
+      "ph": "X",
+      "ts": 230002,
+      "dur": 369,
+      "pid": 1,
+      "tid": 6132
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_shell++sh_configure+local_config_shell",
+      "ph": "X",
+      "ts": 228478,
+      "dur": 2377,
+      "pid": 1,
+      "tid": 6084
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000109,
+      "args": {
+        "name": "module-extension-@@rules_python+//python/extensions:python.bzl%pytho0 (Virtual)"
+      }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000109,
+      "args": { "sort_index": 1000000 }
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_java+//toolchains",
+      "ph": "X",
+      "ts": 226241,
+      "dur": 4965,
+      "pid": 1,
+      "tid": 6123
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6113,
+      "args": { "name": "skyframe-evaluator-34" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6113,
+      "args": { "sort_index": 10034 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk11_win_arm64_toolchain_config_repo",
+      "ph": "X",
+      "ts": 232192,
+      "dur": 8,
+      "pid": 1,
+      "tid": 6113
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6138,
+      "args": { "name": "skyframe-evaluator-59" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6138,
+      "args": { "sort_index": 10059 }
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_cc++cc_configure_extension+local_config_cc_toolchains//",
+      "ph": "X",
+      "ts": 232128,
+      "dur": 176,
+      "pid": 1,
+      "tid": 6138
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6114,
+      "args": { "name": "skyframe-evaluator-35" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6114,
+      "args": { "sort_index": 10035 }
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_shell++sh_configure+local_config_shell//",
+      "ph": "X",
+      "ts": 232813,
+      "dur": 232,
+      "pid": 1,
+      "tid": 6114
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6095,
+      "args": { "name": "skyframe-evaluator-18" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6095,
+      "args": { "sort_index": 10018 }
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_cc++cc_configure_extension+local_config_cc_toolchains//",
+      "ph": "X",
+      "ts": 233056,
+      "dur": 214,
+      "pid": 1,
+      "tid": 6095
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6088,
+      "args": { "name": "skyframe-evaluator-11" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6088,
+      "args": { "sort_index": 10011 }
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_shell++sh_configure+local_config_shell//",
+      "ph": "X",
+      "ts": 234553,
+      "dur": 241,
+      "pid": 1,
+      "tid": 6088
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6106,
+      "args": { "name": "skyframe-evaluator-28" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6106,
+      "args": { "sort_index": 10028 }
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_kotlin+//kotlin/internal",
+      "ph": "X",
+      "ts": 233980,
+      "dur": 893,
+      "pid": 1,
+      "tid": 6106
+    },
+    {
+      "cat": "bazel module processing",
+      "name": "evaluate module extension: @@rules_python+//python/extensions:python.bzl%python",
+      "ph": "X",
+      "ts": 230931,
+      "dur": 6356,
+      "pid": 1,
+      "tid": 1000109
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000110,
+      "args": {
+        "name": "module-extension-@@rules_java+//java:extensions.bzl%toolchain0 (Virtual)"
+      }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000110,
+      "args": { "sort_index": 1000000 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_python++python+pythons_hub",
+      "ph": "X",
+      "ts": 241641,
+      "dur": 412,
+      "pid": 1,
+      "tid": 6102
+    },
+    {
+      "cat": "bazel module processing",
+      "name": "evaluate module extension: @@rules_java+//java:extensions.bzl%toolchains",
+      "ph": "X",
+      "ts": 240811,
+      "dur": 3203,
+      "pid": 1,
+      "tid": 1000110
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6090,
+      "args": { "name": "skyframe-evaluator-13" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6090,
+      "args": { "sort_index": 10013 }
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_python++python+pythons_hub//",
+      "ph": "X",
+      "ts": 243721,
+      "dur": 469,
+      "pid": 1,
+      "tid": 6090
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000111,
+      "args": {
+        "name": "starlark-repository-rules_java++toolchains+remotejdk11_win_arm64_toolchain_config_rep0 (Virtual)"
+      }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000111,
+      "args": { "sort_index": 1000000 }
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000112,
+      "args": {
+        "name": "starlark-repository-rules_java++toolchains+local_jd0 (Virtual)"
+      }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000112,
+      "args": { "sort_index": 1000000 }
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000113,
+      "args": {
+        "name": "starlark-repository-rules_java++toolchains+remote_jdk8_macos_toolchain_config_rep0 (Virtual)"
+      }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000113,
+      "args": { "sort_index": 1000000 }
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000114,
+      "args": {
+        "name": "starlark-repository-rules_java++toolchains+remotejdk11_linux_ppc64le_toolchain_config_rep0 (Virtual)"
+      }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000114,
+      "args": { "sort_index": 1000000 }
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000115,
+      "args": {
+        "name": "starlark-repository-rules_java++toolchains+remote_jdk8_windows_toolchain_config_rep0 (Virtual)"
+      }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000115,
+      "args": { "sort_index": 1000000 }
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000116,
+      "args": {
+        "name": "starlark-repository-rules_java++toolchains+remotejdk17_win_toolchain_config_rep0 (Virtual)"
+      }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000116,
+      "args": { "sort_index": 1000000 }
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000117,
+      "args": {
+        "name": "starlark-repository-rules_java++toolchains+remotejdk17_macos_aarch64_toolchain_config_rep0 (Virtual)"
+      }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000117,
+      "args": { "sort_index": 1000000 }
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000118,
+      "args": {
+        "name": "starlark-repository-rules_java++toolchains+remotejdk21_linux_toolchain_config_rep0 (Virtual)"
+      }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000118,
+      "args": { "sort_index": 1000000 }
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000119,
+      "args": {
+        "name": "starlark-repository-rules_java++toolchains+remote_jdk8_linux_aarch64_toolchain_config_rep0 (Virtual)"
+      }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000119,
+      "args": { "sort_index": 1000000 }
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000120,
+      "args": {
+        "name": "starlark-repository-rules_java++toolchains+remotejdk17_win_arm64_toolchain_config_rep0 (Virtual)"
+      }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000120,
+      "args": { "sort_index": 1000000 }
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000121,
+      "args": {
+        "name": "starlark-repository-rules_java++toolchains+remotejdk21_linux_ppc64le_toolchain_config_rep0 (Virtual)"
+      }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000121,
+      "args": { "sort_index": 1000000 }
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000122,
+      "args": {
+        "name": "starlark-repository-rules_java++toolchains+remotejdk17_macos_toolchain_config_rep0 (Virtual)"
+      }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000122,
+      "args": { "sort_index": 1000000 }
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000123,
+      "args": {
+        "name": "starlark-repository-rules_java++toolchains+remotejdk21_macos_aarch64_toolchain_config_rep0 (Virtual)"
+      }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000123,
+      "args": { "sort_index": 1000000 }
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000124,
+      "args": {
+        "name": "starlark-repository-rules_java++toolchains+remotejdk21_linux_s390x_toolchain_config_rep0 (Virtual)"
+      }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000124,
+      "args": { "sort_index": 1000000 }
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000125,
+      "args": {
+        "name": "starlark-repository-rules_java++toolchains+remotejdk21_linux_aarch64_toolchain_config_rep0 (Virtual)"
+      }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000125,
+      "args": { "sort_index": 1000000 }
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000126,
+      "args": {
+        "name": "starlark-repository-rules_java++toolchains+remotejdk17_linux_aarch64_toolchain_config_rep0 (Virtual)"
+      }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000126,
+      "args": { "sort_index": 1000000 }
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000127,
+      "args": {
+        "name": "starlark-repository-rules_java++toolchains+remotejdk17_linux_s390x_toolchain_config_rep0 (Virtual)"
+      }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000127,
+      "args": { "sort_index": 1000000 }
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000128,
+      "args": {
+        "name": "starlark-repository-rules_java++toolchains+remotejdk11_win_toolchain_config_rep0 (Virtual)"
+      }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000128,
+      "args": { "sort_index": 1000000 }
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000129,
+      "args": {
+        "name": "starlark-repository-rules_java++toolchains+remotejdk11_linux_s390x_toolchain_config_rep0 (Virtual)"
+      }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000129,
+      "args": { "sort_index": 1000000 }
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000130,
+      "args": {
+        "name": "starlark-repository-rules_java++toolchains+remotejdk11_linux_aarch64_toolchain_config_rep0 (Virtual)"
+      }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000130,
+      "args": { "sort_index": 1000000 }
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000131,
+      "args": {
+        "name": "starlark-repository-rules_java++toolchains+remotejdk21_macos_toolchain_config_rep0 (Virtual)"
+      }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000131,
+      "args": { "sort_index": 1000000 }
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000132,
+      "args": {
+        "name": "starlark-repository-rules_java++toolchains+remotejdk11_macos_aarch64_toolchain_config_rep0 (Virtual)"
+      }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000132,
+      "args": { "sort_index": 1000000 }
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000133,
+      "args": {
+        "name": "starlark-repository-rules_java++toolchains+remotejdk17_linux_toolchain_config_rep0 (Virtual)"
+      }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000133,
+      "args": { "sort_index": 1000000 }
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000134,
+      "args": {
+        "name": "starlark-repository-rules_java++toolchains+remotejdk11_linux_toolchain_config_rep0 (Virtual)"
+      }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000134,
+      "args": { "sort_index": 1000000 }
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000135,
+      "args": {
+        "name": "starlark-repository-rules_java++toolchains+remote_jdk8_linux_s390x_toolchain_config_rep0 (Virtual)"
+      }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000135,
+      "args": { "sort_index": 1000000 }
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000136,
+      "args": {
+        "name": "starlark-repository-rules_java++toolchains+remote_jdk8_linux_toolchain_config_rep0 (Virtual)"
+      }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000136,
+      "args": { "sort_index": 1000000 }
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000138,
+      "args": {
+        "name": "starlark-repository-rules_java++toolchains+remotejdk11_macos_toolchain_config_rep0 (Virtual)"
+      }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000138,
+      "args": { "sort_index": 1000000 }
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000137,
+      "args": {
+        "name": "starlark-repository-rules_java++toolchains+remotejdk21_win_arm64_toolchain_config_rep0 (Virtual)"
+      }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000137,
+      "args": { "sort_index": 1000000 }
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6166,
+      "args": { "name": "skyframe-evaluator-87" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6166,
+      "args": { "sort_index": 10087 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk11_win_arm64_toolchain_config_repo",
+      "ph": "X",
+      "ts": 248486,
+      "dur": 2753,
+      "pid": 1,
+      "tid": 6166
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6155,
+      "args": { "name": "skyframe-evaluator-76" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6155,
+      "args": { "sort_index": 10076 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remote_jdk8_macos_toolchain_config_repo",
+      "ph": "X",
+      "ts": 248600,
+      "dur": 2691,
+      "pid": 1,
+      "tid": 6155
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000139,
+      "args": {
+        "name": "starlark-repository-rules_java++toolchains+remotejdk17_linux_ppc64le_toolchain_config_rep0 (Virtual)"
+      }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000139,
+      "args": { "sort_index": 1000000 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk17_win_toolchain_config_repo",
+      "ph": "X",
+      "ts": 248707,
+      "dur": 2732,
+      "pid": 1,
+      "tid": 6080
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000140,
+      "args": {
+        "name": "starlark-repository-rules_java++toolchains+remote_jdk8_macos_aarch64_toolchain_config_rep0 (Virtual)"
+      }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000140,
+      "args": { "sort_index": 1000000 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk21_linux_toolchain_config_repo",
+      "ph": "X",
+      "ts": 248763,
+      "dur": 2804,
+      "pid": 1,
+      "tid": 6106
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remote_jdk8_windows_toolchain_config_repo",
+      "ph": "X",
+      "ts": 248725,
+      "dur": 2910,
+      "pid": 1,
+      "tid": 6088
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6085,
+      "args": { "name": "skyframe-evaluator-8" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6085,
+      "args": { "sort_index": 10008 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk17_macos_aarch64_toolchain_config_repo",
+      "ph": "X",
+      "ts": 248772,
+      "dur": 3004,
+      "pid": 1,
+      "tid": 6085
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6161,
+      "args": { "name": "skyframe-evaluator-82" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6161,
+      "args": { "sort_index": 10082 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk21_linux_ppc64le_toolchain_config_repo",
+      "ph": "X",
+      "ts": 248945,
+      "dur": 2894,
+      "pid": 1,
+      "tid": 6161
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6160,
+      "args": { "name": "skyframe-evaluator-81" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6160,
+      "args": { "sort_index": 10081 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk11_linux_ppc64le_toolchain_config_repo",
+      "ph": "X",
+      "ts": 248606,
+      "dur": 3301,
+      "pid": 1,
+      "tid": 6160
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6165,
+      "args": { "name": "skyframe-evaluator-86" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6165,
+      "args": { "sort_index": 10086 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remote_jdk8_linux_aarch64_toolchain_config_repo",
+      "ph": "X",
+      "ts": 248694,
+      "dur": 3464,
+      "pid": 1,
+      "tid": 6165
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk17_macos_toolchain_config_repo",
+      "ph": "X",
+      "ts": 248855,
+      "dur": 3366,
+      "pid": 1,
+      "tid": 6090
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+local_jdk",
+      "ph": "X",
+      "ts": 248525,
+      "dur": 3906,
+      "pid": 1,
+      "tid": 6102
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6152,
+      "args": { "name": "skyframe-evaluator-73" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6152,
+      "args": { "sort_index": 10073 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk17_linux_aarch64_toolchain_config_repo",
+      "ph": "X",
+      "ts": 249171,
+      "dur": 3346,
+      "pid": 1,
+      "tid": 6152
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6154,
+      "args": { "name": "skyframe-evaluator-75" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6154,
+      "args": { "sort_index": 10075 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk11_win_toolchain_config_repo",
+      "ph": "X",
+      "ts": 249326,
+      "dur": 3406,
+      "pid": 1,
+      "tid": 6154
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk21_linux_s390x_toolchain_config_repo",
+      "ph": "X",
+      "ts": 249157,
+      "dur": 3617,
+      "pid": 1,
+      "tid": 6103
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6163,
+      "args": { "name": "skyframe-evaluator-84" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6163,
+      "args": { "sort_index": 10084 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk17_win_arm64_toolchain_config_repo",
+      "ph": "X",
+      "ts": 248844,
+      "dur": 4133,
+      "pid": 1,
+      "tid": 6163
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6164,
+      "args": { "name": "skyframe-evaluator-85" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6164,
+      "args": { "sort_index": 10085 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk17_linux_s390x_toolchain_config_repo",
+      "ph": "X",
+      "ts": 249269,
+      "dur": 3892,
+      "pid": 1,
+      "tid": 6164
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6117,
+      "args": { "name": "skyframe-evaluator-38" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6117,
+      "args": { "sort_index": 10038 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk21_macos_toolchain_config_repo",
+      "ph": "X",
+      "ts": 249395,
+      "dur": 4244,
+      "pid": 1,
+      "tid": 6117
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000141,
+      "args": {
+        "name": "starlark-repository-rules_java++toolchains+remotejdk21_win_toolchain_config_rep0 (Virtual)"
+      }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000141,
+      "args": { "sort_index": 1000000 }
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6153,
+      "args": { "name": "skyframe-evaluator-74" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6153,
+      "args": { "sort_index": 10074 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remote_jdk8_linux_s390x_toolchain_config_repo",
+      "ph": "X",
+      "ts": 249572,
+      "dur": 4342,
+      "pid": 1,
+      "tid": 6153
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6158,
+      "args": { "name": "skyframe-evaluator-79" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6158,
+      "args": { "sort_index": 10079 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk11_macos_aarch64_toolchain_config_repo",
+      "ph": "X",
+      "ts": 249565,
+      "dur": 4377,
+      "pid": 1,
+      "tid": 6158
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_java++toolchains+remotejdk11_win_arm64_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 253345,
+      "dur": 614,
+      "pid": 1,
+      "tid": 6106
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6159,
+      "args": { "name": "skyframe-evaluator-80" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6159,
+      "args": { "sort_index": 10080 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk11_linux_s390x_toolchain_config_repo",
+      "ph": "X",
+      "ts": 249398,
+      "dur": 4621,
+      "pid": 1,
+      "tid": 6159
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_java++toolchains+remotejdk17_macos_aarch64_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 253524,
+      "dur": 563,
+      "pid": 1,
+      "tid": 6100
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6146,
+      "args": { "name": "skyframe-evaluator-67" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6146,
+      "args": { "sort_index": 10067 }
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_java++toolchains+remote_jdk8_macos_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 253415,
+      "dur": 691,
+      "pid": 1,
+      "tid": 6146
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6157,
+      "args": { "name": "skyframe-evaluator-78" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6157,
+      "args": { "sort_index": 10078 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk17_linux_ppc64le_toolchain_config_repo",
+      "ph": "X",
+      "ts": 249558,
+      "dur": 4557,
+      "pid": 1,
+      "tid": 6157
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_java++toolchains+remote_jdk8_windows_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 253383,
+      "dur": 777,
+      "pid": 1,
+      "tid": 6138
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_java++toolchains+remotejdk17_win_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 253553,
+      "dur": 608,
+      "pid": 1,
+      "tid": 6124
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_java++toolchains+remotejdk11_linux_ppc64le_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 253628,
+      "dur": 533,
+      "pid": 1,
+      "tid": 6128
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6156,
+      "args": { "name": "skyframe-evaluator-77" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6156,
+      "args": { "sort_index": 10077 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remote_jdk8_linux_toolchain_config_repo",
+      "ph": "X",
+      "ts": 249494,
+      "dur": 4660,
+      "pid": 1,
+      "tid": 6156
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6150,
+      "args": { "name": "skyframe-evaluator-71" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6150,
+      "args": { "sort_index": 10071 }
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_java++toolchains+remote_jdk8_linux_aarch64_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 253767,
+      "dur": 482,
+      "pid": 1,
+      "tid": 6150
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6089,
+      "args": { "name": "skyframe-evaluator-12" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6089,
+      "args": { "sort_index": 10012 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk21_macos_aarch64_toolchain_config_repo",
+      "ph": "X",
+      "ts": 249040,
+      "dur": 5236,
+      "pid": 1,
+      "tid": 6089
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_java++toolchains+remotejdk21_linux_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 253785,
+      "dur": 527,
+      "pid": 1,
+      "tid": 6163
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6118,
+      "args": { "name": "skyframe-evaluator-39" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6118,
+      "args": { "sort_index": 10039 }
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_java++toolchains+remotejdk21_linux_ppc64le_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 253637,
+      "dur": 669,
+      "pid": 1,
+      "tid": 6118
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6147,
+      "args": { "name": "skyframe-evaluator-68" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6147,
+      "args": { "sort_index": 10068 }
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_java++toolchains+remotejdk17_macos_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 253862,
+      "dur": 551,
+      "pid": 1,
+      "tid": 6147
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_java++toolchains+remotejdk21_linux_s390x_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 254167,
+      "dur": 474,
+      "pid": 1,
+      "tid": 6165
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk11_linux_toolchain_config_repo",
+      "ph": "X",
+      "ts": 249512,
+      "dur": 5193,
+      "pid": 1,
+      "tid": 6087
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk21_win_arm64_toolchain_config_repo",
+      "ph": "X",
+      "ts": 249506,
+      "dur": 5239,
+      "pid": 1,
+      "tid": 6082
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk17_linux_toolchain_config_repo",
+      "ph": "X",
+      "ts": 249500,
+      "dur": 5292,
+      "pid": 1,
+      "tid": 6091
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6133,
+      "args": { "name": "skyframe-evaluator-54" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6133,
+      "args": { "sort_index": 10054 }
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_java++toolchains+remotejdk17_linux_aarch64_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 254200,
+      "dur": 612,
+      "pid": 1,
+      "tid": 6133
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk11_linux_aarch64_toolchain_config_repo",
+      "ph": "X",
+      "ts": 249348,
+      "dur": 5570,
+      "pid": 1,
+      "tid": 6104
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6093,
+      "args": { "name": "skyframe-evaluator-16" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6093,
+      "args": { "sort_index": 10016 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk11_macos_toolchain_config_repo",
+      "ph": "X",
+      "ts": 249488,
+      "dur": 5579,
+      "pid": 1,
+      "tid": 6093
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_java++toolchains+remotejdk17_win_arm64_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 254690,
+      "dur": 555,
+      "pid": 1,
+      "tid": 6156
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6097,
+      "args": { "name": "skyframe-evaluator-20" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6097,
+      "args": { "sort_index": 10020 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk21_linux_aarch64_toolchain_config_repo",
+      "ph": "X",
+      "ts": 248867,
+      "dur": 6383,
+      "pid": 1,
+      "tid": 6097
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6120,
+      "args": { "name": "skyframe-evaluator-41" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6120,
+      "args": { "sort_index": 10041 }
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_java++toolchains+local_jdk//",
+      "ph": "X",
+      "ts": 255025,
+      "dur": 240,
+      "pid": 1,
+      "tid": 6120
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remote_jdk8_macos_aarch64_toolchain_config_repo",
+      "ph": "X",
+      "ts": 249535,
+      "dur": 5849,
+      "pid": 1,
+      "tid": 6115
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6101,
+      "args": { "name": "skyframe-evaluator-22" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6101,
+      "args": { "sort_index": 10022 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_java++toolchains+remotejdk21_win_toolchain_config_repo",
+      "ph": "X",
+      "ts": 249542,
+      "dur": 6566,
+      "pid": 1,
+      "tid": 6101
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_java++toolchains+remote_jdk8_linux_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 255582,
+      "dur": 664,
+      "pid": 1,
+      "tid": 6133
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_java++toolchains+remotejdk11_macos_aarch64_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 255638,
+      "dur": 611,
+      "pid": 1,
+      "tid": 6138
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6092,
+      "args": { "name": "skyframe-evaluator-15" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6092,
+      "args": { "sort_index": 10015 }
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_java++toolchains+remotejdk11_win_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 255558,
+      "dur": 710,
+      "pid": 1,
+      "tid": 6092
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_java++toolchains+remotejdk21_macos_aarch64_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 255788,
+      "dur": 506,
+      "pid": 1,
+      "tid": 6104
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_java++toolchains+remotejdk17_linux_s390x_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 255794,
+      "dur": 526,
+      "pid": 1,
+      "tid": 6117
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6143,
+      "args": { "name": "skyframe-evaluator-64" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6143,
+      "args": { "sort_index": 10064 }
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_java++toolchains+remotejdk17_linux_ppc64le_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 255955,
+      "dur": 470,
+      "pid": 1,
+      "tid": 6143
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6130,
+      "args": { "name": "skyframe-evaluator-51" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6130,
+      "args": { "sort_index": 10051 }
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_java++toolchains+local_jdk//",
+      "ph": "X",
+      "ts": 256192,
+      "dur": 272,
+      "pid": 1,
+      "tid": 6130
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_java++toolchains+remotejdk21_macos_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 256137,
+      "dur": 495,
+      "pid": 1,
+      "tid": 6150
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_java++toolchains+remotejdk11_linux_s390x_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 256141,
+      "dur": 493,
+      "pid": 1,
+      "tid": 6074
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_java++toolchains+remotejdk11_linux_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 256238,
+      "dur": 484,
+      "pid": 1,
+      "tid": 6118
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_java++toolchains+remotejdk21_win_arm64_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 256130,
+      "dur": 613,
+      "pid": 1,
+      "tid": 6163
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_java++toolchains+remotejdk17_linux_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 256411,
+      "dur": 467,
+      "pid": 1,
+      "tid": 6089
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_java++toolchains+remotejdk11_macos_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 256521,
+      "dur": 474,
+      "pid": 1,
+      "tid": 6093
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_java++toolchains+remote_jdk8_linux_s390x_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 256276,
+      "dur": 734,
+      "pid": 1,
+      "tid": 6153
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_java++toolchains+remotejdk11_linux_aarch64_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 256454,
+      "dur": 607,
+      "pid": 1,
+      "tid": 6127
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_java++toolchains+remote_jdk8_macos_aarch64_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 256737,
+      "dur": 516,
+      "pid": 1,
+      "tid": 6120
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6112,
+      "args": { "name": "skyframe-evaluator-32" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6112,
+      "args": { "sort_index": 10032 }
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_java++toolchains+remotejdk21_linux_aarch64_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 256771,
+      "dur": 480,
+      "pid": 1,
+      "tid": 6112
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_java++toolchains+remotejdk21_win_toolchain_config_repo//",
+      "ph": "X",
+      "ts": 257467,
+      "dur": 521,
+      "pid": 1,
+      "tid": 6092
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_python++python+pythons_hub//",
+      "ph": "X",
+      "ts": 245685,
+      "dur": 12595,
+      "pid": 1,
+      "tid": 6096
+    },
+    {
+      "cat": "package creation",
+      "name": "@@bazel_skylib+//",
+      "ph": "X",
+      "ts": 261572,
+      "dur": 271,
+      "pid": 1,
+      "tid": 6096
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_license+",
+      "ph": "X",
+      "ts": 261971,
+      "dur": 13,
+      "pid": 1,
+      "tid": 6120
+    },
+    {
+      "cat": "package creation",
+      "name": "@@protobuf+//bazel/private",
+      "ph": "X",
+      "ts": 261606,
+      "dur": 431,
+      "pid": 1,
+      "tid": 6092
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_license+",
+      "ph": "X",
+      "ts": 262438,
+      "dur": 396,
+      "pid": 1,
+      "tid": 6120
+    },
+    {
+      "cat": "package creation",
+      "name": "@@protobuf+//bazel/private",
+      "ph": "X",
+      "ts": 262976,
+      "dur": 751,
+      "pid": 1,
+      "tid": 6096
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_java+//java/proto",
+      "ph": "X",
+      "ts": 264688,
+      "dur": 827,
+      "pid": 1,
+      "tid": 6096
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_cc+//cc/proto",
+      "ph": "X",
+      "ts": 265319,
+      "dur": 294,
+      "pid": 1,
+      "tid": 6120
+    },
+    {
+      "cat": "package creation",
+      "name": "@@bazel_skylib+//",
+      "ph": "X",
+      "ts": 265930,
+      "dur": 737,
+      "pid": 1,
+      "tid": 6074
+    },
+    {
+      "cat": "package creation",
+      "name": "@@bazel_tools//tools/jdk",
+      "ph": "X",
+      "ts": 267082,
+      "dur": 577,
+      "pid": 1,
+      "tid": 6163
+    },
+    {
+      "cat": "package creation",
+      "name": "@@protobuf+//",
+      "ph": "X",
+      "ts": 267057,
+      "dur": 688,
+      "pid": 1,
+      "tid": 6096
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_pkg+",
+      "ph": "X",
+      "ts": 267902,
+      "dur": 9,
+      "pid": 1,
+      "tid": 6093
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_pkg+",
+      "ph": "X",
+      "ts": 268146,
+      "dur": 309,
+      "pid": 1,
+      "tid": 6093
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 33,
+      "args": { "name": "Garbage Collector" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 33,
+      "args": { "sort_index": 2 }
+    },
+    {
+      "cat": "gc notification",
+      "name": "minor GC",
+      "ph": "X",
+      "ts": 270899,
+      "dur": 10000,
+      "pid": 1,
+      "tid": 33
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_license+//licenses/spdx",
+      "ph": "X",
+      "ts": 281275,
+      "dur": 3620,
+      "pid": 1,
+      "tid": 6093
+    },
+    {
+      "cat": "package creation",
+      "name": "@@bazel_tools//tools/jdk",
+      "ph": "X",
+      "ts": 282751,
+      "dur": 2960,
+      "pid": 1,
+      "tid": 6089
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_python+//python/cc",
+      "ph": "X",
+      "ts": 287412,
+      "dur": 768,
+      "pid": 1,
+      "tid": 6120
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_python+//python/config_settings",
+      "ph": "X",
+      "ts": 287424,
+      "dur": 903,
+      "pid": 1,
+      "tid": 6117
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_python+//python/cc",
+      "ph": "X",
+      "ts": 289187,
+      "dur": 763,
+      "pid": 1,
+      "tid": 6089
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_shell+//shell",
+      "ph": "X",
+      "ts": 289922,
+      "dur": 479,
+      "pid": 1,
+      "tid": 6118
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6145,
+      "args": { "name": "skyframe-evaluator-66" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6145,
+      "args": { "sort_index": 10066 }
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_python+//python",
+      "ph": "X",
+      "ts": 287420,
+      "dur": 3035,
+      "pid": 1,
+      "tid": 6145
+    },
+    {
+      "cat": "package creation",
+      "name": "@@bazel_tools//tools/python",
+      "ph": "X",
+      "ts": 292377,
+      "dur": 261,
+      "pid": 1,
+      "tid": 6163
+    },
+    {
+      "cat": "package creation",
+      "name": "@@bazel_tools//tools/python",
+      "ph": "X",
+      "ts": 293374,
+      "dur": 852,
+      "pid": 1,
+      "tid": 6163
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_python+//python/config_settings",
+      "ph": "X",
+      "ts": 290870,
+      "dur": 3533,
+      "pid": 1,
+      "tid": 6130
+    },
+    {
+      "cat": "package creation",
+      "name": "@@protobuf+//",
+      "ph": "X",
+      "ts": 286391,
+      "dur": 9752,
+      "pid": 1,
+      "tid": 6092
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_license+//licenses/spdx",
+      "ph": "X",
+      "ts": 285854,
+      "dur": 19245,
+      "pid": 1,
+      "tid": 6153
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_cc++cc_configure_extension+local_config_cc",
+      "ph": "X",
+      "ts": 319083,
+      "dur": 24,
+      "pid": 1,
+      "tid": 6115
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@fmt+",
+      "ph": "X",
+      "ts": 319132,
+      "dur": 12,
+      "pid": 1,
+      "tid": 6153
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_cc+//",
+      "ph": "X",
+      "ts": 319182,
+      "dur": 1219,
+      "pid": 1,
+      "tid": 6074
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@fmt+",
+      "ph": "X",
+      "ts": 319766,
+      "dur": 889,
+      "pid": 1,
+      "tid": 6117
+    },
+    {
+      "cat": "package creation",
+      "name": "@@bazel_tools//tools/def_parser",
+      "ph": "X",
+      "ts": 320565,
+      "dur": 547,
+      "pid": 1,
+      "tid": 6153
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6151,
+      "args": { "name": "skyframe-evaluator-72" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6151,
+      "args": { "sort_index": 10072 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_cc++cc_configure_extension+local_config_cc",
+      "ph": "X",
+      "ts": 319757,
+      "dur": 1693,
+      "pid": 1,
+      "tid": 6151
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_cc+//cc",
+      "ph": "X",
+      "ts": 319403,
+      "dur": 2131,
+      "pid": 1,
+      "tid": 6114
+    },
+    {
+      "cat": "package creation",
+      "name": "@@bazel_tools//src/conditions",
+      "ph": "X",
+      "ts": 321486,
+      "dur": 356,
+      "pid": 1,
+      "tid": 6153
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6162,
+      "args": { "name": "skyframe-evaluator-83" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6162,
+      "args": { "sort_index": 10083 }
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@rules_cc++cc_configure_extension+local_config_cc",
+      "ph": "X",
+      "ts": 321673,
+      "dur": 1190,
+      "pid": 1,
+      "tid": 6162
+    },
+    {
+      "cat": "package creation",
+      "name": "@@fmt+//",
+      "ph": "X",
+      "ts": 322032,
+      "dur": 933,
+      "pid": 1,
+      "tid": 6114
+    },
+    {
+      "cat": "package creation",
+      "name": "@@bazel_tools//src/conditions",
+      "ph": "X",
+      "ts": 322240,
+      "dur": 896,
+      "pid": 1,
+      "tid": 6153
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_cc++cc_configure_extension+local_config_cc//",
+      "ph": "X",
+      "ts": 324688,
+      "dur": 465,
+      "pid": 1,
+      "tid": 6120
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_cc++cc_configure_extension+local_config_cc//",
+      "ph": "X",
+      "ts": 338261,
+      "dur": 2594,
+      "pid": 1,
+      "tid": 6092
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@bazel_tools+xcode_configure_extension+local_config_xcode",
+      "ph": "X",
+      "ts": 344286,
+      "dur": 23,
+      "pid": 1,
+      "tid": 6089
+    },
+    {
+      "cat": "package creation",
+      "name": "@@bazel_tools//tools/build_defs/build_info",
+      "ph": "X",
+      "ts": 343956,
+      "dur": 477,
+      "pid": 1,
+      "tid": 6120
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6148,
+      "args": { "name": "skyframe-evaluator-69" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6148,
+      "args": { "sort_index": 10069 }
+    },
+    {
+      "cat": "package creation",
+      "name": "@@bazel_tools//tools/build_defs/cc/whitelists/parse_headers_and_layering_check",
+      "ph": "X",
+      "ts": 343913,
+      "dur": 748,
+      "pid": 1,
+      "tid": 6148
+    },
+    {
+      "cat": "package creation",
+      "name": "@@bazel_tools//tools/cpp/modules_tools",
+      "ph": "X",
+      "ts": 345272,
+      "dur": 485,
+      "pid": 1,
+      "tid": 6092
+    },
+    {
+      "cat": "package creation",
+      "name": "@@bazel_tools//tools/build_defs/build_info",
+      "ph": "X",
+      "ts": 345795,
+      "dur": 511,
+      "pid": 1,
+      "tid": 6162
+    },
+    {
+      "cat": "package creation",
+      "name": "@@rules_cc+//cc/private/toolchain",
+      "ph": "X",
+      "ts": 343962,
+      "dur": 2431,
+      "pid": 1,
+      "tid": 6153
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000142,
+      "args": {
+        "name": "module-extension-@@bazel_tools//tools/osx:xcode_configure.bzl%xcode_configure_extensio0 (Virtual)"
+      }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 1000142,
+      "args": { "sort_index": 1000000 }
+    },
+    {
+      "cat": "bazel module processing",
+      "name": "evaluate module extension: @@bazel_tools//tools/osx:xcode_configure.bzl%xcode_configure_extension",
+      "ph": "X",
+      "ts": 347050,
+      "dur": 228,
+      "pid": 1,
+      "tid": 1000142
+    },
+    {
+      "cat": "package creation",
+      "name": "@@bazel_tools//tools/build_defs/build_info/templates",
+      "ph": "X",
+      "ts": 346850,
+      "dur": 464,
+      "pid": 1,
+      "tid": 6162
+    },
+    {
+      "cat": "Fetching repository",
+      "name": "@@bazel_tools+xcode_configure_extension+local_config_xcode",
+      "ph": "X",
+      "ts": 349156,
+      "dur": 912,
+      "pid": 1,
+      "tid": 6089
+    },
+    {
+      "cat": "package creation",
+      "name": "@@bazel_tools+xcode_configure_extension+local_config_xcode//",
+      "ph": "X",
+      "ts": 351964,
+      "dur": 293,
+      "pid": 1,
+      "tid": 6089
     },
     {
       "cat": "Conflict checking",
       "name": "ALV collection",
       "ph": "X",
-      "ts": 219586,
-      "dur": 20092,
+      "ts": 380418,
+      "dur": 37434,
       "pid": 1,
-      "tid": 15965
+      "tid": 6089
     },
     {
       "cat": "Conflict checking",
       "name": "Go through actions",
       "ph": "X",
-      "ts": 239707,
-      "dur": 169,
+      "ts": 417875,
+      "dur": 110,
       "pid": 1,
-      "tid": 15965
+      "tid": 6089
     },
     {
       "cat": "Conflict checking",
       "name": "Awaiting signal from a prior key.",
       "ph": "X",
-      "ts": 239884,
+      "ts": 417995,
       "dur": 0,
       "pid": 1,
-      "tid": 15965
+      "tid": 6089
     },
     {
       "cat": "general information",
       "name": "BuildDriverFunction.checkActionConflicts",
       "ph": "X",
-      "ts": 219574,
-      "dur": 20329,
+      "ts": 380396,
+      "dur": 37631,
       "pid": 1,
-      "tid": 15965
+      "tid": 6089
     },
     {
       "cat": "general information",
       "name": "skyframeExecutor.collectActionLookupValuesInBuild",
       "ph": "X",
-      "ts": 245055,
-      "dur": 2899,
+      "ts": 444209,
+      "dur": 5616,
       "pid": 1,
-      "tid": 15965
+      "tid": 6089
     },
     {
       "name": "thread_name",
       "ph": "M",
       "pid": 1,
-      "tid": 16209,
-      "args": { "name": "skyframe-evaluator-execution-8" }
+      "tid": 6444,
+      "args": { "name": "skyframe-evaluator-execution-6" }
     },
     {
       "name": "thread_sort_index",
       "ph": "M",
       "pid": 1,
-      "tid": 16209,
-      "args": { "sort_index": 30008 }
+      "tid": 6444,
+      "args": { "sort_index": 30006 }
     },
     {
       "cat": "general information",
       "name": "checkOutputs",
       "ph": "X",
-      "ts": 268276,
-      "dur": 13,
+      "ts": 477715,
+      "dur": 12,
       "pid": 1,
-      "tid": 16209
-    },
-    {
-      "name": "thread_name",
-      "ph": "M",
-      "pid": 1,
-      "tid": 16205,
-      "args": { "name": "skyframe-evaluator-execution-4" }
-    },
-    {
-      "name": "thread_sort_index",
-      "ph": "M",
-      "pid": 1,
-      "tid": 16205,
-      "args": { "sort_index": 30004 }
+      "tid": 6444
     },
     {
       "cat": "general information",
       "name": "checkOutputs",
       "ph": "X",
-      "ts": 268925,
-      "dur": 11,
-      "pid": 1,
-      "tid": 16205
-    },
-    {
-      "cat": "general information",
-      "name": "checkOutputs",
-      "ph": "X",
-      "ts": 269179,
+      "ts": 478632,
       "dur": 8,
       "pid": 1,
-      "tid": 16209
+      "tid": 6444
     },
     {
       "name": "thread_name",
       "ph": "M",
       "pid": 1,
-      "tid": 16208,
+      "tid": 6445,
       "args": { "name": "skyframe-evaluator-execution-7" }
     },
     {
       "name": "thread_sort_index",
       "ph": "M",
       "pid": 1,
-      "tid": 16208,
+      "tid": 6445,
       "args": { "sort_index": 30007 }
+    },
+    {
+      "cat": "general information",
+      "name": "action.prepare",
+      "ph": "X",
+      "ts": 478811,
+      "dur": 98,
+      "pid": 1,
+      "tid": 6445
+    },
+    {
+      "cat": "general information",
+      "name": "setupDeterministicWriter",
+      "ph": "X",
+      "ts": 479056,
+      "dur": 6,
+      "pid": 1,
+      "tid": 6445
     },
     {
       "cat": "general information",
       "name": "checkOutputs",
       "ph": "X",
-      "ts": 269531,
-      "dur": 16,
+      "ts": 489817,
+      "dur": 11,
       "pid": 1,
-      "tid": 16208
+      "tid": 6444
+    },
+    {
+      "cat": "action dependency checking",
+      "name": "Compiling src/hello-static.cc",
+      "ph": "X",
+      "ts": 479084,
+      "dur": 10815,
+      "pid": 1,
+      "tid": 6444
     },
     {
       "name": "thread_name",
       "ph": "M",
       "pid": 1,
-      "tid": 16206,
+      "tid": 6442,
       "args": { "name": "skyframe-evaluator-execution-5" }
     },
     {
       "name": "thread_sort_index",
       "ph": "M",
       "pid": 1,
-      "tid": 16206,
+      "tid": 6442,
       "args": { "sort_index": 30005 }
     },
     {
       "cat": "general information",
       "name": "checkOutputs",
       "ph": "X",
-      "ts": 269543,
-      "dur": 10,
+      "ts": 489897,
+      "dur": 13,
       "pid": 1,
-      "tid": 16206
-    },
-    {
-      "cat": "general information",
-      "name": "checkOutputs",
-      "ph": "X",
-      "ts": 269806,
-      "dur": 12,
-      "pid": 1,
-      "tid": 15961
+      "tid": 6442
     },
     {
       "name": "thread_name",
       "ph": "M",
       "pid": 1,
-      "tid": 16203,
-      "args": { "name": "skyframe-evaluator-execution-2" }
+      "tid": 6457,
+      "args": { "name": "skyframe-evaluator-execution-19" }
     },
     {
       "name": "thread_sort_index",
       "ph": "M",
       "pid": 1,
-      "tid": 16203,
-      "args": { "sort_index": 30002 }
+      "tid": 6457,
+      "args": { "sort_index": 30019 }
     },
     {
       "cat": "general information",
       "name": "checkOutputs",
       "ph": "X",
-      "ts": 269816,
-      "dur": 10,
+      "ts": 489944,
+      "dur": 14,
       "pid": 1,
-      "tid": 16203
+      "tid": 6457
+    },
+    {
+      "cat": "action dependency checking",
+      "name": "Compiling src/format.cc",
+      "ph": "X",
+      "ts": 479117,
+      "dur": 10887,
+      "pid": 1,
+      "tid": 6442
     },
     {
       "name": "thread_name",
       "ph": "M",
       "pid": 1,
-      "tid": 16211,
-      "args": { "name": "skyframe-evaluator-execution-10" }
+      "tid": 6466,
+      "args": { "name": "skyframe-evaluator-execution-28" }
     },
     {
       "name": "thread_sort_index",
       "ph": "M",
       "pid": 1,
-      "tid": 16211,
-      "args": { "sort_index": 30010 }
+      "tid": 6466,
+      "args": { "sort_index": 30028 }
     },
     {
       "cat": "general information",
       "name": "checkOutputs",
       "ph": "X",
-      "ts": 269821,
+      "ts": 490202,
       "dur": 12,
       "pid": 1,
-      "tid": 16211
+      "tid": 6466
+    },
+    {
+      "name": "thread_name",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6443,
+      "args": { "name": "skyframe-evaluator-execution-4" }
+    },
+    {
+      "name": "thread_sort_index",
+      "ph": "M",
+      "pid": 1,
+      "tid": 6443,
+      "args": { "sort_index": 30004 }
     },
     {
       "cat": "general information",
       "name": "checkOutputs",
       "ph": "X",
-      "ts": 270917,
-      "dur": 74,
+      "ts": 490206,
+      "dur": 14,
       "pid": 1,
-      "tid": 15961
+      "tid": 6443
+    },
+    {
+      "cat": "general information",
+      "name": "Action.execute",
+      "ph": "X",
+      "ts": 479050,
+      "dur": 11248,
+      "pid": 1,
+      "tid": 6445
     },
     {
       "cat": "general information",
       "name": "checkOutputs",
       "ph": "X",
-      "ts": 271300,
-      "dur": 5,
+      "ts": 490457,
+      "dur": 240,
       "pid": 1,
-      "tid": 15961
+      "tid": 6445
+    },
+    {
+      "cat": "general information",
+      "name": "outputService.finalizeAction",
+      "ph": "X",
+      "ts": 490707,
+      "dur": 1,
+      "pid": 1,
+      "tid": 6445
+    },
+    {
+      "cat": "complete action execution",
+      "name": "actuallyCompleteAction",
+      "ph": "X",
+      "ts": 490401,
+      "dur": 352,
+      "pid": 1,
+      "tid": 6445
+    },
+    {
+      "cat": "action processing",
+      "name": "Writing repo mapping manifest for //src:main",
+      "ph": "X",
+      "ts": 478553,
+      "dur": 12324,
+      "pid": 1,
+      "args": { "mnemonic": "RepoMappingManifest" },
+      "tid": 6445
+    },
+    {
+      "cat": "general information",
+      "name": "postprocessing.run",
+      "ph": "X",
+      "ts": 490897,
+      "dur": 100,
+      "pid": 1,
+      "tid": 6445
+    },
+    {
+      "cat": "general information",
+      "name": "checkOutputs",
+      "ph": "X",
+      "ts": 491208,
+      "dur": 9,
+      "pid": 1,
+      "tid": 6457
+    },
+    {
+      "cat": "general information",
+      "name": "checkOutputs",
+      "ph": "X",
+      "ts": 491601,
+      "dur": 48,
+      "pid": 1,
+      "tid": 6457
     },
     {
       "cat": "skyframe evaluator",
       "name": "Parallel Evaluator evaluation",
       "ph": "X",
-      "ts": 137180,
-      "dur": 137245,
+      "ts": 187932,
+      "dur": 308421,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "ParallelEvaluator.eval",
       "ph": "X",
-      "ts": 137129,
-      "dur": 137324,
+      "ts": 187880,
+      "dur": 308507,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "skyframeExecutor.evaluateBuildDriverKeys",
       "ph": "X",
-      "ts": 136697,
-      "dur": 137804,
+      "ts": 187103,
+      "dur": 309371,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "ParallelEvaluator.eval",
       "ph": "X",
-      "ts": 274721,
-      "dur": 65,
+      "ts": 496689,
+      "dur": 121,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "ParallelEvaluator.eval",
       "ph": "X",
-      "ts": 275330,
-      "dur": 77,
+      "ts": 497616,
+      "dur": 134,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "SkyframeExecutor.getWorkspaceStatusArtifact",
       "ph": "X",
-      "ts": 275308,
-      "dur": 160,
+      "ts": 497584,
+      "dur": 207,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "runAnalysisAndExecutionPhase",
       "ph": "X",
-      "ts": 70085,
-      "dur": 205759,
+      "ts": 140158,
+      "dur": 358493,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "ParallelEvaluator.eval",
       "ph": "X",
-      "ts": 276279,
-      "dur": 57,
+      "ts": 508290,
+      "dur": 239,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "OutputDirectoryLinksUtils.createOutputDirectoryLinks",
       "ph": "X",
-      "ts": 276362,
-      "dur": 221,
+      "ts": 508574,
+      "dur": 502,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "ExecutionTool.handleConvenienceSymlinks",
       "ph": "X",
-      "ts": 276195,
-      "dur": 405,
+      "ts": 508167,
+      "dur": 943,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "Saving action cache",
       "ph": "X",
-      "ts": 276792,
-      "dur": 403,
+      "ts": 509531,
+      "dur": 815,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "Show results",
       "ph": "X",
-      "ts": 277701,
-      "dur": 1170,
+      "ts": 510889,
+      "dur": 1960,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "general information",
       "name": "buildTargets",
       "ph": "X",
-      "ts": 66315,
-      "dur": 212643,
+      "ts": 105630,
+      "dur": 407319,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "build phase marker",
       "name": "Complete build",
       "ph": "i",
-      "ts": 279073,
+      "ts": 512984,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     },
     {
       "cat": "critical path component",
-      "name": "action 'BazelWorkspaceStatusAction stable-status.txt'",
+      "name": "action 'Writing repo mapping manifest for //src:main'",
       "ph": "X",
-      "ts": 137969,
-      "dur": 3232,
+      "ts": 476980,
+      "dur": 13785,
       "pid": 1,
-      "args": { "tid": 7330 },
+      "args": { "tid": 1160 },
+      "tid": 0
+    },
+    {
+      "cat": "critical path component",
+      "name": "runfiles for //src:main",
+      "ph": "X",
+      "ts": 491465,
+      "dur": 97,
+      "pid": 1,
+      "args": { "tid": 1160 },
       "tid": 0
     },
     {
       "name": "action count",
       "pid": 1,
-      "tid": 7330,
+      "tid": 1160,
       "ph": "C",
-      "ts": 2828,
+      "ts": 3085,
       "args": { "action": 0.014999999999999958, "local action cache": 0.0 }
     },
     {
       "name": "action count",
       "pid": 1,
-      "tid": 7330,
+      "tid": 1160,
       "ph": "C",
-      "ts": 202828,
+      "ts": 203085,
       "args": { "action": 0.0, "local action cache": 0.0 }
+    },
+    {
+      "name": "action count",
+      "pid": 1,
+      "tid": 1160,
+      "ph": "C",
+      "ts": 403085,
+      "args": {
+        "action": 0.06000000000000005,
+        "local action cache": 0.1050000000000001
+      }
     },
     {
       "name": "Network Up usage (total)",
       "pid": 1,
-      "tid": 7330,
+      "tid": 1160,
       "cname": "rail_response",
       "ph": "C",
-      "ts": 3653,
-      "args": { "system network up (Mbps)": 0.5578463330843962 }
+      "ts": 3858,
+      "args": { "system network up (Mbps)": 521.0115311275382 }
     },
     {
       "name": "System load average",
       "pid": 1,
-      "tid": 7330,
+      "tid": 1160,
       "cname": "generic_work",
       "ph": "C",
-      "ts": 3653,
-      "args": { "load": 1.4860351562499996 }
+      "ts": 3858,
+      "args": { "load": 1.28269091796875 }
     },
     {
       "name": "CPU usage (total)",
       "pid": 1,
-      "tid": 7330,
+      "tid": 1160,
       "cname": "rail_load",
       "ph": "C",
-      "ts": 3653,
-      "args": { "system cpu": 0.3145245264964962 }
+      "ts": 3858,
+      "args": { "system cpu": 4.34900651674496 }
     },
     {
       "name": "CPU usage (Bazel)",
       "pid": 1,
-      "tid": 7330,
+      "tid": 1160,
       "cname": "good",
       "ph": "C",
-      "ts": 3653,
-      "args": { "cpu": 1.4793379149194879 }
+      "ts": 3858,
+      "args": { "cpu": 5.218171295174666 }
     },
     {
       "name": "Memory usage (total)",
       "pid": 1,
-      "tid": 7330,
+      "tid": 1160,
       "cname": "bad",
       "ph": "C",
-      "ts": 3653,
-      "args": { "system memory": 7199.5999999999985 }
+      "ts": 3858,
+      "args": { "system memory": 12434.994999999999 }
     },
     {
       "name": "Network Down usage (total)",
       "pid": 1,
-      "tid": 7330,
+      "tid": 1160,
       "cname": "rail_response",
       "ph": "C",
-      "ts": 3653,
-      "args": { "system network down (Mbps)": 0.9477038504032327 }
+      "ts": 3858,
+      "args": { "system network down (Mbps)": 541.348531903369 }
     },
     {
       "name": "Memory usage (Bazel)",
       "pid": 1,
-      "tid": 7330,
+      "tid": 1160,
       "cname": "olive",
       "ph": "C",
-      "ts": 3653,
-      "args": { "memory": 64.99999999999999 }
+      "ts": 3858,
+      "args": { "memory": 196.064 }
     },
     {
       "cat": "general information",
       "name": "Finishing",
       "ph": "i",
-      "ts": 281607,
+      "ts": 517947,
       "pid": 1,
-      "tid": 7330
+      "tid": 1160
     }
   ]
 }

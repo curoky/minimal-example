@@ -1,7 +1,7 @@
 FROM ubuntu:24.04
 
 RUN apt-get update -y \
-  && apt-get install -y curl gcc-13 g++-13
+  && apt-get install -y curl gcc-13 g++-13 git
 
 RUN curl -sSL -o /usr/local/bin/bazel \
   https://github.com/bazelbuild/bazelisk/releases/download/v1.25.0/bazelisk-linux-amd64 \
@@ -14,11 +14,11 @@ RUN curl -sSL -o /tmp/miniconda.sh https://repo.anaconda.com/miniconda/Miniconda
   && bash /tmp/miniconda.sh -b -u -p /usr/local/conda
 
 ENV PATH=$PATH:/usr/local/conda/bin
-RUN pip3 install conan
 
 ENV CC=gcc-13 CXX=g++-13
 
-WORKDIR /root
+USER ubuntu
+WORKDIR /home/ubuntu
 COPY .  .
 
 RUN task

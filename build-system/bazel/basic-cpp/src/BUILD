@@ -1,6 +1,4 @@
-load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_library")
-
-# Copyright (c) 2018-2024 curoky(cccuroky@gmail.com).
+# Copyright (c) 2018-2025 curoky(cccuroky@gmail.com).
 #
 # This file is part of minimal-example.
 # See https://github.com/curoky/minimal-example for further info.
@@ -16,6 +14,9 @@ load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_library")
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
+load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_library")
+
 cc_library(
     name = "libhello-shared",
     srcs = [

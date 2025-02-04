@@ -1,4 +1,6 @@
-# Copyright (c) 2018-2024 curoky(cccuroky@gmail.com).
+load("@rules_cc//cc:defs.bzl", "cc_binary")
+
+# Copyright (c) 2018-2025 curoky(cccuroky@gmail.com).
 #
 # This file is part of minimal-example.
 # See https://github.com/curoky/minimal-example for further info.

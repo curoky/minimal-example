@@ -4,7 +4,7 @@ tasks:
   default:
     cmds:
       - bazel build //src:main
-      - bazel run @hedron_compile_commands//:refresh_all
+      # - bazel run @hedron_compile_commands//:refresh_all
       - bazel build //src:main --profile=profile.json --generate_json_trace_profile
 
   docker:

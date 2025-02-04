@@ -1,4 +1,4 @@
-# Copyright (c) 2018-2024 curoky(cccuroky@gmail.com).
+# Copyright (c) 2018-2025 curoky(cccuroky@gmail.com).
 #
 # This file is part of minimal-example.
 # See https://github.com/curoky/minimal-example for further info.

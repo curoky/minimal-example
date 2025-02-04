@@ -1,7 +1,7 @@
 FROM ubuntu:24.04
 
 RUN apt-get update -y \
-  && apt-get install -y curl gcc-13 g++-13
+  && apt-get install -y curl gcc-13 g++-13 git
 
 RUN curl -sSL -o /usr/local/bin/bazel \
   https://github.com/bazelbuild/bazelisk/releases/download/v1.25.0/bazelisk-linux-amd64 \
@@ -18,7 +18,7 @@ RUN pip3 install conan
 
 ENV CC=gcc-13 CXX=g++-13
 
-WORKDIR /root
+WORKDIR /tmp
 COPY .  .
 
 RUN task
