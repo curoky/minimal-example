@@ -1,0 +1,20 @@
+version: '3'
+
+tasks:
+  conan-setup:
+    cmds:
+      - conan profile detect --force
+      - conan profile path default
+
+  conan-install:
+    cmds:
+      - rm -rf conan_deps
+      - conan install conanfile.txt --output-folder=conan_deps --build=missing --profile:build=./conanrc --profile:host=./conanrc
+
+  default:
+    cmds:
+      - bazel run //src:main
+
+  docker:
+    cmds:
+      - docker build . --tag bazel-example

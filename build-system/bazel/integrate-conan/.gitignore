@@ -1,0 +1,6 @@
+/external
+/bazel-*
+/compile_commands.json
+/.cache/
+
+conan_deps

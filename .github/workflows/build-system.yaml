@@ -1,0 +1,45 @@
+name: build-system
+
+on:
+  push:
+    paths:
+      - .github/workflows/build-system
+      - build-system/bazel/**
+      - build-system/blade/**
+      - build-system/buck2/**
+  schedule:
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        path:
+          - build-system/autotools/cpp
+          - build-system/bazel/basic-cpp
+          - build-system/bazel/basic-cpp-nobzlmod
+          - build-system/bazel/basic-go
+          - build-system/bazel/basic-go-nobzlmod
+          - build-system/bazel/integrate-conan
+          - build-system/bazel/with-libllvm-v2
+          - build-system/blade/cpp
+          - build-system/buck2/cpp
+          - build-system/meson/cpp
+          - build-system/scons/cpp
+          - build-system/please/cpp
+          - build-system/cmake/hello
+          - build-system/cmake/with-ccache
+          - build-system/cmake/with-conan
+          - build-system/cmake/with-cpm
+          - build-system/cmake/with-vcpkg
+          - build-system/xmake/cpp/hello
+          - build-system/xmake/cpp/with-extern-pm
+          - build-system/xmake/cpp/with-vcpkg
+
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: arduino/setup-task@v2
+      - run: bazel build :main
+        working-directory: ${{ matrix.path }}

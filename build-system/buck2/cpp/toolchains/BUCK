@@ -1,15 +1,21 @@
-load("@prelude//toolchains:cxx.bzl", "system_cxx_toolchain")
-load("@prelude//toolchains:python.bzl", "system_python_bootstrap_toolchain")
+# load("@prelude//toolchains:cxx.bzl", "system_cxx_toolchain")
+# load("@prelude//toolchains:python.bzl", "system_python_bootstrap_toolchain")
 
-system_cxx_toolchain(
-    name = "cxx",
-    compiler = "/nix/var/nix/profiles/llvm15/bin/clang",
-    cxx_compiler = "/nix/var/nix/profiles/llvm15/bin/clang++",
-    linker = "/nix/var/nix/profiles/llvm15/bin/clang++",
-    visibility = ["PUBLIC"],
-)
+# system_cxx_toolchain(
+#     name = "cxx",
+#     compiler = "/usr/bin/gcc",
+#     cxx_compiler = "/usr/bin/g++",
+#     linker = "/usr/bin/g++",
+#     visibility = ["PUBLIC"],
+# )
 
-system_python_bootstrap_toolchain(
-    name = "python_bootstrap",
-    visibility = ["PUBLIC"],
-)
+# system_python_bootstrap_toolchain(
+#     name = "python_bootstrap",
+#     visibility = ["PUBLIC"],
+# )
+
+load("@prelude//toolchains:demo.bzl", "system_demo_toolchains")
+
+# All the default toolchains, suitable for a quick demo or early prototyping.
+# Most real projects should copy/paste the implementation to configure them.
+system_demo_toolchains()

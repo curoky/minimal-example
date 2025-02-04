@@ -1,8 +1,0 @@
-version: '3'
-
-tasks:
-  default:
-    cmds:
-      - bazel build //src:main
-      - GLOG_logtostderr=1 ./bazel-bin/src/main
-      - bazel run @hedron_compile_commands//:refresh_all

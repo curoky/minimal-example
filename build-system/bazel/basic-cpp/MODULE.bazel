@@ -1,0 +1,13 @@
+module(
+    name = "bazel-example",
+    version = "1.0.0",
+)
+
+bazel_dep(name = "fmt", version = "8.1.1")
+
+bazel_dep(name = "hedron_compile_commands", dev_dependency = True)
+git_override(
+    module_name = "hedron_compile_commands",
+    commit = "f5fbd4cee671d8d908f37c83abaf70fba5928fc7",
+    remote = "https://github.com/mikael-s-persson/bazel-compile-commands-extractor",
+)

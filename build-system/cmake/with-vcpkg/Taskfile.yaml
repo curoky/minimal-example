@@ -3,20 +3,19 @@ version: '3'
 tasks:
   default:
     cmds:
-      - task: vcpkg
-      - task: cmake
+      - rm -rf ./builddir/cmake
+      - cmake -B ./builddir/cmake -S . -G Ninja -DCMAKE_TOOLCHAIN_FILE=./vcpkg/scripts/buildsystems/vcpkg.cmake
+      - cmake --build ./builddir/cmake
 
-  install:
+  vcpkg-setup:
     cmds:
       - git clone https://github.com/Microsoft/vcpkg.git --depth=1
       - ./vcpkg/bootstrap-vcpkg.sh -disableMetrics
 
-  vcpkg:
+  vcpkg-install:
     cmds:
       - ./vcpkg/vcpkg install
 
-  cmake:
+  docker:
     cmds:
-      - rm -rf ./builddir/cmake
-      - cmake -B ./builddir/cmake -S . -G Ninja -DCMAKE_TOOLCHAIN_FILE=./vcpkg/scripts/buildsystems/vcpkg.cmake
-      - cmake --build ./builddir/cmake
+      - docker build . --tag bazel-example

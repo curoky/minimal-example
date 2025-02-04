@@ -6,3 +6,6 @@ tasks:
       - meson compile -C ./builddir/meson
       - ninja -C ./builddir/meson
       - ninja -C ./builddir/meson -f build.ninja -t compdb > compile_commands.json
+  docker:
+    cmds:
+      - docker build . --tag bazel-example

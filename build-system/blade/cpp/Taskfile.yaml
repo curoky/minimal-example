@@ -3,3 +3,7 @@ tasks:
   default:
     cmds:
       - blade build //src:main
+
+  docker:
+    cmds:
+      - docker build . --tag bazel-example

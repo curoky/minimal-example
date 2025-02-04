@@ -1,0 +1,9 @@
+version: '3'
+tasks:
+  default:
+    cmds:
+      - xmake build --yes
+      - xmake run
+  docker:
+    cmds:
+      - docker build . --tag bazel-example

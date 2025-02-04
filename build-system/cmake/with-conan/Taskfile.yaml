@@ -3,17 +3,20 @@ version: '3'
 tasks:
   default:
     cmds:
-      - task: conan
-      - task: cmake
+      - rm -rf ./builddir/cmake
+      - cmake -B ./builddir/cmake -S . -G Ninja -DCMAKE_TOOLCHAIN_FILE=conan_deps/conan_toolchain.cmake
+      - cmake --build ./builddir/cmake
 
-  conan:
+  conan-setup:
     cmds:
       - conan profile detect --force
       - conan profile path default
-      - conan install conanfile.txt --output-folder=builddir/conan --build=missing # --profile conanrc
 
-  cmake:
+  conan-install:
     cmds:
-      - rm -rf ./builddir/cmake
-      - cmake -B ./builddir/cmake -S . -G Ninja -DCMAKE_TOOLCHAIN_FILE=builddir/conan/conan_toolchain.cmake
-      - cmake --build ./builddir/cmake
+      - rm -rf conan_deps
+      - conan install conanfile.txt --output-folder=conan_deps --build=missing --profile:build=./conanrc --profile:host=./conanrc
+
+  docker:
+    cmds:
+      - docker build . --tag bazel-example

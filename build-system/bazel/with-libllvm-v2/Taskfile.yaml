@@ -4,3 +4,7 @@ tasks:
   default:
     cmds:
       - bazel run //src:main
+
+  docker:
+    cmds:
+      - docker build . --tag bazel-example

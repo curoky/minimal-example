@@ -1,10 +1,10 @@
 name: meson
 
 on:
-  push:
-    paths:
-      - .github/workflows/meson.yaml
-      - build-system/meson/**
+  # push:
+  #   paths:
+  #     - .github/workflows/meson.yaml
+  #     - build-system/meson/**
   schedule:
     - cron: '0 0 * * 0'
   workflow_dispatch:

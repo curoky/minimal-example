@@ -1,0 +1,11 @@
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      - bazel build //src:main --config=remote_cache
+      - bazel build //src:main --config=remote_build
+
+  docker:
+    cmds:
+      - docker build . --tag bazel-example

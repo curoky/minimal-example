@@ -1,0 +1,14 @@
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      - bazel run :go-example
+
+  docker:
+    cmds:
+      - docker build . --tag bazel-example
+
+  mod-tidy:
+    cmds:
+      - bazel run @rules_go//go -- mod tidy -v

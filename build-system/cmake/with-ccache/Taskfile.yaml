@@ -3,10 +3,9 @@ version: '3'
 tasks:
   default:
     cmds:
-      - task: cmake
-
-  cmake:
-    cmds:
       - rm -rf ./builddir/cmake
       - cmake -B ./builddir/cmake -S . -G Ninja
       - cmake --build ./builddir/cmake
+  docker:
+    cmds:
+      - docker build . --tag bazel-example

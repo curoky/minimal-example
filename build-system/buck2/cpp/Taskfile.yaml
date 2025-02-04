@@ -1,0 +1,11 @@
+version: '3'
+tasks:
+  default:
+    cmds:
+      - buck2 init --git
+      - buck2 targets //...
+      - buck2 build //src:main
+
+  docker:
+    cmds:
+      - docker build . --tag bazel-example

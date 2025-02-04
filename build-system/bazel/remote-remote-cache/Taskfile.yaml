@@ -1,0 +1,10 @@
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      - bazel build //src:main
+
+  docker:
+    cmds:
+      - docker build . --tag bazel-example

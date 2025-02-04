@@ -1,2 +1,0 @@
-build --noenable_bzlmod
-build --announce_rc

@@ -1,5 +1,9 @@
-build --cxxopt=-std=c++17 --host_cxxopt=-std=c++17
+build --announce_rc
 
+build --cxxopt=-std=c++17 --host_cxxopt=-std=c++17
+build --noincompatible_disallow_empty_glob
+
+# for remote build
 build --remote_download_toplevel
 build --experimental_remote_cache_compression
 build --legacy_important_outputs

@@ -1,3 +1,5 @@
+build --announce_rc
+
 # bzlmod
 build --enable_bzlmod
 build --registry=https://bcr.bazel.build

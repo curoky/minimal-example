@@ -1,0 +1,14 @@
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      # - gazelle update-repos -from_file=go.mod -to_macro=go_mod.bzl%go_repositories
+      # - gazelle -go_prefix github.com/curoky/bazel-example -lang go -exclude design-pattern -exclude external -exclude service -build_file_name BUILD
+      - bazel run //:gazelle-update-repos
+      - bazel run //:gazelle
+      - bazel run :go-example
+
+  docker:
+    cmds:
+      - docker build . --tag bazel-example

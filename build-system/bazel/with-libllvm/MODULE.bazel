@@ -16,7 +16,7 @@
 # limitations under the License.
 
 module(
-    name = "learn-build-system",
+    name = "bazel-example",
     version = "1.0.0",
 )
 

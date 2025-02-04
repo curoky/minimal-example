@@ -6,3 +6,6 @@ tasks:
       - autoreconf -vfi ../..
       - ../../configure
       - make -C src
+  docker:
+    cmds:
+      - docker build . --tag bazel-example
