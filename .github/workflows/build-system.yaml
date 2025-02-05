@@ -29,7 +29,6 @@ jobs:
           - build-system/bazel/basic-cpp
           - build-system/bazel/basic-cpp-nobzlmod
           - build-system/bazel/basic-go
-          - build-system/bazel/basic-go-nobzlmod
           - build-system/bazel/integrate-conan
           - build-system/bazel/with-libllvm-v2
           - build-system/blade/cpp

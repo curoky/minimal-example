@@ -1,6 +1,6 @@
 module github.com/curoky/bazel-example
 
-go 1.18
+go 1.23
 
 require github.com/urfave/cli/v2 v2.11.1
 
