@@ -1,20 +1,45 @@
 FROM ubuntu:24.04
 
 RUN apt-get update -y \
-  && apt-get install -y curl gcc g++ git zip unzip tar cmake pkg-config
+  && apt-get install -y sudo curl git perl zip unzip tar
 
+# setup user
+RUN useradd --create-home --user-group ci \
+  && usermod -aG sudo ci \
+  && echo "ci ALL=(ALL:ALL) NOPASSWD:ALL" >>/etc/sudoers.d/nopasswd_user
+
+# setup go-task
 RUN curl -sSL https://github.com/go-task/task/releases/download/v3.41.0/task_linux_amd64.tar.gz | tar -xz -C /usr/local/bin \
   && chmod +x /usr/local/bin/task
 
-RUN curl -fsSL https://xmake.io/shget.text | bash -s v2.9.7
+# setup gcc 13 as default
+RUN apt-get install -y gcc-13 g++-13 \
+  && ln -sf /usr/bin/gcc-13 /usr/bin/gcc \
+  && ln -sf /usr/bin/g++-13 /usr/bin/g++
 
-RUN git clone https://github.com/Microsoft/vcpkg.git --depth=1 /usr/local/vcpkg \
-  && /usr/local/vcpkg/bootstrap-vcpkg.sh -disableMetrics
+# setup extra build tools
+RUN apt-get install -y pkg-config autoconf libtool make cmake ninja-build lld ccache
 
-ENV PATH=$PATH:/root/.local/bin XMAKE_ROOT=y \
-  VCPKG_ROOT=/usr/local/vcpkg
+# setup python3
+ENV PATH=$PATH:/usr/local/conda/bin
+RUN curl -sSL -o /tmp/miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-py312_24.7.1-0-Linux-x86_64.sh \
+  && bash /tmp/miniconda.sh -b -u -p /usr/local/conda
 
-WORKDIR /root
-COPY .  .
+# switch user
+USER ci
+WORKDIR /home/ci/workspace
+
+# setup user's local dir
+ENV PATH=$PATH:/home/ci/.local/bin
+RUN mkdir -p /home/ci/.local/bin
+############################ end setup ############################
+
+RUN curl -fsSL https://xmake.io/shget.text | bash
+
+ENV VCPKG_ROOT=~/vcpkg
+RUN git clone https://github.com/Microsoft/vcpkg.git --depth=1 ~/vcpkg \
+  && ~/vcpkg/bootstrap-vcpkg.sh -disableMetrics
+
+COPY --chown=ci:ci .  .
 
 RUN task
