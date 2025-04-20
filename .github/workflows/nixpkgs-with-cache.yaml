@@ -44,8 +44,7 @@ jobs:
           nix-channel --add https://nixos.org/channels/nixos-24.11 nixpkgs
           nix-channel --update
 
-      # - run: nix-env -iA nixpkgs.pkgsStatic.binutils
+      - run: nix-env -iA nixpkgs.pkgsStatic.binutils
 
-      - run: 12451
-      - uses: fawazahmed0/action-debug-vscode@main
-        if: ${{ failure() || github.event_name == 'workflow_dispatch' }}
+      # - uses: fawazahmed0/action-debug-vscode@main
+      #   if: ${{ failure() || github.event_name == 'workflow_dispatch' }}
