@@ -1,9 +1,8 @@
-load("@rules_cc//cc:defs.bzl", "cc_library")
-
+#
 # Copyright (c) 2018-2024 curoky(cccuroky@gmail.com).
 #
-# This file is part of minimal-example.
-# See https://github.com/curoky/minimal-example for further info.
+# This file is part of dotbox.
+# See https://github.com/curoky/dotbox for further info.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,10 +15,19 @@ load("@rules_cc//cc:defs.bzl", "cc_library")
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-cc_library(
-    name = "tensorflow",
-    srcs = ["libtensorflow_framework.so.2"],
-    hdrs = glob(["include/**"]),
-    includes = ["include"],
-    visibility = ["//visibility:public"],
-)
+#
+class GitMvWithHistory < Formula
+  desc 'git utility to move/rename file or folder and retain history with it.'
+  homepage 'https://gist.github.com/emiller/6769886'
+  url 'https://gist.github.com/emiller/6769886/archive/ae47266e867438b9cbd188fb6851ca6566e241d0.zip'
+  sha256 '0be3fc72b064e199b031e01a3e3725b093ccb234f8ad58e001d8e5c854a9299c'
+  version 'head'
+
+  def install
+    bin.install 'git-mv-with-history' => 'git-mv-with-history'
+  end
+
+  test do
+    ohai 'Test complete.'
+  end
+end

@@ -15,6 +15,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+load("@rules_cc//cc:defs.bzl", "cc_binary")
+
 """
 # need sudo patchelf --add-needed /app/conda/envs/tf2.16/lib/python3.11/site-packages/tensorflow/libtensorflow_framework.so.2 bazel-bin/libadd_one.so
 cc_library(

@@ -1,9 +1,8 @@
-load("@rules_cc//cc:defs.bzl", "cc_library")
-
+#
 # Copyright (c) 2018-2024 curoky(cccuroky@gmail.com).
 #
-# This file is part of minimal-example.
-# See https://github.com/curoky/minimal-example for further info.
+# This file is part of dotbox.
+# See https://github.com/curoky/dotbox for further info.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,10 +15,22 @@ load("@rules_cc//cc:defs.bzl", "cc_library")
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-cc_library(
-    name = "tensorflow",
-    srcs = ["libtensorflow_framework.so.2"],
-    hdrs = glob(["include/**"]),
-    includes = ["include"],
-    visibility = ["//visibility:public"],
-)
+#
+class Flamegraph < Formula
+  desc 'Stack trace visualizer'
+  homepage 'https://github.com/brendangregg/FlameGraph'
+  url 'https://github.com/brendangregg/FlameGraph/archive/master.zip'
+  license 'CDDL-1.0'
+  head 'https://github.com/brendangregg/FlameGraph.git'
+  version '2.0'
+
+  uses_from_macos 'perl'
+
+  def install
+    bin.install Dir['*.pl']
+    bin.install Dir['*.awk']
+  end
+
+  test do
+  end
+end

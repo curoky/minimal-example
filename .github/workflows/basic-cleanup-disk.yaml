@@ -1,0 +1,103 @@
+name: basic cleanup disk
+
+on:
+  push:
+    paths:
+      - .github/workflows/basic-cleanup-disk.yaml
+  workflow_dispatch:
+
+jobs:
+  show-disk-usage:
+    runs-on: ${{ matrix.runs-on }}
+    strategy:
+      matrix:
+        runs-on:
+          - ubuntu-latest
+          - ubuntu-24.04
+          - ubuntu-22.04
+          - ubuntu-20.04
+          - macos-latest
+          - macos-15
+          - macos-14
+          - macos-13
+    steps:
+      - uses: Homebrew/actions/setup-homebrew@master
+      - run: brew install ncdu
+
+      - run: df -h
+      - run: du -ahd2 / 2>&1 | grep -v "denied" | grep -v "/dev" | grep -v "/proc"
+
+      - run: ncdu -o disk-usage-report.data -q off /
+      - uses: actions/upload-artifact@v4
+        with:
+          name: disk-usage-report-original-${{ matrix.runs-on }}.data
+          path: disk-usage-report.data
+
+  cleanup-disk:
+    runs-on: runs-on
+    strategy:
+      matrix:
+        runs-on:
+          - ubuntu-latest
+          - ubuntu-24.04
+          - ubuntu-22.04
+          - ubuntu-20.04
+          - macos-latest
+          - macos-15
+          - macos-14
+          - macos-13
+        method:
+          - '1'
+          - '2'
+          - '3'
+          - '4'
+          - '5'
+    steps:
+      - uses: Homebrew/actions/setup-homebrew@master
+      - run: brew install ncdu
+
+      - run: df -h
+      - run: du -ahd2 / 2>&1 | grep -v "denied" | grep -v "/dev" | grep -v "/proc"
+
+      - name: Optimize Disk Space
+        uses: hugoalh/disk-space-optimizer-ghaction@v0.8.0
+        with:
+          operate_sudo: 'True'
+          general_include: '.+'
+          docker_include: '.+'
+          docker_prune: 'True'
+          docker_clean: 'True'
+          apt_prune: 'True'
+          apt_clean: 'True'
+          homebrew_prune: 'True'
+          homebrew_clean: 'True'
+          npm_prune: 'True'
+          npm_clean: 'True'
+          os_swap: 'True'
+        if: ${{ matrix.method == '1' }}
+
+      - uses: jlumbroso/free-disk-space@main
+        if: ${{ matrix.method == '2' }}
+
+      - uses: easimon/maximize-build-space@master
+        with:
+          root-reserve-mb: 512
+          swap-size-mb: 1024
+          remove-dotnet: 'true'
+          remove-android: 'true'
+          remove-haskell: 'true'
+          remove-codeql: 'true'
+          remove-docker-images: 'true'
+        if: ${{ matrix.method == '3' }}
+
+      - run: github-actions/cleanup-disk/free-github-action-disk-space.sh
+        if: ${{ matrix.method == '4' }}
+
+      - run: df -h
+      - run: du -ahd2 2>&1 | grep -v "denied" | grep -v "/dev" | grep -v "/proc"
+      - run: ncdu -o disk-usage-report.data -q off /
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: disk-usage-report-${{ matrix.method }}-${{ matrix.runs-on }}.data
+          path: disk-usage-report.data

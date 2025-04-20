@@ -1,9 +1,9 @@
-name: gh enable IPv6
+name: basic enable ipv6
 
 on:
   push:
     paths:
-      - .github/workflows/gh-enable-ipv6.yaml
+      - .github/workflows/basic-enable-ipv6.yaml
   workflow_dispatch:
 
 jobs:

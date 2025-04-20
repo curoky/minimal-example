@@ -1,9 +1,8 @@
-load("@rules_cc//cc:defs.bzl", "cc_library")
-
+#
 # Copyright (c) 2018-2024 curoky(cccuroky@gmail.com).
 #
-# This file is part of minimal-example.
-# See https://github.com/curoky/minimal-example for further info.
+# This file is part of dotbox.
+# See https://github.com/curoky/dotbox for further info.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,10 +15,18 @@ load("@rules_cc//cc:defs.bzl", "cc_library")
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-cc_library(
-    name = "tensorflow",
-    srcs = ["libtensorflow_framework.so.2"],
-    hdrs = glob(["include/**"]),
-    includes = ["include"],
-    visibility = ["//visibility:public"],
-)
+#
+class ExaWrapper < Formula
+  desc 'Wrapper script for exa to give it nearly identical switches and appearance to ls.'
+  homepage 'https://gist.github.com/curoky/47dcc36c748c668c4252752ab2ae95a7'
+  url 'https://gist.github.com/curoky/47dcc36c748c668c4252752ab2ae95a7/archive/master.tar.gz'
+  version 'head'
+
+  def install
+    bin.install 'exa-wrapper.sh' => 'ls'
+  end
+
+  test do
+    ohai 'Test complete.'
+  end
+end

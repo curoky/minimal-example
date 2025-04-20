@@ -1,0 +1,33 @@
+name: basic debug
+
+on:
+  push:
+    paths:
+      - .github/workflows/basic-debug.yaml
+  workflow_dispatch:
+    inputs:
+      debug_enabled:
+        description: 'enable debug'
+        default: false
+        required: false
+        type: boolean
+
+jobs:
+  tmate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+        timeout-minutes: 30
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.debug_enabled }}
+        # with:
+        # detached: true
+
+  vscode:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: fawazahmed0/action-debug-vscode@main
+        with:
+          token: 'root'
+        timeout-minutes: 30
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.debug_enabled }}
