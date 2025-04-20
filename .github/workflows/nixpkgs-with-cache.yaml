@@ -8,7 +8,12 @@ on:
 
 jobs:
   default:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.runs-on }}
+    strategy:
+      matrix:
+        runs-on:
+          - ubuntu-latest
+          - macos-latest
     steps:
       - uses: nixbuild/nix-quick-install-action@v30
         with:
