@@ -12,14 +12,13 @@ jobs:
     strategy:
       matrix:
         runs-on:
-          - ubuntu-latest
+          # - ubuntu-latest
           - ubuntu-24.04
           - ubuntu-22.04
-          - ubuntu-20.04
-          - macos-latest
+          # - macos-latest
           - macos-15
           - macos-14
-          - macos-13
+          # - macos-13
     steps:
       - uses: Homebrew/actions/setup-homebrew@master
       - run: brew install ncdu
@@ -27,32 +26,49 @@ jobs:
       - run: df -h
       - run: du -ahd2 / 2>&1 | grep -v "denied" | grep -v "/dev" | grep -v "/proc"
 
-      - run: ncdu -o disk-usage-report.data -q off /
+      - run: |
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          df -h >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+
+      - run: ncdu -o disk-usage-report.data -q /
       - uses: actions/upload-artifact@v4
         with:
           name: disk-usage-report-original-${{ matrix.runs-on }}.data
           path: disk-usage-report.data
 
+      - uses: fawazahmed0/action-debug-vscode@main
+        if: ${{ failure() && github.event_name == 'workflow_dispatch' }}
+
   cleanup-disk:
-    runs-on: runs-on
+    runs-on: ${{ matrix.runs-on }}
     strategy:
       matrix:
         runs-on:
-          - ubuntu-latest
+          # - ubuntu-latest
           - ubuntu-24.04
           - ubuntu-22.04
-          - ubuntu-20.04
-          - macos-latest
+          # - macos-latest
           - macos-15
           - macos-14
-          - macos-13
+          # - macos-13
         method:
           - '1'
-          - '2'
-          - '3'
-          - '4'
-          - '5'
+        include:
+          - runs-on: ubuntu-24.04
+            method: '2'
+          - runs-on: ubuntu-22.04
+            method: '2'
+          - runs-on: ubuntu-24.04
+            method: '3'
+          - runs-on: ubuntu-22.04
+            method: '3'
+          - runs-on: ubuntu-24.04
+            method: '4'
+          - runs-on: ubuntu-22.04
+            method: '4'
     steps:
+      - uses: actions/checkout@v4
       - uses: Homebrew/actions/setup-homebrew@master
       - run: brew install ncdu
 
@@ -60,7 +76,7 @@ jobs:
       - run: du -ahd2 / 2>&1 | grep -v "denied" | grep -v "/dev" | grep -v "/proc"
 
       - name: Optimize Disk Space
-        uses: hugoalh/disk-space-optimizer-ghaction@v0.8.0
+        uses: hugoalh/disk-space-optimizer-ghaction@v0.8.1
         with:
           operate_sudo: 'True'
           general_include: '.+'
@@ -90,14 +106,22 @@ jobs:
           remove-docker-images: 'true'
         if: ${{ matrix.method == '3' }}
 
-      - run: github-actions/cleanup-disk/free-github-action-disk-space.sh
+      - run: build-environ/github-actions/cleanup-disk/free-disk-space.sh
         if: ${{ matrix.method == '4' }}
 
       - run: df -h
       - run: du -ahd2 2>&1 | grep -v "denied" | grep -v "/dev" | grep -v "/proc"
-      - run: ncdu -o disk-usage-report.data -q off /
+      - run: ncdu -o disk-usage-report.data -q /
+
+      - run: |
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          df -h >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
 
       - uses: actions/upload-artifact@v4
         with:
           name: disk-usage-report-${{ matrix.method }}-${{ matrix.runs-on }}.data
           path: disk-usage-report.data
+
+      - uses: fawazahmed0/action-debug-vscode@main
+        if: ${{ failure() && github.event_name == 'workflow_dispatch' }}

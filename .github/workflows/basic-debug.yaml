@@ -11,23 +11,50 @@ on:
         default: false
         required: false
         type: boolean
+      runs-on:
+        description: 'runs-on'
+        default: 'ubuntu-latest'
+        required: false
+        type: string
 
 jobs:
   tmate:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.runs-on }}
+    strategy:
+      matrix:
+        runs-on:
+          - ubuntu-latest
+          - ubuntu-24.04
+          - ubuntu-22.04
+          - macos-latest
+          - macos-15
+          - macos-14
+          - macos-13
     steps:
       - name: Setup tmate session
         uses: mxschmitt/action-tmate@v3
         timeout-minutes: 30
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.debug_enabled }}
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.debug_enabled && inputs.runs-on == matrix.runs-on }}
+        # if: ${{ failure() && github.event_name == 'workflow_dispatch' }}
+
         # with:
         # detached: true
 
   vscode:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.runs-on }}
+    strategy:
+      matrix:
+        runs-on:
+          - ubuntu-latest
+          - ubuntu-24.04
+          - ubuntu-22.04
+          - macos-latest
+          - macos-15
+          - macos-14
+          - macos-13
     steps:
       - uses: fawazahmed0/action-debug-vscode@main
         with:
           token: 'root'
         timeout-minutes: 30
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.debug_enabled }}
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.debug_enabled && inputs.runs-on == matrix.runs-on }}
