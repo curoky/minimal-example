@@ -3,9 +3,11 @@ AC_PREREQ([2.61])
 AC_INIT([helloworld], [0.1], [cccuroky@gmail.com])
 AM_INIT_AUTOMAKE
 
+AC_PROG_RANLIB
 AC_PROG_CXX
 AC_LANG(C++)
 LT_INIT([shared])
+
 
 # AC_PROG_MAKE_SET
 # AC_CONFIG_AUX_DIR(aux-dist)

@@ -10,3 +10,7 @@ install-sh
 ltmain.sh
 missing
 Makefile.in
+libtool
+install-sh~
+.deps
+src/Makefile
