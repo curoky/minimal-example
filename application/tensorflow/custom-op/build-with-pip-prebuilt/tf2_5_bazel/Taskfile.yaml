@@ -4,4 +4,4 @@ tasks:
   build:
     cmds:
       - bazel build :add_one
-      # - sudo patchelf --add-needed /app/conda/envs/tf2.5/lib/python3.8/site-packages/tensorflow/libtensorflow_framework.so.2 bazel-bin/libzero_out.so
+      # - sudo patchelf --add-needed /opt/conda/envs/tf2.5/lib/python3.8/site-packages/tensorflow/libtensorflow_framework.so.2 bazel-bin/libzero_out.so

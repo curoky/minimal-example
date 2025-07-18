@@ -18,7 +18,7 @@
 load("@rules_cc//cc:defs.bzl", "cc_binary")
 
 """
-# need sudo patchelf --add-needed /app/conda/envs/tf2.16/lib/python3.11/site-packages/tensorflow/libtensorflow_framework.so.2 bazel-bin/libadd_one.so
+# need sudo patchelf --add-needed /opt/conda/envs/tf2.16/lib/python3.11/site-packages/tensorflow/libtensorflow_framework.so.2 bazel-bin/libadd_one.so
 cc_library(
     name = "add_one",
     srcs = ["add_one.cc"],

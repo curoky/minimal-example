@@ -28,7 +28,7 @@ g++ -shared -o add_one.so add_one.cu.o \
   ${TF_CFLAGS[@]} -fPIC -lcudart -L/usr/local/cuda-12.3/lib64/ ${TF_LFLAGS[@]}
 
 # g++ -shared add_one.cc -o add_one.so \
-#   -fPIC -I/app/conda/envs/tf2.16/lib/python3.11/site-packages/tensorflow/include \
+#   -fPIC -I/opt/conda/envs/tf2.16/lib/python3.11/site-packages/tensorflow/include \
 #   -D_GLIBCXX_USE_CXX11_ABI=1 --std=c++17 -DEIGEN_MAX_ALIGN_BYTES=64 \
-#   -L/app/conda/envs/tf2.16/lib/python3.11/site-packages/tensorflow \
+#   -L/opt/conda/envs/tf2.16/lib/python3.11/site-packages/tensorflow \
 #   -l:libtensorflow_framework.so.2 -O2

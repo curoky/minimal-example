@@ -14,3 +14,4 @@ libtool
 install-sh~
 .deps
 src/Makefile
+build

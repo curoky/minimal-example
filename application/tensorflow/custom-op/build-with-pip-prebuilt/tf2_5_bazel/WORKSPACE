@@ -20,7 +20,7 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 new_local_repository(
     name = "tensorflow",
     build_file = "//:tf.BUILD",
-    path = "/app/conda/envs/tf2.5/lib/python3.8/site-packages/tensorflow",
+    path = "/opt/conda/envs/tf2.5/lib/python3.8/site-packages/tensorflow",
 )
 
 http_archive(
