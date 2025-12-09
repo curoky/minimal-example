@@ -22,12 +22,12 @@ pre-commit:
       glob: '*.{proto}'
       stage_fixed: false
 
-    - name: bazel
-      run: buildifier fix -mode=fix -lint=fix {staged_files}
+    - name: bazel-buildifier
+      run: buildifier -mode=fix -lint=fix {staged_files}
       glob:
-        - '*.{bzl,bazel}'
-        - 'WORKSPACE'
-        - 'BUILD'
+        - '*.{bzl,bazel,bzlmod}'
+        - BUILD
+        - WORKSPACE
       stage_fixed: false
 
     # - name: json
@@ -39,8 +39,3 @@ pre-commit:
     #   run: shfmt -w -i 2 -s -l -ci {staged_files}
     #   glob: '*.{yaml}'
     #   stage_fixed: false
-
-commit-msg:
-  commands:
-    check-git-author:
-      run: tools/check-author.sh -n curoky -e cccuroky@gmail.com

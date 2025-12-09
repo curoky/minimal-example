@@ -18,7 +18,7 @@ jobs:
     container:
       image: nvidia/cuda:11.4.3-devel-ubuntu20.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - run: |
           apt-get update -y
           apt-get install -y lsb-release python3.8 python3.8-dev python3-pip
@@ -43,7 +43,7 @@ jobs:
     container:
       image: nvidia/cuda:12.3.2-devel-ubuntu22.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - run: |
           apt-get update -y
           apt-get install -y lsb-release python3.11 python3.11-dev python3-pip
@@ -64,7 +64,7 @@ jobs:
     container:
       image: nvidia/cuda:11.4.3-devel-ubuntu20.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: bazelbuild/setup-bazelisk@v3
       - run: |
           apt-get update -y
@@ -91,7 +91,7 @@ jobs:
     container:
       image: nvidia/cuda:12.3.2-devel-ubuntu22.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: bazelbuild/setup-bazelisk@v3
       - run: |
           apt-get update -y
@@ -114,7 +114,7 @@ jobs:
     container:
       image: curoky/infra-image:cuda11.4-cudnn8
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: bazelbuild/setup-bazelisk@v3
       - run: |
           apt-get update -y
@@ -143,7 +143,7 @@ jobs:
     container:
       image: curoky/infra-image:cuda12.3-cudnn8
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: bazelbuild/setup-bazelisk@v3
       - run: |
           apt-get update -y
